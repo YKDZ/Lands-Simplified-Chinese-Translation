@@ -49,7 +49,7 @@ general:
   top:
     sorting:
       balance: 金库存款
-      chunks: 控制区块数
+      chunks: 占领区块数
       members: 成员数
       level: 等级
       ratio_kd: 击杀/死亡比
@@ -124,7 +124,7 @@ gui:
           slots: 31
           name: '&6&l可租用'
           lore:
-          - '&8✖ &7查看所有可被租用的区域'
+          - '&8✖ &7查看所有可被租用的子区域'
         all-nations:
           material: eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvY2Y0MDk0MmYzNjRmNmNiY2VmZmNmMTE1MTc5NjQxMDI4NmE0OGIxYWViYTc3MjQzZTIxODAyNmMwOWNkMSJ9fX0=
           slots: 30
@@ -175,30 +175,30 @@ gui:
         land-settings:
           name: '&8> &6环境设置'
           lore:
-          - '&7修改当前区域的环境设置'
+          - '&7修改当前子区域的环境设置'
           material: eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvODQ0OWI5MzE4ZTMzMTU4ZTY0YTQ2YWIwZGUxMjFjM2Q0MDAwMGUzMzMyYzE1NzQ5MzJiM2M4NDlkOGZhMGRjMiJ9fX0=
           slots: 29
         roles:
           name: '&8> &6职位'
           lore:
           - '&7查看或编辑职位'
-          - '&7当前区域&6 {area}&7.'
+          - '&7当前子区域&6 {area}&7.'
           material: eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvZThiOGM2YTQ2ZDg3Y2Y4NmE1NWRmMjE0Y2Y4NGJmNDVjY2EyNWVkYjlhNjc2ZTk2MzY0ZGQ2YTZlZWEyMzViMyJ9fX0=
           slots: 30
         taxes:
           name: '&8> &6税务'
           lore:
-          - '&7查看区域税务'
-          - '&7当前区域&6 {area}&7.'
+          - '&7查看子区域税务'
+          - '&7当前子区域&6 {area}&7.'
           material: GOLD_INGOT
           slots: 31
         areas:
-          name: '&8> &6区域'
+          name: '&8> &6子区域'
           lore:
-          - '&7查看城镇的所有区域.'
-          - '&7也可以创建新的区域'
+          - '&7查看城镇的所有子区域.'
+          - '&7也可以创建新的子区域'
           - ' '
-          - '&7区域:&3 {areas} &7/&c {max-areas}'
+          - '&7子区域:&3 {areas} &7/&c {max-areas}'
           - '&7领土:&3 {chunks} &7/&c {max-chunks}'
           material: OAK_FENCE
           slots: 11
@@ -233,7 +233,7 @@ gui:
           - '&6&l经济:'
           - ' &8• &7城镇'
           - '   &7金库存款: {balance}'
-          - '   &7控制下一个区块花费: {chunk_cost}'
+          - '   &7占领下一个区块花费: {chunk_cost}'
           - '   &7维护费:&c {upkeep}'
           - '   &7支付时间: {upkeep_next} 后'
           - ''
@@ -290,7 +290,7 @@ gui:
             material: eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvYmNmYWZmYThjNmM3ZjYyNjIxNjgyZmU1NjcxMWRjM2I4OTQ0NjVmZGY3YTYyZjQzYjMxYTBkMzQwM2YzNGU3In19fQ==
             slots: 17
             name: '&6&l统计信息'
-            lore: '&7传送点: {world}, x={x}, z={z}[newline]&7控制区块: {chunks} / {chunks_max}[newline]&7成员数:
+            lore: '&7传送点: {world}, x={x}, z={z}[newline]&7占领区块: {chunks} / {chunks_max}[newline]&7成员数:
               {members} / {members_max}'
           members:
             material: eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvZThiOGM2YTQ2ZDg3Y2Y4NmE1NWRmMjE0Y2Y4NGJmNDVjY2EyNWVkYjlhNjc2ZTk2MzY0ZGQ2YTZlZWEyMzViMyJ9fX0=
@@ -312,35 +312,35 @@ gui:
         land-settings:
           name: '&6&l环境设置'
           lore:
-          - '&8✖ &7点击编辑这个区域的环境设置'
+          - '&8✖ &7点击编辑这个子区域的环境设置'
           - '   &7如植物是否能生长.'
           material: eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvODQ0OWI5MzE4ZTMzMTU4ZTY0YTQ2YWIwZGUxMjFjM2Q0MDAwMGUzMzMyYzE1NzQ5MzJiM2M4NDlkOGZhMGRjMiJ9fX0=
           slots: 29
         roles:
           name: '&6&l职位'
           lore:
-          - '&8✖ &7点击管理这个区域的职位.'
+          - '&8✖ &7点击管理这个子区域的职位.'
           - ''
-          - '   &8• &7默认区域的职位会被自动添加到这个区域'
+          - '   &8• &7默认总区域的职位会被自动添加到这个子区域'
           material: eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvZThiOGM2YTQ2ZDg3Y2Y4NmE1NWRmMjE0Y2Y4NGJmNDVjY2EyNWVkYjlhNjc2ZTk2MzY0ZGQ2YTZlZWEyMzViMyJ9fX0=
           slots: 30
         taxes:
           name: '&6&l税务'
           lore:
-          - '&8✖ &7点击管理这个区域的税务.'
-          - '   &7税金会由每个区域独立结算.'
+          - '&8✖ &7点击管理这个子区域的税务.'
+          - '   &7税金会由每个子区域独立结算.'
           material: GOLD_INGOT
           slots: 31
         various:
           name: '&6&l杂项设置'
           lore:
-          - '&8✖ &7点击编辑区域名和区域简介'
+          - '&8✖ &7点击编辑子区域名和子区域简介'
           material: BEACON
           slots: 32
         child_failure_access:
           name: '&4职位权限不足'
           lore:
-          - '&7区域所有者可以给你的职位分配对应权限'
+          - '&7子区域所有者可以给你的职位分配对应权限'
           - ''
           - ' &8• &7权限: {flag}'
         player-management:
@@ -352,7 +352,7 @@ gui:
           - '   &7邀请和成员请求.'
         child_failure_rented:
           lore:
-          - '&c这个区域已被租售, '
+          - '&c这个子区域已被租售, '
           - '&c你不能编辑它的税务.'
           - ' &8• &7当前租客:&3 {player}'
           name: '&4租售中'
@@ -393,7 +393,7 @@ gui:
           name: '&6&l管理设置'
           lore:
           - '&8✖ &7切换职位成员的管理设置'
-          - '   &7如为城镇控制区块, 将玩家移出城镇.'
+          - '   &7如为城镇占领区块, 将玩家移出城镇.'
           material: eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvMTZkOTZlYWM1YTcwMTY4NDM3Y2NmZmFlZTBlN2ZjNWFjNWMwMjJmNDI5ZTNlZDkyOWNkNTE4OTRhMmRkNmQ4In19fQ==
           slots: 30
         members:
@@ -431,11 +431,11 @@ gui:
           material: NAME_TAG
           slots: 12
         apply:
-          name: '&6&l继承到新区域: {apply}'
+          name: '&6&l继承到新子区域: {apply}'
           lore:
           - '&8✖ &7这个职位的玩家'
           - '   &7是否应该仍以相同的职位'
-          - '   &7被自动分配到新的区域?'
+          - '   &7被自动分配到新的子区域?'
           material: OAK_FENCE
           slots: 14
         members_ally:
@@ -446,17 +446,17 @@ gui:
           material: PLAYER_HEAD
           slots: 11
         apply_always:
-          name: '&6&l自动添加到新区域'
+          name: '&6&l自动添加到新子区域'
           lore:
           - '&7这个职位, 包括属于这个职位的成员和权限'
-          - '&7会被自动复制到新划定的区域'
+          - '&7会被自动复制到新划定的子区域'
           - '&7这不能被关闭'
           material: OAK_FENCE
           slots: 14
         child_failure_access:
           name: '&4&l职位权限不足'
           lore:
-          - '&c你不被允许编辑这个区域的职位'
+          - '&c你不被允许编辑这个子区域的职位'
           - ''
           - ' &8• &7城镇主人可以给你的职位分配对应权限'
         child_failure_priority:
@@ -481,7 +481,7 @@ gui:
           - '&8✖ &7这个职位的玩家是否需要赋税?'
           - ''
           - '   &8• &7城镇在 &5{time} &7内'
-          - '     &7一共从本区域的这个职位收到了'
+          - '     &7一共从本子区域的这个职位收到了'
           - '     &c{taxes} 税金.'
         taxes_never:
           material: GOLD_INGOT
@@ -490,7 +490,7 @@ gui:
           lore:
           - '&7这不能被更改.'
   taxes:
-    title: '&8区域税赋'
+    title: '&8子区域税赋'
     items:
       default:
         tax_area:
@@ -498,10 +498,10 @@ gui:
           lore:
           - '&7下次收税:&5 {time} 后'
           - '&7收取税金:&a {revenue}'
-          - '&7向所有加入该区域的玩家收税'
+          - '&7向所有加入该子区域的玩家收税'
           - ''
-          - ' &8• &7每个区域税赋独立'
-          - '   &7只有加入区域的玩家才需要向区域赋税'
+          - ' &8• &7每个子区域税赋独立'
+          - '   &7只有加入子区域的玩家才需要向子区域赋税'
           material: GOLD_INGOT
           slots: 23
         tax_nation:
@@ -590,9 +590,9 @@ gui:
           material: OAK_SIGN
           slots: 24
         areas:
-          name: '&6&l他加入的区域 &8(&7{amount}&8)'
+          name: '&6&l他加入的子区域 &8(&7{amount}&8)'
           lore:
-          - '&7这个玩家加入了城镇&2 {land}&7 的这些区域:'
+          - '&7这个玩家加入了城镇&2 {land}&7 的这些子区域:'
           - '{areas}'
           material: OAK_FENCE
           slots: 26
@@ -619,7 +619,7 @@ gui:
         title:
           name: '&6&l进入消息'
           lore:
-          - '&8✖ &7点击修改当玩家进入区域时'
+          - '&8✖ &7点击修改当玩家进入子区域时'
           - '   &7呈现给他的信息'
           - ''
           - '    &8• &7&l当前:'
@@ -657,16 +657,16 @@ gui:
     items:
       default:
         name:
-          name: '&6&l区域名'
+          name: '&6&l子区域名'
           lore:
-          - '&8✖ &7重命名这个区域.'
+          - '&8✖ &7重命名这个子区域.'
           - '   &7当前: {name}'
           material: NAME_TAG
           slots: 20
         description:
           name: '&6&l描述'
           lore:
-          - '&8✖ &7更改这个区域的描述.'
+          - '&8✖ &7更改这个子区域的描述.'
           - ''
           - '   &8• &7&l当前:'
           - '     {description}'
@@ -675,10 +675,10 @@ gui:
         icon:
           name: '&6&l图标'
           lore:
-          - '&8✖ &7点击修改这个区域的图标.'
+          - '&8✖ &7点击修改这个子区域的图标.'
           - ''
-          - '    &8• &7这可以帮助你在区域列表中'
-          - '      &7辨认出这个区域.'
+          - '    &8• &7这可以帮助你在子区域列表中'
+          - '      &7辨认出这个子区域.'
           material: OAK_FENCE
           slots: 26
         child_no-item:
@@ -709,7 +709,7 @@ gui:
           - ''
           - '&7玩家: {players}'
           - '&6&l进度'
-          - ' &8• &7控制: {cap}'
+          - ' &8• &7占领: {cap}'
           - ' &8• &7击杀数: {kills}'
           - '   &3= {points} / {towin} &7点数以获胜'
           - '   {bar}'
@@ -722,7 +722,7 @@ gui:
           - ''
           - '&7玩家: {players}'
           - '&6&l进度'
-          - ' &8• &7控制: {cap}'
+          - ' &8• &7占领: {cap}'
           - ' &8• &7击杀数: {kills}'
           - '   &3= {points} / {towin} &7点数以获胜'
           - '   {bar}'
@@ -791,9 +791,9 @@ gui:
           lore:
           - '&7一方需要收集&3 {points} &7点数以获胜.'
           - ' &8• &7击杀: &3{p_kill} 点数'
-          - ' &8• &7控制: &3{p_cap} 点数'
+          - ' &8• &7占领: &3{p_cap} 点数'
           - ''
-          - '    &8• &7想要控制对方的领土, place'
+          - '    &8• &7想要占领对方的领土, place'
           - '      &7需要将战旗放在他们的领土中'
           - '      &7你可以在此处查看战旗合成配方'
           - ''
@@ -970,7 +970,7 @@ gui:
           lore:
           - ''
           - '&7本国无任何战争'
-          - '&7洪福齐天 四海升平'
+          - '&7洪福齐, 四海升平'
           - '&7民安国泰.'
           material: WOODEN_SWORD
           slots: 12
@@ -1049,23 +1049,23 @@ gui:
           material: eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvOTQ3MmM5ZDYyOGJiMzIyMWVmMzZiNGNiZDBiOWYxNWVkZDU4ZTU4NjgxODUxNGQ3ZTgyM2Q1NWM0OGMifX19
           slots: 26
   admin_wilderness:
-    title: '&8野外设置'
+    title: '&8荒野设置'
     items:
       default:
         action:
-          name: '&6&l行为类设置'
+          name: '&6&l行为设置'
           lore:
           - '&8✖ &7编辑行为设置.'
           material: eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvZjM2YjgyMWMxYWZkZDVhNWQxNGUzYjNiZDBhMzIyNjNjOGRmNWRmNWRiNmUxZTg4YmY2NWU5N2IyN2E4NTMwIn19fQ==
           slots: 20
         management:
-          name: '&6&l管理类设置'
+          name: '&6&l管理设置'
           lore:
           - '&8✖ &7编辑管理类设置.'
           material: eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvMTZkOTZlYWM1YTcwMTY4NDM3Y2NmZmFlZTBlN2ZjNWFjNWMwMjJmNDI5ZTNlZDkyOWNkNTE4OTRhMmRkNmQ4In19fQ==
           slots: 23
         landflags:
-          name: '&6&l自然类设置'
+          name: '&6&l自然设置'
           lore:
           - '&8✖ &7编辑自然类设置.'
           material: eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvODQ0OWI5MzE4ZTMzMTU4ZTY0YTQ2YWIwZGUxMjFjM2Q0MDAwMGUzMzMyYzE1NzQ5MzJiM2M4NDlkOGZhMGRjMiJ9fX0=
@@ -1077,7 +1077,7 @@ gui:
         wilderness:
           name: '&6&l荒野设置'
           lore:
-          - '&8✖ &7在荒野区域修改'
+          - '&8✖ &7在荒野子区域修改'
           - '   &7职位设置和环境设置.'
           material: NAME_TAG
           slots: 21
@@ -1211,20 +1211,20 @@ gui:
           - '   &7查看更多信息'
           material: eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNmQ5NTk2NWQ3OWRkZjYxM2Y1OTRmZDIwZDUxZTc2NWMwOWEyYTVmZjhkMGUwOWNmZjE5YThlYTQzMDIzNThhZCJ9fX0=
   list_land_areas:
-    title: '&8区域'
+    title: '&8子区域'
     items:
       default:
         create:
-          name: '&a&l创建区域'
+          name: '&a&l创建子区域'
           lore:
-          - '&8✖ &7为城镇创建一个新的区域.'
+          - '&8✖ &7为城镇创建一个新的子区域.'
           - '   &7可用:&3 {areas} &8/&c {max}'
           material: eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvYjA1NmJjMTI0NGZjZmY5OTM0NGYxMmFiYTQyYWMyM2ZlZTZlZjZlMzM1MWQyN2QyNzNjMTU3MjUzMWYifX19
           slots: 41
         delete:
-          name: '&c&l删除区域'
+          name: '&c&l删除子区域'
           lore:
-          - '&8✖ &7删除城镇的一个区域'
+          - '&8✖ &7删除城镇的一个子区域'
           material: eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvZTljZGI5YWYzOGNmNDFkYWE1M2JjOGNkYTc2NjVjNTA5NjMyZDE0ZTY3OGYwZjE5ZjI2M2Y0NmU1NDFkOGEzMCJ9fX0=
           slots: 42
         entry_area:
@@ -1232,53 +1232,53 @@ gui:
           lore:
           - '&7{description}'
           - ''
-          - '&8✖ &7点击管理这个区域.'
+          - '&8✖ &7点击管理这个子区域.'
           - '&8✖ &3Q 键'
-          - '   &7删除这个区域.'
+          - '   &7删除这个子区域.'
           material: OAK_FENCE
         entry_area_default:
           name: '&6&l{area}'
           lore:
           - '&7{description}'
           - ''
-          - '&8✖ &7点击管理默认区域'
+          - '&8✖ &7点击管理默认总区域'
           material: OAK_FENCE
         entry_area-setup:
-          name: '&c&l创建区域'
+          name: '&c&l创建子区域'
           lore:
           - '&81. &7使用 &e/lands selection'
           - '   &7框选一个立方体范围.'
           - '&82. &7使用 &e/lands selection assign {area}'
-          - '  &7将所选范围分配给区域.'
+          - '  &7将所选范围分配给子区域.'
           - ''
           - '&8✖ &3Q 键'
-          - '   &7删除这个区域.'
+          - '   &7删除这个子区域.'
           material: ACACIA_FENCE
         child_failure_access:
           name: '&4&l职位权限不足'
           lore:
-          - '&c你不被允许删除这个城镇的区域'
+          - '&c你不被允许删除这个城镇的子区域'
           - ''
           - ' &8• &7城镇主人可以给你的职位分配对应权限'
         child_failure_default:
-          name: '&4&l默认区域'
+          name: '&4&l默认总区域'
           lore:
-          - '&c你不能删除一个城镇的默认区域'
+          - '&c你不能删除一个城镇的默认总区域'
           - ''
-          - ' &8• &7所有新控制的区块默认归属这个区域.'
+          - ' &8• &7所有新占领的区块默认归属这个子区域.'
         child_failure_untrusted:
           name: '&4&l未加入'
           lore:
-          - '&c你不能打开这个区域的菜单'
+          - '&c你不能打开这个子区域的菜单'
           - ''
-          - ' &8• &7你需要加入这个区域'
+          - ' &8• &7你需要加入这个子区域'
         child_failure_max-areas:
-          name: '&4&l最大区域数'
+          name: '&4&l最大子区域数'
           lore:
-          - '&c这个城镇已经达到了最大区域数&4 {max}'
+          - '&c这个城镇已经达到了最大子区域数&4 {max}'
         child_failure_rented:
           lore:
-          - '&c这个区域已被租售, '
+          - '&c这个子区域已被租售, '
           - '&c你不能编辑它.'
           - ' &8• &7当前租客:&3 {player}'
           name: '&4&l租售中'
@@ -1289,7 +1289,7 @@ gui:
         entry_object:
           name: '&6&l世界: {world} X: {x} Z: {z}'
           lore:
-          - '&7控制时间:&5 {time} &7前'
+          - '&7占领时间:&5 {time} &7前'
           - ''
           - '&8✖ &7传送到这个区块.'
           material: eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvODQ0OWI5MzE4ZTMzMTU4ZTY0YTQ2YWIwZGUxMjFjM2Q0MDAwMGUzMzMyYzE1NzQ5MzJiM2M4NDlkOGZhMGRjMiJ9fX0=
@@ -1346,7 +1346,7 @@ gui:
         entry_land:
           name: '&e&l{player}'
           lore:
-          - '&7加入了以下区域:'
+          - '&7加入了以下子区域:'
           - '{areas}'
           - ''
           - '&8✖ &3Q 键'
@@ -1364,13 +1364,13 @@ gui:
           - '   &7▼ 降职'
           - ''
           - '&8✖ &3Q 键'
-          - '   &7将玩家移出该区域.'
+          - '   &7将玩家移出该子区域.'
           - '&8✖ &7点击查看更多信息.'
           material: INHERIT
         trust:
           name: '&a&l邀请玩家加入'
           lore:
-          - '&8✖ &7邀请玩家加入这个区域.'
+          - '&8✖ &7邀请玩家加入这个子区域.'
           - '   &7成员数:&3 {players} &8/&c {max}'
           material: eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvYTkyZTMxZmZiNTljOTBhYjA4ZmM5ZGMxZmUyNjgwMjAzNWEzYTQ3YzQyZmVlNjM0MjNiY2RiNDI2MmVjYjliNiJ9fX0=
           slots: 40
@@ -1417,10 +1417,10 @@ gui:
         refresh_toggle:
           material: HOPPER
           slots: 41
-          name: '&6&l仅展示区域: {current}'
+          name: '&6&l仅展示子区域: {current}'
           lore:
           - '&8✖ &7是否仅展示'
-          - '   &7加入区域 &8(&6{area}&8)&7 的玩家?'
+          - '   &7加入子区域 &8(&6{area}&8)&7 的玩家?'
           - ''
           - '    &8• &6&l如果禁用:'
           - '      &7展示全城镇被拉黑的玩家.'
@@ -1452,21 +1452,21 @@ gui:
         ban:
           name: '&c&l拉黑玩家'
           lore:
-          - '&8✖ &7将玩家列入本区域的黑名单.'
+          - '&8✖ &7将玩家列入本子区域的黑名单.'
           - ''
-          - ' &8• &7黑名单中的玩家无法进入这个区域'
+          - ' &8• &7黑名单中的玩家无法进入这个子区域'
           material: eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvZTljZGI5YWYzOGNmNDFkYWE1M2JjOGNkYTc2NjVjNTA5NjMyZDE0ZTY3OGYwZjE5ZjI2M2Y0NmU1NDFkOGEzMCJ9fX0=
           slots: 40
         unban:
           name: '&a&l取消拉黑'
           lore:
-          - '&8✖ &7将玩家从本区域的黑名单中移出.'
+          - '&8✖ &7将玩家从本子区域的黑名单中移出.'
           material: eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvYTkyZTMxZmZiNTljOTBhYjA4ZmM5ZGMxZmUyNjgwMjAzNWEzYTQ3YzQyZmVlNjM0MjNiY2RiNDI2MmVjYjliNiJ9fX0=
           slots: 42
         entry_all:
           name: '&e&l{player}'
           lore:
-          - '&7在以下区域中被拉黑:'
+          - '&7在以下子区域中被拉黑:'
           - '{areas}'
           - ''
           - '&8✖ &7点击获取更多信息'
@@ -1474,17 +1474,17 @@ gui:
         entry_area:
           name: '&e&l{player}'
           lore:
-          - '&7在本区域被拉黑'
+          - '&7在本子区域被拉黑'
           - ''
           - '&8✖ &7点击获取更多信息'
           material: INHERIT
         refresh_toggle:
           material: HOPPER
           slots: 41
-          name: '&6&l仅展示区域: {current}'
+          name: '&6&l仅展示子区域: {current}'
           lore:
           - '&8✖ &7是否仅展示'
-          - '   &7在区域 &8(&6{area}&8)&7 被拉黑的玩家?'
+          - '   &7在子区域 &8(&6{area}&8)&7 被拉黑的玩家?'
           - ''
           - '    &8• &6&l如果禁用:'
           - '      &7展示全城镇被拉黑的玩家.'
@@ -1513,7 +1513,7 @@ gui:
         entry_object_trust_area:
           material: INHERIT
           lore:
-          - '&7邀请玩家加入区域 &6{area}&7'
+          - '&7邀请玩家加入子区域 &6{area}&7'
           - '&6&l信息'
           - '&8• &7发送时间:&5 {time}'
           - '&8• &7申请人: {sender}'
@@ -1541,20 +1541,20 @@ gui:
         create:
           name: '&a&l新建职位'
           lore:
-          - '&8✖ &7新建一个区域职位.'
+          - '&8✖ &7新建一个子区域职位.'
           - '   &7可用数量:&3 {roles} &8/&c {max}'
           material: eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvYjA1NmJjMTI0NGZjZmY5OTM0NGYxMmFiYTQyYWMyM2ZlZTZlZjZlMzM1MWQyN2QyNzNjMTU3MjUzMWYifX19
           slots: 41
         delete:
           name: '&c&l删除职位'
           lore:
-          - '&8✖ &7删除这个区域职位.'
+          - '&8✖ &7删除这个子区域职位.'
           material: eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvZTljZGI5YWYzOGNmNDFkYWE1M2JjOGNkYTc2NjVjNTA5NjMyZDE0ZTY3OGYwZjE5ZjI2M2Y0NmU1NDFkOGEzMCJ9fX0=
           slots: 42
         child_failure_max-roles:
           name: '&4&l最大职位数'
           lore:
-          - '&c这个区域已经达到了最大职位数&4 {max}'
+          - '&c这个子区域已经达到了最大职位数&4 {max}'
         child_failure_priority:
           name: '&4&l低优先级'
           lore:
@@ -1565,7 +1565,7 @@ gui:
         child_failure_access:
           name: '&4&l职位权限不足'
           lore:
-          - '&c你不被允许编辑这个区域的职位'
+          - '&c你不被允许编辑这个子区域的职位'
           - ''
           - ' &8• &7城镇主人可以给你的职位分配对应权限'
         child_failure_required:
@@ -1691,13 +1691,13 @@ gui:
         entry_fly:
           name: '&6&l飞行: {enabled}'
           lore:
-          - '&8✖ &7是否允许这个职位在本区域使用 &e/fly ?'
+          - '&8✖ &7是否允许这个职位在本子区域使用 &e/fly ?'
           - '   &7解锁: {unlocked}'
           material: FEATHER
         entry_land_enter:
-          name: '&6&l进入区域: {enabled}'
+          name: '&6&l进入子区域: {enabled}'
           lore:
-          - '&8✖ &7是否允许这个职位进入这个区域?'
+          - '&8✖ &7是否允许这个职位进入这个子区域?'
           - '   &7解锁: {unlocked}'
           material: OAK_FENCE_GATE
         entry_item_pickup:
@@ -1725,10 +1725,10 @@ gui:
           - '   &7解锁: {unlocked}'
           material: WHEAT
         entry_area_assign:
-          name: '&6&l分配区域: {enabled}'
+          name: '&6&l分配子区域: {enabled}'
           lore:
-          - '&8✖ &7是否允许这个职位创建新区域'
-          - '   &7或给区域分配领土?'
+          - '&8✖ &7是否允许这个职位创建新子区域'
+          - '   &7或给子区域分配领土?'
           - '   &7解锁: {unlocked}'
           material: OAK_FENCE
         entry_player_trust:
@@ -1748,7 +1748,7 @@ gui:
         entry_player_untrust:
           name: '&6&l移出玩家: {enabled}'
           lore:
-          - '&8✖ &7是否允许这个职位将其他玩家移出区域?'
+          - '&8✖ &7是否允许这个职位将其他玩家移出子区域?'
           - ''
           - '    &8• &7他们将不能移出'
           - '    &8    与自己同职位或更高职位的玩家'
@@ -1800,17 +1800,17 @@ gui:
           - '   &7解锁: {unlocked}'
           material: GOLD_INGOT
         entry_land_claim:
-          name: '&6&l控制和取消控制: {enabled}'
+          name: '&6&l占领和取消占领: {enabled}'
           lore:
           - '&8✖ &7是否允许这个职位为城镇'
-          - '   &7控制或取消控制区块?'
+          - '   &7占领或取消占领区块?'
           - '   &7解锁: {unlocked}'
           material: IRON_SHOVEL
         entry_land_claim_border:
-          name: '&6&l边界控制: {enabled}'
+          name: '&6&l边界占领: {enabled}'
           lore:
           - '&8✖ &7是否允许这个职位为他们自己的城镇'
-          - '   &7控制一个紧靠你城镇边界的区块?'
+          - '   &7占领一个紧靠你城镇边界的区块?'
           - '   &7解锁: {unlocked}'
           material: IRON_BARS
         entry_spawn_set:
@@ -1869,7 +1869,7 @@ gui:
         entry_elytra:
           name: '&6&l鞘翅飞行: {enabled}'
           lore:
-          - '&8✖ &7是否允许这个职位在区域内使用鞘翅?'
+          - '&8✖ &7是否允许这个职位在子区域内使用鞘翅?'
           - '   &7解锁: {unlocked}'
           material: ELYTRA
         child_failure_permission:
@@ -1879,7 +1879,7 @@ gui:
         child_failure_access:
           name: '&4&l职位权限不足'
           lore:
-          - '&c你不被允许设置这个区域的职位'
+          - '&c你不被允许设置这个子区域的职位'
           - ''
           - ' &8• &7城镇主人可以给你的职位分配对应权限'
         child_failure_priority:
@@ -1920,7 +1920,7 @@ gui:
         entry_entity_griefing:
           name: '&6&l生物破坏: {enabled}'
           lore:
-          - '&8✖ &7是否允许生物破坏区域内方块?'
+          - '&8✖ &7是否允许生物破坏子区域内方块?'
           - ''
           - '    &8• &7&l如果允许:'
           - '      &7生物爆炸可以破坏你的建筑'
@@ -1929,16 +1929,16 @@ gui:
         entry_tnt_griefing:
           name: '&6&lTNT破坏: {enabled}'
           lore:
-          - '&8✖ &7是否允许TNT破坏区域内方块?'
+          - '&8✖ &7是否允许TNT破坏子区域内方块?'
           - ''
           - '    &8• &7&l如果允许:'
-          - '      &7玩家可以从区域外发射TNT破坏你的建筑'
+          - '      &7玩家可以从子区域外发射TNT破坏你的建筑'
           - '   &7解锁: {unlocked}'
           material: TNT
         entry_piston_griefing:
           name: '&6&l外部活塞: {enabled}'
           lore:
-          - '&8✖ &7是否允许区域外活塞伸入区域内?'
+          - '&8✖ &7是否允许子区域外活塞伸入子区域内?'
           - ''
           - '    &8• &7&l如果允许:'
           - '      &7玩家可以在领土外操控活塞破坏你的建筑'
@@ -1947,16 +1947,16 @@ gui:
         entry_waterflow_allow:
           name: '&6&l外部水流: {enabled}'
           lore:
-          - '&8✖ &7是否允许区域外水流进入区域?'
+          - '&8✖ &7是否允许子区域外水流进入子区域?'
           - ''
           - '    &8• &7&l如果允许:'
-          - '      &7玩家可以在区域外放置水流破坏你的建筑'
+          - '      &7玩家可以在子区域外放置水流破坏你的建筑'
           - '   &7解锁: {unlocked}'
           material: WATER_BUCKET
         entry_monster_spawn:
           name: '&6&l怪物生成: {enabled}'
           lore:
-          - '&8✖ &7是否允许怪物在区域内自然生成?'
+          - '&8✖ &7是否允许怪物在子区域内自然生成?'
           - ''
           - '    &8• &7刷怪笼不受影响'
           - '   &7解锁: {unlocked}'
@@ -1964,7 +1964,7 @@ gui:
         entry_animal_spawn:
           name: '&6&l生物生成: {enabled}'
           lore:
-          - '&8✖ &7是否允许动物在区域内自然生成?'
+          - '&8✖ &7是否允许动物在子区域内自然生成?'
           - ''
           - '    &8• &7刷怪笼不受影响.'
           - '   &7解锁: {unlocked}'
@@ -1972,27 +1972,27 @@ gui:
         entry_fire_spread:
           name: '&6&l火焰传播: {enabled}'
           lore:
-          - '&8✖ &7是否允许火焰在区域内传播?'
+          - '&8✖ &7是否允许火焰在子区域内传播?'
           - ''
-          - '    &8• &7区域外火焰无法进入区域内.'
+          - '    &8• &7子区域外火焰无法进入子区域内.'
           - '   &7解锁: {unlocked}'
           material: FLINT_AND_STEEL
         entry_leaf_decay:
           name: '&6&l树叶凋零: {enabled}'
           lore:
-          - '&8✖ &7是否允许区域内树叶凋零?'
+          - '&8✖ &7是否允许子区域内树叶凋零?'
           - '   &7解锁: {unlocked}'
           material: OAK_LEAVES
         entry_plant_growth:
           name: '&6&l植物生长: {enabled}'
           lore:
-          - '&8✖ &7是否允许区域内的植物生长?'
+          - '&8✖ &7是否允许子区域内的植物生长?'
           - '   &7解锁: {unlocked}'
           material: VINE
         entry_snow_melt:
           name: '&6&l积雪融化: {enabled}'
           lore:
-          - '&8✖ &7是否允许区域内的积雪融化?'
+          - '&8✖ &7是否允许子区域内的积雪融化?'
           - ''
           - '    &8• &7&l如果禁止:'
           - '      &7雪不会再堆积在地上'
@@ -2033,7 +2033,7 @@ gui:
         child_failure_access:
           name: '&4&l职位权限不足'
           lore:
-          - '&c你不被允许编辑这个区域的职位'
+          - '&c你不被允许编辑这个子区域的职位'
           - ''
           - ' &8• &7城镇主人可以给你的职位分配对应权限'
         entry_phantom_spawn:
@@ -2108,11 +2108,11 @@ gui:
           - '{description}'
           material: GRAY_STAINED_GLASS
   list_rentables:
-    title: '&8租售区域'
+    title: '&8租售子区域'
     items:
       default:
         entry_area_rent:
-          name: '&e&l租用区域:&6 {area}'
+          name: '&e&l租用子区域:&6 {area}'
           lore:
           - '&8• &7大小: {size} 方块'
           - '&8• &7花费:&c {costs} &7/ &5{time}'
@@ -2122,7 +2122,7 @@ gui:
           - '&8✖ &7点击传送'
           material: INHERIT
         entry_area_buy:
-          name: '&a&l购买区域:&6 {area}'
+          name: '&a&l购买子区域:&6 {area}'
           lore:
           - '&8• &7大小: {size} 方块'
           - '&8• &7花费:&c {costs}'
@@ -2141,7 +2141,7 @@ gui:
           name: '&4&l冷却中'
           lore:
           - '&7你仍需等待&5 {time}'
-          - '&7来传送到下一个区域'
+          - '&7来传送到下一个子区域'
         refresh_sort:
           material: HOPPER
           slots: 41
@@ -2454,7 +2454,7 @@ gui:
           slots: 23
           name: '&6&l信息'
           lore:
-          - ' &8• &7区域:&6 {area}'
+          - ' &8• &7子区域:&6 {area}'
           - ' &8• &7城镇:&2 {land}'
           - ' &8• &7发送时间:&5 {time}'
           - ' &8• &7发送人: {sender}'
@@ -2491,8 +2491,8 @@ gui:
         child_failure_banned:
           name: '&4&l你被拉黑了'
           lore:
-          - '&c你不加入城镇&4 {land}&c的区域&4 {area} &c'
-          - '&c你被这个区域拉黑了'
+          - '&c你不加入城镇&4 {land}&c的子区域&4 {area} &c'
+          - '&c你被这个子区域拉黑了'
         accept_owner:
           material: LIME_STAINED_GLASS_PANE
           slots: 19-22
@@ -2562,7 +2562,7 @@ gui:
           - ' &8• &7死亡: {deaths}'
           - '   &8= &7击杀死亡比:&3 {kdr}'
           - ''
-          - '&8• &7控制区块: {captures}'
+          - '&8• &7占领区块: {captures}'
         membership-request:
           material: BOOKSHELF
           slots: 33
@@ -2951,7 +2951,7 @@ common:
       child_failure_teleport_enter:
         name: '&4&l不允许进入'
         lore:
-        - '&c你不被允许进入传送点所在的区域'
+        - '&c你不被允许进入传送点所在的子区域'
         - ''
         - ' &8• &7城镇主人可以给予你对应权限.'
       category:

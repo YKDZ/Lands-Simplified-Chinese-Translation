@@ -12,7 +12,7 @@ general:
   wYes: '&a是'
   wNo: '&c否'
   disabled: '&c禁用'
-  wilderness: '&a野外'
+  wilderness: '&a荒野'
   server: 服务器
   affiliation:
     land: '&8[&2{land}&8]'
@@ -146,7 +146,7 @@ general:
     others: '&c▉ '
     position: '&9▉ '
     info:
-      wilderness: ' &2▉ &7= 野外区块'
+      wilderness: ' &2▉ &7= 荒野区块'
       yours: ' &a▉ &7= 你的领土'
       trusted: ' &e▉ &7= 盟友领土'
       others: ' &c▉ &7= 其它领土'
@@ -246,7 +246,7 @@ general:
       type:
         land: 城镇名
         cmd: 命令
-        area: 区域名
+        area: 子区域名
         player: 玩家
         name: 名称
         confirm: 确认
@@ -312,14 +312,14 @@ help:
         main: '[T]&e{parent} {subcmd} {args} &8- &7占领区块[H]&7可使用不同的方式占领 &8(&e/selection&7,
           填充, 自动, 范围&8)&7. &7点击复制.[/H][SC]{fullcmd}[/SC][/T]'
         auto: '[T]&e{parent} {subcmd} &8- &7在移动时占领区块[H]&7占领你走过的所有区块. 点击执行.[/H][C]{fullcmd}[/C][/T]'
-        fill: '[T]&e{parent} {subcmd} &8- &7占领轮廓围住的所有区块[H]&7填满目前占领的区块所围住的封闭区域. 点击执行.[/H][C]{fullcmd}[/C][/T]'
+        fill: '[T]&e{parent} {subcmd} &8- &7占领轮廓围住的所有区块[H]&7填满目前占领的区块所围住的封闭子区域. 点击执行.[/H][C]{fullcmd}[/C][/T]'
         radius: '[T]&e{parent} {subcmd} {args} &8- &7占领半径内的所有区块[H]&7占领指定半径内的所有区块.
           点击复制.[/H][SC]{fullcmd}[/SC][/T]'
       
       create: '[T]&e{parent} {subcmd} {args} &8- &7建立城镇[H]&7点击复制.[/H][SC]{fullcmd}[/SC][/T]'
       createcamp: '[T]&e{parent} {subcmd} {args} &8- &7建立露营地[H]&7点击复制.[/H][SC]{fullcmd}[/SC][/T]'
       merge: '[T]&e{parent} {subcmd} {args} &8- &7合并两个城镇[H]&7点击复制.[/H][SC]{fullcmd}[/SC][/T]'
-      leave: '[T]&e{parent} {subcmd} {args} &8- &7退出城镇或区域.[H]&7如果不指定城镇名或区域名, 你将退出现在所在的城镇或区域.
+      leave: '[T]&e{parent} {subcmd} {args} &8- &7退出城镇或子区域.[H]&7如果不指定城镇名或子区域名, 你将退出现在所在的城镇或子区域.
         &7点击复制.[/H][SC]{fullcmd}[/SC][/T]'
       unclaim:
         main: '[T]&e{parent} {subcmd} &8- &7放弃占领的区块[H]&7也可以放弃占领 &e/lands selection
@@ -329,9 +329,9 @@ help:
         radius: '[T]&e{parent} {subcmd} {args} &8- &7Unclaim radius[H]&7Unclaim all
           chunks in a specified radius. Click to copy.[/H][SC]{fullcmd}[/SC][/T]'
       delete: '[T]&e{parent} delete {args} &8- &7解散城镇[H]&7点击复制.[/H][SC]{fullcmd}[/SC][/T]'
-      trust: '[T]&e{parent} {subcmd} {args} &8- &7邀请玩家[H]&7使用 * 指代区域名可以使这个玩家加入城镇中的所有区域.
+      trust: '[T]&e{parent} {subcmd} {args} &8- &7邀请玩家[H]&7使用 * 指代子区域名可以使这个玩家加入城镇中的所有子区域.
         &7点击复制.[/H][SC]{fullcmd}[/SC][/T]'
-      untrust: '[T]&e{parent} {subcmd} {args} &8- &7移出玩家[H]&7使用 * 指代区域名可以将这个玩家从城镇中的所有区域移出.
+      untrust: '[T]&e{parent} {subcmd} {args} &8- &7移出玩家[H]&7使用 * 指代子区域名可以将这个玩家从城镇中的所有子区域移出.
         &7点击复制.[/H][SC]{fullcmd}[/SC][/T]'
       setRole: '[T]&e{parent} {subcmd} {args} &8- &7设置职位[H]&7点击复制.[/H][SC]{fullcmd}[/SC][/T]'
       accept: '[T]&e{parent} {subcmd} {args} &8- &7同意邀请[H]&7你可以使用 /lands invites &7命令以查看收到的所有城镇加入邀请.
@@ -342,7 +342,7 @@ help:
           &7点击复制.[/H][SC]{fullcmd}[/SC][/T]'
         disable: '[T]&e{parent} {subcmd} &8- &7关闭区块可视化[H]&7关闭现存的 &e/lands view &7创建的可视化范围.
           点击执行.[/H][C]{fullcmd}[/C][/T]'
-        here: '[T]&e{parent} {subcmd} &8- &7可视化区域[H]&7可视化你当前所处的区域. &7点击执行.[/H][C]{fullcmd}[/C][/T]'
+        here: '[T]&e{parent} {subcmd} &8- &7可视化子区域[H]&7可视化你当前所处的子区域. &7点击执行.[/H][C]{fullcmd}[/C][/T]'
         stay: '[T]&e{parent} {subcmd} &8- &7锁定Y轴[H]&7可视化范围不再跟随你改变高度. &7点击执行.[/H][C]{fullcmd}[/C][/T]'
       
       menu: '[T]&e{parent} {subcmd} {args} &8- &7打开菜单[H]&7点击复制.[/H][SC]{fullcmd}[/SC][/T]'
@@ -351,8 +351,8 @@ help:
       wild: '[T]&e{parent} {subcmd} {args} &8- &7传送到随机坐标[H]&7点击复制.[/H][C]{fullcmd}[/C][/T]'
       top: '[T]&e{parent} {subcmd} &8- &7查看城镇排行榜[H]&7点击执行.[/H][C]{fullcmd}[/C][/T]'
       selection:
-        main: '[T]&e{parent} {subcmd} {args} &8- &7选区模式[H]&7使用这个命令来调整区域大小. &7点击执行.[/H][C]{fullcmd}[/C][/T]'
-        assign: '[T]&e{parent} {subcmd} {args} &8- &7调整区域大小[H]&7点击复制.[/H][SC]{fullcmd}[/SC][/T]'
+        main: '[T]&e{parent} {subcmd} {args} &8- &7选区模式[H]&7使用这个命令来调整子区域大小. &7点击执行.[/H][C]{fullcmd}[/C][/T]'
+        assign: '[T]&e{parent} {subcmd} {args} &8- &7调整子区域大小[H]&7点击复制.[/H][SC]{fullcmd}[/SC][/T]'
         expand: '[T]&e{parent} {subcmd} &8- &7使选区覆盖全部Y轴范围[H]&7点击执行.[/H][C]{fullcmd}[/C][/T]'
       chat: '[T]&e{parent} {subcmd} {args} &8- &7城镇聊天[H]&7点击复制.[/H][SC]{fullcmd}[/SC][/T]'
       rename: '[T]&e{parent} {subcmd} {args} &8- &7重命名城镇[H]&7点击复制.[/H][SC]{fullcmd}[/SC][/T]'
@@ -365,28 +365,28 @@ help:
       deposit: '[T]&e{parent} {subcmd} {args} &8- &7向金库存款[H]&7点击复制.[/H][SC]{fullcmd}[/SC][/T]'
       withdraw: '[T]&e{parent} {subcmd} {args} &8- &7从金库取款[H]&7点击复制.[/H][SC]{fullcmd}[/SC][/T]'
       list: '[T]&e{parent} {subcmd} {args} &8- &7列出所有城镇[H]&7点击执行.[/H][C]{fullcmd}[/C][/T]'
-      assign: '[T]&e{parent} {subcmd} {args} &8- &7将选区分配给区域[H]&7点击复制.[/H][SC]{fullcmd}[/SC][/T]'
+      assign: '[T]&e{parent} {subcmd} {args} &8- &7将选区分配给子区域[H]&7点击复制.[/H][SC]{fullcmd}[/SC][/T]'
       setowner: '[T]&e{parent} {subcmd} {args} &8- &7转移城镇所有权[H]&7点击复制.[/H][SC]{fullcmd}[/SC][/T]'
       ban: '[T]&e{parent} {subcmd} {args} &8- &7拉黑玩家[H]&7点击复制.[/H][SC]{fullcmd}[/SC][/T]'
       unban: '[T]&e{parent} {subcmd} {args} &8- &7将玩家移出黑名单[H]&7点击复制.[/H][SC]{fullcmd}[/SC][/T]'
       taxes: '[T]&e{parent} {subcmd} &8- &7展示即将收取的税款信息[H]&7点击执行.[/H][C]{fullcmd}[/C][/T]'
       upkeep: '[T]&e{parent} {subcmd} &8- &7展示即将收取的维护费信息.[H]&7点击复制.[/H][C]{fullcmd}[/C][/T]'
-      unstuck: '[T]&e{parent} {subcmd} &8- &7传送到安全区域[H]&7当你被困在城镇内时可使用. &7点击执行.[/H][C]{fullcmd}[/C][/T]'
+      unstuck: '[T]&e{parent} {subcmd} &8- &7传送到安全子区域[H]&7当你被困在城镇内时可使用. &7点击执行.[/H][C]{fullcmd}[/C][/T]'
       claimlist: '[T]&e{parent} {subcmd} {args} &8- &7展示城镇占领的区块[H]&7这个命令会列出城镇占领的所有土地.
         &7点击执行.[/H][C]{fullcmd}[/C][/T]'
       rent:
-        main: '[T]&e{parent} {subcmd} {args} &8- &7管理出租[H]&7管理你当前所处的出租区域. &7点击复制.[/H][SC]{fullcmd}[/SC][/T]'
-        cancel: '[T]&e{parent} {subcmd} &8- &7取消出租[H]&7使你当前所处的区域不再对外出租. &7点击执行.[/H][C]{fullcmd}[/C][/T]'
-        info: '[T]&e{parent} {subcmd} &8- &7展示信息[H]&7展示你当前所处的对外出租的区域的信息. &7点击执行.[/H][C]{fullcmd}[/C][/T]'
+        main: '[T]&e{parent} {subcmd} {args} &8- &7管理出租[H]&7管理你当前所处的出租子区域. &7点击复制.[/H][SC]{fullcmd}[/SC][/T]'
+        cancel: '[T]&e{parent} {subcmd} &8- &7取消出租[H]&7使你当前所处的子区域不再对外出租. &7点击执行.[/H][C]{fullcmd}[/C][/T]'
+        info: '[T]&e{parent} {subcmd} &8- &7展示信息[H]&7展示你当前所处的对外出租的子区域的信息. &7点击执行.[/H][C]{fullcmd}[/C][/T]'
         list: '[T]&e{parent} {subcmd} &8- &7查看出租列表[H]&7查看所有城镇的出租信息. &7点击执行.[/H][C]{fullcmd}[/C][/T]'
         remove:
-          main: '[T]&e{parent} {subcmd} {args} &8- &7管理当前的已出租区域[H]&7管理你所处的已被他人租用的区域.
+          main: '[T]&e{parent} {subcmd} {args} &8- &7管理当前的已出租子区域[H]&7管理你所处的已被他人租用的子区域.
             &7点击复制.[/H][SC]{fullcmd}[/SC][/T]'
           offer: '[T]&e{parent} {subcmd} &8- &7取消出租[H]&7现有租客将无法继续延长租期. &7点击执行.[/H][C]{fullcmd}[/C][/T]'
           tenant: '[T]&e{parent} {subcmd} &8- &7踢出租客[H]&7直接踢出租客并向他们支付违约金. &7点击执行.[/H][C]{fullcmd}[/C][/T]'
       level: '[T]&e{parent} {subcmd} &8- &7查看升级进度[H]&7查看城镇升级的进程以及下一级带来的奖励. &7点击执行.[/H][C]{fullcmd}[/C][/T]'
       relations:
-        main: '[T]&e{parent} {subcmd} {args} &8- &7管理关系[H]&7将城镇或联邦设为你的盟友或政敌. 点击复制.[/H][SC]{fullcmd}[/SC][/T]'
+        main: '[T]&e{parent} {subcmd} {args} &8- &7管理外交关系[H]&7将城镇或联邦设为你的盟友或政敌. 点击复制.[/H][SC]{fullcmd}[/SC][/T]'
         allies:
           main: '[T]&e{parent} {subcmd} {args} &8- &7管理盟友[H]&7将城镇或联邦设为你的盟友. 点击复制.[/H][SC]{fullcmd}[/SC][/T]'
           add: '[T]&e{parent} {subcmd} {args} &8- &7添加盟友[H]&7将城镇或联邦设为你的盟友. 点击复制.[/H][SC]{fullcmd}[/SC][/T]'
@@ -484,7 +484,7 @@ help:
       list: '[T]&e{parent} {subcmd} {args} &8- &7列出所有联邦[H]&7点击执行.[/H][C]{fullcmd}[/C][/T]'
       top: '[T]&e{parent} {subcmd} &8- &7查看联邦排行榜[H]&7点击执行.[/H][C]{fullcmd}[/C][/T]'
       relations:
-        main: '[T]&e{parent} {subcmd} {args} &8- &7管理关系[H]&7将城镇或联邦设为你的盟友或政敌. 点击复制.[/H][SC]{fullcmd}[/SC][/T]'
+        main: '[T]&e{parent} {subcmd} {args} &8- &7管理外交关系[H]&7将城镇或联邦设为你的盟友或政敌. 点击复制.[/H][SC]{fullcmd}[/SC][/T]'
         allies:
           main: '[T]&e{parent} {subcmd} {args} &8- &7管理盟友[H]&7将城镇或联邦设为你的盟友. 点击复制.[/H][SC]{fullcmd}[/SC][/T]'
           add: '[T]&e{parent} {subcmd} {args} &8- &7添加盟友[H]&7将城镇或联邦设为你的盟友. 点击复制.[/H][SC]{fullcmd}[/SC][/T]'
@@ -501,39 +501,39 @@ lands:
     combat:
       tag: '#b#[config]color:purple,style:solid[/config]&7战斗状态:&5 {time}'
     flags:
-      block_place: '&c你不能在这里放置方块 (&c区域:&4 {area} &c城镇:&4 {land}&c). &8设置: {flag}'
-      block_break: '&c你不能在这里破坏方块 (&c区域:&4 {area} &c城镇:&4 {land}&c). &c设置: {flag}'
-      block_ignite: '&c你不能在这里点燃方块 (&c区域:&4 {area} &c城镇:&4 {land}&c). &c设置: {flag}'
-      interact_general: '&c你不能在这里进行交互 (&c区域:&4 {area} &c城镇:&4 {land}&c). &c设置: {flag}'
-      interact_door: '&c你不能在这里打开门 (&c区域:&4 {area} &c城镇:&4 {land}&c). &c设置: {flag}'
-      interact_mechanism: '&c你不能在这里使用设备 (&c区域:&4 {area} &c城镇:&4 {land}&c). &c设置: {flag}'
-      interact_container: '&c你不能在这里打开容器 (&c区域:&4 {area} &c城镇:&4 {land}&c). &c设置: {flag}'
-      interact_villager: '&c你不能在这里与村民交易 (&c区域:&4 {area} &c城镇:&4 {land}&c). &c设置: {flag}'
-      fly: '&c你不能在这里飞行 (&c区域:&4 {area} &c城镇:&4 {land}&c). &c设置: {flag}'
+      block_place: '&c你不能在这里放置方块 (&c子区域:&4 {area} &c城镇:&4 {land}&c). &8设置: {flag}'
+      block_break: '&c你不能在这里破坏方块 (&c子区域:&4 {area} &c城镇:&4 {land}&c). &c设置: {flag}'
+      block_ignite: '&c你不能在这里点燃方块 (&c子区域:&4 {area} &c城镇:&4 {land}&c). &c设置: {flag}'
+      interact_general: '&c你不能在这里进行交互 (&c子区域:&4 {area} &c城镇:&4 {land}&c). &c设置: {flag}'
+      interact_door: '&c你不能在这里打开门 (&c子区域:&4 {area} &c城镇:&4 {land}&c). &c设置: {flag}'
+      interact_mechanism: '&c你不能在这里使用设备 (&c子区域:&4 {area} &c城镇:&4 {land}&c). &c设置: {flag}'
+      interact_container: '&c你不能在这里打开容器 (&c子区域:&4 {area} &c城镇:&4 {land}&c). &c设置: {flag}'
+      interact_villager: '&c你不能在这里与村民交易 (&c子区域:&4 {area} &c城镇:&4 {land}&c). &c设置: {flag}'
+      fly: '&c你不能在这里飞行 (&c子区域:&4 {area} &c城镇:&4 {land}&c). &c设置: {flag}'
       spawn_teleport: '&c你不能传送到城镇&4 {land} &c的传送点. &7他们可以通过调整你所属职位的设置使你可以进行传送. &c设置:
         {flag}'
-      land_enter: '&c你不能进入城镇&4 {land} &c的区域&4 {area} &c(&c区域:&4 {area} &c城镇:&4 {land}&c).
+      land_enter: '&c你不能进入城镇&4 {land} &c的子区域&4 {area} &c(&c子区域:&4 {area} &c城镇:&4 {land}&c).
         &7你被传送到了上一个位置. &c设置: {flag}'
-      vehicle_use: '&c你不能在这里使用交通工具 (&c区域:&4 {area} &c城镇:&4 {land}&c). &c设置: {flag}'
-      item_pickup: '&c你不能在这里捡起掉落的物品 (&c区域:&4 {area} &c城镇:&4 {land}&c). &c设置: {flag}'
-      ender_pearl: '&c你不能使用末影珍珠传送到城镇&4 {land} &c的区域&4 {area}. &c设置: {flag}'
-      attack_animal: '&c你不能在这里攻击动物 (&c区域:&4 {area} &c城镇:&4 {land}&c). &c设置: {flag}'
-      attack_monster: '&c你不能在这里攻击怪物 (&c区域:&4 {area} &c城镇:&4 {land}&c). &7它们也不能攻击你.
+      vehicle_use: '&c你不能在这里使用交通工具 (&c子区域:&4 {area} &c城镇:&4 {land}&c). &c设置: {flag}'
+      item_pickup: '&c你不能在这里捡起掉落的物品 (&c子区域:&4 {area} &c城镇:&4 {land}&c). &c设置: {flag}'
+      ender_pearl: '&c你不能使用末影珍珠传送到城镇&4 {land} &c的子区域&4 {area}. &c设置: {flag}'
+      attack_animal: '&c你不能在这里攻击动物 (&c子区域:&4 {area} &c城镇:&4 {land}&c). &c设置: {flag}'
+      attack_monster: '&c你不能在这里攻击怪物 (&c子区域:&4 {area} &c城镇:&4 {land}&c). &7它们也不能攻击你.
         &c设置: {flag}'
     noaccess:
-      wilderness: '&c你不被允许在野外这么做. &c设置: {flag}'
-      area: '&c你不被允许在这个区域中这么做 (&c区域:&4 {area} &c城镇:&4 {land}&c). &c设置: {flag}'
-      banned: '&c你不被允许进入这个区域. &7你被这个区域拉黑了 &8(&7区域:&6 {area} &7城镇:&2 {land}&8)&7.'
+      wilderness: '&c你不被允许在荒野这么做. &c设置: {flag}'
+      area: '&c你不被允许在这个子区域中这么做 (&c子区域:&4 {area} &c城镇:&4 {land}&c). &c设置: {flag}'
+      banned: '&c你不被允许进入这个子区域. &7你被这个子区域拉黑了 &8(&7子区域:&6 {area} &7城镇:&2 {land}&8)&7.'
       claimblock: '&c这个占领方块不属于你. &7它属于&3 {player}&7.'
       combat:
-        attacker: '&c你不被允许在这里攻击玩家. &7这个区域属于城镇&2 {land}&7.'
-        target: '&c你的攻击目标不被允许在这里战斗. &7你同样也不能攻击他. &7这个区域属于城镇&2 {land}&7.'
-        ally: '&c你不能在野外攻击这个玩家, 因为他是你城镇的一名成员. &7你可以通过调整城镇区域设置来制作竞技场.'
-        wilderness: '&c你不能攻击这个玩家, 因为他在野外, 而你站在城镇领土里.'
+        attacker: '&c你不被允许在这里攻击玩家. &7这个子区域属于城镇&2 {land}&7.'
+        target: '&c你的攻击目标不被允许在这里战斗. &7你同样也不能攻击他. &7这个子区域属于城镇&2 {land}&7.'
+        ally: '&c你不能在荒野攻击这个玩家, 因为他是你城镇的一名成员. &7你可以通过调整城镇子区域设置来制作竞技场.'
+        wilderness: '&c你不能攻击这个玩家, 因为他在荒野, 而你站在城镇领土里.'
     area:
-      exists: '&c名为&4 {area} &c的区域已经存在于城镇&4 {land} &c中了.'
-      not-exist: '&c区域&4 {area} &c不存在于城镇&4 {land} &c中.'
-      default: '&c你不能对城镇&4 {land} &c的默认区域 &4{area} &c这样做.'
+      exists: '&c名为&4 {area} &c的子区域已经存在于城镇&4 {land} &c中了.'
+      not-exist: '&c子区域&4 {area} &c不存在于城镇&4 {land} &c中.'
+      default: '&c你不能对城镇&4 {land} &c的默认总区域 &4{area} &c这样做.'
     event:
       fly:
         counter: '#t#&6飞行模式即将关闭[newline]&7倒计时 &3{sec} &7秒'
@@ -545,11 +545,11 @@ lands:
         land: '#t#&2&l{land}[newline]&3{title}'
         camp: '#t#&2&l{land}[newline]&3{title}'
         admin: '#t#&2&l{land}[newline]{title}'
-        pvp-warning: '#a#&c你进入了可PVP区域.'
+        pvp-warning: '#a#&c你进入了可 PVP 子区域.'
       leave:
-        land: '#t#&2&l野外[newline]&7清风拂面'
-        camp: '#t#&2&l野外[newline]&7清风拂面'
-        admin: '#t#&2&l野外[newline]&7清风拂面'
+        land: '#t#&2&l荒野[newline]&7清风拂面'
+        camp: '#t#&2&l荒野[newline]&7清风拂面'
+        admin: '#t#&2&l荒野[newline]&7清风拂面'
       level:
         up: '#t#&6{object}[newline]&7升级到: {level}'
         down: '#t#&6{object}[newline]&7降级到: {level}'
@@ -569,15 +569,15 @@ lands:
       combat: '&c你不能在战斗过程中传送. &7请等待&5 {time} &7秒战斗状态解除后再进行传送.'
     claimblock:
       dropped: '&c一些占领方块掉到了地上. &7你的背包空间不足.'
-      success: '&7你获得了&3 {blocks} &7个占领方块. &7将它们放置在野外区块中以占领它.'
+      success: '&7你获得了&3 {blocks} &7个占领方块. &7将它们放置在荒野区块中以占领它.'
     capture:
       dropped: '&c一些战旗掉到了地上. &7你的背包空间不足.'
-      success: '&7你获得了&3 {blocks} &7个战旗. &7将它们放置在政敌的领土中以占领他们的区域.'
+      success: '&7你获得了&3 {blocks} &7个战旗. &7将它们放置在政敌的领土中以占领他们的子区域.'
     camp:
       dropped: '&c一些露营地方块掉到了地上. &7你的背包空间不足.'
       success: '&7你获得了&3 {blocks} &7个露营地方块. &7将他们放在地上以创建露营地.'
     blacklist:
-      untrusted: '&c你不被允许在这里使用这个命令. &7你不是城镇&2 {land} &c的区域&6 {area} &7的成员.'
+      untrusted: '&c你不被允许在这里使用这个命令. &7你不是城镇&2 {land} &c的子区域&6 {area} &7的成员.'
       general: '&c你不被允许在领土内使用这个命令.'
       war: '&c你不被允许在战争期间使用这个命令.'
     auto-action:
@@ -589,15 +589,15 @@ lands:
         unclaim: '#t#&6自动占领[newline]&c关闭'
     role:
       exists: '&c名为&4 {role} &c的职位已经存在了. &7请换个名字.'
-      not-exist: '&c在城镇&4 {land} &c的区域 &4{area} &c中并不存在职位&4 {role}&c.'
+      not-exist: '&c在城镇&4 {land} &c的子区域 &4{area} &c中并不存在职位&4 {role}&c.'
       max: '&c你不能为城镇创建更多的职位了. &7你可以创建的最大数量为&3 {max} &7.'
       player:
         land: '&c你不能在城镇&4 {land} &c中编辑这个玩家. &7他的职位&6 {role} &7与你的职位优先级相同或比你更高.'
-        area: '&c你不能在这个区域中编辑这个玩家 (&c区域:&4 {area} &c城镇:&4 {land}&c). &7他的职位&6 {role}
+        area: '&c你不能在这个子区域中编辑这个玩家 (&c子区域:&4 {area} &c城镇:&4 {land}&c). &7他的职位&6 {role}
           &7与你的职位优先级相同或比你更高.'
       weight:
         land: '&c你不能编辑城镇&4 {land} &c的职位&4 {role}&c. &7该职位的优先级与你的职位相同或比你更高.'
-        area: '&c你不能在这个区域编辑职位&4 {role} &c(&c区域:&4 {area} &c城镇:&4 {land}&c). &7该职位的优先级与你的职位相同或比你更高.'
+        area: '&c你不能在这个子区域编辑职位&4 {role} &c(&c子区域:&4 {area} &c城镇:&4 {land}&c). &7该职位的优先级与你的职位相同或比你更高.'
       delete:
         role: '&c你不能删除职位&4 {role}&c. &7这个职位是必须的.'
         entry: '&c你不能删除职位&4 {role}&c. &7它被用于容纳新成员.'
@@ -614,7 +614,7 @@ lands:
     war: '&c你现在不能这么做. &7{object} &7正在进行与 {enemy} &7的战争. &7请等战争结束后再试.'
     introduction:
       container-placement: |
-        &c你在野外放置了一个容器. &7其它玩家可以打开它并取走物品.
+        &c你在荒野放置了一个容器. &7其它玩家可以打开它并取走物品.
           [T]&7✖ 保护它: &e/{cmd}[H]&7将此区块占领为城镇领土.[/H][C]{fullcmd}[/C][/T]
     inbox:
       new:
@@ -633,22 +633,22 @@ lands:
       invalid: '&c没有名为&4 {shortcut}&c 的快捷方式.'
     rent:
       own: '&c你不能租用 / 购买你自己的领土. &7Shift + 点击全息图以取消出租或出售.'
-      edit: '&c你不能编辑城镇&4 {land}&7 的区域&4 {area}&c, 它被租售给玩家&3 {player}&7.'
-      tenant: '&c你没有租用所处的区域. 城镇&6 {land}&7 的区域&2 {area}&c 并没有被你租用.'
-      none: '&c城镇&4 {land}&c 的区域&4 {area} &c没有被租售给任何人.'
-      status: '&c城镇&4 {land}&c 的区域&4 {area}&c并没有正在出租或出售.'
+      edit: '&c你不能编辑城镇&4 {land}&7 的子区域&4 {area}&c, 它被租售给玩家&3 {player}&7.'
+      tenant: '&c你没有租用所处的子区域. 城镇&6 {land}&7 的子区域&2 {area}&c 并没有被你租用.'
+      none: '&c城镇&4 {land}&c 的子区域&4 {area} &c没有被租售给任何人.'
+      status: '&c城镇&4 {land}&c 的子区域&4 {area}&c并没有正在出租或出售.'
       sign: |
         &7你需要指定一个牌子类型 (第 2 行)
          &81. line:&7 Lands
          &82. line:&3 rent &7或 &3sell &8[&7area&8]
       set:
-        land: '&c你不能出租整个&4 {land} &c城镇. &7你可以在城镇中创建区域以供出租或直接出售整个城镇.'
-        already: '&c你不能再次出租这个区域. &7区域&6 {area} &7已经被&3 {player}&7 租用了. 租约将在&5 {time}&7
+        land: '&c你不能出租整个&4 {land} &c城镇. &7你可以在城镇中创建子区域以供出租或直接出售整个城镇.'
+        already: '&c你不能再次出租这个子区域. &7子区域&6 {area} &7已经被&3 {player}&7 租用了. 租约将在&5 {time}&7
           后到期.'
-        sold: '&c你不能出租已被购买的区域. &7区域&6 {area} &7已经被&3 {player}&7 买走了.'
+        sold: '&c你不能出租已被购买的子区域. &7子区域&6 {area} &7已经被&3 {player}&7 买走了.'
         success: |
-          &7你出租了区域&6 {area} &7. 租客需每次支付&c {cost} &7以租用区域&5 {time}&7.
-            [T]&8✖ &7取消出租: &e/lands rent removeOffer[H]&7点击取消区域的出租.[/H][C]lands rent removeOffer[/C][/T]
+          &7你出租了子区域&6 {area} &7. 租客需每次支付&c {cost} &7以租用子区域&5 {time}&7.
+            [T]&8✖ &7取消出租: &e/lands rent removeOffer[H]&7点击取消子区域的出租.[/H][C]lands rent removeOffer[/C][/T]
         invalid: |
           &7你的牌子格式不正确 (第 {line} 行)
            &81. line:&7 Lands
@@ -657,53 +657,53 @@ lands:
            &84. line:&7 单次租金 (example: 5 = 5)
         info: |
           [NoPrefix]
-          &7&m━━━━━━━━━<━&r &5&l出租区域 &7&m━>━━━━━━━━━
-          [T]&8• &7城镇:&a {land} &8[&8点击&8][H]&7点击查看区域范围.[/H][C]lands view here[/C][/T]
-           &8• &7区域:&6 {area}
+          &7&m━━━━━━━━━<━&r &5&l出租子区域 &7&m━>━━━━━━━━━
+          [T]&8• &7城镇:&a {land} &8[&8点击&8][H]&7点击查看子区域范围.[/H][C]lands view here[/C][/T]
+           &8• &7子区域:&6 {area}
            &8• &7花费:&c {cost} &7每 {time}
            &8• &8最大租期: {max}
-          &7&m━━━━━━━━━<━&r &5&l出租区域 &7&m━>━━━━━━━━━
+          &7&m━━━━━━━━━<━&r &5&l出租子区域 &7&m━>━━━━━━━━━
       rent:
-        expire: '&c你不能再延长区域&4 {area}&c 的租期了. &7城镇&2 {land} &7不再出租这个区域了. 当前租约过期时间&5
+        expire: '&c你不能再延长子区域&4 {area}&c 的租期了. &7城镇&2 {land} &7不再出租这个子区域了. 当前租约过期时间&5
           {time}&7 后.'
-        add: '&7你花费&c {cost}&7 延长了区域&6 {area} &7的租期&5 {add}&7. 租约将在&5 {time}&7 后到期.'
+        add: '&7你花费&c {cost}&7 延长了子区域&6 {area} &7的租期&5 {add}&7. 租约将在&5 {time}&7 后到期.'
         success: |
-          &7你成功花费&c {cost}&7租用了城镇&6 {land}&7 的区域&2 {area}&7. 租约将在&5 {time}&7 后到期.
+          &7你成功花费&c {cost}&7租用了城镇&6 {land}&7 的子区域&2 {area}&7. 租约将在&5 {time}&7 后到期.
             &8✖ &7延长租期: 点击全息图
-            [T]&8✖ &7取消租用: &e/lands rent cancel[H]&7点击取消租用该区域.[/H][C]lands rent cancel[/C][/T]
+            [T]&8✖ &7取消租用: &e/lands rent cancel[H]&7点击取消租用该子区域.[/H][C]lands rent cancel[/C][/T]
         info: |
           [NoPrefix]
           &7&m━━━━━━━━━<━&r &5&l租用信息 &7&m━>━━━━━━━━━
-          [T]&8• &7城镇:&a {land} &8[&8点击&8][H]&7点击查看区域范围.[/H][C]lands view here[/C][/T]
-           &8• &7区域:&6 {area}
+          [T]&8• &7城镇:&a {land} &8[&8点击&8][H]&7点击查看子区域范围.[/H][C]lands view here[/C][/T]
+           &8• &7子区域:&6 {area}
            &8• &7租客: {player}
            &8• &7剩余时间:&5 {left}
            &8• &8租用花费: {cost} 每 {time}
           &7&m━━━━━━━━━<━&r &5&l租用信息 &7&m━>━━━━━━━━━
         time: '&c你不能再续租子区域&4 {area}&c. &7城镇&2 {land} &7将最大租用时间设为&5 {max}&7.'
       cancel:
-        success: '&7你取消了对&6 {area}&7 的租用. 你不再拥有这个区域的权限了.'
+        success: '&7你取消了对&6 {area}&7 的租用. 你不再拥有这个子区域的权限了.'
       remove:
         offer:
           success:
             land: '&7城镇&2 {land} &7不再能被购买了.'
-            area: '&7城镇&6 {land}&7 的区域&2 {area}&c &7不再能被购买或租用了. 现存的租客将会在租约到期后自动解约.'
+            area: '&7城镇&6 {land}&7 的子区域&2 {area}&c &7不再能被购买或租用了. 现存的租客将会在租约到期后自动解约.'
         tenant:
           confirm: |
-            &c请确认是否向租客&4 {player} &c支付&4 {cost} &c违约金并强行让其不再租用区域:
+            &c请确认是否向租客&4 {player} &c支付&4 {cost} &c违约金并强行让其不再租用子区域:
               [T]&2✔ 确认[H]&7点击确认支付违约金.[/H][C]{cmd}[/C][/T]
-          success: '&7你将租客&3 {player} &7从城镇&6 {land}&7 的区域&2 {area}&7中赶了出去并向他支付了&c
+          success: '&7你将租客&3 {player} &7从城镇&6 {land}&7 的子区域&2 {area}&7中赶了出去并向他支付了&c
             {cost} &c违约金.'
-          target: '&c你被从城镇&4 {land}&c 的区域&4 {area}&c中赶了出去&c. &7他们向你支付了&c {compensation}
+          target: '&c你被从城镇&4 {land}&c 的子区域&4 {area}&c中赶了出去&c. &7他们向你支付了&c {compensation}
             &7作为违约金.'
       max-amount: '&c你不能在城镇&4 {land}&c 内租用或购买另一个子区域. &7你已经达到了这个城镇内的最大租购数量&3 {max} &7.'
     sell:
       sell:
-        rented: '&c你不能出售正在被租用的区域. &7区域&6 {area} &7已被&3 {player}&7 租用了. 租约将在&5 {time}&7
+        rented: '&c你不能出售正在被租用的子区域. &7子区域&6 {area} &7已被&3 {player}&7 租用了. 租约将在&5 {time}&7
           后到期.'
         success:
           area: |
-            &7你出售了区域&6 {area} &7. 价格:&c {cost}
+            &7你出售了子区域&6 {area} &7. 价格:&c {cost}
              &8✖ &7取消出售: &e/lands rent removeOffer
           land: |
             &7你出售了城镇&2 {land} &7. 价格:&c {cost}
@@ -715,16 +715,16 @@ lands:
            &83. line:&7 出售价格 (example: 5 = 5)
       buy:
         success:
-          area: '&7你花费&c {cost}&7 购买了城镇&6 {land}&7 的区域&2 {area}&7.'
+          area: '&7你花费&c {cost}&7 购买了城镇&6 {land}&7 的子区域&2 {area}&7.'
           land: '&7你花费&c {cost}&7 购买了城镇&2 {land}&7.'
         info:
           area: |
             [NoPrefix]
-            &7&m━━━━━━━━━<━&r &5&l出售区域 &7&m━>━━━━━━━━━
-            [T]&7城镇:&a {land} &8[&8点击&8][H]&7点击查看区域范围.[/H][C]lands view here[/C][/T]
-             &7区域:&6 {area}
+            &7&m━━━━━━━━━<━&r &5&l出售子区域 &7&m━>━━━━━━━━━
+            [T]&7城镇:&a {land} &8[&8点击&8][H]&7点击查看子区域范围.[/H][C]lands view here[/C][/T]
+             &7子区域:&6 {area}
              &7价格:&c {cost}
-            &7&m━━━━━━━━━<━&r &5&l出售区域 &7&m━>━━━━━━━━━
+            &7&m━━━━━━━━━<━&r &5&l出售子区域 &7&m━>━━━━━━━━━
           land: |
             [NoPrefix]
             &7&m━━━━━━━━━<━&r &5&l出售城镇 &7&m━>━━━━━━━━━
@@ -736,8 +736,8 @@ lands:
       sold: |
         [NoPrefix]
         &7---------<- &5&l已出售的城镇 &7->---------
-        [T]&7城镇:&a {land} &8[&8点击&8][H]&7点击查看区域范围.[/H][C]lands view here[/C][/T]
-         &7区域:&6 {area}
+        [T]&7城镇:&a {land} &8[&8点击&8][H]&7点击查看子区域范围.[/H][C]lands view here[/C][/T]
+         &7子区域:&6 {area}
          &7买主:&3 {player}
          &7成交价:&c {cost}
         &7---------<- &5&l已出售的城镇 &7->---------
@@ -745,7 +745,7 @@ lands:
       no-permission: '&c你的权限不足以这么做.'
       not-exist: '&c不存在名为&4 {object}&c 的城镇或联邦.'
       land-not-exist: '&c城镇&2 {land} &c不存在. &7没有叫这个名字的城镇.'
-      area-not-exist: '&c城镇&4 {land} &c中不存在区域&4 {area}&c. &7你可以在城镇菜单中创建一个区域.'
+      area-not-exist: '&c城镇&4 {land} &c中不存在子区域&4 {area}&c. &7你可以在城镇菜单中创建一个子区域.'
       noaccess:
         untrusted: '&c你不是城镇&4 {land} &c的成员. &7使用 &e/lands menu &7查看你所属的所有城镇.'
         land: '&c你不能为城镇&4 {land} &c这么做. &c设置: {flag}'
@@ -754,7 +754,7 @@ lands:
         position:
           flag: '&c你不能在当前位置为城镇&4 {land} &c这么做. &c设置: {flag}'
           untrusted: '&c你不能在当前位置为城镇&4 {land} &c这么做. &7你不是这个城镇的成员.'
-        area: '&c你不能在城镇&4 {land}&c 的区域&4 {area} &c中这么做.'
+        area: '&c你不能在城镇&4 {land}&c 的子区域&4 {area} &c中这么做.'
       no-edit-land: '&c你还未选择编辑一个城镇. &7使用 &e/lands edit &8<&e城镇名&8> &7来选择城镇作为编辑对象.'
       name-exists: '&c名称&4 {name} &c已经被其它城镇或联邦使用了. &7请换一个名字.'
       swear-word: '&c删除了一个不文明用语. &7请文明用语. 词语:&c {word}'
@@ -764,7 +764,7 @@ lands:
       banks-disabled: '&7金库功能已被禁用.'
       land-not-trusted: '&c玩家&4 {player} &7不是城镇&4 {land} &c的成员. 你需要先使用 &e/lands trust
         &7邀请他加入城镇.'
-      area-not-trusted: '&c你不能在这里这么做. &7你不是城镇&6 {land}&7 的区域&2 {area} &7的成员.'
+      area-not-trusted: '&c你不能在这里这么做. &7你不是城镇&6 {land}&7 的子区域&2 {area} &7的成员.'
       number: '&c你的输入&4 {input} &c不是一个数组. &7参数&3 {argument} &7需要是一个数字.'
       none: |
         &c你不是任何城镇的成员.
@@ -795,7 +795,7 @@ lands:
         number: '&c你的输入&4 {input} &c不是一个数字. &7参数 {pos}: {expected}'
         player: '&c玩家&4 {input}&c 不存在.'
         offline: '&c玩家&4 {input} &c不在线.'
-        world: '&c世界区域&4 {input} &c不存在. &7参数 {pos}: {expected}'
+        world: '&c世界子区域&4 {input} &c不存在. &7参数 {pos}: {expected}'
         world-disabled: '&c这在当前世界中被禁用了. &8世界: {input}'
         category: '&c你的输入&4 {input} &c不是一个类别. &7参数 {pos}: {expected}'
         funds: '&c你的输入&4 {input} &c不是一个金额. &7参数 {pos}:
@@ -832,8 +832,8 @@ lands:
         warn: '&c警告: &7这个区块属于另外一个插件. 名称:&3 {plugin}'
         cancelled: '&c你不能在这里创建选区. &7这个区块属于另外一个插件. 名称:&3 {plugin}'
       area:
-        conflicts: '&c发现了&4 {conflicts}个 &c区块与现存区域冲突. &7使用 &e/lands selection assign
-          {area} confirm &7以确认覆盖. 冲突区块属于区域: {areas}'
+        conflicts: '&c发现了&4 {conflicts}个 &c区块与现存子区域冲突. &7使用 &e/lands selection assign
+          {area} confirm &7以确认覆盖. 冲突区块属于子区域: {areas}'
       expand:
         enabled: '&7成功将选区的Y值扩展到最大.'
         disabled: '&7你的选区Y值不再是最大值.'
@@ -882,7 +882,7 @@ lands:
         success: '&7你为你的城镇&2 {land}&7 占领了半径&7 {radius} &7内的&3 {chunks}个 &7区块. 你花费了&c
           {cost}&7.'
       fill:
-        none: '&c无法确定范围. &7请保证你站在一个被你领地环绕的未被占领的区域.'
+        none: '&c无法确定范围. &7请保证你站在一个被你领地环绕的未被占领的子区域.'
         success: '&7你成功为你的城镇&2 {land} &7占领了范围内的&3 {chunks} &7个区块. 你花费了&c {cost}&7.'
       force-near:
         far-land: '&c你不能占领这个区块. &7新的领地必须与城镇&2 {land}&7 相连.'
@@ -903,9 +903,9 @@ lands:
       success: '&7你成功将城镇&2 {merge} &7与城镇&2 {land}&7 合并. 你花费了&c {cost}&7.'
     assign:
       selection: '&c你需要先创建一个选区. &7使用 &e/lands selection &7进行创建. 这之后再进行选区分配.'
-      default: '&c你不能将选区分配到默认总区域.'
+      default: '&c你不能将选区分配到默认总子区域.'
       size: '&c你的选区太小了. &7最小尺寸是&3 {min}格 &7方块, 而你的是&3 {current}格&7.'
-      success: '&7你成功更改了城镇&2 {land}&7 的子区域&6 {area} &7的大小&7. 区域边界现在对你可见.'
+      success: '&7你成功更改了城镇&2 {land}&7 的子区域&6 {area} &7的大小&7. 子区域边界现在对你可见.'
       conflict:
         land: '&c你的选区与城镇&4 {land}&c 的领地冲突. &7请调整你的选区.'
         area: '&c你的选区与子区域&4 {area}&c 冲突. &7请调整你的选区.'
@@ -919,18 +919,18 @@ lands:
           [T]&c✘ 删除 &8[&8点击&8][C]lands delete[/C][H]&7点击解散城镇&2 {land}&7.[/H][/T]
           [T]&2✔ 转让所有权 &8[&8点击&8][SC]lands setowner [/SC][H]&7点击复制这个命令.[/H][/T]
       land:
-        untrusted: '&7你不是城镇&2 {land}&7 的任何区域的成员.'
+        untrusted: '&7你不是城镇&2 {land}&7 的任何子区域的成员.'
         success: '&7成功离开了城镇&2 {land}&7.'
       area:
-        untrusted: '&7你不是城镇&2 {land}&7 的区域&6 {area} &7的成员.'
-        success: '&7成功离开了城镇&2 {land}&7 的区域&6 {area} &7.'
+        untrusted: '&7你不是城镇&2 {land}&7 的子区域&6 {area} &7的成员.'
+        success: '&7成功离开了城镇&2 {land}&7 的子区域&6 {area} &7.'
     unclaim:
-      rental: '&c你不能解除占领这个区块&7, 因为它是已被出租/售卖的区域&6 {area}&7 的一部分. 租客:&3 {player}'
+      rental: '&c你不能解除占领这个区块&7, 因为它是已被出租/售卖的子区域&6 {area}&7 的一部分. 租客:&3 {player}'
       split: '&c你不能解除占领这个区块, 因为这会将你的领地分为不相连的几块. &7会被分割的区块边界现在对你可见.'
       success: '&7成功解除占领区块 &8(&7城镇:&2 {land} &7X: {x} Z: {z}&8)&7. 你拿回了&c {back} &7的退款.'
       selection:
         empty: '&c你没有解除占领任何区块, 因为它们并没有被占领或你无权解除占领.'
-        rental: '&c你不能解除占领这个选区&7, 因为它是城镇&2 {land}&7 中已被出租/售卖的区域&6 {area}&7 的一部分&7.
+        rental: '&c你不能解除占领这个选区&7, 因为它是城镇&2 {land}&7 中已被出租/售卖的子区域&6 {area}&7 的一部分&7.
           租客:&3 {player}'
         split: '&7你成功解除占领了 {success} / {size}个 选区中的区块, &c其中 {failed}个 区块无法被解除占领, 因为这会将你的领地分为不相连的几块&7.
           会被分割的区块边界现在对你可见. 你拿回了&c {back} &7的退款.'
@@ -947,7 +947,7 @@ lands:
           [T]&2✔ 确认[H]&7点此确认.[/H][C]{fullcmd}[/C][/T]
       nation: '&c你不能解散这个城镇, 因为它是联邦&4 {nation}&c 的首都. &7你可能需要先解散联邦: &e/nations delete'
       success: '&7成功解散了你的城镇&2 {land}&7. 你拿回了&c {back} &7的退款.'
-      rented: '&c你不能解散这个城镇, 因为它的子区域&4 {area} &c已经被&4 {player}&c 租用或购买了. &7站在该区域使用
+      rented: '&c你不能解散这个城镇, 因为它的子区域&4 {area} &c已经被&4 {player}&c 租用或购买了. &7站在该子区域使用
         &e/lands rent removetenant &7以移除这个租客.'
       broadcast: '&7城镇&2 {land} &7被玩家&3 {player}&7 解散了.'
     trust:
@@ -958,17 +958,17 @@ lands:
         {members} &7.'
       max: '&c玩家&4 {player} &c不能加入更多城镇了. &7他最多只能加入&3 {max}个 &7城镇.' # &8Permission: lands.lands.<number>
       area:
-        invited: '&c玩家&4 {player} &c已经被邀请过加入城镇&4 {land}&c 的区域&4 {area} &c了. &7邀请在&5
+        invited: '&c玩家&4 {player} &c已经被邀请过加入城镇&4 {land}&c 的子区域&4 {area} &c了. &7邀请在&5
           {time} &7前被发送.'
-        trusted: '&7玩家&3 {player} &7已经加入过城镇&2 {land}&7 的区域&6 {area} &7了.'
-        success: '&7成功邀请玩家&3 {player} &7加入城镇&2 {land}&7 的区域&6 {area}&7. 他现在可以同意你的邀请.'
+        trusted: '&7玩家&3 {player} &7已经加入过城镇&2 {land}&7 的子区域&6 {area} &7了.'
+        success: '&7成功邀请玩家&3 {player} &7加入城镇&2 {land}&7 的子区域&6 {area}&7. 他现在可以同意你的邀请.'
         target: |
-          [T]&7玩家&3 {player} &7邀请你加入城镇&2 {land}&7 的区域&6 {area} &7.[H]&7点击开启邀请菜单.[/H][C]lands invites[/C][/T] &7税务:&c {tax}
+          [T]&7玩家&3 {player} &7邀请你加入城镇&2 {land}&7 的子区域&6 {area} &7.[H]&7点击开启邀请菜单.[/H][C]lands invites[/C][/T] &7税务:&c {tax}
             [T]&2✔ 同意 &8[&8点击&8][H]&7点击同意这个邀请.[/H][C]lands accept {land}[/C][/T]
             [T]&c✘ 拒绝 &8[&8点击&8][H]&7点击拒绝这个邀请.[/H][C]lands deny {land}[/C][/T]
         banned: |
-          &c你不能邀请&4 {player}&c 加入城镇&4 {land}&c 的区域&4 {area} &c. &7他被这个区域拉黑了.
-            [T]&2✔ 解禁: &e/{cmd} &8[&8点击&8][H]&7点此将玩家移出区域黑名单.[/H][C]{cmd}[/C][/T]
+          &c你不能邀请&4 {player}&c 加入城镇&4 {land}&c 的子区域&4 {area} &c. &7他被这个子区域拉黑了.
+            [T]&2✔ 解禁: &e/{cmd} &8[&8点击&8][H]&7点此将玩家移出子区域黑名单.[/H][C]{cmd}[/C][/T]
       land:
         invited: '&c玩家&4 {player} &c已被邀请过加入城镇&4 {land}&c 了. &7邀请在&5 {time} &7前被发送.'
         trusted: '&7玩家&3 {player} &7已经加入过城镇&2 {land}&7 了.'
@@ -984,26 +984,26 @@ lands:
     untrust:
       owner: '&c城镇主人不能被移出城镇. [T]&7可以用 &e/{cmd}&7 制定新所有者.[H]&7点击复制命令.[/H][SC]{cmd}[/SC][/T]'
       area:
-        already: '&7玩家&3 {player} &7并没有加入这个区域 &8(&7区域:&6 {area} &7城镇:&2 {land}&8)
+        already: '&7玩家&3 {player} &7并没有加入这个子区域 &8(&7子区域:&6 {area} &7城镇:&2 {land}&8)
           &7且没有被邀请过.'
-        revoke: '&7成功撤回在这个区域对玩家&3 {player} &7的加入邀请 &8(&7区域:&6 {area} &7城镇:&2 {land}&8)&7.
-          玩家没有加入该区域.'
-        success: '&7成功将玩家&3 {player} &7移出区域 &8(&7区域:&6 {area} &7城镇:&2 {land}&8)&7.'
-        rental: '&c你不能移出区域&4 {area}&c 的租客&4 {player} &c. &7站在区域内使用 &e/lands rent remove
-          &7解除这个区域的出租状态.'
+        revoke: '&7成功撤回在这个子区域对玩家&3 {player} &7的加入邀请 &8(&7子区域:&6 {area} &7城镇:&2 {land}&8)&7.
+          玩家没有加入该子区域.'
+        success: '&7成功将玩家&3 {player} &7移出子区域 &8(&7子区域:&6 {area} &7城镇:&2 {land}&8)&7.'
+        rental: '&c你不能移出子区域&4 {area}&c 的租客&4 {player} &c. &7站在子区域内使用 &e/lands rent remove
+          &7解除这个子区域的出租状态.'
       land:
-        already: '&7玩家&3 {player} &7没有加入城镇&2 {land} &7的任何区域且没有收到过邀请.'
-        revoke: '&7成功撤回在城镇&2 {land}&7 对玩家&3 {player} &7的邀请&7. 玩家没有加入任何区域.'
-        success: '&7成功将玩家&3 {player} &7移出城镇&2 {land}&7, 除了他租用或购买的区域外.'
+        already: '&7玩家&3 {player} &7没有加入城镇&2 {land} &7的任何子区域且没有收到过邀请.'
+        revoke: '&7成功撤回在城镇&2 {land}&7 对玩家&3 {player} &7的邀请&7. 玩家没有加入任何子区域.'
+        success: '&7成功将玩家&3 {player} &7移出城镇&2 {land}&7, 除了他租用或购买的子区域外.'
     setrole:
-      visitor: '&c你不能设置&4 {role} &c职位. &7如果你想要将玩家移出区域, 使用 &e/lands untrust {player}
+      visitor: '&c你不能设置&4 {role} &c职位. &7如果你想要将玩家移出子区域, 使用 &e/lands untrust {player}
         [area]&7.'
       land:
         untrusted: '&c玩家&4 {player} &c没有加入城镇&4 {land}&c. &7请先邀请他加入城镇.'
-        success: '&7成功在城镇&2 {land}&7 中所有被玩家&3 {player} &7加入的区域分配职位&3 {role}&7.'
+        success: '&7成功在城镇&2 {land}&7 中所有被玩家&3 {player} &7加入的子区域分配职位&3 {role}&7.'
       area:
-        untrusted: '&c玩家&4 {player} &c没有加入城镇&4 {land}&c 的区域&4 {area} &c. &7请先邀请他加入区域.'
-        success: '&7成功在城镇&2 {land}&7 的区域&6 {area} &7为玩家&3 {player} &7分配职位&3 {role}
+        untrusted: '&c玩家&4 {player} &c没有加入城镇&4 {land}&c 的子区域&4 {area} &c. &7请先邀请他加入子区域.'
+        success: '&7成功在城镇&2 {land}&7 的子区域&6 {area} &7为玩家&3 {player} &7分配职位&3 {role}
           &7.'
     accept:
       max: '&c你不能加入更多城镇了. &7你最多只能加入&3 {max}个 &7城镇.' # &8Permission: lands.lands.<number>
@@ -1015,13 +1015,13 @@ lands:
       notification: "&7你收到了来自其他城镇的&3 {invites}个 &7邀请. \n\n [T]&7查看或接受邀请[H]&7查看所有邀请\
         .[/H][C]lands invites[/C][/T]'\n"
       area:
-        success: '&7成功接受了来自城镇&2 {land} &7的区域&6 {area}&7 的邀请.'
-        broadcast: '&2{land} &8| &7玩家&3 {player} &7现在是城镇&2 {land} &7的区域&6 {area} &7的一名成员.'
+        success: '&7成功接受了来自城镇&2 {land} &7的子区域&6 {area}&7 的邀请.'
+        broadcast: '&2{land} &8| &7玩家&3 {player} &7现在是城镇&2 {land} &7的子区域&6 {area} &7的一名成员.'
       land:
         success: '&7成功接受了来自城镇&2 {land} &7的邀请.'
         broadcast: '&2{land} &8| &7玩家&3 {player} &7现在是城镇的一名成员.'
         owner: '&7成功接受了来自城镇&2 {land}&7 的邀请. 你现在是城镇&2 {land}&7 的主人.'
-      banned: '&c你不能加入城镇&4 {land}&c 的区域&4 {area}&c. &7这个区域将你拉黑了.'
+      banned: '&c你不能加入城镇&4 {land}&c 的子区域&4 {area}&c. &7这个子区域将你拉黑了.'
     setowner:
       confirm: |
         &7请确认你想邀请玩家 {player} 成为城镇&2 {land}&7 的新主人:
@@ -1073,9 +1073,9 @@ lands:
     balance: '&7城镇&2 {land} &7的金库存款有&3 {balance}'
     ban:
       area:
-        already: '&7玩家&3 {player} &7已经被城镇&2 {land}&7 的区域&6 {area} &7拉黑过了.'
-        success: '&7成功在城镇&2 {land}&7 的区域&6 {area} &7 拉黑玩家&3 {player}&7. 他将不能再进入这个区域.'
-        target: '&c城镇&4 {land} &c的区域&4 {area} &c将你拉黑了. &7你将不能再进入该区域.'
+        already: '&7玩家&3 {player} &7已经被城镇&2 {land}&7 的子区域&6 {area} &7拉黑过了.'
+        success: '&7成功在城镇&2 {land}&7 的子区域&6 {area} &7 拉黑玩家&3 {player}&7. 他将不能再进入这个子区域.'
+        target: '&c城镇&4 {land} &c的子区域&4 {area} &c将你拉黑了. &7你将不能再进入该子区域.'
       land:
         already: '&7玩家&3 {player} &7已经被城镇&2 {land}&7 拉黑过了.'
         success: '&7成功在城镇&2 {land}&7 拉黑玩家&3 {player}&7. 他将不能再进入城镇.'
@@ -1084,7 +1084,7 @@ lands:
           因为他是子区域&4 {area}&c 的租客. &7移除租客: &e/{cmd}'
     unban:
       area:
-        success: '&7成功将玩家&3 {player} &7移出区域黑名单 &8(&7区域:&6 {area} &7城镇:&2 {land}&8)&7.'
+        success: '&7成功将玩家&3 {player} &7移出子区域黑名单 &8(&7子区域:&6 {area} &7城镇:&2 {land}&8)&7.'
       land:
         success: '&7成功将玩家&3 {player} &7移出城镇&2 {land}&7 的黑名单.'
     chat:
@@ -1097,41 +1097,41 @@ lands:
         discord: '[NoPrefix]&2{land} &8| &9Discord &7{player} &8»&f {message}'
         spy: '[NoPrefix]&8[&c窃听&8] &2{land} &8| {role} &7{player} &8»&f {message}'
     view:
-      disabled: '&7成功关闭当前区域可视化.'
-      wilderness: '&7已启用区域可视化. &7你目前处于野外.'
-      tool: '&7你指向的区域是野外. [T]&7点此占领这个区域.[H]&7点击占领你指向的区块.[/H][C]lands claim mlc {world}
+      disabled: '&7成功关闭当前子区域可视化.'
+      wilderness: '&7已启用子区域可视化. &7你目前处于荒野.'
+      tool: '&7你指向的子区域是荒野. [T]&7点此占领这个子区域.[H]&7点击占领你指向的区块.[/H][C]lands claim mlc {world}
         {x} {z}[/C][/T]'
-      y-level: '&7你目前的位置是野外, 但这个区块已经被城镇&2 {land} &7在其它高度上占领了.'
+      y-level: '&7你目前的位置是荒野, 但这个区块已经被城镇&2 {land} &7在其它高度上占领了.'
       y-lock:
-        enabled: '&c成功关闭高度跟随: &7区域边界不再随你升降.'
-        disabled: '&a成功开启高度跟随: &7区域边界现在随你升降.'
+        enabled: '&c成功关闭高度跟随: &7子区域边界不再随你升降.'
+        disabled: '&a成功开启高度跟随: &7子区域边界现在随你升降.'
       info: |
         [NoPrefix]
-        &7&m━━━━━━━━━<━&r &5&l区域信息 &7&m━>━━━━━━━━━
+        &7&m━━━━━━━━━<━&r &5&l子区域信息 &7&m━>━━━━━━━━━
         [T]&8• &7城镇: &2{land} &8[&8点击&8][H]&7点此查看该城镇的更多信息.[/H][C]lands info {land}[/C][/T]
         &8• &7点击: {level}
         &8• &7联邦: {nation}
         &8• &7区块 &7X: {x} Z: {z}
-        &7&l区域:&6 {area}
+        &7&l子区域:&6 {area}
          &8• &7税务:&c {tax}
          &8• &7成员:&7 {players}
          &8• &7描述:&r {description}
-        &7&m━━━━━━━━━<━&r &5&l区域信息 &7&m━>━━━━━━━━━
+        &7&m━━━━━━━━━<━&r &5&l子区域信息 &7&m━>━━━━━━━━━
       area: |
         [NoPrefix]
-        &7&m━━━━━━━━━<━&r &5&l区域信息 &7&m━>━━━━━━━━━
+        &7&m━━━━━━━━━<━&r &5&l子区域信息 &7&m━>━━━━━━━━━
         [T]&8• &7城镇: &2{land} &8[&8点击&8][H]&7点此查看该城镇的更多信息.[/H][C]lands info {land}[/C][/T]
         &8• &7点击: {level}
-        [T]&7&l区域:&6 {area} &8[&8点击&8][H]&7点此查看该区域的更多信息.[/H][C]lands menu here[/C][/T]
+        [T]&7&l子区域:&6 {area} &8[&8点击&8][H]&7点此查看该子区域的更多信息.[/H][C]lands menu here[/C][/T]
          &8• &7税务:&c {tax}
          &8• &7成员:&7 {players}
          &8• &7描述:&r {description}
-        &7&m━━━━━━━━━<━&r &5&l区域信息 &7&m━>━━━━━━━━━
+        &7&m━━━━━━━━━<━&r &5&l子区域信息 &7&m━>━━━━━━━━━
     map:
       header: '&7&m━━━━━━━━━━<━&r &2城镇地图 &7&m━>━━━━━━━━━━[newline]'
       footer: '[newline]&7&m━━━━━━━━━━<━&r &2城镇地图 &7&m━>━━━━━━━━━━'
     unstuck:
-      success: '&7成功传送到最近的野外区块.'
+      success: '&7成功传送到最近的荒野区块.'
     taxes:
       none: '&7你没有任何需要缴纳的税款.'
       upcoming:
@@ -1162,12 +1162,12 @@ lands:
         &7&m━━━━━━━━━<━━━━━━━━━━━━━━━━>━━━━━━━━━
     relations:
       self: '&c你不能将&4 {object} &c设为它自己的盟友或敌国.'
-      nation: '&c所有关系由你城镇所属的联邦&4 {nation}&c 统一管理. 你不能自行更改'
+      nation: '&c所有外交关系由你城镇所属的联邦&4 {nation}&c 统一管理. 你不能自行更改'
       allies:
         add:
           already: '&7{target} &7已经是 {object}&7 的盟友了.'
           nation: |
-            &c你不能与城镇&4 {land}&c 联盟. &7这个城镇的关系由联邦&9 {nation}&7 统一管理.
+            &c你不能与城镇&4 {land}&c 联盟. &7这个城镇的外交关系由联邦&9 {nation}&7 统一管理.
               [T]&7✖ 向联邦发送联盟申请&9 {nation}&7.[H]&7点此向联邦&9 {nation}&7 发送联盟申请.[/H][C]{cmd}[/C][/T]
           success: '&7成功向 {target}&7 发送联盟请求. 如果他们同意, 你 &8(&7{object}&8) &7将会与他们成为盟友.'
         remove:
@@ -1180,7 +1180,7 @@ lands:
           already: '&7{target} &7已经是 {object}&7 的政敌了.'
           revoked: '&7你 &8(&7{object}&8) 撤回了对 {target}&7 的和解请求.'
           nation: |
-            &c你不能与城镇&4 {land} &c敌对. &7这个城镇的关系由联邦&9 {nation}&7 统一管理.
+            &c你不能与城镇&4 {land} &c敌对. &7这个城镇的外交关系由联邦&9 {nation}&7 统一管理.
               [T]&7✖ 与联邦&9 {nation} &7敌对.[H]&7点此与联邦&9 {nation} &7成为敌对关系.[/H][C]{cmd}[/C][/T]
           success: '&7你 &8(&7{object}&8) &7和 {target} &7现在互相敌对了.'
           broadcast: '&7{object} &7和 {target} &7现在互相敌对了.'
@@ -1212,7 +1212,7 @@ lands:
 wars:
   message:
     noaccess:
-      wilderness: '&c你不能在战争期间在野外这样做. &c设置: {flag}'
+      wilderness: '&c你不能在战争期间在荒野这样做. &c设置: {flag}'
       general: '&c你不能在与&4 {land}&c 战争时这样做. &c设置: {flag}'
       pillage: '&c你不能在敌方城镇&4 {land} &c在线的守卫者不足时掠夺这个城镇. &7请至少等待城镇&2 {land} &7有&3 {defenders}个
         &7守卫者上线.'
@@ -1231,8 +1231,8 @@ wars:
         defenders: '&7我们的队友&a {defender} &7杀死了&c {attacker} &a+ {points} 点数'
     capture:
       place:
-        wilderness: '&c不能在野外放置战旗. &7你需要将它放置在敌方领土中.'
-        overlap: '&c战旗信标和其基座不能与野外重合, 请让放置位置再靠近敌方领土一点.'
+        wilderness: '&c不能在荒野放置战旗. &7你需要将它放置在敌方领土中.'
+        overlap: '&c战旗信标和其基座不能与荒野重合, 请让放置位置再靠近敌方领土一点.'
         outskirts: '&c不能在这里放置战旗. 战旗只能被放置在敌方领土的最外圈.'
         state: '&c你并没有正在与城镇&4 {land} &c进行战争或战争还未开始.'
         y: '&c不能在这里放置战旗. &7你只能将战旗放置在Y轴坐标由&3 {min} &7到&3 {max} &7的位置.'
@@ -1240,14 +1240,14 @@ wars:
         space: '&c不能在这里放置战旗. &7这个位置没有足够的空间.'
         cooldown: '&c你方还需要等待&4 {time} &c才能放置下一个战旗.'
         max: '&c你方已经达到了可同时存在的最大战旗数量&4 {max}个&c. 请等待其它战旗被破坏或成功起效后再放置下一个.'
-        invader: '#t#&a战旗[newline]&a成功放置在敌方领土: {land}, {x}, {y}, {z}[newline]&a靠近战旗以占领区域.'
+        invader: '#t#&a战旗[newline]&a成功放置在敌方领土: {land}, {x}, {y}, {z}[newline]&a靠近战旗以占领子区域.'
         defender: '#t#&c战旗[newline]&c被放置在了我方领土: {land}, {x}, {y}, {z}[newline]&c快去破坏战旗.'
         region: '&c不能在这里放置战旗. &7战旗生效范围与其他战旗重合了.'
       destroy:
         presense: '&c你目前不能破坏这个战旗. &7战旗范围内仍有&3 {players}个 &7敌方玩家. 你需要先清除他们'
         invader: '#t#&c战旗[newline]&c放置在敌方城镇 {land} 内的战旗被破坏了'
         defender: '#t#&a战旗[newline]&a我方城镇 {land} 拔除了战旗[newline]&2&l+ {points} 点数'
-      none: '#b#[config]color:green,style:solid[/config]&a区域内无入侵者.'
+      none: '#b#[config]color:green,style:solid[/config]&a子区域内无入侵者.'
       online: '#a#&c无法占领: 城镇 {land} 至少要有 {min}个 成员在线.'
       success:
         invader: '#t#&a战旗[newline]&a我们成功在城镇 {land} 占领了 {chunks}个 区块[newline]&2&l+
@@ -1282,7 +1282,7 @@ wars:
           [T]&7✖ 宣布敌对[H]&7点击将 {object} &7宣布为政敌来与它开战.[/H][C]{cmd}[/C][/T]
       ally: |
         &c你不能对盟友 {object}&c 宣战.
-          [T]&7✖ 管理关系[H]&7点此管理你的关系.[/H][C]{cmd}[/C][/T]
+          [T]&7✖ 管理外交关系[H]&7点此管理你的外交关系.[/H][C]{cmd}[/C][/T]
       war-shield: '&c你不能对 {object}&c 宣战. &7它的战争护盾还能生效&5 {time}&7.'
       no-nation: '&c你不能对&4 {land}&c 宣战. &7你只能对联邦的成员城镇宣战.'
       admin: '&c你不能对森林公共城镇宣战.'
@@ -1492,7 +1492,7 @@ list:
       - ''
     rented:
     - ''
-    - '&7区域&6 {area}'
+    - '&7子区域&6 {area}'
     - '&7租客: {player}'
     - '&7剩余时长 &5{time}'
     - '&7价格 &c{cost} &7每 &5{time}'
@@ -1503,7 +1503,7 @@ list:
     sold:
       area:
       - ''
-      - '&7区域&6 {area}'
+      - '&7子区域&6 {area}'
       - '&a卖给了玩家 &7{player}'
       - '&8Shift + 点击: 放弃购买'
       - ''
@@ -1541,7 +1541,7 @@ list:
       area:
       - ''
       - '&a购买'
-      - '&7区域: &2{area}'
+      - '&7子区域: &2{area}'
       - '&7价格 &c{cost}'
       - '&8[&f点击购买&8]'
       - ''
@@ -1556,7 +1556,7 @@ list:
       - ''
     rented:
     - ''
-    - '&7区域&6 {area}'
+    - '&7子区域&6 {area}'
     - '&7租客: {player}'
     - '&7剩余时长 &5{time}'
     - '&7价格 &c{cost} &7每 &5{time}'
@@ -1568,7 +1568,7 @@ list:
       area:
       - ''
       - '&a已出售'
-      - '&7区域: &6{area}'
+      - '&7子区域: &6{area}'
       - '&7买主: {player}'
       - '&8Shift + 点击: 放弃购买'
       - ''
