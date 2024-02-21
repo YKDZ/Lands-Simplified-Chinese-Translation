@@ -30,7 +30,7 @@ general:
     members: '&e☺ 成员'
     economy: '&c 经济'
     war: '&4⚔ 战争'
-    relations: '&a☯ 关系'
+    relations: '&a☯ 外交关系'
     posts: '&7通知'
   
   rentables:
@@ -78,19 +78,19 @@ gui:
           - '   &7这里包含了你创建的城镇'
           - '   &7与你加入的城镇'
           material: eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvODQ0OWI5MzE4ZTMzMTU4ZTY0YTQ2YWIwZGUxMjFjM2Q0MDAwMGUzMzMyYzE1NzQ5MzJiM2M4NDlkOGZhMGRjMiJ9fX0=
-          slots: 12
+          slots: 31
         all-lands:
           name: '&9&l所有城镇'
           lore:
           - '&8✖ &7点击查看森林里所有的城镇'
           material: eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvYzljODg4MWU0MjkxNWE5ZDI5YmI2MWExNmZiMjZkMDU5OTEzMjA0ZDI2NWRmNWI0MzliM2Q3OTJhY2Q1NiJ9fX0=
-          slots: 31
+          slots: 29
         invites:
           name: '&6&l邀请信箱'
           lore:
           - '&8✖ &7点击查看你收到的所有邀请.'
           material: WRITABLE_BOOK
-          slots: 15
+          slots: 13
         limitation:
           name: '&c&l你的权益'
           lore:
@@ -104,16 +104,16 @@ gui:
           - '&8• &7最多加入&3 {lands} &7个城镇'
           - '&8• &7为你加入的城镇提供 &3{support-chunks} &7最大区块数'
           material: INHERIT
-          slots: 16
+          slots: 17
         flags:
           name: '&6&l设置'
           lore:
           - '&8✖ &7编辑个人设置'
           material: eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvZWMyZmYyNDRkZmM5ZGQzYTJjZWY2MzExMmU3NTAyZGM2MzY3YjBkMDIxMzI5NTAzNDdiMmI0NzlhNzIzNjZkZCJ9fX0=
-          slots: 9
+          slots: 32
         nations:
           material: eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNDU1ODdkYTdmZTczMzZlOGFiOWY3OTFlYTVlMmNmYzhhODI3Y2E5NTk1NjdlYjlkNTNhNjQ3YmFiZjk0OGQ1In19fQ==
-          slots: 13
+          slots: 12
           name: '&9&l你的联邦'
           lore:
           - '&8✖ &7点击管理你的联邦.'
@@ -121,13 +121,13 @@ gui:
           - '    &8• &7你加入的: {trusted}'
         rentable:
           material: OAK_FENCE
-          slots: 33
+          slots: 31
           name: '&6&l可租用'
           lore:
           - '&8✖ &7查看所有可被租用的区域'
         all-nations:
           material: eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvY2Y0MDk0MmYzNjRmNmNiY2VmZmNmMTE1MTc5NjQxMDI4NmE0OGIxYWViYTc3MjQzZTIxODAyNmMwOWNkMSJ9fX0=
-          slots: 32
+          slots: 30
           name: '&9&l所有联邦'
           lore:
           - '&8✖ &7点击查看所有联邦.'
@@ -153,17 +153,23 @@ gui:
           - '&7设置城镇欢迎语'
           - '&7编辑城镇图标'
           material: BEACON
-          slots: 34
+          slots: 32
         level:
           name: '&6&l等级'
           lore:
           - '&8✖ &7查看城镇升级进度.'
           material: EXPERIENCE_BOTTLE
-          slots: 33
+          slots: 14
         spawn:
-          name: '&8> &6&l传送点'
           lore:
-          - '&8✖ &7点传送到城镇传送点.'
+          - '&8✖ &b左键'
+          - '   &7传送到城镇传送点.'
+          - '&8✖ &bSHIFT + 左键'
+          - '   &7设置传送点.'
+          - '&8✖ &9SHIFT + 右键'
+          - '   &7访客传送: {teleport}'
+          - '   &8• 这也可以在职位设置中编辑.'
+          name: '&6&l传送点'
           material: ENDER_PEARL
           slots: 9
         land-settings:
@@ -171,21 +177,21 @@ gui:
           lore:
           - '&7修改当前区域的环境设置'
           material: eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvODQ0OWI5MzE4ZTMzMTU4ZTY0YTQ2YWIwZGUxMjFjM2Q0MDAwMGUzMzMyYzE1NzQ5MzJiM2M4NDlkOGZhMGRjMiJ9fX0=
-          slots: 30
+          slots: 29
         roles:
           name: '&8> &6职位'
           lore:
           - '&7查看或编辑职位'
           - '&7当前区域&6 {area}&7.'
           material: eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvZThiOGM2YTQ2ZDg3Y2Y4NmE1NWRmMjE0Y2Y4NGJmNDVjY2EyNWVkYjlhNjc2ZTk2MzY0ZGQ2YTZlZWEyMzViMyJ9fX0=
-          slots: 31
+          slots: 30
         taxes:
           name: '&8> &6税务'
           lore:
           - '&7查看区域税务'
           - '&7当前区域&6 {area}&7.'
           material: GOLD_INGOT
-          slots: 32
+          slots: 31
         areas:
           name: '&8> &6区域'
           lore:
@@ -195,7 +201,7 @@ gui:
           - '&7区域:&3 {areas} &7/&c {max-areas}'
           - '&7领土:&3 {chunks} &7/&c {max-chunks}'
           material: OAK_FENCE
-          slots: 12
+          slots: 11
         inbox:
           name: '&8> &6日志箱 &8(&7{amount}条&8)'
           lore:
@@ -204,21 +210,19 @@ gui:
           - '&7日志信息:'
           - '{inbox}'
           material: eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNmJmM2ZjZGNjZmZkOTYzZTQzMzQ4MTgxMDhlMWU5YWUzYTgwNTY2ZDBkM2QyZDRhYjMwNTFhMmNkODExMzQ4YyJ9fX0=
-          slots: 14
+          slots: 15
         relations:
-          enable: false
-          name: '&6&l关系'
+          name: '&6&l外交关系'
           lore:
-          - '&8✖ &7管理城镇与其它城镇的关系'
+          - '&8✖ &7管理城镇与其它城镇的外交关系'
           material: LIME_BANNER
-          slots: 15
+          slots: 13
         relations_camp:
-          enable: false
-          name: '&6&l关系'
+          name: '&6&l外交关系'
           lore:
-          - '&c露营地无法拥有关系.'
+          - '&c露营地无法拥有外交关系.'
           material: LIME_BANNER
-          slots: 15
+          slots: 13
         stats:
           name: '&6&l统计数据'
           lore:
@@ -241,13 +245,13 @@ gui:
           slots: 16
         level_camp:
           material: EXPERIENCE_BOTTLE
-          slots: 33
+          slots: 14
           name: '&6&l等级'
           lore:
           - '&c露营地没有等级.'
         player-management:
           material: eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvZThiOGM2YTQ2ZDg3Y2Y4NmE1NWRmMjE0Y2Y4NGJmNDVjY2EyNWVkYjlhNjc2ZTk2MzY0ZGQ2YTZlZWEyMzViMyJ9fX0=
-          slots: 13
+          slots: 12
           name: '&6&l玩家管理'
           lore:
           - '&8✖ &7管理城镇成员, 黑名单,'
@@ -302,7 +306,7 @@ gui:
           various:
             slots: 31
   area:
-    title: '&8&l{land} &8> {area}'
+    title: '&8{area}'
     items:
       default:
         land-settings:
@@ -311,7 +315,7 @@ gui:
           - '&8✖ &7点击编辑这个区域的环境设置'
           - '   &7如植物是否能生长.'
           material: eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvODQ0OWI5MzE4ZTMzMTU4ZTY0YTQ2YWIwZGUxMjFjM2Q0MDAwMGUzMzMyYzE1NzQ5MzJiM2M4NDlkOGZhMGRjMiJ9fX0=
-          slots: 30
+          slots: 29
         roles:
           name: '&6&l职位'
           lore:
@@ -319,20 +323,20 @@ gui:
           - ''
           - '   &8• &7默认区域的职位会被自动添加到这个区域'
           material: eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvZThiOGM2YTQ2ZDg3Y2Y4NmE1NWRmMjE0Y2Y4NGJmNDVjY2EyNWVkYjlhNjc2ZTk2MzY0ZGQ2YTZlZWEyMzViMyJ9fX0=
-          slots: 31
+          slots: 30
         taxes:
           name: '&6&l税务'
           lore:
           - '&8✖ &7点击管理这个区域的税务.'
           - '   &7税金会由每个区域独立结算.'
           material: GOLD_INGOT
-          slots: 32
+          slots: 31
         various:
           name: '&6&l杂项设置'
           lore:
           - '&8✖ &7点击编辑区域名和区域简介'
           material: BEACON
-          slots: 33
+          slots: 32
         child_failure_access:
           name: '&4职位权限不足'
           lore:
@@ -341,7 +345,7 @@ gui:
           - ' &8• &7权限: {flag}'
         player-management:
           material: eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvZThiOGM2YTQ2ZDg3Y2Y4NmE1NWRmMjE0Y2Y4NGJmNDVjY2EyNWVkYjlhNjc2ZTk2MzY0ZGQ2YTZlZWEyMzViMyJ9fX0=
-          slots: 12
+          slots: 11
           name: '&6&l玩家管理'
           lore:
           - '&8✖ &7管理城镇成员, 黑名单,'
@@ -934,9 +938,9 @@ gui:
           material: GOLD_INGOT
           slots: 29
         relations:
-          name: '&6&l关系'
+          name: '&6&l外交关系'
           lore:
-          - '&8✖ &7管理联邦与其它联邦的关系'
+          - '&8✖ &7管理联邦与其它联邦的外交关系'
           material: LIME_BANNER
           slots: 14
         level:
@@ -1017,7 +1021,7 @@ gui:
           - ' &8• &7设置指令:'
           - '   &e/lands setspawn'
   relations:
-    title: '&8关系'
+    title: '&8外交关系'
     items:
       default:
         allies:
@@ -1035,13 +1039,13 @@ gui:
         offer_sent:
           name: '&6&l发送的请求'
           lore:
-          - '&8✖ &7管理发出的关系请求.'
+          - '&8✖ &7管理发出的外交关系请求.'
           material: eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNTUxNDlkZGRhZGVkMjBkMjQ0ZTBiYjYyYTJkOWZhMGRjNmM2YTc4NjI1NTkzMjhhOTRmNzc3MjVmNTNjMzU4In19fQ==
           slots: 24
         offer_received:
           name: '&6&l受到的请求'
           lore:
-          - '&8✖ &7管理收到的关系请求.'
+          - '&8✖ &7管理收到的外交关系请求.'
           material: eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvOTQ3MmM5ZDYyOGJiMzIyMWVmMzZiNGNiZDBiOWYxNWVkZDU4ZTU4NjgxODUxNGQ3ZTgyM2Q1NWM0OGMifX19
           slots: 26
   admin_wilderness:
@@ -1071,37 +1075,37 @@ gui:
     items:
       default:
         wilderness:
-          name: '&6&lWilderness Flags'
+          name: '&6&l荒野设置'
           lore:
-          - '&8✖ &7Toggle role and natural'
-          - '   &7flags in the wilderness.'
+          - '&8✖ &7在荒野区域修改'
+          - '   &7职位设置和环境设置.'
           material: NAME_TAG
           slots: 21
         lands:
-          name: '&6&lManage Admin Lands'
+          name: '&6&l编辑管理员城镇'
           lore:
-          - '&8✖ &7View and manage admin lands.'
+          - '&8✖ &7查看和编辑管理员城镇.'
           - ''
-          - '    &8• &7To further edit admin lands, execute'
-          - '      &3/lands edit &8<&3land&8>&7, just like'
-          - '      &7you would do with normal lands.'
+          - '    &8• &7使用 &3/lands edit &8<&3城镇名&8>&7 以'
+          - '      &7进一步编辑管理员城镇,'
+          - '      &7就像编辑普通城镇一样.'
           - ''
-          - '    &8• &7Admin lands don''t pay any upkeep'
-          - '      &7and can''t participate in wars. While'
-          - '      &7their owner is automatically set to'
-          - '      &7"Server", you can still change it by'
-          - '      &7executing &3/lands setowner&7.'
+          - '    &8• &7管理员城镇无需缴纳维护费'
+          - '      &7且无法参加战争.'
+          - '      &7它的主人默认为 &f服务器'
+          - '      &7但你仍可以用命令 &3/lands setowner'
+          - '      &7为它指定主人.'
           material: eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvMTI2Yjc3MjMyOWNmMzJmODY0M2M0OTI4NjI2YjZhMzI1MjMzZmY2MWFhOWM3NzI1ODczYTRiZDY2ZGIzZDY5MiJ9fX0=
           slots: 25
         child_failure_world:
-          name: '&4&lNot a Lands world'
+          name: '&4&l不是城镇世界'
           lore:
-          - '&cThe world you''re currently standing'
-          - '&cin must be a Lands claim world.'
+          - '&c你当前所处的世界'
+          - '&c必须是一个城镇世界.'
           - ''
-          - ' &8• &7You can add claim worlds in'
-          - '   &7the config by editing the'
-          - '   &7"claim-worlds_list" option.'
+          - ' &8• &7你可以在配置文件中'
+          - '   &7修改 "claim-worlds_list"'
+          - '   &7以新增城镇世界.'
   list_player_lands:
     title: '&8你的城镇'
     items:
@@ -1599,47 +1603,56 @@ gui:
           name: '&6&l破坏方块: {enabled}'
           lore:
           - '&8✖ &7是否允许这个职位破坏方块?'
+          - '   &7解锁: {unlocked}'
           material: IRON_PICKAXE
         entry_block_place:
           name: '&6&l放置方块: {enabled}'
           lore:
           - '&8✖ &7是否允许这个职位放置方块?'
+          - '   &7解锁: {unlocked}'
           material: OAK_PLANKS
         entry_block_ignite:
           name: '&6&l点燃方块: {enabled}'
           lore:
           - '&8✖ &7是否允许这个职位点燃方块?'
+          - '   &7解锁: {unlocked}'
           material: FLINT_AND_STEEL
         entry_interact_general:
           name: '&6&l通用交互: {enabled}'
           lore:
           - '&8✖ &7是否允许这个职位与?'
           - '&8     与未被其它设置控制的普通方块交互?'
+          - '   &7解锁: {unlocked}'
           material: STRING
         entry_interact_door:
           name: '&6&l开关门: {enabled}'
           lore:
           - '&8✖ &7是否允许这个职位开关门?'
+          - '   &7解锁: {unlocked}'
           material: IRON_DOOR
         entry_interact_trapdoor:
           name: '&6&l开关活板门: {enabled}'
           lore:
           - '&8✖ &7是否允许这个职位开关活板门?'
+          - '   &7解锁: {unlocked}'
           material: OAK_TRAPDOOR
         entry_interact_container:
           name: '&6&l开关容器: {enabled}'
           lore:
           - '&8✖ &7是否允许这个职位开关容器?'
+          - '   &7解锁: {unlocked}'
           material: CHEST
         entry_interact_mechanism:
           name: '&6&l使用红石: {enabled}'
           lore:
           - '&8✖ &7是否允许这个职位使用红石元件?'
+          - '   &7解锁: {unlocked}'
           material: REDSTONE
         entry_interact_villager:
           name: '&6&l村民交易: {enabled}'
           lore:
           - '&8✖ &7是否允许这个职位与村民交易?'
+          - '   &7解锁: {unlocked}'
           material: EMERALD
         entry_attack_player:
           name: '&6&l攻击玩家: {enabled}'
@@ -1652,11 +1665,13 @@ gui:
           - '    &8• &7&l双向作用:'
           - '      &7玩家只能攻击'
           - '      &7"可以攻击自己"的玩家.'
+          - '   &7解锁: {unlocked}'
           material: IRON_SWORD
         entry_attack_animal:
           name: '&6&l攻击动物: {enabled}'
           lore:
           - '&8✖ &7是否允许这个职位攻击动物?'
+          - '   &7解锁: {unlocked}'
           material: WOODEN_SWORD
         entry_attack_monster:
           name: '&6&l攻击怪物: {enabled}'
@@ -1665,57 +1680,68 @@ gui:
           - ''
           - '    &8• &7&l如果禁止:'
           - '      &7怪物也不再能攻击这个职位的玩家'
+          - '   &7解锁: {unlocked}'
           material: ZOMBIE_HEAD
         entry_vehicle_use:
           name: '&6&l使用载具: {enabled}'
           lore:
           - '&8✖ &7是否允许这个职位使用载具?'
+          - '   &7解锁: {unlocked}'
           material: MINECART
         entry_fly:
           name: '&6&l飞行: {enabled}'
           lore:
           - '&8✖ &7是否允许这个职位在本区域使用 &e/fly ?'
+          - '   &7解锁: {unlocked}'
           material: FEATHER
         entry_land_enter:
           name: '&6&l进入区域: {enabled}'
           lore:
           - '&8✖ &7是否允许这个职位进入这个区域?'
+          - '   &7解锁: {unlocked}'
           material: OAK_FENCE_GATE
         entry_item_pickup:
           name: '&6&l捡起物品: {enabled}'
           lore:
           - '&8✖ &7是否允许这个职位捡起地上的物品?'
+          - '   &7解锁: {unlocked}'
           material: HOPPER
         entry_ender_pearl:
           name: '&6&l使用末影传送: {enabled}'
           lore:
           - '&8✖ &7是否允许这个职位用珍珠或紫颂果传送入城镇?'
+          - '   &7解锁: {unlocked}'
           material: ENDER_PEARL
         entry_trample_farmland:
           name: '&6&l踩坏耕地: {enabled}'
           lore:
           - '&8✖ &7是否允许这个职位踩坏耕地?'
+          - '   &7解锁: {unlocked}'
           material: FARMLAND
         entry_harvest:
           name: '&6&l收割作物: {enabled}'
           lore:
           - '&8✖ &7是否允许这个职位收割浆果和作物?'
+          - '   &7解锁: {unlocked}'
           material: WHEAT
         entry_area_assign:
           name: '&6&l分配区域: {enabled}'
           lore:
           - '&8✖ &7是否允许这个职位创建新区域'
           - '   &7或给区域分配领土?'
+          - '   &7解锁: {unlocked}'
           material: OAK_FENCE
         entry_player_trust:
           name: '&6&l邀请玩家: {enabled}'
           lore:
           - '&8✖ &7是否允许这个职位邀请其他玩家?'
+          - '   &7解锁: {unlocked}'
           material: eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvYTkyZTMxZmZiNTljOTBhYjA4ZmM5ZGMxZmUyNjgwMjAzNWEzYTQ3YzQyZmVlNjM0MjNiY2RiNDI2MmVjYjliNiJ9fX0=
         entry_player_setrole:
           name: '&6&l设置职位: {enabled}'
           lore:
           - '&8✖ &7是否允许这个职位给成员玩家分配职位?'
+          - '   &7解锁: {unlocked}'
           - ''
           - '    &8• &7他们将不能分配优先级比自己职位高的职位'
           material: eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNmFjNmY3NzVlOGFjZmRmNmUxZGVhYzgwYThkYTFmMzdiM2I0YmE1Y2FhNGEzNTI0OWY5ZWIxNDVjY2Y0M2RhNSJ9fX0=
@@ -1726,6 +1752,7 @@ gui:
           - ''
           - '    &8• &7他们将不能移出'
           - '    &8    与自己同职位或更高职位的玩家'
+          - '   &7解锁: {unlocked}'
           material: eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvZTljZGI5YWYzOGNmNDFkYWE1M2JjOGNkYTc2NjVjNTA5NjMyZDE0ZTY3OGYwZjE5ZjI2M2Y0NmU1NDFkOGEzMCJ9fX0=
         entry_player_ban:
           name: '&6&l管理黑名单: {enabled}'
@@ -1733,17 +1760,20 @@ gui:
           - '&8✖ &7是否允许这个职位拉黑或取消拉黑玩家?'
           - ''
           - '    &8• &7他们将不能拉黑比自己职位高的玩家'
+          - '   &7解锁: {unlocked}'
           material: eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvM2VkMWFiYTczZjYzOWY0YmM0MmJkNDgxOTZjNzE1MTk3YmUyNzEyYzNiOTYyYzk3ZWJmOWU5ZWQ4ZWZhMDI1In19fQ==
         entry_setting_edit_land:
           name: '&6&l编辑环境设置: {enabled}'
           lore:
           - '&8✖ &7是否允许这个职位编辑环境设置?'
+          - '   &7解锁: {unlocked}'
           material: eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvODQ0OWI5MzE4ZTMzMTU4ZTY0YTQ2YWIwZGUxMjFjM2Q0MDAwMGUzMzMyYzE1NzQ5MzJiM2M4NDlkOGZhMGRjMiJ9fX0=
         entry_setting_edit_various:
           name: '&6&l编辑杂项设置: {enabled}'
           lore:
           - '&8✖ &7是否允许这个职位编辑杂项设置'
           - '   &7如编辑领地名?'
+          - '   &7解锁: {unlocked}'
           material: NAME_TAG
         entry_setting_edit_role:
           name: '&6&l编辑职位设置: {enabled}'
@@ -1753,11 +1783,13 @@ gui:
           - ''
           - '    &8• &7他们将不能管理自己职位的设置'
           - '    &8• &7你只应该将这个权限给予你最信任的人'
+          - '   &7解锁: {unlocked}'
           material: eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvZThiOGM2YTQ2ZDg3Y2Y4NmE1NWRmMjE0Y2Y4NGJmNDVjY2EyNWVkYjlhNjc2ZTk2MzY0ZGQ2YTZlZWEyMzViMyJ9fX0=
         entry_war_manage:
           name: '&6&l管理战争: {enabled}'
           lore:
           - '&8✖ &7是否允许这个职位向他人宣战?'
+          - '   &7解锁: {unlocked}'
           material: IRON_SWORD
         entry_setting_edit_taxes:
           name: '&6&l编辑税务: {enabled}'
@@ -1765,33 +1797,39 @@ gui:
           - '&8✖ &7是否允许这个职位编辑税务?'
           - ''
           - '    &8• &7你只应该将这个权限给予你最信任的人'
+          - '   &7解锁: {unlocked}'
           material: GOLD_INGOT
         entry_land_claim:
           name: '&6&l控制和取消控制: {enabled}'
           lore:
           - '&8✖ &7是否允许这个职位为城镇'
           - '   &7控制或取消控制区块?'
+          - '   &7解锁: {unlocked}'
           material: IRON_SHOVEL
         entry_land_claim_border:
           name: '&6&l边界控制: {enabled}'
           lore:
           - '&8✖ &7是否允许这个职位为他们自己的城镇'
           - '   &7控制一个紧靠你城镇边界的区块?'
+          - '   &7解锁: {unlocked}'
           material: IRON_BARS
         entry_spawn_set:
           name: '&6&l设置传送点: {enabled}'
           lore:
           - '&8✖ &7是否允许这个职位为城镇设置传送点?'
+          - '   &7解锁: {unlocked}'
           material: ENDER_EYE
         entry_spawn_teleport:
           name: '&6&l传送到传送点: {enabled}'
           lore:
           - '&8✖ &7是否允许这个职位传送到城镇传送点?'
+          - '   &7解锁: {unlocked}'
           material: ENDER_EYE
         entry_balance_withdraw:
           name: '&6&l取钱: {enabled}'
           lore:
           - '&8✖ &7是否允许这个职位从城镇金库取钱?'
+          - '   &7解锁: {unlocked}'
           - ''
           - '    &8• &7指令: &e/lands withdraw'
           material: SUNFLOWER
@@ -1799,11 +1837,13 @@ gui:
           name: '&6&l种植: {enabled}'
           lore:
           - '&8✖ &7是否允许这个职位种植作物?'
+          - '   &7解锁: {unlocked}'
           material: IRON_HOE
         entry_shear:
           name: '&6&l修剪动物: {enabled}'
           lore:
           - '&8✖ &7是否允许这个职位修剪羊或哞菇等生物?'
+          - '   &7解锁: {unlocked}'
           material: IRON_HOE
         entry_general_admin:
           name: '&6&l{flag}: {enabled}'
@@ -1815,6 +1855,7 @@ gui:
           - ' &8• {desc}'
           - ''
           - ' &8• &7这是一个管理员设置. 仅会出现在管理员菜单里'
+          - '   &7解锁: {unlocked}'
           material: NAME_TAG
         entry_general_player:
           name: '&6&l{flag}: {enabled}'
@@ -1829,6 +1870,7 @@ gui:
           name: '&6&l鞘翅飞行: {enabled}'
           lore:
           - '&8✖ &7是否允许这个职位在区域内使用鞘翅?'
+          - '   &7解锁: {unlocked}'
           material: ELYTRA
         child_failure_permission:
           name: '&4&l权限不足'
@@ -1882,6 +1924,7 @@ gui:
           - ''
           - '    &8• &7&l如果允许:'
           - '      &7生物爆炸可以破坏你的建筑'
+          - '   &7解锁: {unlocked}'
           material: CREEPER_HEAD
         entry_tnt_griefing:
           name: '&6&lTNT破坏: {enabled}'
@@ -1890,6 +1933,7 @@ gui:
           - ''
           - '    &8• &7&l如果允许:'
           - '      &7玩家可以从区域外发射TNT破坏你的建筑'
+          - '   &7解锁: {unlocked}'
           material: TNT
         entry_piston_griefing:
           name: '&6&l外部活塞: {enabled}'
@@ -1898,6 +1942,7 @@ gui:
           - ''
           - '    &8• &7&l如果允许:'
           - '      &7玩家可以在领土外操控活塞破坏你的建筑'
+          - '   &7解锁: {unlocked}'
           material: PISTON
         entry_waterflow_allow:
           name: '&6&l外部水流: {enabled}'
@@ -1906,6 +1951,7 @@ gui:
           - ''
           - '    &8• &7&l如果允许:'
           - '      &7玩家可以在区域外放置水流破坏你的建筑'
+          - '   &7解锁: {unlocked}'
           material: WATER_BUCKET
         entry_monster_spawn:
           name: '&6&l怪物生成: {enabled}'
@@ -1913,6 +1959,7 @@ gui:
           - '&8✖ &7是否允许怪物在区域内自然生成?'
           - ''
           - '    &8• &7刷怪笼不受影响'
+          - '   &7解锁: {unlocked}'
           material: SPAWNER
         entry_animal_spawn:
           name: '&6&l生物生成: {enabled}'
@@ -1920,6 +1967,7 @@ gui:
           - '&8✖ &7是否允许动物在区域内自然生成?'
           - ''
           - '    &8• &7刷怪笼不受影响.'
+          - '   &7解锁: {unlocked}'
           material: eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNWQ2YzZlZGE5NDJmN2Y1ZjcxYzMxNjFjNzMwNmY0YWVkMzA3ZDgyODk1ZjlkMmIwN2FiNDUyNTcxOGVkYzUifX19
         entry_fire_spread:
           name: '&6&l火焰传播: {enabled}'
@@ -1927,16 +1975,19 @@ gui:
           - '&8✖ &7是否允许火焰在区域内传播?'
           - ''
           - '    &8• &7区域外火焰无法进入区域内.'
+          - '   &7解锁: {unlocked}'
           material: FLINT_AND_STEEL
         entry_leaf_decay:
           name: '&6&l树叶凋零: {enabled}'
           lore:
           - '&8✖ &7是否允许区域内树叶凋零?'
+          - '   &7解锁: {unlocked}'
           material: OAK_LEAVES
         entry_plant_growth:
           name: '&6&l植物生长: {enabled}'
           lore:
           - '&8✖ &7是否允许区域内的植物生长?'
+          - '   &7解锁: {unlocked}'
           material: VINE
         entry_snow_melt:
           name: '&6&l积雪融化: {enabled}'
@@ -1945,6 +1996,7 @@ gui:
           - ''
           - '    &8• &7&l如果禁止:'
           - '      &7雪不会再堆积在地上'
+          - '   &7解锁: {unlocked}'
           material: SNOWBALL
         entry_general_admin:
           name: '&6&l{flag}: {enabled}'
@@ -1955,15 +2007,15 @@ gui:
           - '&7描述:'
           - ' &8• {desc}'
           - ''
-          - ' &8• &7This is an admin flag. It only applies'
-          - '   &7to admin lands and &e/lands admin wilderness&7.'
+          - ' &8• &7这是一个管理员设置. 它只会被应用在'
+          - '   &7管理员城镇和 &e/lands admin wilderness&7 中.'
+          - '   &7解锁: {unlocked}'
           material: NAME_TAG
         entry_general_player:
           name: '&6&l{flag}: {enabled}'
           lore:
           - '&8✖ &7点击开关:'
           - '   &7解锁: {unlocked}'
-          - ''
           - '&7描述:'
           - '{desc}'
           material: NAME_TAG
@@ -2182,7 +2234,7 @@ gui:
           - ''
           - ' &8• &7你需要提升联邦等级来启用这个效果'
   list_relation:
-    title: '&8关系'
+    title: '&8外交关系'
     items:
       default:
         add:
@@ -2282,7 +2334,7 @@ gui:
         child_failure_nation:
           name: '&4&l由联邦管理'
           lore:
-          - '&c所有关系设置都有你所属的联邦&4{nation}&c进行管理'
+          - '&c所有外交关系设置都有你所属的联邦 &4{nation}&c 进行管理'
         entry_ally:
           material: INHERIT
           name: '&a&l盟友 {object}'
@@ -2323,35 +2375,35 @@ gui:
           lore:
           - '&4{object} &c已经达到了他们的最大政敌数 &4{max}.'
   list_admin_wilderness_roleflags:
-    title: '&8Player Flags'
+    title: '&8玩家设置'
     items:
       default: {}
   list_admin_wilderness_landflags:
-    title: '&8Natural Flags'
+    title: '&8环境设置'
     items:
       default: {}
   list_admin_lands:
-    title: '&8Admin Lands'
+    title: '&8管理员城镇'
     items:
       default:
         add:
-          name: '&a&lConvert into Admin Land'
+          name: '&a&l转换为管理员城镇'
           lore:
-          - '&8✖ &7Convert a normal land into'
-          - '   &7a admin land.'
+          - '&8✖ &7将一个普通城镇'
+          - '   &7转换为管理员城镇.'
           material: eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvYTkyZTMxZmZiNTljOTBhYjA4ZmM5ZGMxZmUyNjgwMjAzNWEzYTQ3YzQyZmVlNjM0MjNiY2RiNDI2MmVjYjliNiJ9fX0=
           slots: 40
         convert:
-          name: '&e&lConvert back to Normal'
+          name: '&e&l转换为普通城镇'
           lore:
-          - '&8✖ &7Convert a admin land back'
-          - '   &7to a normal land.'
+          - '&8✖ &7将一个管理员城镇'
+          - '   &7转换为普通城镇.'
           material: eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvMTUxZDlhZTBkMzVlYzE4OWI2Nzg1OWUxYzI4ZGQyZGYxMzMzM2M5MTU2Y2UyMjU4MWM3Yjg2Y2NjZDE1YTIifX19
           slots: 41
         delete:
-          name: '&c&lDelete completely'
+          name: '&c&l完全删除'
           lore:
-          - '&8✖ &7Delete a admin land completely.'
+          - '&8✖ &7完全删除一个管理员城镇.'
           material: eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvZTljZGI5YWYzOGNmNDFkYWE1M2JjOGNkYTc2NjVjNTA5NjMyZDE0ZTY3OGYwZjE5ZjI2M2Y0NmU1NDFkOGEzMCJ9fX0=
           slots: 42
         entry_object:
@@ -2491,12 +2543,11 @@ gui:
           lore:
           - '&c露营地没有等级.'
         relations:
-          enabled: true
           material: LIME_BANNER
           slots: 29
-          name: '&6&l关系'
+          name: '&6&l外交关系'
           lore:
-          - '&8✖ &7查看关系.'
+          - '&8✖ &7查看外交关系.'
         war:
           material: IRON_SWORD
           slots: 31
@@ -2545,7 +2596,7 @@ gui:
           lore:
           - '&8✖ &7查看政敌.'
           - '   &8• &7数量: {enemies}'
-    title: '&8关系'
+    title: '&8外交关系'
   player-management:
     items:
       default:
@@ -2939,56 +2990,45 @@ common_sounds:
     failure: ENTITY_VILLAGER_NO
     success: ENTITY_PLAYER_LEVELUP
 physical:
-  claim_block:
-    material: GRASS_BLOCK
-    name: '&7控制方块'
-    lore:
-    - ''
-    - '&7物品类型: &f道具'
-    - ''
-    - '&7将这个方块放置在无人控制的野外'
-    - '&7以创建城镇或控制方块所在的区块'
-    - ''
-    - '&7主人:&3 {owner}'
   selection:
-    material: GOLDEN_HOE
-    name: '&2选区工具'
     lore:
-    - '&7使用这个工具来创建选区.'
-    - '&7选区可以被用于:'
+    - '&7使用这个工具创建选区.'
+    - '&7选区可以用于以下操作:'
     - ' &8- &e/claim'
     - ' &8- &e/unclaim'
     - ' &8- &e/assign'
-  info:
-    material: BEDROCK
-    name: '&2Info Tool'
-    lore:
-    - '&7Use this tool to get'
-    - '&7information about the claim'
-    - '&7you''re pointing at.'
-  camp:
-    material: CAMPFIRE
-    name: '&2露营地'
-    lore:
-    - ''
-    - '&7物品类型: &f道具'
-    - ''
-    - '&7将这个篝火放在野外以创建露营地'
-    - '&7露营地会在&5{time}&7后被删除'
-    - '&7露营地是一种特殊的城镇'
-    - ''
-    - '&7半径:&3 {radius}'
-    - '&7露营地无法被扩展范围'
-  currency:
-    material: GOLD_INGOT
-    name: ''
-    lore: []
+    name: '&2&l选区工具'
+    material: GOLDEN_HOE
   capture_flag:
-    material: BEACON
-    name: '&2城镇战旗'
     lore:
-    - ''
-    - '&7物品类型: &f道具'
-    - ''
-    - '&7将战旗放在敌人的领土里'
-    - '&7以控制一部分的区块'
+    - '&7在战争期间将它放置在'
+    - '&7政敌的领土中从而占领它.'
+    name: '&2&l战旗'
+    material: BEACON
+  currency:
+    name: ''
+    material: GOLD_INGOT
+  claim_block:
+    lore:
+    - '&7你可以将它放置在荒野中'
+    - '&7以将它占领为自己的领土.'
+    - '&7主人:&3 {owner}'
+    name: '&2&l占领方块'
+    material: GRASS_BLOCK
+  info:
+    lore:
+    - '&7使用这个工具'
+    - '&7以获得你指向的区块'
+    - '&7的领土相关信息.'
+    name: '&2&l信息工具'
+    material: FEATHER
+  camp:
+    lore:
+    - '&7将其放置以创建一个'
+    - '&7临时的露营地,'
+    - '&7它将会在 &5{time}&7'
+    - '&7后被自动删除.'
+    - '&7半径:&3 {radius}'
+    - '&7露营地不能被扩展范围.'
+    name: '&2&l露营地'
+    material: CAMPFIRE

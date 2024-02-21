@@ -60,7 +60,7 @@ land:
   roles:
     # NOTE: The owner role can not be deleted.
     owner:
-      name: '&4&lOwner'
+      name: '&4&l主人'
       # The icon supports minecraft URL values (example: https://minecraft-heads.com/) and normal material values.
       icon: 'skin:83f642814fa2551e7763d04060c532adea51015cbfe030cbb78e82c92092a6fb'
       # Default flag values. Please note that these only apply to new land creations. The flags of the owner role can only be toggled by server administrators.
@@ -69,7 +69,7 @@ land:
 
     # This role can't be deleted, but is only visible if an area is rented or in admin lands.
     tenant:
-      name: '&6&lTenant'
+      name: '&6&l租客'
       # The icon supports minecraft URL values (example: https://minecraft-heads.com/) and normal material values.
       icon: 'skin:d831830a7bd3b1ab05beb98dc2f9fc5ea550b3cf649fd94d483da7cd39f7c063'
       # Allow lands to toggle specific flags for this role? They can only do this while the area is NOT rented.
@@ -110,7 +110,7 @@ land:
 
     # This role can be deleted, in case you don't want it.
     admin:
-      name: '&c&lAdmin'
+      name: '&c&l管理员'
       # The icon supports texture values (example: https://minecraft-heads.com/) and normal material values.
       icon: 'skin:548e2397834b1a16b15b71a52175ed8ae6919366dfecd3882a85f8236ff5d1d4'
       # Should members of this role automatically be added to new sub areas?
@@ -149,7 +149,7 @@ land:
 
     # NOTE: The member role can not be deleted.
     member:
-      name: '&e&lMember'
+      name: '&e&l成员'
       # The icon supports texture values (example: https://minecraft-heads.com/) and normal material values.
       icon: 'skin:e8b8c6a46d87cf86a55df214cf84bf45cca25edb9a676e96364dd6a6eea235b3'
       # Default flag values. Please note that these only apply to new land creations. Players will be able to change them later in their land menu if the flag is listed under 'display' above.
@@ -180,7 +180,7 @@ land:
 
     # This role can be deleted, in case you don't want it.
     nation:
-      name: '&9&lNation'
+      name: '&9&l联邦'
       # The icon supports texture values (example: https://minecraft-heads.com/) and normal material values.
       icon: 'skin:45587da7fe7336e8ab9f791ea5e2cfc8a827ca959567eb9d53a647babf948d5'
       # Default flag values. Please note that these only apply to new land creations. Players will be able to change them later in their land menu if the flag is listed under 'display' above.
@@ -224,7 +224,7 @@ land:
 
     # This role can be deleted, in case you don't want it.
     ally:
-      name: '&a&lAlly'
+      name: '&a&l盟友'
       # The icon supports texture values (example: https://minecraft-heads.com/) and normal material values.
       icon: 'skin:2567251d71b6f3a4dc03fa01e441de7edf9354794e74aec16c04f141ddf31c70'
       # Default flag values. Please note that these only apply to new land creations. Players will be able to change them later in their land menu if the flag is listed under 'display' above.
@@ -247,7 +247,7 @@ land:
 
     # NOTE: The visitor role can not be deleted.
     visitor:
-      name: '&8&lUntrusted'
+      name: '&8&l游客'
       # The icon supports texture values (example: https://minecraft-heads.com/) and normal material values.
       icon: 'skin:126ec1ca185b47aad39f931db8b0a8500ded86a127a204886ed4b3783ad1775c'
       # Default flag values. Please note that these only apply to new land creations. Players will be able to change them later in their land menu if the flag is listed under 'display' above.

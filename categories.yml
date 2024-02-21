@@ -10,22 +10,22 @@ land:
   categories:
     members:
       enabled: true
-      name: '&eLooking for Members ☺'
+      name: '&e成员募集中 ☺'
       description:
-        - '&7This land is actively searching'
-        - '&7for new members.'
+        - '&7这个城镇'
+        - '&7正在募集新成员.'
     shop:
       enabled: true
-      name: '&cShop $'
+      name: '&c商店 $'
       description:
-        - '&7This land contains shops.'
+        - '&7T这个城镇中有商店.'
     pvp:
       enabled: true
-      name: '&4PvP Arena ⚔'
+      name: '&4PvP 场地 ⚔'
       description:
-        - '&7This land features a PvP arena.'
+        - '&7这个城镇中有 PVP 场地.'
     mobfarm:
       enabled: true
-      name: '&9Mobfarm'
+      name: '&9生物农场'
       description:
-        - '&7This land features a mobfarm.'
+        - '&7这个城镇中有生物农场.'
