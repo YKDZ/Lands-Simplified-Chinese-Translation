@@ -1,0 +1,11 @@
+.vscode
+Data/
+Language/en-US_gui.yml
+Language/en-US.yml
+
+config.yml
+changelog.txt
+events.yml
+nations.yml
+wars.yml
+web.yml
