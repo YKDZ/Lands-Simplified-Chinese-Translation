@@ -88,4 +88,4 @@ Neutral -> 中立
 
 ## 支持
 
-本插件文本量较大，若翻译有帮助到你，你可以考虑在 [爱发电](https://afdian.net/a/ForestRealm) 赞助我。
+本插件文本量较大，若翻译有帮助到你，你可以考虑给这个储存库上颗星星，抑或是在 [爱发电](https://afdian.net/a/ForestRealm) 赞助我。
