@@ -6,8 +6,8 @@
 # Wiki: https://github.com/Angeschossen/General/wiki/GUI-Menus
 
 general:
-  wYes: '&a确认'
-  wNo: '&c取消'
+  wYes: '&a是'
+  wNo: '&c否'
   none: '&c无'
   now: '&a现在'
   enabled: '&a允许'

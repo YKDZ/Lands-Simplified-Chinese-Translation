@@ -51,15 +51,15 @@ land:
           required: 7500
           title: '金库余额 ${req}'
           description:
-            - '在你的城镇金库中拥有 ${req} 存款'
+            - '&7在你的城镇金库中拥有 ${req} 存款'
             - '&7命令: &e/lands deposit'
         # Plugin: https://www.spigotmc.org/resources/67627
         betterfarming:
           farms:
             required: 1
-            title: '{req} Upgradeable Farm'
+            title: '拥有 {req} 个可升级农场'
             description:
-              - '&7Have {req} upgradeable farm in your land.'
+              - '&7在你的城镇中拥有 {req} 个可升级农场.'
               - '&7命令: &e/farm get'
         # Plugin: https://www.spigotmc.org/resources/69201
         upgradeablehoppers:
@@ -116,7 +116,7 @@ land:
           required: 17000
           title: '金库余额 ${req}'
           description:
-            - '在你的城镇金库中拥有 ${req} 存款'
+            - '&7在你的城镇金库中拥有 \$\{req\} 存款'
             - '&7命令: &e/lands deposit'
         # Plugin: https://www.spigotmc.org/resources/67627
         betterfarming:
@@ -171,7 +171,7 @@ land:
           required: 30000
           title: '金库余额 ${req}'
           description:
-            - '在你的城镇金库中拥有 ${req} 存款'
+            - '&7在你的城镇金库中拥有 \$\{req\} 存款'
             - '&7命令: &e/lands deposit'
         # Plugin: https://www.spigotmc.org/resources/67627
         betterfarming:
@@ -226,7 +226,7 @@ land:
           required: 55000
           title: '金库余额 ${req}'
           description:
-            - '在你的城镇金库中拥有 ${req} 存款'
+            - '&7在你的城镇金库中拥有 \$\{req\} 存款'
             - '&7命令: &e/lands deposit'
         # Plugin: https://www.spigotmc.org/resources/67627
         betterfarming:
