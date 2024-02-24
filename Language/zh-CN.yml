@@ -65,13 +65,14 @@ general:
           200%;"><span style="color: {land_color};">{land}</span><br /></span>{title}</div>
           <ul> <li class="\&quot;infowindow\&quot;">等级: {level}</li> <li class="\&quot;infowindow\&quot;">领土区块:
           {chunks}</li> <li class="\&quot;infowindow\&quot;">成员 ({members_amount}):
-          {members}</li> </ul> <p><strong>这个城镇属于联邦 {nation}:</strong></p>
-          <ul> <li>等级: {level_nation}</li> <li>首都: {capital}</li> <li>城镇
-          (总玩家数: {members_amount_nation}): {lands}</li> </ul>'
+          {members}</li> </ul> <p><strong>这个城镇属于联邦 {nation}:</strong></p> <ul> <li>等级:
+          {level_nation}</li> <li>首都: {capital}</li> <li>城镇 (总玩家数: {members_amount_nation}):
+          {lands}</li> </ul>'
       capital:
         spawn: '<div class="\&quot;infowindow\&quot;"><span style="font-size: 200%;"><span
-          style="color: {land_color};">首都传送点</span><br /></span>这个传送点属于联邦 {nation} 的首都.</div><div class="\&quot;infowindow\&quot;"><br
-          />是否开放: {public}</div><ul><li>如果这个传送点对游客开放, 每个人都可以通过 /lands spawn {land} 传送到这里.</li></ul>'
+          style="color: {land_color};">首都传送点</span><br /></span>这个传送点属于联邦 {nation}
+          的首都.</div><div class="\&quot;infowindow\&quot;"><br />是否开放: {public}</div><ul><li>如果这个传送点对游客开放,
+          每个人都可以通过 /lands spawn {land} 传送到这里.</li></ul>'
     bluemap:
       land:
         description: '<div class="\&quot;infowindow\&quot;"><span style="font-size:
@@ -79,20 +80,22 @@ general:
           <ul> <li class="\&quot;infowindow\&quot;">等级: {level}</li> <li class="\&quot;infowindow\&quot;">领土区块:
           {chunks}</li> <li class="\&quot;infowindow\&quot;">成员 ({members_amount}):
           {members}</li> </ul>'
-        spawn: '城镇 {land} 的传送点. 是否开放: {public}. 如果这个传送点对游客开放, 每个人都可以通过 /lands spawn {land} 传送到这里.'
+        spawn: '城镇 {land} 的传送点. 是否开放: {public}. 如果这个传送点对游客开放, 每个人都可以通过 /lands spawn
+          {land} 传送到这里.'
       nation:
         description: '<div class="\&quot;infowindow\&quot;"><span style="font-size:
           200%;"><span style="color: {land_color};">{land}</span><br /></span>{title}</div>
           <ul> <li class="\&quot;infowindow\&quot;">等级: {level}</li> <li class="\&quot;infowindow\&quot;">领土区块:
           {chunks}</li> <li class="\&quot;infowindow\&quot;">成员 ({members_amount}):
-          {members}</li> </ul> <p><strong>这个城镇属于联邦 {nation}:</strong></p>
-          <ul> <li>等级: {level_nation}</li> <li>首都: {capital}</li> <li>城镇
-          (总玩家数: {members_amount_nation}): {lands}</li> </ul>'
+          {members}</li> </ul> <p><strong>这个城镇属于联邦 {nation}:</strong></p> <ul> <li>等级:
+          {level_nation}</li> <li>首都: {capital}</li> <li>城镇 (总玩家数: {members_amount_nation}):
+          {lands}</li> </ul>'
       capital:
         spawn: '<div class="\&quot;infowindow\&quot;"><span style="font-size: 200%;"><span
-          style="color: {land_color};">首都传送点</span><br /></span>This
-          spawn belongs to the capital of nation {nation}.</div><div class="\&quot;infowindow\&quot;"><br
-          />是否开放: {public}</div><ul><li>如果这个传送点对游客开放, 每个人都可以通过 /lands spawn {land} 传送到这里.</li></ul>'
+          style="color: {land_color};">首都传送点</span><br /></span>This spawn belongs
+          to the capital of nation {nation}.</div><div class="\&quot;infowindow\&quot;"><br
+          />是否开放: {public}</div><ul><li>如果这个传送点对游客开放, 每个人都可以通过 /lands spawn {land}
+          传送到这里.</li></ul>'
     squaremap:
       land:
         description: '<div class="\&quot;infowindow\&quot;"><span style="font-size:
@@ -102,19 +105,21 @@ general:
           {members}</li> </ul>'
         spawn: '<div class="\&quot;infowindow\&quot;"><span style="font-size: 200%;"><span
           style="color: {land_color};">Spawnpoint</span></span></div> <div class="\&quot;infowindow\&quot;"><br
-          />是否开放: {public}</div> <ul> <li>如果这个传送点对游客开放, 每个人都可以通过 /lands spawn {land} 传送到这里.</li> </ul>'
+          />是否开放: {public}</div> <ul> <li>如果这个传送点对游客开放, 每个人都可以通过 /lands spawn {land}
+          传送到这里.</li> </ul>'
       nation:
         description: '<div class="\&quot;infowindow\&quot;"><span style="font-size:
           200%;"><span style="color: {land_color};">{land}</span><br /></span>{title}</div>
           <ul> <li class="\&quot;infowindow\&quot;">等级: {level}</li> <li class="\&quot;infowindow\&quot;">领土区块:
           {chunks}</li> <li class="\&quot;infowindow\&quot;">成员 ({members_amount}):
-          {members}</li> </ul> <p><strong>这个城镇属于联邦 {nation}:</strong></p>
-          <ul> <li>等级: {level_nation}</li> <li>首都: {capital}</li> <li>城镇
-          (总玩家数: {members_amount_nation}): {lands}</li> </ul>'
+          {members}</li> </ul> <p><strong>这个城镇属于联邦 {nation}:</strong></p> <ul> <li>等级:
+          {level_nation}</li> <li>首都: {capital}</li> <li>城镇 (总玩家数: {members_amount_nation}):
+          {lands}</li> </ul>'
       capital:
         spawn: '<div class="\&quot;infowindow\&quot;"><span style="font-size: 200%;"><span
-          style="color: {land_color};">首都传送点</span><br /></span>这个传送点属于联邦 {nation}.</div><div class="\&quot;infowindow\&quot;"><br
-          />是否开放: {public}</div><ul><li>如果这个传送点对游客开放, 每个人都可以通过 /lands spawn {land} 传送到这里.</li></ul>'
+          style="color: {land_color};">首都传送点</span><br /></span>这个传送点属于联邦 {nation}.</div><div
+          class="\&quot;infowindow\&quot;"><br />是否开放: {public}</div><ul><li>如果这个传送点对游客开放,
+          每个人都可以通过 /lands spawn {land} 传送到这里.</li></ul>'
     pl3xmap:
       land:
         description: '<div class="\&quot;infowindow\&quot;"><span style="font-size:
@@ -506,9 +511,12 @@ lands:
       block_ignite: '&c你不能在这里点燃方块 (&c子区域:&4 {area} &c城镇:&4 {land}&c). &c设置: {flag}'
       interact_general: '&c你不能在这里进行交互 (&c子区域:&4 {area} &c城镇:&4 {land}&c). &c设置: {flag}'
       interact_door: '&c你不能在这里打开门 (&c子区域:&4 {area} &c城镇:&4 {land}&c). &c设置: {flag}'
-      interact_mechanism: '&c你不能在这里使用设备 (&c子区域:&4 {area} &c城镇:&4 {land}&c). &c设置: {flag}'
-      interact_container: '&c你不能在这里打开容器 (&c子区域:&4 {area} &c城镇:&4 {land}&c). &c设置: {flag}'
-      interact_villager: '&c你不能在这里与村民交易 (&c子区域:&4 {area} &c城镇:&4 {land}&c). &c设置: {flag}'
+      interact_mechanism: '&c你不能在这里使用设备 (&c子区域:&4 {area} &c城镇:&4 {land}&c). &c设置:
+        {flag}'
+      interact_container: '&c你不能在这里打开容器 (&c子区域:&4 {area} &c城镇:&4 {land}&c). &c设置:
+        {flag}'
+      interact_villager: '&c你不能在这里与村民交易 (&c子区域:&4 {area} &c城镇:&4 {land}&c). &c设置:
+        {flag}'
       fly: '&c你不能在这里飞行 (&c子区域:&4 {area} &c城镇:&4 {land}&c). &c设置: {flag}'
       spawn_teleport: '&c你不能传送到城镇&4 {land} &c的传送点. &7他们可以通过调整你所属职位的设置使你可以进行传送. &c设置:
         {flag}'
@@ -625,8 +633,7 @@ lands:
           &7你的城镇有 {amount} 条新的日志箱信息&2 {land}&7. 最新一条: {latest}
             [T]&7✖ 查看: &e/{cmd} &8[CLICK][H]&7点击查看这些通知[/H][C]{cmd}[/C][/T]
     rented:
-      edit: '&c你不能拿在子区域&4 {area}&c 正在出租或已被出售时这样做.
-        &7移除租客: &e/{cmd}'
+      edit: '&c你不能拿在子区域&4 {area}&c 正在出租或已被出售时这样做. &7移除租客: &e/{cmd}'
       tenant: '&c你不能编辑子区域&4 {area}&c 的租客&4 {player}&c. &7移除租客: &e/{cmd}'
   command:
     menu:
@@ -696,7 +703,8 @@ lands:
             {cost} &c违约金.'
           target: '&c你被从城镇&4 {land}&c 的子区域&4 {area}&c中赶了出去&c. &7他们向你支付了&c {compensation}
             &7作为违约金.'
-      max-amount: '&c你不能在城镇&4 {land}&c 内租用或购买另一个子区域. &7你已经达到了这个城镇内的最大租购数量&3 {max} &7.'
+      max-amount: '&c你不能在城镇&4 {land}&c 内租用或购买另一个子区域. &7你已经达到了这个城镇内的最大租购数量&3 {max}
+        &7.'
     sell:
       sell:
         rented: '&c你不能出售正在被租用的子区域. &7子区域&6 {area} &7已被&3 {player}&7 租用了. 租约将在&5 {time}&7
@@ -798,10 +806,8 @@ lands:
         world: '&c世界子区域&4 {input} &c不存在. &7参数 {pos}: {expected}'
         world-disabled: '&c这在当前世界中被禁用了. &8世界: {input}'
         category: '&c你的输入&4 {input} &c不是一个类别. &7参数 {pos}: {expected}'
-        funds: '&c你的输入&4 {input} &c不是一个金额. &7参数 {pos}:
-          {expected}'
-        time: '&c你的输入&4 {input} &c不是一个时间. &7参数 {pos}:
-          {expected}. 正确实例: 1h'
+        funds: '&c你的输入&4 {input} &c不是一个金额. &7参数 {pos}: {expected}'
+        time: '&c你的输入&4 {input} &c不是一个时间. &7参数 {pos}: {expected}. 正确实例: 1h'
     
     create:
       land-other: '&c你不能在拥有自己城镇的同时加入其他城镇. &7你需要先离开城镇&2 {land}&7.'
@@ -989,8 +995,8 @@ lands:
         revoke: '&7成功撤回在这个子区域对玩家&3 {player} &7的加入邀请 &8(&7子区域:&6 {area} &7城镇:&2 {land}&8)&7.
           玩家没有加入该子区域.'
         success: '&7成功将玩家&3 {player} &7移出子区域 &8(&7子区域:&6 {area} &7城镇:&2 {land}&8)&7.'
-        rental: '&c你不能移出子区域&4 {area}&c 的租客&4 {player} &c. &7站在子区域内使用 &e/lands rent remove
-          &7解除这个子区域的出租状态.'
+        rental: '&c你不能移出子区域&4 {area}&c 的租客&4 {player} &c. &7站在子区域内使用 &e/lands rent
+          remove &7解除这个子区域的出租状态.'
       land:
         already: '&7玩家&3 {player} &7没有加入城镇&2 {land} &7的任何子区域且没有收到过邀请.'
         revoke: '&7成功撤回在城镇&2 {land}&7 对玩家&3 {player} &7的邀请&7. 玩家没有加入任何子区域.'
@@ -1016,7 +1022,8 @@ lands:
         .[/H][C]lands invites[/C][/T]'\n"
       area:
         success: '&7成功接受了来自城镇&2 {land} &7的子区域&6 {area}&7 的邀请.'
-        broadcast: '&2{land} &8| &7玩家&3 {player} &7现在是城镇&2 {land} &7的子区域&6 {area} &7的一名成员.'
+        broadcast: '&2{land} &8| &7玩家&3 {player} &7现在是城镇&2 {land} &7的子区域&6 {area}
+          &7的一名成员.'
       land:
         success: '&7成功接受了来自城镇&2 {land} &7的邀请.'
         broadcast: '&2{land} &8| &7玩家&3 {player} &7现在是城镇的一名成员.'
@@ -1080,8 +1087,8 @@ lands:
         already: '&7玩家&3 {player} &7已经被城镇&2 {land}&7 拉黑过了.'
         success: '&7成功在城镇&2 {land}&7 拉黑玩家&3 {player}&7. 他将不能再进入城镇.'
         target: '&c城镇&4 {land} &c将你拉黑了&c. &7你将不能再进入该城镇.'
-        tenant: '&c你不能在整个城镇&4 {land}&c 内拉黑玩家&4 {player}&c,
-          因为他是子区域&4 {area}&c 的租客. &7移除租客: &e/{cmd}'
+        tenant: '&c你不能在整个城镇&4 {land}&c 内拉黑玩家&4 {player}&c, 因为他是子区域&4 {area}&c 的租客.
+          &7移除租客: &e/{cmd}'
     unban:
       area:
         success: '&7成功将玩家&3 {player} &7移出子区域黑名单 &8(&7子区域:&6 {area} &7城镇:&2 {land}&8)&7.'
@@ -1319,7 +1326,8 @@ wars:
       min-age:
         attacker: '&c不能对它宣战. &7{object} &7至少要成立&5 {min} &7以上才能进行战争.'
         defender: '&c{object} &c的建立时间太短了. &7你只能对成立了&5 {min} &7以上的对象发起战争.'
-      hour-of-day: '&c你只能在&4 {from} &c到&4 {to}&c 进行宣战. &7当前时间:&5 {current}&8 (&7时区: {timezone}&8)'
+      hour-of-day: '&c你只能在&4 {from} &c到&4 {to}&c 进行宣战. &7当前时间:&5 {current}&8 (&7时区:
+        {timezone}&8)'
     deny:
       attacker: '&c攻方不能拒绝自己的宣战书. &7只有守方才能这么做.'
       ongoing: '&c你不能拒绝与 {enemy} 的正在进行的战争&c. &7你只能拒绝对 {object}&7 的宣战书.'
