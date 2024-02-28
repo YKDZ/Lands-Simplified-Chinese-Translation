@@ -1595,4 +1595,4 @@ list:
       - '&7区块数: {chunks} / {chunks_max}'
       - '&7成员数: {members} / {members_max}'
       - '&7金库余额: {balance}'
-      - '&7下次赋税/收取维护费: {upkeep_next}'
+      - '&7下次收税/缴纳维护费: {upkeep_next}'
