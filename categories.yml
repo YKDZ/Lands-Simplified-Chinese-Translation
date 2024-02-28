@@ -12,13 +12,12 @@ land:
       enabled: true
       name: '&e成员募集中 ☺'
       description:
-        - '&7这个城镇'
-        - '&7正在募集新成员.'
+        - '&7这个城镇正在募集新成员.'
     shop:
       enabled: true
       name: '&c商店 $'
       description:
-        - '&7T这个城镇中有商店.'
+        - '&7这个城镇中有商店.'
     pvp:
       enabled: true
       name: '&4PvP 场地 ⚔'
