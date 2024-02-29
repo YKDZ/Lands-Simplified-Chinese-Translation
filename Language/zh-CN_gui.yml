@@ -27,10 +27,10 @@ general:
       land: '&2&l城镇'
   
   inbox-filter:
-    members: '&e☺ 成员'
-    economy: '&c 经济'
-    war: '&4⚔ 战争'
-    relations: '&a☯ 外交关系'
+    members: '&e成员 ☺'
+    war: '&4战争 ⚔'
+    economy: '&c经济 $'
+    relations: '&a外交关系'
     posts: '&7通知'
   
   rentables:

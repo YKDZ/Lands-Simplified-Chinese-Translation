@@ -1590,9 +1590,9 @@ list:
       - ''
     landblock:
       main:
-      - '&7部落&2 {land}'
+      - '&7城镇&2 {land}'
       - '&7日志箱:&r {inbox}'
       - '&7区块数: {chunks} / {chunks_max}'
       - '&7成员数: {members} / {members_max}'
-      - '&7金库余额: {balance}'
+      - '&7金库存量: {balance}'
       - '&7下次收税/缴纳维护费: {upkeep_next}'
