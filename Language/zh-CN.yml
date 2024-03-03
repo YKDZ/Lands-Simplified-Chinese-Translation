@@ -356,7 +356,7 @@ help:
       wild: '[T]&e{parent} {subcmd} {args} &8- &7传送到随机坐标[H]&7点击复制.[/H][C]{fullcmd}[/C][/T]'
       top: '[T]&e{parent} {subcmd} &8- &7查看城镇排行榜[H]&7点击执行.[/H][C]{fullcmd}[/C][/T]'
       selection:
-        main: '[T]&e{parent} {subcmd} {args} &8- &7选区模式[H]&7使用这个命令来调整子区域大小. &7点击执行.[/H][C]{fullcmd}[/C][/T]'
+        main: '[T]&e{parent} {subcmd} {args} &8- &7选区模式[H]&7使用这个命令来调整子区域大小.[H]&7点击执行.[/H][C]{fullcmd}[/C][/T]'
         assign: '[T]&e{parent} {subcmd} {args} &8- &7调整子区域大小[H]&7点击复制.[/H][SC]{fullcmd}[/SC][/T]'
         expand: '[T]&e{parent} {subcmd} &8- &7使选区覆盖全部Y轴范围[H]&7点击执行.[/H][C]{fullcmd}[/C][/T]'
       chat: '[T]&e{parent} {subcmd} {args} &8- &7城镇聊天[H]&7点击复制.[/H][SC]{fullcmd}[/SC][/T]'
@@ -365,7 +365,9 @@ help:
       invites: '[T]&e{parent} {subcmd} &8- &7查看收到的邀请[H]&7点击执行.[/H][C]{fullcmd}[/C][/T]'
       info: '[T]&e{parent} {subcmd} {args} &8- &7查看关于城镇的信息[H]&7点击复制.[/H][C]{fullcmd}[/C][/T]'
       player: '[T]&e{parent} {subcmd} {args} &8- &7查看关于玩家的信息[H]&7点击复制.[/H][SC]{fullcmd}[/SC][/T]'
-      map: '[T]&e{parent} {subcmd} &8- &7查看城镇地图[H]&7点击执行.[/H][C]{fullcmd}[/C][/T]'
+      map:
+        main: '[T]&e{parent} {subcmd} &8- &7查看城镇地图[H]&7点击执行.[/H][C]{fullcmd}[/C][/T]'
+        chat: '[T]&e{parent} {subcmd} &8- &7在聊天栏中查看城镇地图[H]&7点击执行.[/H][C]{fullcmd}[/C][/T]'
       balance: '[T]&e{parent} {subcmd} {args} &8- &7查看城镇金库存款[H]&7点击复制.[/H][SC]{fullcmd}[/SC][/T]'
       deposit: '[T]&e{parent} {subcmd} {args} &8- &7向金库存款[H]&7点击复制.[/H][SC]{fullcmd}[/SC][/T]'
       withdraw: '[T]&e{parent} {subcmd} {args} &8- &7从金库取款[H]&7点击复制.[/H][SC]{fullcmd}[/SC][/T]'
