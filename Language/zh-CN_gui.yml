@@ -2773,6 +2773,16 @@ gui:
           - '   &7传送到这个首都'
           - '&8✖ &9右键'
           - '   &7查看信息'
+        refresh_search:
+          material: SPYGLASS
+          slots: 43
+          lore:
+          - '&8✖ &7按名称查找.'
+          - '   &8• &7当前查找: {search}'
+          - ''
+          - '&8✖ &3Q 键'
+          - '   &7重置查找'
+          name: '&6&l查找'
     title: '&8所有城邦'
   list_player_nations:
     items:
