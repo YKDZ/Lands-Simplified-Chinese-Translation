@@ -132,6 +132,12 @@ gui:
           lore:
           - '&8✖ &7点击查看所有联邦.'
           - '    &8• &7总数: {nations}'
+        map:
+          material: MAP
+          slots: 33
+          name: '&6&l地图'
+          lore:
+          - '&8✖ &7查看城镇地图.'
       patches:
         basic:
           lands:
@@ -3124,6 +3130,14 @@ common:
         lore:
         - '&7你需要花费&c {cost} &7以这么做.'
         name: '&4&l余额不足'
+      child_failure_message:
+        name: '&4&l失败'
+        lore:
+        - '{message}'
+      child_success_message:
+        name: '&a&l成功'
+        lore:
+        - '{message}'
 common_sounds:
   # Play a sound when the item is set in the menu.
   set:
