@@ -2,7 +2,7 @@
 
 先前曾咨询过插件作者，发现他们采用的翻译维护平台真的很难用，故自行开设储存库维护简体中文翻译。
 
-本翻译纯手动翻译，不含 AI 翻译等。
+纯手动翻译，不含 AI 翻译等。
 
 当前对应的插件版本：[6.46.7](https://www.spigotmc.org/resources/lands-%E2%AD%95-land-claim-plugin-%E2%9C%85-grief-prevention-protection-gui-management-nations-wars-1-20-support.53313/updates)
 
