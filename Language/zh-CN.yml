@@ -1063,6 +1063,12 @@ lands:
       chunk: '&7城镇&2 {land} &7还没有设置过城镇传送点 &8(&e/lands setspawn&8)&7. &7你被传送到了这个城镇的第一个领土区块.'
       success: '&7成功传送到城镇&2 {land} &7的传送点. 你花费了:&c {cost}'
       war: '&c你目前不能传送到城镇&4 {land}&c 的传送点. &7他们正在进行一场战争, 战争最晚在&5 {time}&7 后结束.'
+      area:
+        cooldown: '&c你现在不能传送到这个子区域. &7你还需等待 &5{time} &7才能再次传送.'
+        none: '&c城镇&4 {land} &c的子区域&4 {area} &c没有设置传送点.'
+        teleport: '&c你无权传送到这个子区域的传送点. &7城镇主人可以给你对应权限.'
+        enter: '&c你无权进入这个子区域. &7城镇主人可以给你对应权限.'
+        success: '&7成功传送到城镇&2 {land} &7的子区域&6 {area}&7.'
     wild:
       perm: '&c你不能在世界&4 {world}&c 内随机传送.' # &8You''re missing the permission {perm} for this world.
       no-location: '&c无法找到一个符合条件的目的地.' # &8Please adjust your max and min distance settings and set the world spawn (/setworldspawn)
