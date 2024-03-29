@@ -4,7 +4,7 @@
 
 纯手动翻译，不含 AI 翻译等。
 
-当前对应的插件版本：[6.46.7](https://www.spigotmc.org/resources/lands-%E2%AD%95-land-claim-plugin-%E2%9C%85-grief-prevention-protection-gui-management-nations-wars-1-20-support.53313/updates)
+当前对应的插件版本：[6.46.10](https://www.spigotmc.org/resources/lands-%E2%AD%95-land-claim-plugin-%E2%9C%85-grief-prevention-protection-gui-management-nations-wars-1-20-support.53313/updates)
 
 ## 安装使用
 
