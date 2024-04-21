@@ -1536,10 +1536,6 @@ gui:
           - '&8✖ &3Q 键'
           - '   &7撤回邀请.'
           name: '&e&l{player} &7- &6&l成员邀请'
-        entry_invite_area:
-          material: INHERIT
-        entry_invite_land:
-          material: INHERIT
   list_area_roles:
     title: '&8{area} &7> &8职位'
     items:
@@ -3138,6 +3134,11 @@ common:
         name: '&a&l成功'
         lore:
         - '{message}'
+      child_failure_teleport_unsafe:
+        name: '&4&l落点不安全'
+        lore:
+        - '&c你不能传送到这个位置,'
+        - '&c因为那里不安全.'
 common_sounds:
   # Play a sound when the item is set in the menu.
   set:
