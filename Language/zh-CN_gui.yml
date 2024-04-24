@@ -59,6 +59,11 @@ general:
   value:
     none: '&c无'
     unlimited: '&a无限'
+  directions:
+    north: 北
+    east: 东
+    south: 南
+    west: 西
 
 skull:
   area:
@@ -2858,30 +2863,6 @@ gui:
           lore:
           - '&7你是这个城镇的主人.'
           - '&8✖ &7打开城镇管理菜单.'
-        refresh_move_north:
-          material: skin:45c588b9ec0a08a37e01a809ed0903cc34c3e3f176dc92230417da93b948f148
-          slots: 5
-          name: '&6&l向北移动'
-          lore:
-          - '&7导航到北边.'
-        refresh_move_south:
-          material: skin:1cb8be16d40c25ace64e09f6086d408ebc3d545cfb2990c5b6c25dabcedeacc
-          slots: 41
-          name: '&6&l向南移动'
-          lore:
-          - '&7导航到南边.'
-        refresh_move_west:
-          material: skin:76ebaa41d1d405eb6b60845bb9ac724af70e85eac8a96a5544b9e23ad6c96c62
-          slots: 19
-          name: '&6&l向西移动'
-          lore:
-          - '&7导航到西边.'
-        refresh_move_east:
-          material: skin:8399e5da82ef7765fd5e472f3147ed118d981887730ea7bb80d7a1bed98d5ba
-          slots: 27
-          name: '&6&l向东移动'
-          lore:
-          - '&7导航到东边.'
         refresh_reset-pos:
           material: skin:22e4ad83c4938d9e5fc589e60c8010be2480e08d834529cec0da13bdf2538555
           slots: 45
@@ -2893,6 +2874,22 @@ gui:
           name: '&6&l当前位置'
           lore:
           - '&7这是你当前所处的位置.'
+        refresh_move_up:
+          material: skin:45c588b9ec0a08a37e01a809ed0903cc34c3e3f176dc92230417da93b948f148
+          slots: 5
+          name: '&6&l向 {direction} 移动'
+        refresh_move_down:
+          material: skin:1cb8be16d40c25ace64e09f6086d408ebc3d545cfb2990c5b6c25dabcedeacc
+          slots: 41
+          name: '&6&l向 {direction} 移动'
+        refresh_move_left:
+          material: skin:76ebaa41d1d405eb6b60845bb9ac724af70e85eac8a96a5544b9e23ad6c96c62
+          slots: 19
+          name: '&6&l向 {direction} 移动'
+        refresh_move_right:
+          material: skin:8399e5da82ef7765fd5e472f3147ed118d981887730ea7bb80d7a1bed98d5ba
+          slots: 27
+          name: '&6&l向 {direction} 移动'
     title: 城镇地图
   list_player_map:
     size: 54
@@ -2924,30 +2921,6 @@ gui:
           lore:
           - '&7你是这个城镇的主人.'
           - '&8✖ &7打开城镇管理菜单.'
-        refresh_move_north:
-          material: skin:45c588b9ec0a08a37e01a809ed0903cc34c3e3f176dc92230417da93b948f148
-          slots: 5
-          name: '&6&l向北移动'
-          lore:
-          - '&7导航到北边.'
-        refresh_move_south:
-          material: skin:1cb8be16d40c25ace64e09f6086d408ebc3d545cfb2990c5b6c25dabcedeacc
-          slots: 50
-          name: '&6&l向南移动'
-          lore:
-          - '&7导航到南边.'
-        refresh_move_west:
-          material: skin:76ebaa41d1d405eb6b60845bb9ac724af70e85eac8a96a5544b9e23ad6c96c62
-          slots: 19
-          name: '&6&l向西移动'
-          lore:
-          - '&7导航到西边.'
-        refresh_move_east:
-          material: skin:8399e5da82ef7765fd5e472f3147ed118d981887730ea7bb80d7a1bed98d5ba
-          slots: 27
-          name: '&6&l向东移动'
-          lore:
-          - '&7导航到东边.'
         refresh_reset-pos:
           material: skin:22e4ad83c4938d9e5fc589e60c8010be2480e08d834529cec0da13bdf2538555
           slots: 54
@@ -2959,6 +2932,22 @@ gui:
           name: '&6&l当前位置'
           lore:
           - '&7这是你当前所处的位置.'
+        refresh_move_up:
+          material: skin:45c588b9ec0a08a37e01a809ed0903cc34c3e3f176dc92230417da93b948f148
+          slots: 5
+          name: '&6&l向 {direction} 移动'
+        refresh_move_down:
+          material: skin:1cb8be16d40c25ace64e09f6086d408ebc3d545cfb2990c5b6c25dabcedeacc
+          slots: 50
+          name: '&6&l向 {direction} 移动'
+        refresh_move_left:
+          material: skin:76ebaa41d1d405eb6b60845bb9ac724af70e85eac8a96a5544b9e23ad6c96c62
+          slots: 19
+          name: '&6&l向 {direction} 移动'
+        refresh_move_right:
+          material: skin:8399e5da82ef7765fd5e472f3147ed118d981887730ea7bb80d7a1bed98d5ba
+          slots: 27
+          name: '&6&l向 {direction} 移动'
     title: 城镇地图
 common:
   size: 45
