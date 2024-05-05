@@ -279,6 +279,8 @@ general:
         sorting: 分类方式
         preparation_time: 准备时长
         category: 类别
+        ally: 盟友
+        enemy: 政敌
   value:
     none: '&8无'
     unlimited: '&a无限'
@@ -1187,6 +1189,7 @@ lands:
             &c你不能与城镇&4 {land}&c 联盟. &7这个城镇的外交关系由联邦&9 {nation}&7 统一管理.
               [T]&7✖ 向联邦发送联盟申请&9 {nation}&7.[H]&7点此向联邦&9 {nation}&7 发送联盟申请.[/H][C]{cmd}[/C][/T]
           success: '&7成功向 {target}&7 发送联盟请求. 如果他们同意, 你 &8(&7{object}&8) &7将会与他们成为盟友.'
+          sent: '&7你已经在&5 {time} &7前向 {object} 发送过联盟请求了.'
         remove:
           already: '&7{target} &7不是 {object}&7 的盟友.'
           revoked: '&7你 &8(&7{object}&8) 撤回了对 {target}&7 的联盟邀请.'
@@ -1204,6 +1207,7 @@ lands:
         remove:
           already: '&7{target} &7不与&7 {object}&7 敌对.'
           success: '&7成功向 {target}&7 发送和解请求. 如果他们同意, 你 &8(&7{object}&8) &7将不再与他们敌对.'
+          sent: '&7你已经在&5 {time} &7前向 {object} &7发送过和解请求了.'
     confirmtp:
       none: '&c你没有进行中的传送.'
     
