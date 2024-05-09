@@ -175,7 +175,7 @@ gui:
           lore:
           - '&8✖ &b左键'
           - '   &7传送到城镇传送点.'
-          - '&8✖ &bSHIFT + 左键'
+          - '&8✖ &bShift + 左键'
           - '   &7设置传送点.'
           - '&8✖ &9SHIFT + 右键'
           - '   &7访客传送: {teleport}'
@@ -1369,7 +1369,7 @@ gui:
           lore:
           - '&7职位: {role}'
           - ''
-          - '&8✖ &bSHIFT + 左键'
+          - '&8✖ &bShift + 左键'
           - '   &7▲ 升职'
           - '&8✖ &9SHIFT + 右键'
           - '   &7▼ 降职'
@@ -1581,17 +1581,34 @@ gui:
           - '&c你不能删除这个职位.'
           - ''
           - ' &8• &7它被用于管理玩家'
-        entry_object:
+        entry_object_system_priority:
           material: INHERIT
-          name: '&7&l{role}'
           lore:
-          - '&8✖ &bShift +左键 点击'
+          - '&8✖ &b左键'
+          - '   &7编辑这个职位.'
+          - '&8✖ &bShift + 左键'
           - '   &7提高优先级'
-          - '&8✖ &9Shift +右键 点击'
+          - '&8✖ &9Shift + 右键'
           - '   &7降低优先级'
-          - ''
+          name: '&7&l{role}'
+        entry_object_normal:
+          material: INHERIT
+          lore:
+          - '&8✖ &b左键'
+          - '   &7编辑这个职位.'
+          - '&8✖ &bShift + 左键'
+          - '   &7提高优先级'
+          - '&8✖ &9Shift + 右键'
+          - '   &7降低优先级'
           - '&8✖ &3Q 键'
           - '   &7删除这个职位.'
+          name: '&7&l{role}'
+        entry_object_system:
+          material: INHERIT
+          lore:
+          - '&8✖ &b左键'
+          - '   &7编辑这个职位.'
+          name: '&7&l{role}'
   list_role_players:
     title: '&8职位成员'
     items:

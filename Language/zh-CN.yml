@@ -632,10 +632,10 @@ lands:
       new:
         posts: |
           &7你有 {amount} 条来自你城镇成员的通知&2 {land}&7. 最新一条: {latest}
-            [T]&7✖ 查看: &e/{cmd} &8[CLICK][H]&7点击查看这些通知[/H][C]{cmd}[/C][/T]
+            [T]&7✖ 查看: &e/{cmd} &8[点击][H]&7点击查看这些通知[/H][C]{cmd}[/C][/T]
         general: |
           &7你的城镇有 {amount} 条新的日志箱信息&2 {land}&7. 最新一条: {latest}
-            [T]&7✖ 查看: &e/{cmd} &8[CLICK][H]&7点击查看这些通知[/H][C]{cmd}[/C][/T]
+            [T]&7✖ 查看: &e/{cmd} &8[点击][H]&7点击查看这些通知[/H][C]{cmd}[/C][/T]
     rented:
       edit: '&c你不能拿在子区域&4 {area}&c 正在出租或已被出售时这样做. &7移除租客: &e/{cmd}'
       tenant: '&c你不能编辑子区域&4 {area}&c 的租客&4 {player}&c. &7移除租客: &e/{cmd}'
@@ -1008,8 +1008,6 @@ lands:
         revoke: '&7成功撤回在城镇&2 {land}&7 对玩家&3 {player} &7的邀请&7. 玩家没有加入任何子区域.'
         success: '&7成功将玩家&3 {player} &7移出城镇&2 {land}&7, 除了他租用或购买的子区域外.'
     setrole:
-      visitor: '&c你不能设置&4 {role} &c职位. &7如果你想要将玩家移出子区域, 使用 &e/lands untrust {player}
-        [area]&7.'
       land:
         untrusted: '&c玩家&4 {player} &c没有加入城镇&4 {land}&c. &7请先邀请他加入城镇.'
         success: '&7成功在城镇&2 {land}&7 中所有被玩家&3 {player} &7加入的子区域分配职位&3 {role}&7.'
@@ -1017,6 +1015,16 @@ lands:
         untrusted: '&c玩家&4 {player} &c没有加入城镇&4 {land}&c 的子区域&4 {area} &c. &7请先邀请他加入子区域.'
         success: '&7成功在城镇&2 {land}&7 的子区域&6 {area} &7为玩家&3 {player} &7分配职位&3 {role}
           &7.'
+      cant-set:
+        owner: |
+          &c你不能设置职位&4 {role}&c. &7如果你想更换城镇&2 {land}&7 的主人, 使用以下命令:
+            [T]&7✖ 更改主人: &e/{cmd} &8[点击][H]&7点击设置玩家&3 {player} &7为城镇&2 {land}&7 的新主人.[/H][C]{cmd}[/C][/T]
+        ally: '&c你不能设置职位&4 {role}&c. &7这个职位会被自动分配给盟友城镇或联邦的所有成员.'
+        nation: '&c你不能设置职位&4 {role}&c. &7这个职位会被自动分配给城镇 &2{land}&7 所属联邦的所有成员.'
+        visitor: |
+          &c你不能设置职位&4 {role}&c. &7如果你想将这个玩家从城镇移出, 使用以下命令:
+            [T]&7✖ 移出: &e/{cmd} &8[点击][H]&7点击移出玩家&3 {player}&7.[/H][C]{cmd}[/C][/T]
+        tenant: '&c你不能设置职位&4 {role}&c. &7这个职位会被自动分配给区域的租用或购买者: {wiki}'
     accept:
       max: '&c你不能加入更多城镇了. &7你最多只能加入&3 {max}个 &7城镇.' # &8Permission: lands.lands.<number>
       not-exist: '&c你没有来自城镇&4 {land} &c的邀请或邀请已过期.'
