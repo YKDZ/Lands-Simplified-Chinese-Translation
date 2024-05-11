@@ -60,7 +60,7 @@ land:
   roles:
     # NOTE: The owner role can not be deleted.
     owner:
-      name: '&4&l主人'
+      name: '&4&l成员'
       # The icon supports minecraft URL values (example: https://minecraft-heads.com/) and normal material values.
       icon: 'skin:83f642814fa2551e7763d04060c532adea51015cbfe030cbb78e82c92092a6fb'
       # Default flag values. Please note that these only apply to new land creations. The flags of the owner role can only be toggled by server administrators.
@@ -69,7 +69,7 @@ land:
 
     # This role can't be deleted, but is only visible if an area is rented or in admin lands.
     tenant:
-      name: '&6&l租客'
+      name: '&6&l住户'
       # The icon supports minecraft URL values (example: https://minecraft-heads.com/) and normal material values.
       icon: 'skin:d831830a7bd3b1ab05beb98dc2f9fc5ea550b3cf649fd94d483da7cd39f7c063'
       # Allow lands to toggle specific flags for this role? They can only do this while the area is NOT rented.

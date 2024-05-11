@@ -384,15 +384,15 @@ help:
       claimlist: '[T]&e{parent} {subcmd} {args} &8- &7展示城镇占领的区块[H]&7这个命令会列出城镇占领的所有土地.
         &7点击执行.[/H][C]{fullcmd}[/C][/T]'
       rent:
-        main: '[T]&e{parent} {subcmd} {args} &8- &7管理出租[H]&7管理你当前所处的出租子区域. &7点击复制.[/H][SC]{fullcmd}[/SC][/T]'
+        main: '[T]&e{parent} {subcmd} {args} &8- &7管理出租[H]&7管理你当前所处的被出租子区域. &7点击复制.[/H][SC]{fullcmd}[/SC][/T]'
         cancel: '[T]&e{parent} {subcmd} &8- &7取消出租[H]&7使你当前所处的子区域不再对外出租. &7点击执行.[/H][C]{fullcmd}[/C][/T]'
         info: '[T]&e{parent} {subcmd} &8- &7展示信息[H]&7展示你当前所处的对外出租的子区域的信息. &7点击执行.[/H][C]{fullcmd}[/C][/T]'
         list: '[T]&e{parent} {subcmd} &8- &7查看出租列表[H]&7查看所有城镇的出租信息. &7点击执行.[/H][C]{fullcmd}[/C][/T]'
         remove:
           main: '[T]&e{parent} {subcmd} {args} &8- &7管理当前的已出租子区域[H]&7管理你所处的已被他人租用的子区域.
             &7点击复制.[/H][SC]{fullcmd}[/SC][/T]'
-          offer: '[T]&e{parent} {subcmd} &8- &7取消出租[H]&7现有租客将无法继续延长租期. &7点击执行.[/H][C]{fullcmd}[/C][/T]'
-          tenant: '[T]&e{parent} {subcmd} &8- &7踢出租客[H]&7直接踢出租客并向他们支付违约金. &7点击执行.[/H][C]{fullcmd}[/C][/T]'
+          offer: '[T]&e{parent} {subcmd} &8- &7取消出租[H]&7现有住户将无法继续延长租期. &7点击执行.[/H][C]{fullcmd}[/C][/T]'
+          tenant: '[T]&e{parent} {subcmd} &8- &7踢出住户[H]&7直接踢出住户并向他们支付违约金. &7点击执行.[/H][C]{fullcmd}[/C][/T]'
       level: '[T]&e{parent} {subcmd} &8- &7查看升级进度[H]&7查看城镇升级的进程以及下一级带来的奖励. &7点击执行.[/H][C]{fullcmd}[/C][/T]'
       relations:
         main: '[T]&e{parent} {subcmd} {args} &8- &7管理外交关系[H]&7将城镇或联邦设为你的盟友或政敌. 点击复制.[/H][SC]{fullcmd}[/SC][/T]'
@@ -637,8 +637,8 @@ lands:
           &7你的城镇有 {amount} 条新的日志箱信息&2 {land}&7. 最新一条: {latest}
             [T]&7✖ 查看: &e/{cmd} &8[点击][H]&7点击查看这些通知[/H][C]{cmd}[/C][/T]
     rented:
-      edit: '&c你不能拿在子区域&4 {area}&c 正在出租或已被出售时这样做. &7移除租客: &e/{cmd}'
-      tenant: '&c你不能编辑子区域&4 {area}&c 的租客&4 {player}&c. &7移除租客: &e/{cmd}'
+      edit: '&c你不能拿在子区域&4 {area}&c 正在出租或已被出售时这样做. &7移除住户: &e/{cmd}'
+      tenant: '&c你不能编辑子区域&4 {area}&c 的住户&4 {player}&c. &7移除住户: &e/{cmd}'
   command:
     menu:
       invalid: '&c没有名为&4 {shortcut}&c 的快捷方式.'
@@ -658,7 +658,7 @@ lands:
           后到期.'
         sold: '&c你不能出租已被购买的子区域. &7子区域&6 {area} &7已经被&3 {player}&7 买走了.'
         success: |
-          &7你出租了子区域&6 {area} &7. 租客需每次支付&c {cost} &7以租用子区域&5 {time}&7.
+          &7你出租了子区域&6 {area} &7. 住户需每次支付&c {cost} &7以租用子区域&5 {time}&7.
             [T]&8✖ &7取消出租: &e/lands rent removeOffer[H]&7点击取消子区域的出租.[/H][C]lands rent removeOffer[/C][/T]
         invalid: |
           &7你的牌子格式不正确 (第 {line} 行)
@@ -687,7 +687,7 @@ lands:
           &7&m━━━━━━━━━<━&r &5&l租用信息 &7&m━>━━━━━━━━━
           [T]&8• &7城镇:&a {land} &8[&8点击&8][H]&7点击查看子区域范围.[/H][C]lands view here[/C][/T]
            &8• &7子区域:&6 {area}
-           &8• &7租客: {player}
+           &8• &7住户: {player}
            &8• &7剩余时间:&5 {left}
            &8• &8租用花费: {cost} 每 {time}
           &7&m━━━━━━━━━<━&r &5&l租用信息 &7&m━>━━━━━━━━━
@@ -698,12 +698,12 @@ lands:
         offer:
           success:
             land: '&7城镇&2 {land} &7不再能被购买了.'
-            area: '&7城镇&6 {land}&7 的子区域&2 {area}&c &7不再能被购买或租用了. 现存的租客将会在租约到期后自动解约.'
+            area: '&7城镇&6 {land}&7 的子区域&2 {area}&c &7不再能被购买或租用了. 现存的住户将会在租约到期后自动解约.'
         tenant:
           confirm: |
-            &c请确认是否向租客&4 {player} &c支付&4 {cost} &c违约金并强行让其不再租用子区域:
+            &c请确认是否向住户&4 {player} &c支付&4 {cost} &c违约金并强行让其不再租用子区域:
               [T]&2✔ 确认[H]&7点击确认支付违约金.[/H][C]{cmd}[/C][/T]
-          success: '&7你将租客&3 {player} &7从城镇&6 {land}&7 的子区域&2 {area}&7中赶了出去并向他支付了&c
+          success: '&7你将住户&3 {player} &7从城镇&6 {land}&7 的子区域&2 {area}&7中赶了出去并向他支付了&c
             {cost} &c违约金.'
           target: '&c你被从城镇&4 {land}&c 的子区域&4 {area}&c中赶了出去&c. &7他们向你支付了&c {compensation}
             &7作为违约金.'
@@ -936,13 +936,13 @@ lands:
         untrusted: '&7你不是城镇&2 {land}&7 的子区域&6 {area} &7的成员.'
         success: '&7成功离开了城镇&2 {land}&7 的子区域&6 {area} &7.'
     unclaim:
-      rental: '&c你不能解除占领这个区块&7, 因为它是已被出租/售卖的子区域&6 {area}&7 的一部分. 租客:&3 {player}'
+      rental: '&c你不能解除占领这个区块&7, 因为它是已被出租/售卖的子区域&6 {area}&7 的一部分. 住户:&3 {player}'
       split: '&c你不能解除占领这个区块, 因为这会将你的领地分为不相连的几块. &7会被分割的区块边界现在对你可见.'
       success: '&7成功解除占领区块 &8(&7城镇:&2 {land} &7X: {x} Z: {z}&8)&7. 你拿回了&c {back} &7的退款.'
       selection:
         empty: '&c你没有解除占领任何区块, 因为它们并没有被占领或你无权解除占领.'
         rental: '&c你不能解除占领这个选区&7, 因为它是城镇&2 {land}&7 中已被出租/售卖的子区域&6 {area}&7 的一部分&7.
-          租客:&3 {player}'
+          住户:&3 {player}'
         split: '&7你成功解除占领了 {success} / {size}个 选区中的区块, &c其中 {failed}个 区块无法被解除占领, 因为这会将你的领地分为不相连的几块&7.
           会被分割的区块边界现在对你可见. 你拿回了&c {back} &7的退款.'
         partly: '&7你成功解除占领了 {success} / {size}个 选区中的区块. 你拿回了&c {back} &7的退款.'
@@ -959,7 +959,7 @@ lands:
       nation: '&c你不能解散这个城镇, 因为它是联邦&4 {nation}&c 的首都. &7你可能需要先解散联邦: &e/nations delete'
       success: '&7成功解散了你的城镇&2 {land}&7. 你拿回了&c {back} &7的退款.'
       rented: '&c你不能解散这个城镇, 因为它的子区域&4 {area} &c已经被&4 {player}&c 租用或购买了. &7站在该子区域使用
-        &e/lands rent removetenant &7以移除这个租客.'
+        &e/lands rent removetenant &7以移除这个住户.'
       broadcast: '&7城镇&2 {land} &7被玩家&3 {player}&7 解散了.'
     trust:
       own-land: '&c玩家&4 {player} &c不能被邀请加入其他城镇. &7他不能在拥有自己城镇的情况下加入其它人的城镇. 他需要先删除自己的城镇&2
@@ -1001,7 +1001,7 @@ lands:
         revoke: '&7成功撤回在这个子区域对玩家&3 {player} &7的加入邀请 &8(&7子区域:&6 {area} &7城镇:&2 {land}&8)&7.
           玩家没有加入该子区域.'
         success: '&7成功将玩家&3 {player} &7移出子区域 &8(&7子区域:&6 {area} &7城镇:&2 {land}&8)&7.'
-        rental: '&c你不能移出子区域&4 {area}&c 的租客&4 {player} &c. &7站在子区域内使用 &e/lands rent
+        rental: '&c你不能移出子区域&4 {area}&c 的住户&4 {player} &c. &7站在子区域内使用 &e/lands rent
           remove &7解除这个子区域的出租状态.'
       land:
         already: '&7玩家&3 {player} &7没有加入城镇&2 {land} &7的任何子区域且没有收到过邀请.'
@@ -1107,8 +1107,8 @@ lands:
         already: '&7玩家&3 {player} &7已经被城镇&2 {land}&7 拉黑过了.'
         success: '&7成功在城镇&2 {land}&7 拉黑玩家&3 {player}&7. 他将不能再进入城镇.'
         target: '&c城镇&4 {land} &c将你拉黑了&c. &7你将不能再进入该城镇.'
-        tenant: '&c你不能在整个城镇&4 {land}&c 内拉黑玩家&4 {player}&c, 因为他是子区域&4 {area}&c 的租客.
-          &7移除租客: &e/{cmd}'
+        tenant: '&c你不能在整个城镇&4 {land}&c 内拉黑玩家&4 {player}&c, 因为他是子区域&4 {area}&c 的住户.
+          &7移除住户: &e/{cmd}'
     unban:
       area:
         success: '&7成功将玩家&3 {player} &7移出子区域黑名单 &8(&7子区域:&6 {area} &7城镇:&2 {land}&8)&7.'
@@ -1534,7 +1534,7 @@ list:
       area:
       - ''
       - '&7子区域&6 {area}'
-      - '&a卖给了玩家 &7{player}'
+      - '&a买主 &7{player}'
       - '&8Shift + 点击: 放弃购买'
       - ''
       - ''

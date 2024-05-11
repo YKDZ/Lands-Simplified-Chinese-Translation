@@ -365,7 +365,7 @@ gui:
           lore:
           - '&c这个子区域已被租售, '
           - '&c你不能编辑它的税务.'
-          - ' &8• &7当前租客:&3 {player}'
+          - ' &8• &7当前住户:&3 {player}'
           name: '&4租售中'
         spawn:
           material: ENDER_PEARL
@@ -1291,7 +1291,7 @@ gui:
           lore:
           - '&c这个子区域已被租售, '
           - '&c你不能编辑它.'
-          - ' &8• &7当前租客:&3 {player}'
+          - ' &8• &7当前住户:&3 {player}'
           name: '&4&l租售中'
   list_land_claims:
     title: '&8领土'
@@ -1451,9 +1451,9 @@ gui:
           - ' &8• &7城镇主人可以给予你对应权限'
         child_failure_tenant:
           lore:
-          - '&c租客不能被移除.'
+          - '&c住户不能被移出城镇.'
           - '&c他们的职位也不能被修改.'
-          - ' &8• &7你可以通过以下命令移除租客:'
+          - ' &8• &7你可以通过以下命令移除住户:'
           - '   &e/{cmd}&7.'
           name: '&4&lTenant'
   list_area_banned:

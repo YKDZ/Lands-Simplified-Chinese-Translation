@@ -49,7 +49,7 @@ Wilderness -> 荒野
 
 Role -> 职位
 
-Tenant -> 租客
+Tenant -> 住户（原词实际上同时包括租客和买主的意思）
 
 Claim -> 
 n. 领土
