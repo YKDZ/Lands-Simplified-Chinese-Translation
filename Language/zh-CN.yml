@@ -167,6 +167,7 @@ general:
     general:
       created: '&7城镇 {0} &7被建立了.'
       post: '{0}: {1}'
+      renamed: '&7{0} 将城镇名称从 {1} 修改为 {2}.'
     member:
       join: '&7玩家 {0} 加入城镇.'
       leave: '&7玩家 {0} 退出城镇.'
@@ -623,6 +624,7 @@ lands:
       rename: '#t#&6在聊天栏输入[newline]&7新名称[newline]&7不能使用空格. 输入 "cancel" 以取消.'
       name: '#t#&6在聊天栏输入[newline]&7名称[newline]&7输入 "cancel" 以取消.'
       text: '#t#&6Enter the Text[newline]&7in chat[newline]&7Enter "cancel" to abort.'
+      general: '&7Please enter your input in the chat.'
     war: '&c你现在不能这么做. &7{object} &7正在进行与 {enemy} &7的战争. &7请等战争结束后再试.'
     introduction:
       container-placement: |

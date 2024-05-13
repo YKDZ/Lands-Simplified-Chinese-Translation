@@ -32,6 +32,7 @@ general:
     economy: '&c经济 $'
     relations: '&a外交关系'
     posts: '&7通知'
+    general: 通常
   
   rentables:
     buy: '&a购买'

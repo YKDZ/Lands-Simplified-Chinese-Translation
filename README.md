@@ -4,7 +4,7 @@
 
 纯手动翻译，不使用任何 AI 翻译或通篇机器翻译。
 
-当前对应的插件版本：[7.1.12](https://www.spigotmc.org/resources/lands-%E2%AD%95-land-claim-plugin-%E2%9C%85-grief-prevention-protection-gui-management-nations-wars-1-20-support.53313/updates)
+当前对应的插件版本：[7.1.13](https://www.spigotmc.org/resources/lands-%E2%AD%95-land-claim-plugin-%E2%9C%85-grief-prevention-protection-gui-management-nations-wars-1-20-support.53313/updates)
 
 ## 安装使用
 
@@ -30,7 +30,7 @@ roles.yml
 
 ## 翻译风格
 
-本翻译融合了部分个人风格，在此处声明，以便识别：
+本翻译融合了部分个人风格，在此处声明，以便识别和修改：
 
 - 所有的标点符号皆为**英文半角标点**（因为在 Minecraft 游戏内使用官方中文字体时，中文全角标点给人的观感较差，欠缺美观）
 - 不使用**您**字
