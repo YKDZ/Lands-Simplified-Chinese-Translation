@@ -772,7 +772,6 @@ lands:
       no-edit-land: '&c你还未选择编辑一个城镇. &7使用 &e/lands edit &8<&e城镇名&8> &7来选择城镇作为编辑对象.'
       name-exists: '&c名称&4 {name} &c已经被其它城镇或联邦使用了. &7请换一个名字.'
       swear-word: '&c删除了一个不文明用语. &7请文明用语. 词语:&c {word}'
-      action-cooldown: '&c你现在不能这么做. &7你还需等待&5 {time}&7.'
       wilderness: '&c你当前不处于城镇领土内. &7请先去往城镇领土内以执行该操作. &7你可以使用 &e/view &7查看你附近的城镇.'
       player-self: '&c你不能对自己这么做.'
       banks-disabled: '&7金库功能已被禁用.'
@@ -815,6 +814,9 @@ lands:
         category: '&c你的输入&4 {input} &c不是一个类别. &7参数 {pos}: {expected}'
         funds: '&c你的输入&4 {input} &c不是一个金额. &7参数 {pos}: {expected}'
         time: '&c你的输入&4 {input} &c不是一个时间. &7参数 {pos}: {expected}. 正确实例: 1h'
+      action:
+        cooldown: '&c你现在不能这么做. &7你需要等待&5 {time}&7.'
+        spam: '&c你当前已有正在执行的命令或动作. &7请等待它完成后再输入下一条命令.'
     
     create:
       land-other: '&c你不能在拥有自己城镇的同时加入其他城镇. &7你需要先离开城镇&2 {land}&7.'
@@ -888,7 +890,6 @@ lands:
         {next}&7.'
       already-claimed: '&c你的选区中有一个已经属于其它城镇的区块 &8(&7X: {x} Z: {z}&8)&c. &7它属于城镇&2 {land}&7.'
       max-chunk: '&c你不能为这个城镇占领&4 {chunks}个 &c以上的区块. &7城镇&2 {land} &7可占领的最大数量是&3 {max}个&7.' # &8Permission: lands.chunks.<number>
-      processing: '&c已经有一个选区正在被处理. &7请等待完成.'
       selection:
         success: '&7你成功为城镇&2 {land}&7 占领了&3 {chunks}个 &7区块&7. 你花费了&c {cost}&7.'
       radius:
