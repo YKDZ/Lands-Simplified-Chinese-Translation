@@ -641,6 +641,11 @@ lands:
     rented:
       edit: '&c你不能拿在子区域&4 {area}&c 正在出租或已被出售时这样做. &7移除住户: &e/{cmd}'
       tenant: '&c你不能编辑子区域&4 {area}&c 的住户&4 {player}&c. &7移除住户: &e/{cmd}'
+    block-selection:
+      rental:
+        prompt: '#t#&6在子区域&6 {area} &6内[newline]&7选择一个告示牌'
+        sign: '&c选择的方块必须是一个告示牌.'
+        area: '&c选择的告示牌必须在城镇&4 {land}&c 的子区域&4 {area} &c内.'
   command:
     menu:
       invalid: '&c没有名为&4 {shortcut}&c 的快捷方式.'
@@ -667,7 +672,7 @@ lands:
            &81. line:&7 Lands
            &82. line:&7 rent &8[&7area&8]
            &83. line:&7 最大出租时间 (not required)
-           &84. line:&7 单次租金 (example: 5 = 5)
+           &84. line:&7 单次租金 (例: 5 = 5)
         info: |
           [NoPrefix]
           &7&m━━━━━━━━━<━&r &5&l出租子区域 &7&m━>━━━━━━━━━
@@ -676,6 +681,7 @@ lands:
            &8• &7花费:&c {cost} &7每 {time}
            &8• &8最大租期: {max}
           &7&m━━━━━━━━━<━&r &5&l出租子区域 &7&m━>━━━━━━━━━
+        interval: '&c单次租期必须短于最大租用时长. &7提供的值 - 单次租期:&5 {interval}&7, 最大租用时长:&5 {max-time}'
       rent:
         expire: '&c你不能再延长子区域&4 {area}&c 的租期了. &7城镇&2 {land} &7不再出租这个子区域了. 当前租约过期时间&5
           {time}&7 后.'
@@ -693,7 +699,7 @@ lands:
            &8• &7剩余时间:&5 {left}
            &8• &8租用花费: {cost} 每 {time}
           &7&m━━━━━━━━━<━&r &5&l租用信息 &7&m━>━━━━━━━━━
-        time: '&c你不能再续租子区域&4 {area}&c. &7城镇&2 {land} &7将最大租用时间设为&5 {max}&7.'
+        time: '&c你不能再续租子区域&4 {area}&c. &7城镇&2 {land} &7将最大租用时长设为&5 {max}&7.'
       cancel:
         success: '&7你取消了对&6 {area}&7 的租用. 你不再拥有这个子区域的权限了.'
       remove:
@@ -827,10 +833,10 @@ lands:
         land: |
           &7成功花费&c {cost}&7 创建了城镇&2 {land}&7.
           已将城镇 {land} &7设为你之后命令的编辑对象.
-            [T]&7✖ 修改编辑对象: &3/edit &8<&3城镇名&8>[SC]lands edit[/SC][H]&7城镇 {land} 已成为你之后命令的编辑对象. 使用本命令修改编辑对象. 点击复制.[/H][/T]
-            [T]&7✖ 占领区块: &3/claim[C]lands claim[/C][H]&7点击占领你所处的区块.[/H][/T]
-            [T]&7✖ 占领选区范围: &3/selection[C]lands selection[/C][H]&7点击为城镇占领选区内的区块.[/H][/T]
-            [T]&7✖ 邀请玩家: &3/trust[SC]lands trust[/SC][H]&7点击复制.[/H][/T]
+            [T]&7✖ 修改编辑对象: &3/land edit &8<&3城镇名&8>[SC]lands edit[/SC][H]&7城镇 {land} 已成为你之后命令的编辑对象. 使用本命令修改编辑对象. 点击复制.[/H][/T]
+            [T]&7✖ 占领区块: &3/land claim[C]lands claim[/C][H]&7点击占领你所处的区块.[/H][/T]
+            [T]&7✖ 占领选区范围: &3/land selection[C]lands selection[/C][H]&7点击为城镇占领选区内的区块.[/H][/T]
+            [T]&7✖ 邀请玩家: &3/land trust[SC]lands trust[/SC][H]&7点击复制.[/H][/T]
         camp: '&7你再当前位置创建了露营地&2 {land} &7. &7这花费了&c {cost}&7. 露营地范围不能被扩展, 且会在&5 {time}&7
           后被删除. 请注意收取个人物品'
       broadcast: '&7玩家&3 {player}&7 创建了城镇&2 {land}&7.'
@@ -854,15 +860,15 @@ lands:
         disabled: '&7你的选区Y值不再是最大值.'
         y: '&7将选区最低点的Y值扩展&3 {y-min} &7将最高点Y值扩展&3 {y-max}&7.'
       status:
-        complete: '#t#&6选区完成[newline]&7占领: &e&l/claim &7解除占领: &e&l/unclaim[newline]&6&l分配到子区域:
-          &e&l/assign'
+        complete: '#t#&6选区完成[newline]&7占领: &e&l/land claim &7解除占领: &e&l/land unclaim[newline]&6&l分配到子区域:
+          &e&l/land assign'
         progress: '#t#&6选区中[newline]&7左键: {first} &7右键: {second}[newline]&6&l选取顶点:
           &6左/右键或Q键 &7&l取消: &7切换工具栏'
         reminder: |
           &7选区完成: 接下来你可以:
-            [T]&7✖ 占领: &e/claim &8[&8点击&8][H]&7点此占领这个选区.[/H][C]lands claim[/C][/T]
-            [T]&7✖ 解除占领: &e/unclaim &8[&8点击&8][H]&7点此解除占领这个选区.[/H][C]lands unclaim[/C][/T]
-            [T]&7✖ 子区域: &e/assign &8[&8点击&8][H]&7将选区分配到子区域.[/H][SC]lands assign <area>[/SC][/T]
+            [T]&7✖ 占领: &e/land claim &8[&8点击&8][H]&7点此占领这个选区.[/H][C]lands claim[/C][/T]
+            [T]&7✖ 解除占领: &e/land unclaim &8[&8点击&8][H]&7点此解除占领这个选区.[/H][C]lands unclaim[/C][/T]
+            [T]&7✖ 子区域: &e/land assign &8[&8点击&8][H]&7将选区分配到子区域.[/H][SC]lands assign <area>[/SC][/T]
         not-complete: '&c你的选区还未完成. &7请保证两个顶点都已被选取. [T]&7你可以用 &e/lands selection &7开关选区模式
           &8[&8点击&8][H]&7点击开关选区模式.[/H][C]lands selection[/C][/T]'
         disabled: '#t#&6选区模式[newline]&c关闭'
@@ -1434,7 +1440,7 @@ nations:
     create:
       camp: |
         &c你不能以露营地 &8(&4{land}&8) &c为首都建立联邦.
-          [T]&7✖ 更改编辑对象: &3/edit &8<&3城镇&8>[SC]lands edit[/SC][H]&7使用这个命令选定你想作为首都的城镇. 点击复制.[/H][/T]
+          [T]&7✖ 更改编辑对象: &3/land edit &8<&3城镇&8>[SC]lands edit[/SC][H]&7使用这个命令选定你想作为首都的城镇. 点击复制.[/H][/T]
       already: '&c城镇&4 {land} &c已经是联邦&4 {nation}&c 的成员了. &7你需要先让城镇退出联邦 &e/nations
         leave&7.'
       war: '&c你不能在城镇&4 {land} &c仍处在与&4 {object}&c 的战争中时以它为首都建立联邦. &7请在战争结束后再试.'

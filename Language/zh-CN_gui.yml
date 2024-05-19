@@ -40,6 +40,8 @@ general:
     cost: '&c花费'
     size: '&e大小'
     price_blocks_ratio: '&a价格-大小 比率'
+    rental: '&e出租'
+    sell: '&a出售'
   
   war:
     defenders: '&a防守方'
@@ -390,6 +392,40 @@ gui:
           name: '&a成功设置传送点'
           lore:
           - '&7成功将传送点设置为你当前的位置.'
+        rental_setup:
+          material: INHERIT
+          slots: 34
+          name: '&6&l设置租售'
+          lore:
+          - '&8✖ &7将这个子区域对外出租或出售.'
+        rental_setup_land:
+          material: INHERIT
+          slots: 34
+          name: '&6&l出售城镇'
+          lore:
+          - '&8✖ &7将这个城镇对外出售.'
+          - '   &8• &7整个城镇或它的默认区域 &8(&6{area}&8)'
+          - '     &7只能被出售, 不能被出租.'
+        rental_setup_change_sell:
+          material: INHERIT
+          slots: 34
+          name: '&6&l修改出售报价'
+          lore:
+          - '&8✖ &7修改之前设置的售价.'
+          - ''
+          - '   &7当前:'
+          - '    &8• &7售价:&c {cost}'
+        rental_setup_change_rent:
+          material: INHERIT
+          slots: 34
+          name: '&6&l修改出租报价'
+          lore:
+          - '&8✖ &7修改之前设置的出租配置.'
+          - ''
+          - '   &7当前:'
+          - '    &8• &7单次租期:&5 {interval}'
+          - '    &8• &7每 {interval} 花费:&c {cost}'
+          - '    &8• &7最大租用时长:&5 {max-time}'
   role:
     title: '&8{role}'
     items:
@@ -2141,7 +2177,7 @@ gui:
           lore:
           - '&8• &7大小: {size} 方块'
           - '&8• &7花费:&c {costs} &7/ &5{time}'
-          - '&8• &7最大租用时间: {max}'
+          - '&8• &7最大租用时长: {max}'
           - '&8• &7城镇: {land}'
           - ''
           - '&8✖ &7点击传送'
@@ -2909,6 +2945,155 @@ gui:
           slots: 27
           name: '&6&l向 {direction} 移动'
     title: 城镇地图
+  rental_setup:
+    items:
+      default:
+        type:
+          material: OAK_SIGN
+          slots: 32
+          name: '&6&l模式: {type}'
+          lore:
+          - '&8✖ &7在出租和出售间切换.'
+        interval:
+          material: CLOCK
+          slots: 12
+          name: '&6单次租期: {interval}'
+          lore:
+          - '&8✖ &7租客每&5 {interval}&7 需要支付租金&c {cost}'
+          - '   &7以继续租用本区域.'
+        max-time:
+          material: CLOCK
+          slots: 16
+          name: '&6&l最大租用时长: {max-time}'
+          lore:
+          - '&8✖ &7每个玩家可以租用本区域'
+          - '   &7的最长时间.'
+        cost_rental:
+          material: GOLD_INGOT
+          slots: 14
+          name: '&6&l租金:&c {cost}'
+          lore:
+          - '&8✖ &7租客每&5 {interval}&7'
+          - '   &7需要支付的租金数量.'
+        cost_sell:
+          material: GOLD_INGOT
+          slots: 14
+          name: '&6&l售价:&c {cost}'
+          lore:
+          - '&8✖ &7购买者需要支付的金额数量.'
+        confirm_rental:
+          material: LIME_STAINED_GLASS_PANE
+          slots: 45
+          name: '&a&l确认'
+          lore:
+          - '&8✖ &7将这个子区域设为待出租.'
+          - '   &8• &7单次租期:&5 {interval}'
+          - '   &8• &7每 {interval} 租金:&c {cost}'
+          - '   &8• &7最大租用时长:&5 {max-time}'
+        confirm_sell:
+          material: LIME_STAINED_GLASS_PANE
+          slots: 45
+          name: '&a&l确认'
+          lore:
+          - '&8✖ &7将这个子区域设为待售.'
+          - '   &8• &7售价:&c {cost}'
+    title: '{type} 设置'
+  select_time:
+    items:
+      default:
+        refresh_d_plus:
+          material: GLOWSTONE_DUST
+          slots: 24
+          data:
+            modify: 1
+          name: '&a&l+{value} 天'
+        refresh_h_plus:
+          material: GLOWSTONE_DUST
+          slots: 25
+          data:
+            modify: 1
+          name: '&a&l+{value} 小时'
+        refresh_m_plus:
+          material: GLOWSTONE_DUST
+          slots: 26
+          data:
+            modify: 5
+          name: '&a&l+{value} 分钟'
+        refresh_d_minus:
+          material: REDSTONE
+          slots: 22
+          data:
+            modify: -1
+          name: '&c&l-{value} 天'
+        refresh_h_minus:
+          material: REDSTONE
+          slots: 21
+          data:
+            modify: -1
+          name: '&c&l-{value} 小时'
+        refresh_m_minus:
+          material: REDSTONE
+          slots: 20
+          data:
+            modify: -5
+          name: '&c&l-{value} 分钟'
+        current:
+          material: CLOCK
+          slots: 23
+          name: '&6&l当前:&5 {time}'
+        confirm:
+          material: LIME_STAINED_GLASS_PANE
+          slots: 45
+          name: '&a&l确认'
+    title: 时长
+  select_value:
+    items:
+      default:
+        refresh_plus-1:
+          material: GLOWSTONE_DUST
+          slots: 26
+          data:
+            modify: 1
+          name: '&a+{value}'
+        refresh_plus-2:
+          material: GLOWSTONE_DUST
+          slots: 25
+          data:
+            modify: 50
+          name: '&a+{value}'
+        refresh_plus-3:
+          material: GLOWSTONE_DUST
+          slots: 24
+          data:
+            modify: 500
+          name: '&a+{value}'
+        current:
+          material: GOLD_INGOT
+          slots: 23
+          name: '&6&l当前: {value}'
+        refresh_minus-3:
+          material: GLOWSTONE_DUST
+          slots: 22
+          data:
+            modify: -500
+          name: '&c-{value}'
+        refresh_minus-2:
+          material: GLOWSTONE_DUST
+          slots: 21
+          data:
+            modify: -50
+          name: '&c-{value}'
+        refresh_minus-1:
+          material: GLOWSTONE_DUST
+          slots: 20
+          data:
+            modify: -1
+          name: '&c-{value}'
+        confirm:
+          material: LIME_STAINED_GLASS_PANE
+          slots: 45
+          name: '&a&l确认'
+    title: 金额
 common:
   size: 45
   entries: 10-36
