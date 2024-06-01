@@ -282,6 +282,7 @@ general:
         category: 类别
         ally: 盟友
         enemy: 政敌
+        here: 当前位置
   value:
     none: '&8无'
     unlimited: '&a无限'
@@ -891,7 +892,6 @@ lands:
       already: '&c你不能占领这个区块. &7它已经属于城镇&2 {land}&7.'
       initial-world: '&c你只能占领在城镇&4 {land} &c创建时的世界&4 {world}&c 内的区块. &7你可能想在你当前所处的世界
         ({current}) 创建一个新城镇: &e/lands create &8<&e名称&8>'
-      near-other: '&c与城镇&4 {land}&c 距离过近. &7你需要离得远一些. 最小的区块间隔是&3 {distance}&7.'
       success: '&7成功占领区块 &8(&7城镇:&2 {land} &7X: {x} Z: {z}&8) &7花费&c {cost}&7. 下一次占领将花费&c
         {next}&7.'
       already-claimed: '&c你的选区中有一个已经属于其它城镇的区块 &8(&7X: {x} Z: {z}&8)&c. &7它属于城镇&2 {land}&7.'
@@ -907,6 +907,9 @@ lands:
       force-near:
         far-land: '&c你不能占领这个区块. &7新的领地必须与城镇&2 {land}&7 相连.'
         parts: '&c你不能占领这个区块. &7新的领地必须与城镇&2 {land}&7 相连, 因为你已经达到了飞地数量最大值.'
+      chunk-distance:
+        land: '&c这里距离城镇&4 {land}&c 太近了. &7不属于某联邦的城镇与其他城镇之间的最小距离是&3 {distance} 个区块&7.'
+        nation: '&c这里距离城镇&4 {land}&c 太近了. &7属于某联邦的城镇与其他城镇之间的最小距离是&3 {distance} 个区块&7.'
     merge:
       confirm: |
         &7请确认你要将城镇&2 {merge} &7与城镇&2 {land}&7 合并:

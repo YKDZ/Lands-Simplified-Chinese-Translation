@@ -1391,16 +1391,6 @@ gui:
     title: '&8{area} &7- &8成员玩家'
     items:
       default:
-        entry_land:
-          name: '&e&l{player}'
-          lore:
-          - '&7加入了以下子区域:'
-          - '{areas}'
-          - ''
-          - '&8✖ &3Q 键'
-          - '   &7将玩家移出该城镇.'
-          - '&8✖ &7点击查看更多信息.'
-          material: INHERIT
         entry_area:
           name: '&e&l{player}'
           lore:
@@ -1493,6 +1483,25 @@ gui:
           - ' &8• &7你可以通过以下命令移除住户:'
           - '   &e/{cmd}&7.'
           name: '&4&lTenant'
+        global-action:
+          material: skin:c9c8881e42915a9d29bb61a16fb26d059913204d265df5b439b3d792acd56
+          slots: 44
+          name: '&6&lExecute for all Areas: {current}'
+          lore:
+          - '&8✖ &7Trust or untrust players in the whole land?'
+          - '   &8• &7If disabled: Only trusts/untrusts'
+          - '     &7players for area&6 {area}&7.'
+        entry_area_all:
+          material: INHERIT
+          lore:
+          - '&7Trusted in these areas:'
+          - '{areas}'
+          - ''
+          - '&8✖ &bLEFT CLICK'
+          - '   &7View more information.'
+          - '&8✖ &3DROP'
+          - '   &7Untrust'
+          name: '&e&l{player}'
   list_area_banned:
     title: '&8{area} &7> &8黑名单'
     items:
@@ -1511,14 +1520,6 @@ gui:
           - '&8✖ &7将玩家从本子区域的黑名单中移出.'
           material: skin:548d7d1e03e1af145b0125ab841285672b421265da2ab915015f9058438ba2d8
           slots: 42
-        entry_all:
-          name: '&e&l{player}'
-          lore:
-          - '&7在以下子区域中被拉黑:'
-          - '{areas}'
-          - ''
-          - '&8✖ &7点击获取更多信息'
-          material: INHERIT
         entry_area:
           name: '&e&l{player}'
           lore:
@@ -1537,6 +1538,24 @@ gui:
           - '    &8• &6&l如果禁用:'
           - '      &7展示全城镇被拉黑的玩家.'
           - '      &7同时允许你将玩家从全城镇移出黑名单'
+        entry_area_all:
+          material: INHERIT
+          lore:
+          - '&7在这些子区域被拉黑:'
+          - '{areas}'
+          - ''
+          - '&8✖ &7查看更多信息.'
+          - '&8✖ &3Q 键'
+          - '   &7移出黑名单'
+          name: '&e&l{player}'
+        global-action:
+          material: skin:c9c8881e42915a9d29bb61a16fb26d059913204d265df5b439b3d792acd56
+          slots: 44
+          name: '&6&l对所有子区域执行: {current}'
+          lore:
+          - '&8✖ &7在整个城镇将玩家拉黑或移出黑名单?'
+          - '   &8• &7如果禁用: 仅在&6 {area}&7内'
+          - '     &7将玩家拉黑/移出黑名单.'
   list_area_invites:
     title: '&8{area} &7> &8邀请'
     items:
@@ -3273,6 +3292,12 @@ common:
         lore:
         - '&c你不能传送到这个位置,'
         - '&c因为那里不安全.'
+      child_failure_global-action:
+        name: '&4&l正在查看所有子区域'
+        lore:
+        - '&c如果你正在查看所有子区域的条目,'
+        - '&c则不能禁用这个. &7开启 "&6&l仅查看子区域&7"'
+        - '&7以更改这个.'
 common_sounds:
   # Play a sound when the item is set in the menu.
   set:
