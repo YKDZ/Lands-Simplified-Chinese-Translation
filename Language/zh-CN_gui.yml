@@ -1351,6 +1351,15 @@ gui:
           name: '&6&l世界: {world}'
           lore:
           - '&8✖ &7点击开关世界'
+        entry_object_server:
+          lore:
+          - '&8✖ &7传送到这个区块.'
+          - '   &8• &7服务器: {server}'
+          - '&8• &7世界: {world}'
+          - '   &8• &7X: {x}'
+          - '   &8• &7Z: {z}'
+          - '   &8• &7占领时间:&5 {time} &7前'
+          name: '&e{server} &6&l{world}, {x}, {z}'
   list_inbox:
     title: '&8日志箱'
     items:
