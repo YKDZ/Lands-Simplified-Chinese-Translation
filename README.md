@@ -51,6 +51,10 @@ Role -> 职位
 
 Tenant -> 住户（原词实际上同时包括租客和买主的意思）
 
+Trust / Untrust ->（对应其他领地插件中常见的 invite / kick，在玩家眼里相当于“被” join / leave）
+    v. 根据具体语境译为加入、邀请 / 移出等
+    n. 如 Trusted player 译为成员
+
 Claim -> 
 n. 领土
 v. 占领

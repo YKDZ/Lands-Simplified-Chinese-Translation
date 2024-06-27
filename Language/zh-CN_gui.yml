@@ -1491,25 +1491,25 @@ gui:
           - '&c他们的职位也不能被修改.'
           - ' &8• &7你可以通过以下命令移除住户:'
           - '   &e/{cmd}&7.'
-          name: '&4&lTenant'
+          name: '&4&l住户'
         global-action:
           material: skin:c9c8881e42915a9d29bb61a16fb26d059913204d265df5b439b3d792acd56
           slots: 44
-          name: '&6&lExecute for all Areas: {current}'
+          name: '&6&l对所有子区域执行: {current}'
           lore:
-          - '&8✖ &7Trust or untrust players in the whole land?'
-          - '   &8• &7If disabled: Only trusts/untrusts'
-          - '     &7players for area&6 {area}&7.'
+          - '&8✖ &7是否在整个城镇内移出玩家/邀请玩家成为成员?'
+          - '   &8• &7如果关闭: 仅在子区域&6 {area} &7内'
+          - '     &7移出玩家/邀请玩家成为成员.'
         entry_area_all:
           material: INHERIT
           lore:
-          - '&7Trusted in these areas:'
+          - '&7是以下子区域的成员:'
           - '{areas}'
           - ''
-          - '&8✖ &bLEFT CLICK'
-          - '   &7View more information.'
-          - '&8✖ &3DROP'
-          - '   &7Untrust'
+          - '&8✖ &b左键'
+          - '   &7显示更多信息.'
+          - '&8✖ &3Q 键'
+          - '   &7移出'
           name: '&e&l{player}'
   list_area_banned:
     title: '&8{area} &7> &8黑名单'
