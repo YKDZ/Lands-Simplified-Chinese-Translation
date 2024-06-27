@@ -64,7 +64,9 @@ Unclaim -> 解除占领
 Natural Flags / Settings -> 环境设置
 Role Flags / Settings -> 职位设置
 
+Mainblock -> 城镇核心
 Bank -> 金库
+Storage -> 储存库
 Upkeep -> 维护费
 Taxes -> 税费
 
