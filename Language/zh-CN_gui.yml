@@ -2289,6 +2289,12 @@ gui:
           - '&8✖ &9右键'
           - '   &7查看更多信息'
           material: INHERIT
+        members_online:
+          material: CLOCK
+          slots: 41
+          name: '&6&l在线成员'
+          lore:
+          - '&8✖ &7查看所有在线成员.'
   list_nation_effects:
     title: '&8加成'
     items:
@@ -2713,6 +2719,12 @@ gui:
           name: '&6&l成员请求'
           lore:
           - '&8✖ &7管理外人发来的成员请求.'
+        members_online:
+          material: CLOCK
+          slots: 32
+          name: '&6&l在线成员'
+          lore:
+          - '&8✖ &7查看所有在线成员.'
     title: '&8玩家管理'
   list_membership-requests:
     items:
@@ -3122,6 +3134,28 @@ gui:
           slots: 45
           name: '&a&l确认'
     title: 金额
+  list_members_online:
+    items:
+      default:
+        refresh_toggle:
+          material: HOPPER
+          slots: 40
+          lore:
+          - '&8✖ &7是否仅展示子区域'
+          - '   &8(&6{area}&8)&7 的在线成员?'
+          name: '&6&l仅展示子区域: {current}'
+        entry_area_all:
+          material: INHERIT
+          name: '&e&l{player}'
+        entry_area:
+          material: INHERIT
+          name: '&e&l{player}'
+          lore:
+          - '&7职位: {role}'
+        entry_nation:
+          material: INHERIT
+          name: '&e&l{player}'
+    title: '&8在线成员'
 common:
   size: 45
   entries: 10-36
