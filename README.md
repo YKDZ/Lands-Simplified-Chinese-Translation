@@ -4,7 +4,7 @@
 
 纯手动翻译，不使用任何 AI 翻译或通篇机器翻译。
 
-当前对应的插件版本：[7.6.1](https://www.spigotmc.org/resources/lands-%E2%AD%95-land-claim-plugin-%E2%9C%85-grief-prevention-protection-gui-management-nations-wars-1-20-support.53313/updates)
+当前对应的插件版本：[7.6.2](https://www.spigotmc.org/resources/lands-%E2%AD%95-land-claim-plugin-%E2%9C%85-grief-prevention-protection-gui-management-nations-wars-1-20-support.53313/updates)
 
 ## 安装使用
 
@@ -74,6 +74,15 @@ Relation -> 外交关系
 Ally -> 盟友
 Enemy -> 政敌
 Neutral -> 中立
+
+War -> 战争
+Capture Block / Flag -> 战旗（战争中攻方用于占领守方领地的信标道具）
+Attacker / Defender -> 攻方 / 守方
+Tribute -> 赔偿金（战争中一方投降后需要向另一方支付的款项）
+Shield -> 战争护盾
+Declare ->
+    n. 宣战书
+    v. 宣战
 ```
 
 ## 风格化
@@ -90,7 +99,7 @@ Neutral -> 中立
 
 ## 贡献
 
-若发现遗漏或错误的翻译条目，烦请在 **Issues** 处指出，会在第一时间进行修复。
+若发现遗漏或错误的翻译条目（包括但不限于样式代码缺漏、错字漏字、同词异译等），烦请在 **Issues** 处指出，会在第一时间进行修复。
 
 ## 支持
 
