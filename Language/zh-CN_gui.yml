@@ -2138,6 +2138,15 @@ gui:
           lore:
           - '&8✖ &7凋灵是否可以攻击动物?'
           - '    &8• &7动物仍可以被其他怪物攻击.'
+        entry_block_spreading:
+          material: BUDDING_AMETHYST
+          name: '&6&l来自城镇的方块传播: {enabled}'
+          lore:
+          - '&8✖ &7是否允许这个城镇的其他子区域'
+          - '   &7中的方块传播入当前子区域?'
+          - '    &8• &7这将影响如紫水晶母等方块.'
+          - '    &8• &7来自荒野的方块永远不会'
+          - '      &7传播入当前子区域.'
   list_player_invites:
     title: '&8收到的邀请'
     items:
