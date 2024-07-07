@@ -44,11 +44,11 @@ general:
     sell: '&a出售'
   
   war:
-    defenders: '&a防守方'
-    attackers: '&c攻击方'
+    defenders: '&a守方'
+    attackers: '&c攻方'
     name:
       land: '&2城镇 '
-      nation: '&9联盟 '
+      nation: '&9联邦 '
   top:
     sorting:
       balance: 金库存款
@@ -741,7 +741,7 @@ gui:
         recipe:
           name: '&6&l战旗配方'
           lore:
-          - '&7C点击查看战旗的合成配方'
+          - '&7点击查看战旗的合成配方'
           material: BEACON
           slots: 15
         spawn:
@@ -750,32 +750,6 @@ gui:
           - '&7传送到敌人领地的边界.'
           material: ENDER_PEARL
           slots: 9
-        attackers:
-          name: '&c&l攻方 {object}'
-          lore:
-          - '&8✖ &7查看攻方城镇.'
-          - ''
-          - '&7玩家: {players}'
-          - '&6&l进度'
-          - ' &8• &7占领: {cap}'
-          - ' &8• &7击杀数: {kills}'
-          - '   &3= {points} / {towin} &7点数以获胜'
-          - '   {bar}'
-          material: IRON_SWORD
-          slots: 13
-        defenders:
-          name: '&a&l守方 {object}'
-          lore:
-          - '&8✖ &7查看守方城镇.'
-          - ''
-          - '&7玩家: {players}'
-          - '&6&l进度'
-          - ' &8• &7占领: {cap}'
-          - ' &8• &7击杀数: {kills}'
-          - '   &3= {points} / {towin} &7点数以获胜'
-          - '   {bar}'
-          material: SHIELD
-          slots: 14
         tribute_attacker:
           name: '&6&l赔偿金:&c {tribute}'
           lore:
@@ -823,32 +797,6 @@ gui:
           - '&7双方需要充足的准备时间才能开战.'
           material: CLOCK
           slots: 17
-        war_end:
-          name: '&6&l结束'
-          lore:
-          - '&7战争将会在'
-          - '&7一方收集了&3 {points} &7点数'
-          - '&7或一方投降时结束.'
-          - ''
-          - ' &8• &7如果没有一方收集到 {points} 点数:'
-          - '   &7战争将会在&5 {end}&7 时超时.'
-          material: CLOCK
-          slots: 17
-        points:
-          name: '&6&l点数胜利'
-          lore:
-          - '&7一方需要收集&3 {points} &7点数以获胜.'
-          - ' &8• &7击杀: &3{p_kill} 点数'
-          - ' &8• &7占领: &3{p_cap} 点数'
-          - ''
-          - '    &8• &7想要占领对方的领土, place'
-          - '      &7需要将战旗放在他们的领土中'
-          - '      &7你可以在此处查看战旗合成配方'
-          - ''
-          - '&6&l敌方可以在你的领土内:'
-          - '{settings}'
-          material: IRON_INGOT
-          slots: 16
         child_failure_permission:
           name: '&4&l职位权限不足'
           lore:
@@ -876,6 +824,36 @@ gui:
           name: '&4&l无领地'
           lore:
           - '&c敌方 {enemy} &c没有可供传送的领地'
+        war_points_declaration:
+          material: IRON_INGOT
+          slots: 13
+          lore:
+          - '&7一方需要获得&3 {points} &7点数以赢得战争.'
+          - ' &8• &7击杀敌人: &3{p_kill} 点数'
+          - ' &8• &7占领区块: &3{p_cap} 点数'
+          - '    &8• &7将战旗放在敌方领土中'
+          - '      &7以占领它. 你可以在这个菜单中'
+          - '      &7查看战旗的合成配方.'
+          - ''
+          - ' &8• &7战争将在:&5 {time} &7后开始'
+          name: '&6&l点数信息'
+        flags:
+          material: IRON_PICKAXE
+          slots: 14
+          name: '&6&l可行动作'
+          lore:
+          - '&7战争相关的玩家可以在'
+          - '&7涉及的城镇中进行以下行为:'
+          - '{settings}'
+        war_attackers:
+          material: IRON_SWORD
+          slots: 11
+        war_defenders:
+          material: SHIELD
+          slots: 12
+        war_points:
+          material: IRON_INGOT
+          slots: 13
   war_capture_recipe:
     title: '&8战争 &7> &8信息 &7> &8合成配方'
     items:
@@ -3165,6 +3143,33 @@ gui:
           material: INHERIT
           name: '&e&l{player}'
     title: '&8在线成员'
+  list_wars:
+    items:
+      default:
+        entry_object:
+          material: IRON_SWORD
+          name: '{attacker}&7 vs. {defender}'
+          lore:
+          - ' &8• &7进度:&3 {points} / {points_towin} &7点数'
+          - '   {points_bar}'
+          - ''
+          - ' &8• &7时限: &5{timeout}'
+          - ' &8• &7攻方: {attacker}'
+          - ' &8• &7守方: {defender}'
+    title: '&8正在进行的战争'
+  war_info:
+    items:
+      default:
+        war_attackers:
+          material: IRON_SWORD
+          slots: 21
+        war_defenders:
+          material: SHIELD
+          slots: 23
+        war_points:
+          material: IRON_INGOT
+          slots: 25
+    title: '&8战争信息'
 common:
   size: 45
   entries: 10-36
@@ -3350,6 +3355,40 @@ common:
         - '&c如果你正在查看所有子区域的条目,'
         - '&c则不能禁用这个. &7开启 "&6&l仅查看子区域&7"'
         - '&7以更改这个.'
+      war_attackers:
+        lore:
+        - '&8✖ &7查看所有攻方城镇.'
+        - '   &7玩家: {players}'
+        - ''
+        - '&6&l进度'
+        - ' &8• &7占领区块: {cap}'
+        - ' &8• &7击杀: {kills}'
+        - '   &3= {points} / {towin} &7点数'
+        - '   {bar}'
+        name: '&c&l攻方 {object}'
+      war_defenders:
+        lore:
+        - '&8✖ &7查看所有守方城镇.'
+        - '   &7玩家: {players}'
+        - ''
+        - '&6&l进度'
+        - ' &8• &7占领区块: {cap}'
+        - ' &8• &7击杀: {kills}'
+        - '   &3= {points} / {towin} &7点数'
+        - '   {bar}'
+        name: '&a&l守方 {object}'
+      war_points:
+        lore:
+        - '&7一方需要获得&3 {points} &7点数以赢得战争.'
+        - ' &8• &7击杀敌人: &3{p_kill} 点数'
+        - ' &8• &7占领区块: &3{p_cap} 点数'
+        - '    &8• &7将战旗放在敌方领土中'
+        - '      &7以占领它. 你可以在这个菜单中'
+        - '      &7查看战旗的合成配方.'
+        - ''
+        - ' &8• &7如果没有任何一方获取到 {points} 点数'
+        - '   &7战争将会在&5 {time}&7 后自动结束.'
+        name: '&6&l点数信息'
 common_sounds:
   # Play a sound when the item is set in the menu.
   set:

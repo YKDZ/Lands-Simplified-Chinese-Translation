@@ -475,6 +475,7 @@ help:
         main: '[T]&e{parent} {subcmd} {args} &8- &7战争相关管理员命令[H]&7点击复制.[/H][SC]{fullcmd}[/SC][/T]'
         start: '[T]&e{parent} {subcmd} {args} &8- &7开始战争[H]&7点击复制.[/H][SC]{fullcmd}[/SC][/T]'
         end: '[T]&e{parent} {subcmd} {args} &8- &7结束战争[H]&7点击复制.[/H][SC]{fullcmd}[/SC][/T]'
+      list: '[T]&e{parent} {subcmd} - &7查看正在进行的战争[H]&7点击执行.[/H][C]{fullcmd}[/C][/T]'
     
     # /nations
     nations:
