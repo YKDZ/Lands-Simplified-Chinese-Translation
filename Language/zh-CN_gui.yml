@@ -747,7 +747,7 @@ gui:
         spawn:
           name: '&6&l传送点'
           lore:
-          - '&7传送到敌人领地的边界.'
+          - '&7传送到敌人领土的边界.'
           material: ENDER_PEARL
           slots: 9
         tribute_attacker:
@@ -821,9 +821,9 @@ gui:
           - '&c你方 &8({object}&8) &c没有足够的金库余额'
           - '&c以支付赔偿金&4 {tribute}&c.'
         child_failure_none:
-          name: '&4&l无领地'
+          name: '&4&l无领土'
           lore:
-          - '&c敌方 {enemy} &c没有可供传送的领地'
+          - '&c敌方 {enemy} &c没有可供传送的领土'
         war_points_declaration:
           material: IRON_INGOT
           slots: 13
@@ -1839,7 +1839,7 @@ gui:
           name: '&6&l编辑杂项设置: {enabled}'
           lore:
           - '&8✖ &7是否允许这个职位编辑杂项设置'
-          - '   &7如编辑领地名?'
+          - '   &7如编辑城镇名?'
           - '   &7解锁: {unlocked}'
           material: NAME_TAG
         entry_setting_edit_role:
@@ -3389,6 +3389,10 @@ common:
         - ' &8• &7如果没有任何一方获取到 {points} 点数'
         - '   &7战争将会在&5 {time}&7 后自动结束.'
         name: '&6&l点数信息'
+      child_failure_noaccess_owner:
+        name: '&4&l不被允许'
+        lore:
+        - '&7只有 {object}&7 的所有者才能这么做.'
 common_sounds:
   # Play a sound when the item is set in the menu.
   set:

@@ -4,7 +4,7 @@
 
 纯手动翻译，不使用任何 AI 翻译或通篇机器翻译。
 
-当前对应的插件版本：[7.8.6](https://www.spigotmc.org/resources/lands-%E2%AD%95-land-claim-plugin-%E2%9C%85-grief-prevention-protection-gui-management-nations-wars-1-20-support.53313/updates)
+当前对应的插件版本：[7.8.7](https://www.spigotmc.org/resources/lands-%E2%AD%95-land-claim-plugin-%E2%9C%85-grief-prevention-protection-gui-management-nations-wars-1-20-support.53313/updates)
 
 ## 安装使用
 
@@ -26,7 +26,9 @@ roles.yml
 
 仅翻译了可以显示在游戏内的文本，没有翻译配置文件注释等不重要的文本（因为量大且难以维护）。
 
-与管理员相关的命令和菜单文本的翻译可能比针对玩家的文本和菜单的要粗糙，因为插件本身提供的英文原文就很模糊。
+与管理员相关的菜单文本的翻译可能比针对玩家的文本和菜单的要粗糙，因为插件本身提供的英文原文就很模糊。
+
+另外，大部分管理员相关命令的提示文本（如 `/lands admin reload`）都是硬编码在插件中的，无法被翻译。
 
 ## 翻译风格
 
