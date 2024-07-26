@@ -288,6 +288,7 @@ general:
         ally: 盟友
         enemy: 政敌
         here: 当前位置
+        land_or_here: 城镇 | 此处
   value:
     none: '&8无'
     unlimited: '&a无限'
@@ -958,6 +959,9 @@ lands:
       area:
         untrusted: '&7你不是城镇&2 {land}&7 的子区域&6 {area} &7的成员.'
         success: '&7成功离开了城镇&2 {land}&7 的子区域&6 {area} &7.'
+      confirm: |
+        &7请点击下方确认你要离开整个城镇&2 {land}&7:
+          [T]&2✔ 确认: &e/{fullcmd} &8[点击][H]&7点此确认进行此操作.[/H][C]{fullcmd}[/C][/T]
     unclaim:
       rental: '&c你不能解除占领这个区块&7, 因为它是已被出租/售卖的子区域&6 {area}&7 的一部分. 住户:&3 {player}'
       split: '&c你不能解除占领这个区块, 因为这会将你的领土分为不相连的几块. &7会被分割的区块边界现在对你可见.'
@@ -976,14 +980,23 @@ lands:
           &7请确认你是否要解除占领城镇&2 {land}&7 的所有领土区块:
             [T]&2✔ 确认[H]&7点击确认.[/H][C]{fullcmd}[/C][/T]
     delete:
-      confirm: |
-        &7请确认你是否要解散城镇&2 {land} &7:
-          [T]&2✔ 确认[H]&7点此确认.[/H][C]{fullcmd}[/C][/T]
-      nation: '&c你不能解散这个城镇, 因为它是联邦&4 {nation}&c 的首都. &7你可能需要先解散联邦: &e/nations delete'
-      success: '&7成功解散了你的城镇&2 {land}&7. 你拿回了&c {back} &7的退款.'
-      rented: '&c你不能解散这个城镇, 因为它的子区域&4 {area} &c已经被&4 {player}&c 租用或购买了. &7站在该子区域使用
-        &e/lands rent removetenant &7以移除这个住户.'
-      broadcast: '&7城镇&2 {land} &7被玩家&3 {player}&7 解散了.'
+      area:
+        subarea: '&c你必须站在子区域中执行此命令.'
+        rented: "&c你不能删除这个子区域, 因为它被出租或出售给了&4\
+          \ {player}&c. \n  [T]&7移除租客: &e/{cmd} &8[点击][H]&7点此\
+          \ 移除租客.[/H][C]{cmd}[/C][/T]'\n"
+        success: '&7成功删除了城镇&2 {land}&7 的子区域&6 {area}&7.'
+      land:
+        confirm: |
+          &7请点击下方确认按钮以解散城镇&2 {land}&7:
+            [T]&2✔ 确认: &e/{fullcmd} &8[点击][H]&7点此确认进行此操作.[/H][C]{fullcmd}[/C][/T]
+        nation: '&c你不能解散这个城镇, 因为它是联邦&4
+          {nation}&c 的首都. &7你需要先解散这个联邦: &e/nations delete'
+        broadcast: '&7城镇&2 {land} &7被&3 {player}&7 解散了.'
+        rented: "&c你不能解散这个城镇, 因为其子区域&4 {area} &c已经被出租或\
+          \ 出售给了玩家&4 {player}&c. \n  [T]&7执行以下命令以移除租客 &e/{cmd}\
+          \ &8[点击] &7需要站在这个子区域内.[H]&7点击以移除租客.[/H][C]{cmd}[/C][/T]'\n"
+        success: '&7成功解散了城镇&2 {land}&7. 你拿回了&e {back}&7.'
     trust:
       own-land: '&c玩家&4 {player} &c不能被邀请加入其他城镇. &7他不能在拥有自己城镇的情况下加入其它人的城镇. 他需要先删除自己的城镇&2
         {land} &7.'
