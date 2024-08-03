@@ -641,11 +641,11 @@ lands:
     inbox:
       new:
         posts: |
-          &7你有 {amount} 条来自你城镇成员的通知&2 {land}&7. 最新一条: {latest}
+          &7你有 {amount} 条来自你城镇&2 {land}&7 成员的通知. 最新一条: {latest}
             [T]&7✖ 查看: &e/{cmd} &8[点击][H]&7点击查看这些通知[/H][C]{cmd}[/C][/T]
         general: |
-          &7你的城镇有 {amount} 条新的日志箱信息&2 {land}&7. 最新一条: {latest}
-            [T]&7✖ 查看: &e/{cmd} &8[点击][H]&7点击查看这些通知[/H][C]{cmd}[/C][/T]
+          &7你的城镇&2 {land}&7 有 {amount} 条新的日志箱信息. 最新一条: {latest}
+            [T]&7✖ 查看: &e/{cmd} &8[点击][H]&7点击查看这些日志信息[/H][C]{cmd}[/C][/T]
     rented:
       edit: '&c你不能拿在子区域&4 {area}&c 正在出租或已被出售时这样做. &7移除住户: &e/{cmd}'
       tenant: '&c你不能编辑子区域&4 {area}&c 的住户&4 {player}&c. &7移除住户: &e/{cmd}'

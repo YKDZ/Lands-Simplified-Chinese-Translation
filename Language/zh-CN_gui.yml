@@ -3393,6 +3393,11 @@ common:
         name: '&4&l不被允许'
         lore:
         - '&7只有 {object}&7 的所有者才能这么做.'
+      child_failure_teleport:
+        name: '&4&l传送失败'
+        lore:
+        - '&7传送因为以下原因而失败了:'
+        - '&7{result}'
 common_sounds:
   # Play a sound when the item is set in the menu.
   set:
