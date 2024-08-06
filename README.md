@@ -50,6 +50,7 @@ Camp -> 露营地
 Wilderness -> 荒野
 
 Role -> 职位
+Owner -> 所有者
 
 Tenant -> 住户（原词实际上同时包括租客和买主的意思）
 
