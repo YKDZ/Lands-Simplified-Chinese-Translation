@@ -506,7 +506,7 @@ gui:
           lore:
           - '&c你不被允许编辑这个子区域的职位'
           - ''
-          - ' &8• &7城镇主人可以给你的职位分配对应权限'
+          - ' &8• &7城镇所有者可以给你的职位分配对应权限'
         child_failure_priority:
           name: '&4&l低优先级'
           lore:
@@ -674,7 +674,7 @@ gui:
           - '      {title}'
           - ''
           - '    &8• &7&l可用占位符'
-          - '      &8- &3%owner% &8= &7城镇主人'
+          - '      &8- &3%owner% &8= &7城镇所有者'
           - '      &8- &3%level% &8= &7城镇等级'
           - '      &8- &3%nation% &8= &7所属国家'
           - '      &8- &3%player% &8= &7进入的玩家'
@@ -803,7 +803,7 @@ gui:
           - '&c你不能为'
           - '&c&8({object}&8)&c 这样做.'
           - ''
-          - ' &8• &7城镇主人可以给你的职位分配对应权限'
+          - ' &8• &7城镇所有者可以给你的职位分配对应权限'
         child_failure_surrender:
           name: '&4&l投降被拒'
           lore:
@@ -1038,7 +1038,7 @@ gui:
           lore:
           - '&c你无权使用联邦首都传送点'
           - ''
-          - ' &8• &7联邦主人可以给予你这么做的权限'
+          - ' &8• &7联邦所有者可以给予你这么做的权限'
         child_failure_spawn_none:
           name: '&4&l无传送点'
           lore:
@@ -1118,9 +1118,9 @@ gui:
           - ''
           - '    &8• &7管理员城镇无需缴纳维护费'
           - '      &7且无法参加战争.'
-          - '      &7它的主人默认为 &f服务器'
+          - '      &7它的所有者默认为 &f服务器'
           - '      &7但你仍可以用命令 &3/lands setowner'
-          - '      &7为它指定主人.'
+          - '      &7为它指定所有者.'
           material: skin:8449b9318e33158e64a46ab0de121c3d40000e3332c1574932b3c849d8fa0dc2
           slots: 25
         child_failure_world:
@@ -1285,7 +1285,7 @@ gui:
           lore:
           - '&c你不被允许删除这个城镇的子区域'
           - ''
-          - ' &8• &7城镇主人可以给你的职位分配对应权限'
+          - ' &8• &7城镇所有者可以给你的职位分配对应权限'
         child_failure_default:
           name: '&4&l默认总区域'
           lore:
@@ -1358,9 +1358,9 @@ gui:
           - '&8✖ &7在日志类型间切换.'
           - '   &7当前类型:&3 {type}'
         child_failure_owner:
-          name: '&4&l城镇主人'
+          name: '&4&l城镇所有者'
           lore:
-          - '&7只有城镇主人可以删除日志'
+          - '&7只有城镇所有者可以删除日志'
         refresh_clear:
           material: BARRIER
           slots: 42
@@ -1422,7 +1422,7 @@ gui:
           lore:
           - '&c你不能移出其它玩家'
           - ''
-          - ' &8• &7城镇主人可以给你的职位分配对应权限'
+          - ' &8• &7城镇所有者可以给你的职位分配对应权限'
         child_failure_self:
           name: '&4&l你不能移出自己'
           lore:
@@ -1456,13 +1456,13 @@ gui:
           - '&c所有者不能被移出.'
           - ''
           - ' &8• &7可以用指令 &e/{cmd}&7'
-          - '   &7更换城镇主人.'
+          - '   &7更换城镇所有者.'
         child_failure_setrole:
           name: '&4&l无权限'
           lore:
           - '&c你没有设置职位的权限.'
           - ''
-          - ' &8• &7城镇主人可以给予你对应权限'
+          - ' &8• &7城镇所有者可以给予你对应权限'
         child_failure_tenant:
           lore:
           - '&c住户不能被移出城镇.'
@@ -1552,18 +1552,18 @@ gui:
           lore:
           - '&c你不被允许撤销已发送的邀请'
           - ''
-          - ' &8• &7城镇主人可以给你的职位分配对应权限'
+          - ' &8• &7城镇所有者可以给你的职位分配对应权限'
         entry_object_owner:
           material: INHERIT
           lore:
           - '&7将这个玩家设为'
-          - '&7城镇 &2{land}&7 的新主人.'
+          - '&7城镇 &2{land}&7 的所有者.'
           - '&6&l信息'
           - '&8• &7发送时间:&5 {time}'
           - '&8• &7申请人: {sender}'
           - '&8✖ &3丢弃键'
           - '   &7撤回邀请.'
-          name: '&e&l{player} &7- &6&l新主人邀请'
+          name: '&e&l{player} &7- &6&l新所有者邀请'
         entry_object_trust_area:
           material: INHERIT
           lore:
@@ -1617,7 +1617,7 @@ gui:
           lore:
           - '&c你不被允许编辑这个子区域的职位'
           - ''
-          - ' &8• &7城镇主人可以给你的职位分配对应权限'
+          - ' &8• &7城镇所有者可以给你的职位分配对应权限'
         child_failure_required:
           name: '&4&l必须职位'
           lore:
@@ -1948,7 +1948,7 @@ gui:
           lore:
           - '&c你不被允许设置这个子区域的职位'
           - ''
-          - ' &8• &7城镇主人可以给你的职位分配对应权限'
+          - ' &8• &7城镇所有者可以给你的职位分配对应权限'
         child_failure_priority:
           name: '&4&l低优先级'
           lore:
@@ -1968,9 +1968,9 @@ gui:
           lore:
           - '&c任何人都不能编辑这个设置.'
         child_failure_edit_owner:
-          name: '&4&l城镇主人'
+          name: '&4&l城镇所有者'
           lore:
-          - '&c你不能为自己的城镇主人职位'
+          - '&c你不能为自己的城镇所有者职位'
           - '&c切换这个设置.'
           - ''
           - ' &8• &7这可以防止你意外'
@@ -2102,7 +2102,7 @@ gui:
           lore:
           - '&c你不被允许编辑这个子区域的职位'
           - ''
-          - ' &8• &7城镇主人可以给你的职位分配对应权限'
+          - ' &8• &7城镇所有者可以给你的职位分配对应权限'
         entry_phantom_spawn:
           material: PHANTOM_SPAWN_EGG
           name: '&6&l幻翼生成: {enabled}'
@@ -2134,7 +2134,7 @@ gui:
           lore:
           - '&8✖ &7拒绝邀请'
           - '   &7或查看更多信息.'
-          name: '&2&l{land} &7- &6&l成为主人'
+          name: '&2&l{land} &7- &6&l成为所有者'
         entry_object_trust:
           material: INHERIT
           lore:
@@ -2554,7 +2554,7 @@ gui:
           - ' &8• &7你已经达到了可以'
           - '   &7加入城镇的最大数量&3 {max}'
         child_failure_inviteOwner:
-          name: '&4&l城镇主人'
+          name: '&4&l城镇所有者'
           lore:
           - '&c你不能加入这个城镇.'
           - ''
@@ -2729,7 +2729,7 @@ gui:
           - '&8✖ &3丢弃键'
           - '   &7拒绝请求.'
         child_failure_player_own-land:
-          name: '&4&l城镇主人'
+          name: '&4&l城镇所有者'
           lore:
           - '&c不能同意这个玩家的请求'
           - '&c因为他是一个城镇的所有者.'
@@ -2940,9 +2940,9 @@ gui:
           - '&8✖ &7打开城镇管理菜单.'
         entry_chunk_owner:
           material: LIME_STAINED_GLASS_PANE
-          name: '&a&l主人'
+          name: '&a&l所有者'
           lore:
-          - '&7你是这个城镇的主人.'
+          - '&7你是这个城镇的所有者.'
           - '&8✖ &7打开城镇管理菜单.'
         refresh_reset-pos:
           material: skin:22e4ad83c4938d9e5fc589e60c8010be2480e08d834529cec0da13bdf2538555
@@ -3228,7 +3228,7 @@ common:
         lore:
         - '&c你不被允许传送到这个城镇传送点'
         - ''
-        - ' &8• &7城镇主人可以给予你对应权限'
+        - ' &8• &7城镇所有者可以给予你对应权限'
       child_failure_spawn_none:
         name: '&4&l无传送点'
         lore:
@@ -3307,7 +3307,7 @@ common:
         lore:
         - '&c你不被允许进入传送点所在的子区域'
         - ''
-        - ' &8• &7城镇主人可以给予你对应权限.'
+        - ' &8• &7城镇所有者可以给予你对应权限.'
       category:
         material: BOOKSHELF
         slots: 40
@@ -3428,7 +3428,7 @@ physical:
     lore:
     - '&7你可以将它放置在荒野中'
     - '&7以将它占领为自己的领土.'
-    - '&7主人:&3 {owner}'
+    - '&7所有者:&3 {owner}'
     name: '&2&l占领方块'
     material: GRASS_BLOCK
   info:

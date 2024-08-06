@@ -172,7 +172,7 @@ general:
       join: '&7玩家 {0} 加入城镇.'
       leave: '&7玩家 {0} 退出城镇.'
       ban: '&c玩家 {0} 被拉黑.'
-      owner: '&7玩家 {0} 现在是新的城镇主人.'
+      owner: '&7玩家 {0} 现在是新的城镇所有者.'
     economy:
       upkeep:
         warning: '&c无法支付维护费: {0}'
@@ -759,7 +759,7 @@ lands:
             [T]&7城镇:&a {land} &8[&8点击&8][H]&7点击查看城镇范围.[/H][C]lands view[/C][/T]
             &7价格:&c {cost}
             &7&m━━━━━━━━━<━&r &5&l出售城镇 &7&m━>━━━━━━━━━
-        owner-cooldown: '&c城镇的主人在&4 {cooldown}&c 内只能变动一次. &7你仍需等待&5 {time} &7才能购买城镇&2
+        owner-cooldown: '&c城镇的所有者在&4 {cooldown}&c 内只能变动一次. &7你仍需等待&5 {time} &7才能购买城镇&2
           {land}&7.'
       sold: |
         [NoPrefix]
@@ -777,7 +777,7 @@ lands:
       noaccess:
         untrusted: '&c你不是城镇&4 {land} &c的成员. &7使用 &e/lands menu &7查看你所属的所有城镇.'
         land: '&c你不能为城镇&4 {land} &c这么做. &c设置: {flag}'
-        owner: '&c你不能为城镇&4 {land} &c这么做. &7只有城镇主人才能这么做. &7选择你自己的城镇 &8(/&3Lands edit
+        owner: '&c你不能为城镇&4 {land} &c这么做. &7只有城镇所有者才能这么做. &7选择你自己的城镇 &8(/&3Lands edit
           &8<&e城镇名&8>) &7或创建一个新的 &8(/&3Lands create &8<&e城镇名&8>)&7.'
         position:
           flag: '&c你不能在当前位置为城镇&4 {land} &c这么做. &c设置: {flag}'
@@ -950,7 +950,7 @@ lands:
           [T] &7✖ 扩展高度: &e/{cmd_expand}[H]&7点击扩展选区高度到最大.[/H][C]{cmd_expand}[/C][/T]
     leave:
       owner: |
-        &c你不能离开这个城镇. &7作为城镇的主人, 你需要解散城镇或转让城镇所有权.
+        &c你不能离开这个城镇. &7作为城镇的所有者, 你需要解散城镇或转让城镇所有权.
           [T]&c✘ 删除 &8[&8点击&8][C]lands delete[/C][H]&7点击解散城镇&2 {land}&7.[/H][/T]
           [T]&2✔ 转让所有权 &8[&8点击&8][SC]lands setowner [/SC][H]&7点击复制这个命令.[/H][/T]
       land:
@@ -1027,7 +1027,7 @@ lands:
       flag: '&c玩家&4 {player}&c 不想收到任何城镇的邀请. &7他可以使用 &8/&3{cmd}&7 调整这个设置.'
       server-admin: '&7你是服务器城镇管理员, 成功绕过邀请, 直接让玩家加入城镇. &8权限: {permission}'
     untrust:
-      owner: '&c城镇主人不能被移出城镇. [T]&7可以用 &e/{cmd}&7 制定新所有者.[H]&7点击复制命令.[/H][SC]{cmd}[/SC][/T]'
+      owner: '&c城镇所有者不能被移出城镇. [T]&7可以用 &e/{cmd}&7 制定新所有者.[H]&7点击复制命令.[/H][SC]{cmd}[/SC][/T]'
       area:
         already: '&7玩家&3 {player} &7并没有加入这个子区域 &8(&7子区域:&6 {area} &7城镇:&2 {land}&8)
           &7且没有被邀请过.'
@@ -1050,8 +1050,8 @@ lands:
           &7.'
       cant-set:
         owner: |
-          &c你不能设置职位&4 {role}&c. &7如果你想更换城镇&2 {land}&7 的主人, 使用以下命令:
-            [T]&7✖ 更改主人: &e/{cmd} &8[点击][H]&7点击设置玩家&3 {player} &7为城镇&2 {land}&7 的新主人.[/H][C]{cmd}[/C][/T]
+          &c你不能设置职位&4 {role}&c. &7如果你想更换城镇&2 {land}&7 的所有者, 使用以下命令:
+            [T]&7✖ 更改所有者: &e/{cmd} &8[点击][H]&7点击设置玩家&3 {player} &7为城镇&2 {land}&7 的新所有者.[/H][C]{cmd}[/C][/T]
         ally: '&c你不能设置职位&4 {role}&c. &7这个职位会被自动分配给盟友城镇或联邦的所有成员.'
         nation: '&c你不能设置职位&4 {role}&c. &7这个职位会被自动分配给城镇 &2{land}&7 所属联邦的所有成员.'
         visitor: |
@@ -1074,23 +1074,23 @@ lands:
       land:
         success: '&7成功接受了来自城镇&2 {land} &7的邀请.'
         broadcast: '&2{land} &8| &7玩家&3 {player} &7现在是城镇的一名成员.'
-        owner: '&7成功接受了来自城镇&2 {land}&7 的邀请. 你现在是城镇&2 {land}&7 的主人.'
+        owner: '&7成功接受了来自城镇&2 {land}&7 的邀请. 你现在是城镇&2 {land}&7 的所有者.'
       banned: '&c你不能加入城镇&4 {land}&c 的子区域&4 {area}&c. &7这个子区域将你拉黑了.'
     setowner:
       confirm: |
-        &7请确认你想邀请玩家 {player} 成为城镇&2 {land}&7 的新主人:
+        &7请确认你想邀请玩家 {player} 成为城镇&2 {land}&7 的所有者:
           [T]&2✔ 确认[H]&7点此确认.[/H][C]{fullcmd}[/C][/T]
       success:
-        invited: '&7你成功邀请玩家&3 {player} &7成为城镇&2 {land}&7 的新主人.'
-        set: '&7你成功将玩家&3 {player} &7立为城镇&2 {land}&7 的新主人.'
+        invited: '&7你成功邀请玩家&3 {player} &7成为城镇&2 {land}&7 的所有者.'
+        set: '&7你成功将玩家&3 {player} &7立为城镇&2 {land}&7 的所有者.'
         target: |
-          [T]&7玩家&3 {player} &7邀请你成为城镇&2 {land}&7 的新主人.[H]&7点此打开邀请菜单.[/H][C]lands invites[/C][/T] &7维护费:&c {upkeep}
+          [T]&7玩家&3 {player} &7邀请你成为城镇&2 {land}&7 的所有者.[H]&7点此打开邀请菜单.[/H][C]lands invites[/C][/T] &7维护费:&c {upkeep}
             [T]&2✔ 接受: &e/{cmd_accept} &8[&8点击&8][H]&7点此同意邀请.[/H][C]{cmd_accept}[/C][/T]
             [T]&c✘ 拒绝: &e/{cmd_deny} &8[&8点击&8][H]&7点此拒绝邀请.[/H][C]{cmd_deny}[/C][/T]
-      cooldown: '&c每&4 {cooldown}&c 内只能更改一次城镇主人. &7请等待&5 {time}&7 后再试.'
+      cooldown: '&c每&4 {cooldown}&c 内只能更改一次城镇所有者. &7请等待&5 {time}&7 后再试.'
       max:
         ownlands: '&c玩家&4 {player} &c不能再拥有更多城镇了. &7他已经达到了可拥有的城镇数上限&3 {max}个&7.'
-        chunks: '&c玩家&4 {player} &c不能成为这个城镇的主人. &7这个城镇有&3 {chunks}个 &7区块的领土, 这超过了该玩家的城镇可以拥有的最大区块数&4
+        chunks: '&c玩家&4 {player} &c不能成为这个城镇的所有者. &7这个城镇有&3 {chunks}个 &7区块的领土, 这超过了该玩家的城镇可以拥有的最大区块数&4
           {max}个&7.'
     deny:
       not-exist: '&c你没有任何来自城镇&4 {land} &c的邀请或邀请已过期.'
@@ -1103,7 +1103,7 @@ lands:
       wilderness: '&c你只能在城镇&2 {land}&7 的领土内设置城镇传送点.'
       success: '#t#&6传送点设置成功[newline]&7花费:&c {cost}'
     spawn:
-      not-exist: '&c城镇&4 {land}&c 没有传送点. &7城镇主人需要用 &e/lands setspawn&7 设置一个传送点.'
+      not-exist: '&c城镇&4 {land}&c 没有传送点. &7城镇所有者需要用 &e/lands setspawn&7 设置一个传送点.'
       not-allowed: '&c你无权传送到城镇&4 {land}&c 的传送点. &7他们可以在城镇职位设置内给予你对应的权限.'
       chunk: '&7城镇&2 {land} &7还没有设置过城镇传送点 &8(&e/lands setspawn&8)&7. &7你被传送到了这个城镇的第一个领土区块.'
       success: '&7成功传送到城镇&2 {land} &7的传送点. 你花费了:&c {cost}'
@@ -1111,8 +1111,8 @@ lands:
       area:
         cooldown: '&c你现在不能传送到这个子区域. &7你还需等待 &5{time} &7才能再次传送.'
         none: '&c城镇&4 {land} &c的子区域&4 {area} &c没有设置传送点.'
-        teleport: '&c你无权传送到这个子区域的传送点. &7城镇主人可以给你对应权限.'
-        enter: '&c你无权进入这个子区域. &7城镇主人可以给你对应权限.'
+        teleport: '&c你无权传送到这个子区域的传送点. &7城镇所有者可以给你对应权限.'
+        enter: '&c你无权进入这个子区域. &7城镇所有者可以给你对应权限.'
         success: '&7成功传送到城镇&2 {land} &7的子区域&6 {area}&7.'
     wild:
       perm: '&c你不能在世界&4 {world}&c 内随机传送.' # &8You''re missing the permission {perm} for this world.
@@ -1346,8 +1346,8 @@ wars:
       confirm: |
         &7请确认你 &8(&7{attacker}&8) &7想要对 {defender}&7 宣战:
           [T]&2✔ 确认[H]&7点此确认操作.[/H][C]{fullcmd}[/C][/T]
-      not-allowed: '&c你无权代表 {object}&c 宣战. &7只有它的主人才能这么做.'
-      member: '&c你不能对 {object}&c 宣战. &7你和对方主人是同一个城镇或联邦的成员.'
+      not-allowed: '&c你无权代表 {object}&c 宣战. &7只有它的所有者才能这么做.'
+      member: '&c你不能对 {object}&c 宣战. &7你和敌方的所有者是同一个城镇或联邦的成员.'
       enemies: |
         &c你需要先与&4 {object} &c成为政敌关系.
           [T]&7✖ 宣布敌对[H]&7点击将 {object} &7宣布为政敌来与它开战.[/H][C]{cmd}[/C][/T]
