@@ -60,7 +60,7 @@ land:
   roles:
     # NOTE: The owner role can not be deleted.
     owner:
-      name: '&4&l成员'
+      name: '&4&l所有者'
       # The icon supports minecraft URL values (example: https://minecraft-heads.com/) and normal material values.
       icon: 'skin:83f642814fa2551e7763d04060c532adea51015cbfe030cbb78e82c92092a6fb'
       # Default flag values. Please note that these only apply to new land creations. The flags of the owner role can only be toggled by server administrators.
