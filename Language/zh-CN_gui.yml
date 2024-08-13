@@ -539,10 +539,10 @@ gui:
           - '&7这不能被更改.'
         child_failure_nation_none:
           lore:
-          - '&cThis role will be partly managed'
-          - '&cby the nation you may belong to in the future.'
-          - ' &8• &7You''re currently not part of any nation.'
-          name: '&4&lRole managed by Nation'
+          - '&c这个职位的一部分将会在未来'
+          - '&c被联邦管理.'
+          - ' &8• &7你目前不是任何联邦的成员.'
+          name: '&4&l由联邦管理'
   taxes:
     title: '&8子区域税赋'
     items:
