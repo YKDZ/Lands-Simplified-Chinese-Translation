@@ -4,7 +4,7 @@
 
 纯手动翻译，不使用任何 AI 翻译或通篇机器翻译。
 
-当前对应的插件版本：[7.9.9](https://www.spigotmc.org/resources/lands-%E2%AD%95-land-claim-plugin-%E2%9C%85-grief-prevention-protection-gui-management-nations-wars-1-20-support.53313/updates)
+当前对应的插件版本：[7.9.11](https://www.spigotmc.org/resources/lands-%E2%AD%95-land-claim-plugin-%E2%9C%85-grief-prevention-protection-gui-management-nations-wars-1-20-support.53313/updates)
 
 另外 [此处](https://forest-development.gitbook.io/lands-zh-cn-wiki/) 还有本人维护的官方 Wiki 的简体中文翻译版本。
 
