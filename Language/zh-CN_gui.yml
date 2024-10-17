@@ -33,6 +33,7 @@ general:
     relations: '&a外交关系'
     posts: '&7通知'
     general: 通常
+    storage: '&7仓库'
   
   rentables:
     buy: '&a购买'

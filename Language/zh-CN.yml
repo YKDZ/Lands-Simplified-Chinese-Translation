@@ -235,6 +235,10 @@ general:
         add: '&7我们现在是 {0} &7的政敌.'
         offer: '&7{0} &7想要与我们和解.'
         accepted: '&7我们不再是 {0} &7的政敌.'
+    storage:
+      entry: '&r{item}&r x {amount}'
+      message: '&7玩家 {0} 修改了仓库. 被拿取的物品: {1}&7 - 被放入的物品:
+        {2}'
   
   wars:
     object:
@@ -464,7 +468,7 @@ help:
           addrole: '[T]&e{parent} {subcmd} {args} &8- &7向 roles.yml 添加自定义职位[H]&7点击复制.[/H][SC]{fullcmd}[/SC][/T]'
           syncpermissions: '[T]&e{parent} {subcmd} &8- &7同步权限限制[H]&7点击执行.[/H][C]{fullcmd}[/C][/T]'
         deleteinactive: '[T]&e{parent} {subcmd} &8- &7删除不活跃的玩家的数据[H]&7点击执行.[/H][C]{fullcmd}[/C][/T]'
-      storage: '[T]&e{parent} {subcmd} &8- &7打开城镇储存库[H]&7点击执行.[/H][C]{fullcmd}[/C][/T]'
+      storage: '[T]&e{parent} {subcmd} &8- &7打开城镇仓库[H]&7点击执行.[/H][C]{fullcmd}[/C][/T]'
     
     # /wars
     wars:

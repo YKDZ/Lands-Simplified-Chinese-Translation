@@ -71,7 +71,7 @@ Role Flags / Settings -> 职位设置
 
 Mainblock -> 城镇核心
 Bank -> 金库
-Storage -> 储存库
+Storage -> 仓库
 Upkeep -> 维护费
 Taxes -> 税费
 
