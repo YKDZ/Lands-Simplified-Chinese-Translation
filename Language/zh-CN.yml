@@ -237,8 +237,7 @@ general:
         accepted: '&7我们不再是 {0} &7的政敌.'
     storage:
       entry: '&r{item}&r x {amount}'
-      message: '&7玩家 {0} 修改了仓库. 被拿取的物品: {1}&7 - 被放入的物品:
-        {2}'
+      message: '&7玩家 {0} 修改了仓库. 被拿取的物品: {1}&7 - 被放入的物品: {2}'
   
   wars:
     object:

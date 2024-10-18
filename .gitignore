@@ -10,5 +10,6 @@ config.yml
 changelog.txt
 events.yml
 nations.yml
+server-name.yml
 wars.yml
 web.yml
