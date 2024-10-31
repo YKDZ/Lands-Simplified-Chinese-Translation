@@ -19,7 +19,9 @@ general:
     nation: '&8[&9{nation} &8|&2 {land}&8]'
   land:
     title:
-      land: '&7%level% &7-&3 %owner%&7.'
+      land:
+        normal: '&3%owner% &7的 &7%level%.'
+        levels-disabled: '&7属于&3 %owner%&7.'
       camp: '&3%owner% &7的露营地.'
       admin: '&7这个城镇属于服务器.'
     default-area: 默认总区域
