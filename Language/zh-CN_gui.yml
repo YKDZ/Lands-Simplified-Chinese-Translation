@@ -1319,13 +1319,6 @@ gui:
     title: '&8领土'
     items:
       default:
-        entry_object:
-          name: '&6&l世界: {world} X: {x} Z: {z}'
-          lore:
-          - '&7占领时间:&5 {time} &7前'
-          - ''
-          - '&8✖ &7传送到这个区块.'
-          material: skin:8449b9318e33158e64a46ab0de121c3d40000e3332c1574932b3c849d8fa0dc2
         child_failure_cooldown:
           name: '&4&l冷却中'
           lore:
@@ -1336,14 +1329,24 @@ gui:
           name: '&6&l世界: {world}'
           lore:
           - '&8✖ &7点击开关世界'
-        entry_object_server:
+        entry_chunk:
+          material: skin:8449b9318e33158e64a46ab0de121c3d40000e3332c1574932b3c849d8fa0dc2
           lore:
-          - '&8✖ &7传送到这个区块.'
+          - '&8✖ &7传送到此区块.'
+          - '   &8• &7世界: {world}'
+          - '   &8• &7X: {x}'
+          - '   &8• &7Z: {z}'
+          - '   &8• &7占领于:&5 {date}'
+          name: '&6&l{world}, {x}, {z}'
+        entry_chunk_server:
+          material: skin:8449b9318e33158e64a46ab0de121c3d40000e3332c1574932b3c849d8fa0dc2
+          lore:
+          - '&8✖ &7传送到此区块.'
           - '   &8• &7服务器: {server}'
           - '&8• &7世界: {world}'
           - '   &8• &7X: {x}'
           - '   &8• &7Z: {z}'
-          - '   &8• &7占领时间:&5 {time} &7前'
+          - '   &8• &7占领于:&5 {date}'
           name: '&e{server} &6&l{world}, {x}, {z}'
   list_inbox:
     title: '&8日志箱'
