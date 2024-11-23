@@ -1,9 +1,9 @@
 # Here you can edit all GUI menus.
 #
 # If you encounter any issues or have questions:
-# Discord: https://discord.gg/B4MAJVk
+# Discord: https://discord.incredibleplugins.com
 #
-# Wiki: https://github.com/Angeschossen/General/wiki/GUI-Menus
+# Wiki: https://wiki.incredibleplugins.com/general/menus/gui-menus
 
 general:
   wYes: '&a是'
@@ -1990,6 +1990,11 @@ gui:
           lore:
           - '&c这个设置被限制为'
           - '&c不能在这个职位下被修改.'
+        child_failure_cancelled:
+          name: '&4&l操作被插件取消'
+          lore:
+          - '&c第三方插件阻止了'
+          - '&c你对此设置进行的操作.'
   list_area_settings:
     title: '&8{area} &7> &8环境设置'
     items:
