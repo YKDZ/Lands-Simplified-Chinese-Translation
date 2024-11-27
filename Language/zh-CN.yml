@@ -383,6 +383,7 @@ help:
       map:
         main: '[T]&e{parent} {subcmd} &8- &7查看城镇地图[H]&7点击执行.[/H][C]{fullcmd}[/C][/T]'
         chat: '[T]&e{parent} {subcmd} &8- &7在聊天栏中查看城镇地图[H]&7点击执行.[/H][C]{fullcmd}[/C][/T]'
+        link: '[T]&e{parent} {subcmd} &8- &7获取网页地图连接[H]&7点击执行.[/H][C]{fullcmd}[/C][/T]'
       balance: '[T]&e{parent} {subcmd} {args} &8- &7查看城镇金库存款[H]&7点击复制.[/H][SC]{fullcmd}[/SC][/T]'
       deposit: '[T]&e{parent} {subcmd} {args} &8- &7向金库存款[H]&7点击复制.[/H][SC]{fullcmd}[/SC][/T]'
       withdraw: '[T]&e{parent} {subcmd} {args} &8- &7从金库取款[H]&7点击复制.[/H][SC]{fullcmd}[/SC][/T]'
@@ -986,10 +987,12 @@ lands:
             [T]&2✔ 确认[H]&7点击确认.[/H][C]{fullcmd}[/C][/T]
     delete:
       area:
-        subarea: '&c你必须站在子区域中执行此命令.'
         rented: "&c你不能删除这个子区域, 因为它被出租或出售给了&4 {player}&c. \n  [T]&7移除租客: &e/{cmd} &8[点\
           击][H]&7点此 移除租客.[/H][C]{cmd}[/C][/T]'\n"
         success: '&7成功删除了城镇&2 {land}&7 的子区域&6 {area}&7.'
+        sub: |
+          &c你当前所处的位置没有子区域. &7如果你想解散整个城镇, 请使用以下命令.
+            [T]&7✖ 解散城镇: &e/{cmd} &8[CLICK][H]&7解散整个城镇&2 {land}&7.[/H][C]{cmd}[/C][/T]
       land:
         confirm: |
           &7请点击下方确认按钮以解散城镇&2 {land}&7:
@@ -1195,6 +1198,7 @@ lands:
     map:
       header: '&7&m━━━━━━━━━━<━&r &2城镇地图 &7&m━>━━━━━━━━━━[newline]'
       footer: '[newline]&7&m━━━━━━━━━━<━&r &2城镇地图 &7&m━>━━━━━━━━━━'
+      link: '[T]&7Dynmap 链接: &8[CLICK][H]&7点击打开 Dynmap.[/H][URL]{dynmap}[/URL][/T]'
     unstuck:
       success: '&7成功传送到最近的荒野区块.'
     taxes:
