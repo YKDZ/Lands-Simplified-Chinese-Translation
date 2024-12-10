@@ -830,7 +830,9 @@ lands:
         player: '&c玩家&4 {input}&c 不存在.'
         offline: '&c玩家&4 {input} &c不在线.'
         world: '&c世界子区域&4 {input} &c不存在. &7参数 {pos}: {expected}'
-        world-disabled: '&c这在当前世界中被禁用了. &8世界: {input}'
+        world-disabled:
+          general: '&c不能在此世界中这么做. &8世界: {input}'
+          claiming: '&c你所处的世界不允许占领领土. &7请先进入一个允许占领领土的世界.[V] &8当前世界: {input}[/V]'
         category: '&c你的输入&4 {input} &c不是一个类别. &7参数 {pos}: {expected}'
         funds: '&c你的输入&4 {input} &c不是一个金额. &7参数 {pos}: {expected}'
         time: '&c你的输入&4 {input} &c不是一个时间. &7参数 {pos}: {expected}. 正确实例: 1h'
