@@ -3490,3 +3490,12 @@ physical:
     - '&7露营地不能被扩展范围.'
     name: '&2&l露营地'
     material: CAMPFIRE
+  claim_block_radius:
+    material: GRASS_BLOCK
+    lore:
+    - '&7将其放置在荒野中'
+    - '&7以占领指定半径范围内的所有区块.'
+    - ''
+    - ' &8• &7所有者:&3 {owner}'
+    - ' &8• &7半径:&3 {radius} &8(&3= {chunks} 个区块&8)'
+    name: '&2&l范围占领方块'
