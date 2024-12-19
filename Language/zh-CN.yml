@@ -660,6 +660,7 @@ lands:
         prompt: '#t#&6在子区域&6 {area} &6内[newline]&7选择一个告示牌'
         sign: '&c选择的方块必须是一个告示牌.'
         area: '&c选择的告示牌必须在城镇&4 {land}&c 的子区域&4 {area} &c内.'
+    menu-reopen: '#a#&6在&5 {time}&6 内打开上一个菜单.'
   command:
     menu:
       invalid: '&c没有名为&4 {shortcut}&c 的快捷方式.'

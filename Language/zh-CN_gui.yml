@@ -283,6 +283,15 @@ gui:
           lore:
           - '&c传送点不能设在'
           - '&c荒野或其他城镇中.'
+        child_failure_mainblock_claim:
+          name: '&4&l只能被放在城镇内'
+          lore:
+          - '&c城镇核心只能被放置在城镇领地内.'
+          - '&7请确保你站在城镇&2 {land}&7 之内.'
+        child_failure_mainblock_space:
+          name: '&4&l空间不足'
+          lore:
+          - '&c你当前所处的位置没有足够的空间以放置城镇核心.'
       patches:
         basic:
           stats:
@@ -3202,15 +3211,6 @@ gui:
           - '    &8• &7重新放置花费:&c {cost}'
           - '&8✖ &9右键'
           - '   &7开关全息显示: {hologram}'
-        child_failure_mainblock_claim:
-          name: '&4&l必须放置在城镇之内'
-          lore:
-          - '&c城镇核心必须放置在城镇领土之内.'
-          - '&7请确保你当前位于城镇&2 {land} &7之内.'
-        child_failure_mainblock_space:
-          name: '&4&l空间不足'
-          lore:
-          - '&c你目前所处的位置没有足够的空间以放置城镇核心.'
     title: '&8{level_prefix}{land}'
 common:
   size: 45
