@@ -469,6 +469,7 @@ help:
             set: '[T]&e{parent} {subcmd} {args} &8- &7设置时长[H]&7点击复制.[/H][SC]{fullcmd}[/SC][/T]'
           addrole: '[T]&e{parent} {subcmd} {args} &8- &7向 roles.yml 添加自定义职位[H]&7点击复制.[/H][SC]{fullcmd}[/SC][/T]'
           syncpermissions: '[T]&e{parent} {subcmd} &8- &7同步权限限制[H]&7点击执行.[/H][C]{fullcmd}[/C][/T]'
+          removespawn: '[T]&e{parent} {subcmd} {args} &8- &7移除城镇的传送点[H]&7点击复制.[/H][SC]{fullcmd}[/SC][/T]'
         deleteinactive: '[T]&e{parent} {subcmd} &8- &7删除不活跃的玩家的数据[H]&7点击执行.[/H][C]{fullcmd}[/C][/T]'
       storage: '[T]&e{parent} {subcmd} &8- &7打开城镇仓库[H]&7点击执行.[/H][C]{fullcmd}[/C][/T]'
     
