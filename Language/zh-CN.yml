@@ -946,6 +946,10 @@ lands:
         &c你不能将城镇&4 {merge} &c与城镇&4 {land}&c 合并. &7城镇&2 {merge} &7是联邦&9 {nation}&7 的首都.
           [T]&7✖ 更改首都: &e/nations setcapital &8<&e城镇&8>[H]&7点此更改联邦首都. 这将允许你合并城镇 {merge}. 点击复制.[/H][SC]nations setcapital[/SC][/T]
       success: '&7你成功将城镇&2 {merge} &7与城镇&2 {land}&7 合并. 你花费了&c {cost}&7.'
+      already: '&c你已经要求城镇&4 {merge}&c 合并到你的城镇&4 {land}&c 中了.'
+      cost: '&c城镇&4 {land}&c 的余额不足以支付本次合并的花销&4 {cost}&c.'
+      requested: '&7你成功向玩家&3 {player}&7 申请将他的城镇&2
+        {merge} &7合并到你的城镇&2 {land}&7 中. 他现在可以回复你的申请了.'
     assign:
       selection: '&c你需要先创建一个选区. &7使用 &e/lands selection &7进行创建. 这之后再进行选区分配.'
       default: '&c你不能将选区分配到默认总子区域.'

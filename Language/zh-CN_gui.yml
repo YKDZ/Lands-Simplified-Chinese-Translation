@@ -1587,6 +1587,19 @@ gui:
           - '&8✖ &3丢弃键'
           - '   &7撤回邀请.'
           name: '&e&l{player} &7- &6&l成员邀请'
+        entry_object_merge:
+          material: INHERIT
+          lore:
+          - '&7合并城镇&2 {merge}&7.'
+          - ''
+          - '&6&l信息'
+          - ' &8• &7发送时间:&5 {time}'
+          - ' &8• &7申请人: {sender}'
+          - ' &8• &7收件人: {receiver}'
+          - ''
+          - '&8✖ &3丢弃键'
+          - '   &7撤回邀请.'
+          name: '&e&l{merge} &7- &6&l合并请求'
   list_area_roles:
     title: '&8{area} &7> &8职位'
     items:
@@ -2149,6 +2162,12 @@ gui:
           - '&8✖ &7拒绝邀请'
           - '   &7或查看更多信息.'
           name: '&2&l{land} &7- &6&l成员邀请'
+        entry_object_merge:
+          material: INHERIT
+          lore:
+          - '&8✖ &决定是否要将城镇&2 {merge}&7 合并到'
+          - '   &7城镇&2 {land}&7 中.'
+          name: '&2&l{land} &7- &6&l合并你的城镇'
   list_level_progress:
     title: '&8升级进度'
     items:
@@ -2597,6 +2616,13 @@ gui:
           lore:
           - '&8✖ &7接受这个邀请.'
           - '   &7税金:&c {tax}'
+          name: '&a&l接受'
+        accept_merge:
+          material: LIME_STAINED_GLASS_PANE
+          slots: 19-22
+          lore:
+          - '&8✖ &7同意将城镇&2{merge} &7'
+          - '   &7合并到城镇&2 {land}&7 中.'
           name: '&a&l接受'
     title: '&8{land}'
   object_info:
