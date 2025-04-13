@@ -948,8 +948,8 @@ lands:
       success: '&7你成功将城镇&2 {merge} &7与城镇&2 {land}&7 合并. 你花费了&c {cost}&7.'
       already: '&c你已经要求城镇&4 {merge}&c 合并到你的城镇&4 {land}&c 中了.'
       cost: '&c城镇&4 {land}&c 的余额不足以支付本次合并的花销&4 {cost}&c.'
-      requested: '&7你成功向玩家&3 {player}&7 申请将他的城镇&2
-        {merge} &7合并到你的城镇&2 {land}&7 中. 他现在可以回复你的申请了.'
+      requested: '&7你成功向玩家&3 {player}&7 申请将他的城镇&2 {merge} &7合并到你的城镇&2 {land}&7 中.
+        他现在可以回复你的申请了.'
     assign:
       selection: '&c你需要先创建一个选区. &7使用 &e/lands selection &7进行创建. 这之后再进行选区分配.'
       default: '&c你不能将选区分配到默认总子区域.'
@@ -1307,6 +1307,7 @@ wars:
       general: '&c你不能在与&4 {land}&c 战争时这样做. &c设置: {flag}'
       pillage: '&c你不能在敌方城镇&4 {land} &c在线的守卫者不足时掠夺这个城镇. &7请至少等待城镇&2 {land} &7有&3 {defenders}个
         &7守卫者上线.'
+      allies: '&c你只能在这场战争中侵略攻方&4 {attacker}&c 和守方&4 {defender}&c. &7任何一方的盟友都不能被掠夺.'
     start:
       broadcast: '&7{attacker} &7与 {defender} &7之间的战争开始了. 战争最晚在&5 {time}&7 后结束.'
     end:
