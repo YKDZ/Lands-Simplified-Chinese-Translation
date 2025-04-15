@@ -531,12 +531,6 @@ gui:
           name: '&6&l这个职位不会被收税'
           lore:
           - '&7这不能被更改.'
-        child_failure_nation_none:
-          lore:
-          - '&c这个职位的一部分将会在未来'
-          - '&c被联邦管理.'
-          - ' &8• &7你目前不是任何联邦的成员.'
-          name: '&4&l由联邦管理'
   taxes:
     title: '&8子区域税赋'
     items:
@@ -3466,6 +3460,12 @@ common:
         lore:
         - '&7传送因为以下原因而失败了:'
         - '&7{result}'
+      child_failure_nation_none:
+        lore:
+        - '&c这个职位将部分被你'
+        - '&c未来可能加入的联邦管理.'
+        - ' &8• &7你当前不属于任何联邦.'
+        name: '&4&l职位被联邦管理'
 common_sounds:
   # Play a sound when the item is set in the menu.
   set:
