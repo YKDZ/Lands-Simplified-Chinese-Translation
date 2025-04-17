@@ -1360,10 +1360,10 @@ wars:
           defenders: '#b#[config]style:solid[/config]&a我们正在夺回区块 - {progress}%, {invaders}名
             侵略者'
         none:
-          area: '#b#[config]style:solid,color:white[/config]&7占领暂停 - {progress}%
-            - 没有任何一方人数占优'
-          broadcast: '#b#[config]style:solid,color:white[/config]&7占领暂停
-            - {progress}%, x: {x}, y: {y}, z: {z}'
+          area: '#b#[config]style:solid,color:white[/config]&7占领暂停 - {progress}% -
+            没有任何一方人数占优'
+          broadcast: '#b#[config]style:solid,color:white[/config]&7占领暂停 - {progress}%,
+            x: {x}, y: {y}, z: {z}'
   command:
     general:
       no-war: '&c{object}&c 并没有正在进行或即将开始的战争. &7目前十分和平.'

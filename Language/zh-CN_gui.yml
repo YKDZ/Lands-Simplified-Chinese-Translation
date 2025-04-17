@@ -3267,6 +3267,7 @@ common:
       placeholder_1:
         material: GRAY_STAINED_GLASS_PANE
         slots: 1-45
+        hide-tooltip: true
       child_failure_noaccess:
         name: '&4&l不被允许'
         lore:
