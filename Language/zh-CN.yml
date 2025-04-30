@@ -1339,6 +1339,7 @@ wars:
         presense: '&c你目前不能破坏这个战旗. &7战旗范围内仍有&3 {players}个 &7敌方玩家. 你需要先清除他们'
         invader: '#t#&c战旗[newline]&c放置在敌方城镇 {land} 内的战旗被破坏了'
         defender: '#t#&a战旗[newline]&a我方城镇 {land} 拔除了战旗[newline]&2&l+ {points} 点数'
+        invaders-break: '&c侵略者不被允许破坏自己的战旗.'
       online: '#a#&c无法占领: 城镇 {land} 至少要有 {min}个 成员在线.'
       success:
         invader: '#t#&a战旗[newline]&a我们成功在城镇 {land} 占领了 {chunks}个 区块[newline]&2&l+
