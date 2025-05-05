@@ -1257,8 +1257,8 @@ lands:
               [T]&7✖ 向联邦发送联盟申请&9 {nation}&7.[H]&7点此向联邦&9 {nation}&7 发送联盟申请.[/H][C]{cmd}[/C][/T]
           success: '&7成功向 {target}&7 发送联盟请求. 如果他们同意, 你 &8(&7{object}&8) &7将会与他们成为盟友.'
           sent: '&7你已经在&5 {time} &7前向 {object} 发送过联盟请求了.'
-          max: '&4{object} &ccan''t have any more allies. &7It reached its maximum
-            amount of&3 {max} &7allies.'
+          max: '&4{object} &c不能拥有更多盟友了. &7它的盟友数量已经达到了上限&3 {max} &7位.'
+          broadcast: '&7{object} &7与 {target} &7成为了盟友.'
         remove:
           already: '&7{target} &7不是 {object}&7 的盟友.'
           revoked: '&7你 &8(&7{object}&8) 撤回了对 {target}&7 的联盟邀请.'
@@ -1278,6 +1278,7 @@ lands:
           already: '&7{target} &7不与&7 {object}&7 敌对.'
           success: '&7成功向 {target}&7 发送和解请求. 如果他们同意, 你 &8(&7{object}&8) &7将不再与他们敌对.'
           sent: '&7你已经在&5 {time} &7前向 {object} &7发送过和解请求了.'
+          broadcast: '&7{object} &7与 {target} &7不再敌对了.'
     confirmtp:
       none: '&c你没有进行中的传送.'
     
