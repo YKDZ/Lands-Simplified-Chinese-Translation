@@ -298,7 +298,6 @@ general:
     none: '&8无'
     unlimited: '&a无限'
 
-
 # /<cmd> help
 help:
   help:
@@ -1312,9 +1311,13 @@ wars:
     start:
       broadcast: '&7{attacker} &7与 {defender} &7之间的战争开始了. 战争最晚在&5 {time}&7 后结束.'
     end:
-      broadcast: '&7{attacker} &7与 {defender} &7之间的战争结束了. 战争持续了&5 {time}&7.'
-      surrender: '{object} &7投降了. 战争结束, 败者向 {enemy} 支付了&c {tribute} &7赔偿金.'
-      draw: '&7{attacker} &7与 {defender} &7之间的战争以平局收场. 战争持续了&5 {time}&7.'
+      broadcast:
+        won: '&7{winner}&7 以点数 &3 {winner_points}&7 vs.&3 {loser_points}&7 赢得了与 {loser}&7
+          的战争. 这场战争共持续了&5 {time}&7.'
+        surrendered: '{loser} &7在&3 {loser_points}&7 点数时投降了. 战争结束, 他们向 {winner} &8(&3{winner_points}&7
+          点数&8)&7支付了&c {tribute} &7赔偿金. 这场战争共持续了&5 {time}&7.'
+        draw: '&7{attacker} &7与 {defender} &7间的战争以点数&3 {points}&7 平局收场. 这场战争共持续了&5
+          {time}&7.'
     kill:
       target:
         attackers: '&7我们的队友&a {attacker} &7被&c {defender}&7 击杀了.'
@@ -1556,7 +1559,6 @@ nations:
       level: '&c你不能将城镇&4 {land} &c设为联邦&4 {nation}&c 的新首都. &7城镇至少需要达到&3 {level}级 &8(&7当前:
         {current}&8)&7.'
       success: '&7成功将城镇&2 {land} &7设为联邦{nation}&7 的新首都.'
-
 
 # Sign lines, Hologram lines etc.
 list:
