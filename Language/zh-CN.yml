@@ -446,6 +446,7 @@ help:
               lands: '[T]&e{parent} {subcmd} {args} &8- &7修改最大成员城镇数[H]&7点击复制.[/H][SC]{fullcmd}[/SC][/T]'
               members: '[T]&e{parent} {subcmd} {args} &8- &7修改最大玩家成员数[H]&7点击复制.[/H][SC]{fullcmd}[/SC][/T]'
               ownlands: '[T]&e{parent} {subcmd} {args} &8- &7修改最大建立城镇数[H]&7点击复制.[/H][SC]{fullcmd}[/SC][/T]'
+            first-join-items: '[T]&e{parent} {subcmd} {args} &8- &7给予启用的首次加入物品[H]&7点击复制.[/H][SC]{fullcmd}[/SC][/T]'
         
         resetworld: '[T]&e{parent} {subcmd} {args} &8- &7删除某世界中的所有领土[H]&7点击复制.[/H][SC]{fullcmd}[/SC][/T]'
         hologram:
