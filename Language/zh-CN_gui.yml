@@ -74,7 +74,6 @@ skull:
     default: DARK_OAK_FENCE
     sub: OAK_FENCE
 
-
 gui:
   main:
     title: '&8城镇主菜单'
@@ -2536,7 +2535,7 @@ gui:
           - 37-40
           name: '&a&l确认'
           lore: []
-          sound_click: ENTITY_PLAYER_LEVELUP
+          sound_click: entity.player.levelup
         cancel:
           material: RED_STAINED_GLASS_PANE
           slots:
@@ -2547,7 +2546,7 @@ gui:
           - 42-45
           name: '&c&l取消'
           lore: []
-          sound_click: BLOCK_ANVIL_HIT
+          sound_click: block.anvil.hit
     title: '&8确认动作'
   player_invite:
     items:
@@ -3472,8 +3471,8 @@ common_sounds:
   set:
     # Each item starting with [item_type]_failure_<name> will have this sound set.
     # You can still override the "sound_set" for any item in their sections.
-    failure: ENTITY_VILLAGER_NO
-    success: ENTITY_PLAYER_LEVELUP
+    failure: entity.villager.no
+    success: entity.player.levelup
 physical:
   selection:
     lore:

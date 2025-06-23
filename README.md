@@ -4,7 +4,7 @@
 
 纯手动翻译，不使用任何 AI 翻译或通篇机器翻译。
 
-当前对应的插件版本：[7.15.22](https://www.spigotmc.org/resources/lands-%E2%AD%95-land-claim-plugin-%E2%9C%85-grief-prevention-protection-gui-management-nations-wars-1-20-support.53313/updates)
+当前对应的插件版本：[7.16.0](https://www.spigotmc.org/resources/lands-%E2%AD%95-land-claim-plugin-%E2%9C%85-grief-prevention-protection-gui-management-nations-wars-1-20-support.53313/updates)
 
 另外 [此处](https://forest-development.gitbook.io/lands-zh-cn-wiki/) 还有本人维护的官方 Wiki 的简体中文翻译版本。
 
@@ -18,7 +18,7 @@
 
 ## 翻译内容
 
-```
+```txt
 Language/en-US_gui.yml -> Language/zh-CN_gui.yml
 Language/en-US.yml -> Language/zh-CN.yml
 categories.yml
@@ -43,7 +43,7 @@ roles.yml
 
 本插件使用了数个赋予了特殊含义的名词和动词，它们的翻译可能随着服务器的玩法和性质等而改变，故提供名词对照表，方便使用 `VSCode` 等编辑器的**批量修改功能**快速地进行匹配和替换以满足各类服务器的需求。
 
-```
+```txt
 Nation -> 联邦
 Capital -> 首都
 Land -> 城镇

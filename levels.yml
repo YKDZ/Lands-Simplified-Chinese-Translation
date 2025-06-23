@@ -17,72 +17,72 @@ land:
   levels:
     1:
       # Set the name of the level.
-      title: '据点'
+      title: "据点"
       # These values are only active if the land isn't a member of any nation.
       attributes:
         # The chunks attribute will add or remove (= negative value) chunks to the land. That means that the land can claim more (or less) chunks at /claim.
         chunks:
-          description: '&7最大领土区块数 {value}'
+          description: "&7最大领土区块数 {value}"
           value: 0
         # The upkeep attribute will higher or lower (= negative value) their 维护费s by a given value.
         # This attribute is not active, if the land is part of a nation.
         upkeep:
-          description: '&7{value}% 维护费'
+          description: "&7{value}% 维护费"
           value: 0
     2:
-      title: '村落'
+      title: "村落"
       requirements:
         # Required members to get this level assigned.
         members:
           required: 4
-          title: '拥有 {req} 个玩家成员'
+          title: "拥有 {req} 个玩家成员"
           description:
-            - '&7在你的城镇中拥有 {req} 个玩家成员.'
-            - '&7命令: &e/lands trust'
+            - "&7在你的城镇中拥有 {req} 个玩家成员."
+            - "&7命令: &e/lands trust"
         # Required chunks to get this level assigned.
         chunks:
           required: 0
-          title: '拥有 {req} 个领土区块'
+          title: "拥有 {req} 个领土区块"
           description:
-            - '&7在你的城镇中拥有 {req} 个领土区块.'
-            - '&7命令: &e/claim'
+            - "&7在你的城镇中拥有 {req} 个领土区块."
+            - "&7命令: &e/claim"
         # Required bank balance to get this level assigned (/lands balance).
         balance:
           required: 7500
-          title: '金库余额 ${req}'
+          title: "金库余额 ${req}"
           description:
-            - '&7在你的城镇金库中拥有 ${req} 存款'
-            - '&7命令: &e/lands deposit'
+            - "&7在你的城镇金库中拥有 ${req} 存款"
+            - "&7命令: &e/lands deposit"
         # Plugin: https://www.spigotmc.org/resources/67627
         betterfarming:
           farms:
             required: 1
-            title: '拥有 {req} 个可升级农场'
+            title: "拥有 {req} 个可升级农场"
             description:
-              - '&7在你的城镇中拥有 {req} 个可升级农场.'
-              - '&7命令: &e/farm get'
+              - "&7在你的城镇中拥有 {req} 个可升级农场."
+              - "&7命令: &e/farm get"
         # Plugin: https://www.spigotmc.org/resources/69201
         upgradeablehoppers:
           hoppers:
             required: 5
-            title: '拥有 {req} 个可升级漏斗'
+            title: "拥有 {req} 个可升级漏斗"
             description:
-              - '&7在你的城镇中拥有 {req} 个可升级漏斗.'
-              - '&7命令: &e/hopper get'
+              - "&7在你的城镇中拥有 {req} 个可升级漏斗."
+              - "&7命令: &e/hopper get"
         # Plugin: https://www.spigotmc.org/resources/77717
         upgradeablespawners:
           spawners:
             required: 3
-            title: '拥有 {req} 个可升级刷怪笼'
+            title: "拥有 {req} 个可升级刷怪笼"
             description:
-              - '&7在你的城镇中拥有 {req} 个可升级刷怪笼.'
-              - '&7命令: &e/spawner get'
+              - "&7在你的城镇中拥有 {req} 个可升级刷怪笼."
+              - "&7命令: &e/spawner get"
       attributes:
         chunks:
-          description: '&7最大领土区块数 {value}'
+          description: "&7最大领土区块数 {value}"
           value: 1
         upkeep:
-          description: '&7{value}% 维护费'
+          description: "&7{value}% 维护费"
           value: 5
       # Execute console commands, if the land reaches this level or gets downgraded from this level to the previous one.
       # Available placeholders:
@@ -94,175 +94,174 @@ land:
       # If the command contains the {member} placeholder, the command will be executed for each player that is trusted in the land.
       commands:
         # When a land reaches this level.
-        reached: [ ]
+        reached: []
         # When a land gets downgraded from the next level to this one.
-        down: [ ]
+        down: []
     3:
-      title: '城市'
+      title: "城市"
       requirements:
         members:
           required: 8
-          title: '拥有 {req} 个玩家成员'
+          title: "拥有 {req} 个玩家成员"
           description:
-            - '&7在你的城镇中拥有 {req} 个玩家成员.'
-            - '&7命令: &e/lands trust'
+            - "&7在你的城镇中拥有 {req} 个玩家成员."
+            - "&7命令: &e/lands trust"
         chunks:
           required: 0
-          title: '拥有 {req} 个领土区块'
+          title: "拥有 {req} 个领土区块"
           description:
-            - '&7在你的城镇中拥有 {req} 个领土区块.'
-            - '&7命令: &e/claim'
+            - "&7在你的城镇中拥有 {req} 个领土区块."
+            - "&7命令: &e/claim"
         balance:
           required: 17000
-          title: '金库余额 ${req}'
+          title: "金库余额 ${req}"
           description:
             - '&7在你的城镇金库中拥有 \$\{req\} 存款'
-            - '&7命令: &e/lands deposit'
+            - "&7命令: &e/lands deposit"
         # Plugin: https://www.spigotmc.org/resources/67627
         betterfarming:
           farms:
             required: 3
-            title: '拥有 {req} 个可升级农场'
+            title: "拥有 {req} 个可升级农场"
             description:
-              - '&7在你的城镇中拥有 {req} 个可升级农场.'
-              - '&7命令: &e/farm get'
+              - "&7在你的城镇中拥有 {req} 个可升级农场."
+              - "&7命令: &e/farm get"
         # Plugin: https://www.spigotmc.org/resources/69201
         upgradeablehoppers:
           hoppers:
             required: 8
-            title: '拥有 {req} 个可升级漏斗'
+            title: "拥有 {req} 个可升级漏斗"
             description:
-              - '&7在你的城镇中拥有 {req} 个可升级漏斗.'
-              - '&7命令: &e/hopper get'
+              - "&7在你的城镇中拥有 {req} 个可升级漏斗."
+              - "&7命令: &e/hopper get"
         # Plugin: https://www.spigotmc.org/resources/77717
         upgradeablespawners:
           spawners:
             required: 3
-            title: '拥有 {req} 个可升级刷怪笼'
+            title: "拥有 {req} 个可升级刷怪笼"
             description:
-              - '&7在你的城镇中拥有 {req} 个可升级刷怪笼.'
-              - '&7命令: &e/spawner get'
+              - "&7在你的城镇中拥有 {req} 个可升级刷怪笼."
+              - "&7命令: &e/spawner get"
       attributes:
         chunks:
-          description: '&7最大领土区块数 {value}'
+          description: "&7最大领土区块数 {value}"
           value: 2
         upkeep:
-          description: '&7{value}% 维护费'
+          description: "&7{value}% 维护费"
           value: 10
       commands:
-        reached: [ ]
-        down: [ ]
+        reached: []
+        down: []
     4:
-      title: '省区'
+      title: "省区"
       requirements:
         members:
           required: 14
-          title: '拥有 {req} 个玩家成员'
+          title: "拥有 {req} 个玩家成员"
           description:
-            - '&7在你的城镇中拥有 {req} 个玩家成员.'
-            - '&7命令: &e/lands trust'
+            - "&7在你的城镇中拥有 {req} 个玩家成员."
+            - "&7命令: &e/lands trust"
         chunks:
           required: 0
-          title: '拥有 {req} 个领土区块'
+          title: "拥有 {req} 个领土区块"
           description:
-            - '&7在你的城镇中拥有 {req} 个领土区块.'
-            - '&7命令: &e/claim'
+            - "&7在你的城镇中拥有 {req} 个领土区块."
+            - "&7命令: &e/claim"
         balance:
           required: 30000
-          title: '金库余额 ${req}'
+          title: "金库余额 ${req}"
           description:
             - '&7在你的城镇金库中拥有 \$\{req\} 存款'
-            - '&7命令: &e/lands deposit'
+            - "&7命令: &e/lands deposit"
         # Plugin: https://www.spigotmc.org/resources/67627
         betterfarming:
           farms:
             required: 5
-            title: '拥有 {req} 个可升级农场'
+            title: "拥有 {req} 个可升级农场"
             description:
-              - '&7在你的城镇中拥有 {req} 个可升级农场.'
-              - '&7命令: &e/farm get'
+              - "&7在你的城镇中拥有 {req} 个可升级农场."
+              - "&7命令: &e/farm get"
         # Plugin: https://www.spigotmc.org/resources/69201
         upgradeablehoppers:
           hoppers:
             required: 15
-            title: '拥有 {req} 个可升级漏斗'
+            title: "拥有 {req} 个可升级漏斗"
             description:
-              - '&7在你的城镇中拥有 {req} 个可升级漏斗.'
-              - '&7命令: &e/hopper get'
+              - "&7在你的城镇中拥有 {req} 个可升级漏斗."
+              - "&7命令: &e/hopper get"
         # Plugin: https://www.spigotmc.org/resources/77717
         upgradeablespawners:
           spawners:
             required: 5
-            title: '拥有 {req} 个可升级刷怪笼'
+            title: "拥有 {req} 个可升级刷怪笼"
             description:
-              - '&7在你的城镇中拥有 {req} 个可升级刷怪笼.'
-              - '&7命令: &e/spawner get'
+              - "&7在你的城镇中拥有 {req} 个可升级刷怪笼."
+              - "&7命令: &e/spawner get"
       attributes:
         chunks:
-          description: '&7最大领土区块数 {value}'
+          description: "&7最大领土区块数 {value}"
           value: 4
         upkeep:
-          description: '&7{value}% 维护费'
+          description: "&7{value}% 维护费"
           value: 25
       commands:
-        reached: [ ]
-        down: [ ]
+        reached: []
+        down: []
     5:
-      title: '市区'
+      title: "市区"
       requirements:
         members:
           required: 24
-          title: '拥有 {req} 个玩家成员'
+          title: "拥有 {req} 个玩家成员"
           description:
-            - '&7在你的城镇中拥有 {req} 个玩家成员.'
-            - '&7命令: &e/lands trust'
+            - "&7在你的城镇中拥有 {req} 个玩家成员."
+            - "&7命令: &e/lands trust"
         chunks:
           required: 0
-          title: '拥有 {req} 个领土区块'
+          title: "拥有 {req} 个领土区块"
           description:
-            - '&7在你的城镇中拥有 {req} 个领土区块.'
-            - '&7命令: &e/claim'
+            - "&7在你的城镇中拥有 {req} 个领土区块."
+            - "&7命令: &e/claim"
         balance:
           required: 55000
-          title: '金库余额 ${req}'
+          title: "金库余额 ${req}"
           description:
             - '&7在你的城镇金库中拥有 \$\{req\} 存款'
-            - '&7命令: &e/lands deposit'
+            - "&7命令: &e/lands deposit"
         # Plugin: https://www.spigotmc.org/resources/67627
         betterfarming:
           farms:
             required: 6
-            title: '拥有 {req} 个可升级农场'
+            title: "拥有 {req} 个可升级农场"
             description:
-              - '&7在你的城镇中拥有 {req} 个可升级农场.'
-              - '&7命令: &e/farm get'
+              - "&7在你的城镇中拥有 {req} 个可升级农场."
+              - "&7命令: &e/farm get"
         # Plugin: https://www.spigotmc.org/resources/69201
         upgradeablehoppers:
           hoppers:
             required: 25
-            title: '拥有 {req} 个可升级漏斗'
+            title: "拥有 {req} 个可升级漏斗"
             description:
-              - '&7在你的城镇中拥有 {req} 个可升级漏斗.'
-              - '&7命令: &e/hopper get'
+              - "&7在你的城镇中拥有 {req} 个可升级漏斗."
+              - "&7命令: &e/hopper get"
         # Plugin: https://www.spigotmc.org/resources/77717
         upgradeablespawners:
           spawners:
             required: 6
-            title: '拥有 {req} 个可升级刷怪笼'
+            title: "拥有 {req} 个可升级刷怪笼"
             description:
-              - '&7在你的城镇中拥有 {req} 个可升级刷怪笼.'
-              - '&7命令: &e/spawner get'
+              - "&7在你的城镇中拥有 {req} 个可升级刷怪笼."
+              - "&7命令: &e/spawner get"
       attributes:
         chunks:
-          description: '&7最大领土区块数 {value}'
+          description: "&7最大领土区块数 {value}"
           value: 8
         upkeep:
-          description: '&7{value}% 维护费'
+          description: "&7{value}% 维护费"
           value: 30
       commands:
-        reached: [ ]
-        down: [ ]
-
+        reached: []
+        down: []
 
 nation:
   # Enable nation levels?
@@ -271,91 +270,91 @@ nation:
   levels:
     1:
       # Set the name of the level.
-      title: '联邦'
+      title: "联邦"
       # For the entry level, there are not attributes set. But you could add them anyways, if you modify the value options.
       attributes:
         chunks:
-          description: '&7最大领土区块数 {value}'
+          description: "&7最大领土区块数 {value}"
           value: 0
         upkeep:
-          description: '&7{value}% 维护费'
+          description: "&7{value}% 维护费"
           value: 0
         effects:
-          description: '&a+ 解锁增益效果: {value}'
-          value: [ ]
+          description: "&a+ 解锁增益效果: {value}"
+          value: []
         effects_amount:
-          description: '&a+ 最多同时开启 {value} 个增益效果'
+          description: "&a+ 最多同时开启 {value} 个增益效果"
           value: 0
     2:
-      title: '国家'
+      title: "国家"
       requirements:
         # Required minimum amount of unique lands in the nation.
         # This does not include the capital land.
         lands:
           required: 3
-          title: '拥有 {req} 个城镇成员'
+          title: "拥有 {req} 个城镇成员"
           description:
-            - '&7邀请 {req} 个城镇成为你'
-            - '&7联邦的成员.'
-            - '&7命令: &e/nation trust'
+            - "&7邀请 {req} 个城镇成为你"
+            - "&7联邦的成员."
+            - "&7命令: &e/nation trust"
         # Required members (total unique players) to get this level assigned.
         members:
           required: 32
-          title: '拥有 {req} 个玩家成员'
+          title: "拥有 {req} 个玩家成员"
           description:
-            - '&7拥有 {req} 个玩家成员.'
-            - '&7命令: &e/lands trust'
+            - "&7拥有 {req} 个玩家成员."
+            - "&7命令: &e/lands trust"
         # Required total chunks to get this level assigned.
         chunks:
           required: 0
-          title: '拥有 {req} 个领土区块'
+          title: "拥有 {req} 个领土区块"
           description:
-            - '&7拥有 {req} 个领土区块数.'
-            - '&7命令: &e/claim'
+            - "&7拥有 {req} 个领土区块数."
+            - "&7命令: &e/claim"
         # Required total balance (the balance of all lands) to get this level assigned.
         balance:
           required: 100000
-          title: '金库余额 ${req}'
+          title: "金库余额 ${req}"
           description:
-            - '&7所有成员部落的金库余额总和达到 ${req}.'
-            - '&7命令: &e/lands deposit'
+            - "&7所有成员部落的金库余额总和达到 ${req}."
+            - "&7命令: &e/lands deposit"
         # Plugin: https://www.spigotmc.org/resources/67627
         betterfarming:
           farms:
             required: 9
-            title: '拥有 {req} 个可升级农场'
+            title: "拥有 {req} 个可升级农场"
             description:
-              - '&7在你的城镇中拥有 {req} 个可升级农场.'
-              - '&7命令: &e/farm get'
+              - "&7在你的城镇中拥有 {req} 个可升级农场."
+              - "&7命令: &e/farm get"
         # Plugin: https://www.spigotmc.org/resources/69201
         upgradeablehoppers:
           hoppers:
             required: 24
-            title: '拥有 {req} 个可升级漏斗'
+            title: "拥有 {req} 个可升级漏斗"
             description:
-              - '&7在你的城镇中拥有 {req} 个可升级漏斗.'
-              - '&7命令: &e/hopper get'
+              - "&7在你的城镇中拥有 {req} 个可升级漏斗."
+              - "&7命令: &e/hopper get"
         # Plugin: https://www.spigotmc.org/resources/77717
         upgradeablespawners:
           spawners:
             required: 9
-            title: '拥有 {req} 个可升级刷怪笼'
+            title: "拥有 {req} 个可升级刷怪笼"
             description:
-              - '&7在你的城镇中拥有 {req} 个可升级刷怪笼.'
-              - '&7命令: &e/spawner get'
+              - "&7在你的城镇中拥有 {req} 个可升级刷怪笼."
+              - "&7命令: &e/spawner get"
       attributes:
         # Give each land of the nation x amount of additional chunks.
         chunks:
-          description: '&7最大领土区块数 {value}'
+          description: "&7最大领土区块数 {value}"
           value: 20
         # Modify upkeep by x percent. This also supports negative values.
         # The nation pays the upkeep to the server.
         upkeep:
-          description: '&7{value}% 维护费'
+          description: "&7{value}% 维护费"
           value: 20
         # Allow nations to activate a specific amount of effects in their nation. Effects can be unlocked through level progression.
         effects:
-          description: '&a+ 解锁增益效果: {value}'
+          description: "&a+ 解锁增益效果: {value}"
           # Configure a list of unlocked effects for this level. Valid effects: https://hub.spigotmc.org/javadocs/bukkit/org/bukkit/potion/PotionEffectType.html
           # Format: EFFECT:AMPLIFIER
           # The amiplifier is the strength (level) of the effect. Example: JUMP:2 -> Jump II
@@ -366,7 +365,7 @@ nation:
             - DOLPHINS_GRACE
         # Modify how many effects can be active at the same time.
         effects_amount:
-          description: '&a+ 最多同时开启 {value} 个增益效果'
+          description: "&a+ 最多同时开启 {value} 个增益效果"
           value: 1
       # Execute console commands, if the nation reaches this level or gets downgraded from this level to the previous one.
       # Available placeholders:
@@ -378,70 +377,70 @@ nation:
       # If the command contains the {land} placeholder, the command will be executed for each land, which is part of the nation.
       commands:
         # When a nation reaches this level.
-        reached: [ ]
+        reached: []
         # When a nation gets downgraded from the next level to this one.
-        down: [ ]
+        down: []
     3:
-      title: '帝国'
+      title: "帝国"
       requirements:
         lands:
           required: 6
-          title: '拥有 {req} 个城镇成员'
+          title: "拥有 {req} 个城镇成员"
           description:
-            - '&7邀请 {req} 个城镇成为你'
-            - '&7联邦的成员.'
-            - '&7命令: &e/nations trust'
+            - "&7邀请 {req} 个城镇成为你"
+            - "&7联邦的成员."
+            - "&7命令: &e/nations trust"
         members:
           required: 64
-          title: '拥有 {req} 个玩家成员'
+          title: "拥有 {req} 个玩家成员"
           description:
-            - '&7拥有 {req} 个玩家成员.'
-            - '&7命令: &e/lands trust'
+            - "&7拥有 {req} 个玩家成员."
+            - "&7命令: &e/lands trust"
         chunks:
           required: 0
-          title: '拥有 {req} 个领土区块'
+          title: "拥有 {req} 个领土区块"
           description:
-            - '&7拥有 {req} 个领土区块数.'
-            - '&7命令: &e/claim'
+            - "&7拥有 {req} 个领土区块数."
+            - "&7命令: &e/claim"
         balance:
           required: 250000
-          title: '金库余额 ${req}'
+          title: "金库余额 ${req}"
           description:
-            - '&7所有成员部落的金库余额总和达到 ${req}.'
-            - '&7命令: &e/lands deposit'
+            - "&7所有成员部落的金库余额总和达到 ${req}."
+            - "&7命令: &e/lands deposit"
         # Plugin: https://www.spigotmc.org/resources/67627
         betterfarming:
           farms:
             required: 18
-            title: '拥有 {req} 个可升级农场'
+            title: "拥有 {req} 个可升级农场"
             description:
-              - '&7在你的城镇中拥有 {req} 个可升级农场.'
-              - '&7命令: &e/farm get'
+              - "&7在你的城镇中拥有 {req} 个可升级农场."
+              - "&7命令: &e/farm get"
         # Plugin: https://www.spigotmc.org/resources/69201
         upgradeablehoppers:
           hoppers:
             required: 30
-            title: '拥有 {req} 个可升级漏斗'
+            title: "拥有 {req} 个可升级漏斗"
             description:
-              - '&7在你的城镇中拥有 {req} 个可升级漏斗.'
-              - '&7命令: &e/hopper get'
+              - "&7在你的城镇中拥有 {req} 个可升级漏斗."
+              - "&7命令: &e/hopper get"
         # Plugin: https://www.spigotmc.org/resources/77717
         upgradeablespawners:
           spawners:
             required: 18
-            title: '拥有 {req} 个可升级刷怪笼'
+            title: "拥有 {req} 个可升级刷怪笼"
             description:
-              - '&7在你的城镇中拥有 {req} 个可升级刷怪笼.'
-              - '&7命令: &e/spawner get'
+              - "&7在你的城镇中拥有 {req} 个可升级刷怪笼."
+              - "&7命令: &e/spawner get"
       attributes:
         chunks:
-          description: '&7最大领土区块数 {value}'
+          description: "&7最大领土区块数 {value}"
           value: 35
         upkeep:
-          description: '&7{value}% 维护费'
+          description: "&7{value}% 维护费"
           value: 35
         effects:
-          description: '&a+ 解锁增益效果: {value}'
+          description: "&a+ 解锁增益效果: {value}"
           value:
             - JUMP:2
             - SPEED:2
@@ -453,17 +452,15 @@ nation:
             - INCREASE_DAMAGE
             - HEALTH_BOOST
         effects_amount:
-          description: '&a+ 最多同时开启 {value} 个增益效果'
+          description: "&a+ 最多同时开启 {value} 个增益效果"
           value: 3
       commands:
-        reached: [ ]
-        down: [ ]
-
+        reached: []
+        down: []
 
 # You can disable sounds by setting them to ''
 sound:
   # Played to each player of the land or nation on level up.
-  up: 'BLOCK_BELL_USE'
+  up: "block.bell.use"
   # Played to each player of the land or nation on level down.
-  down: 'BLOCK_ANVIL_DESTROY'
-
+  down: "block.anvil.destroy"
