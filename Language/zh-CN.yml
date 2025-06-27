@@ -1423,6 +1423,7 @@ wars:
         defender: '&c{object} &c的建立时间太短了. &7你只能对成立了&5 {min} &7以上的对象发起战争.'
       hour-of-day: '&c你只能在&4 {from} &c到&4 {to}&c 进行宣战. &7当前时间:&5 {current}&8 (&7时区:
         {timezone}&8)'
+      peaceful: '&c这个城镇被管理员标记为和平. &7它不能参与任何战争.'
     deny:
       attacker: '&c攻方不能拒绝自己的宣战书. &7只有守方才能这么做.'
       ongoing: '&c你不能拒绝与 {enemy} 的正在进行的战争&c. &7你只能拒绝对 {object}&7 的宣战书.'

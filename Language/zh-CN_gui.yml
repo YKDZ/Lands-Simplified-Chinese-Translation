@@ -1994,6 +1994,15 @@ gui:
           lore:
           - '&c第三方插件阻止了'
           - '&c你对此设置进行的操作.'
+        entry_no_damage:
+          material: CAKE
+          name: '&6&l伤害免疫: {enabled}'
+          lore:
+          - '&8✖ &7使这个职位免疫'
+          - '   &7除了 PvP 和怪物以外的一切伤害'
+          - '    &8• &7来自玩家和怪物的伤害'
+          - '      &7可以用各自独立的设置开关.'
+          - '    &8• &7这个设置仅对服务器管理员可见.'
   list_area_settings:
     title: '&8{area} &7> &8环境设置'
     items:
@@ -2139,6 +2148,19 @@ gui:
           - '    &8• &7这将影响如紫水晶母等方块.'
           - '    &8• &7来自荒野的方块永远不会'
           - '      &7传播入当前子区域.'
+        entry_expiration_shield:
+          material: CLOCK
+          name: '&6&l过期护盾: {enabled}'
+          lore:
+          - '&8✖ &7在这个城镇不活跃时,'
+          - '   &7避免其被自动解散.'
+          - '    &8• &7这个设置仅对服务器管理员可见.'
+        entry_peaceful:
+          material: CAKE
+          name: '&6&l和平城镇: {enabled}'
+          lore:
+          - '&8✖ &7使这个城镇无法加入任何战争.'
+          - '    &8• &7这个设置仅对服务器管理员可见.'
   list_player_invites:
     title: '&8收到的邀请'
     items:
@@ -3527,3 +3549,8 @@ physical:
     name: '&2&l范围占领方块'
   main_block:
     material: BELL
+skulls:
+  area_default:
+    material: DARK_OAK_FENCE
+  area_sub:
+    material: OAK_FENCE
