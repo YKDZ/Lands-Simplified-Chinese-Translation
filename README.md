@@ -4,7 +4,7 @@
 
 纯手动翻译，不使用任何 AI 翻译或通篇机器翻译。
 
-当前对应的插件版本：[7.16.4](https://www.spigotmc.org/resources/lands-%E2%AD%95-land-claim-plugin-%E2%9C%85-grief-prevention-protection-gui-management-nations-wars-1-20-support.53313/updates)
+当前对应的插件版本：[7.16.5](https://www.spigotmc.org/resources/lands-%E2%AD%95-land-claim-plugin-%E2%9C%85-grief-prevention-protection-gui-management-nations-wars-1-20-support.53313/updates)
 
 另外 [此处](https://forest-development.gitbook.io/lands-zh-cn-wiki/) 还有本人维护的官方 Wiki 的简体中文翻译版本。
 
@@ -60,7 +60,7 @@ Trust / Untrust ->（对应其他领地插件中常见的 invite / kick，在玩
     v. 根据具体语境译为加入、邀请 / 移出等
     n. 如 Trusted player 译为成员
 
-Claim -> 
+Claim ->
 n. 领土
 v. 占领
 
