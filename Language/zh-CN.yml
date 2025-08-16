@@ -1099,7 +1099,9 @@ lands:
       land:
         success: '&7成功接受了来自城镇&2 {land} &7的邀请.'
         broadcast: '&2{land} &8| &7玩家&3 {player} &7现在是城镇的一名成员.'
-        owner: '&7成功接受了来自城镇&2 {land}&7 的邀请. 你现在是城镇&2 {land}&7 的所有者.'
+        owner:
+          max: '&c你不能拥有更多城镇了. &7你已经达到了最大数量上限&3 {max}&7 个.'
+          success: '&7你同意了来自城镇&2 {land} &7的请求. 你现在是城镇&2 {land} &7的所有者了.'
       banned: '&c你不能加入城镇&4 {land}&c 的子区域&4 {area}&c. &7这个子区域将你拉黑了.'
     setowner:
       confirm: |
