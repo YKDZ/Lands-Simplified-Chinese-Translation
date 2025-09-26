@@ -46,27 +46,27 @@
 | 术语 | 翻译 | 备注 |
 |--------|----------|----------|
 | Nation | 联邦 | |
-| Capital | 首都 | |
+| Capital | 首都 | 建立联邦的那个城镇 |
 | Land | 城镇 | |
 | Area | 子区域 | |
-| Camp | 露营地 | |
+| Camp | 露营地 | 临时、固定大小的城镇，通过放置一个营火道具创建 |
 | Wilderness | 荒野 | |
-| Role | 职位 | |
+| Role | 职位 | 用于城镇或玩家联邦权限控制的容器 |
 | Owner | 所有者 | |
 | Tenant | 住户 | 区域的租客和买主都用这个词表示 |
 | Trust | v.邀请, 加入 | 对应其他领地插件中的 invite，在玩家眼中相当于 “被” join |
-| Trusted Player | v.成员 | |
+| Trusted Player | 成员 | |
 | Untrust | 移出 | 对应其他领地插件中的 kick，在玩家眼中相当于 “被” leave |
 | Claim | v.占领 n.领土 | |
 | Unclaim | 取消占领 | |
-| Natural Flags / Settings | 环境设置 | |
-| Role Flags / Settings | 职位设置 | |
-| Mainblock | 城镇核心 | |
-| Bank | 金库 | |
-| Storage | 仓库 | |
-| Upkeep | 维护费 | |
-| Taxes | 税费 | |
-| Relation | 外交关系 | |
+| Natural Flags / Settings | 环境设置 | 区域中是否能刷怪、TNT 是否可以破坏方块等 |
+| Role Flags / Settings | 职位设置 | 职位中的玩家是否可以破坏方块等 |
+| Mainblock | 城镇核心 | 城镇被创建时自动产生的方块结构 |
+| Bank | 金库 | 城镇和联邦的 “银行” |
+| Storage | 仓库 | 城镇核心具有的储存物品的虚拟空间 |
+| Upkeep | 维护费 | 城镇和联邦需要定时向服务器支付的款项 |
+| Taxes | 税费 | 城镇或联邦成员需要定时向所述城镇或联邦支付的款项 |
+| Relation | 外交关系 | 城镇或联邦等在战争中的关系 |
 | Ally | 盟友 | |
 | Enemy | 政敌 | |
 | Neutral | 中立 | |
