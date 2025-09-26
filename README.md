@@ -18,13 +18,13 @@
 
 ## 翻译内容
 
-```txt
-Language/en-US_gui.yml -> Language/zh-CN_gui.yml
-Language/en-US.yml -> Language/zh-CN.yml
-categories.yml
-levels.yml
-roles.yml
-```
+| 源文件 | 翻译后 |
+|--------|----------|
+| Language/en-US_gui.yml | Language/zh-CN_gui.yml |
+| Language/en-US.yml | Language/zh-CN.yml |
+| categories.yml | categories.yml |
+| levels.yml | levels.yml |
+| roles.yml | roles.yml |
 
 仅翻译了可以显示在游戏内的文本，没有翻译配置文件注释等不重要的文本（因为量大且难以维护）。
 
@@ -39,56 +39,44 @@ roles.yml
 - 所有的标点符号皆为**英文半角标点**（因为在 Minecraft 游戏内使用官方中文字体时，中文全角标点给人的观感较差，欠缺美观）
 - 不使用**您**字
 
-## 词汇对照
+## 术语表
 
-本插件使用了数个赋予了特殊含义的名词和动词，它们的翻译可能随着服务器的玩法和性质等而改变，故提供名词对照表，方便使用 `VSCode` 等编辑器的**批量修改功能**快速地进行匹配和替换以满足各类服务器的需求。
+本插件使用了数个赋予了特殊含义的名词和动词（术语），它们的翻译可能随着服务器的玩法和性质等而改变，故提供术语表，方便使用 `VSCode` 等编辑器的**批量修改功能**快速地进行匹配和替换以满足各类服务器的需求。
 
-```txt
-Nation -> 联邦
-Capital -> 首都
-Land -> 城镇
-Area -> 子区域
-Camp -> 露营地
-Wilderness -> 荒野
-
-Role -> 职位
-Owner -> 所有者
-
-Tenant -> 住户（原词实际上同时包括租客和买主的意思）
-
-Trust / Untrust ->（对应其他领地插件中常见的 invite / kick，在玩家眼里相当于“被” join / leave）
-    v. 根据具体语境译为加入、邀请 / 移出等
-    n. 如 Trusted player 译为成员
-
-Claim ->
-n. 领土
-v. 占领
-
-Unclaim -> 解除占领
-
-Natural Flags / Settings -> 环境设置
-Role Flags / Settings -> 职位设置
-
-Mainblock -> 城镇核心
-Bank -> 金库
-Storage -> 仓库
-Upkeep -> 维护费
-Taxes -> 税费
-
-Relation -> 外交关系
-Ally -> 盟友
-Enemy -> 政敌
-Neutral -> 中立
-
-War -> 战争
-Capture Block / Flag -> 战旗（战争中攻方用于占领守方领地的信标道具）
-Attacker / Defender -> 攻方 / 守方
-Tribute -> 赔偿金（战争中一方投降后需要向另一方支付的款项）
-Shield -> 战争护盾
-Declare ->
-    n. 宣战书
-    v. 宣战
-```
+| 术语 | 翻译 | 备注 |
+|--------|----------|----------|
+| Nation | 联邦 | |
+| Capital | 首都 | |
+| Land | 城镇 | |
+| Area | 子区域 | |
+| Camp | 露营地 | |
+| Wilderness | 荒野 | |
+| Role | 职位 | |
+| Owner | 所有者 | |
+| Tenant | 住户 | 区域的租客和买主都用这个词表示 |
+| Trust | v.邀请, 加入 | 对应其他领地插件中的 invite，在玩家眼中相当于 “被” join |
+| Trusted Player | v.成员 | |
+| Untrust | 移出 | 对应其他领地插件中的 kick，在玩家眼中相当于 “被” leave |
+| Claim | v.占领 n.领土 | |
+| Unclaim | 取消占领 | |
+| Natural Flags / Settings | 环境设置 | |
+| Role Flags / Settings | 职位设置 | |
+| Mainblock | 城镇核心 | |
+| Bank | 金库 | |
+| Storage | 仓库 | |
+| Upkeep | 维护费 | |
+| Taxes | 税费 | |
+| Relation | 外交关系 | |
+| Ally | 盟友 | |
+| Enemy | 政敌 | |
+| Neutral | 中立 | |
+| War |  战争| |
+| Capture Block / Flag | 战旗 | 战争中攻方用于占领守方领土的信标道具 |
+| Attacker | 攻方 | |
+| Defender | 守方 | |
+| Tribute | 赔偿金 | 战争中一方投降后需要向另一方支付的款项 |
+| Shield | 战争护盾 | 保护城镇或联邦免于战争的时间 |
+| Declare | n.宣战书 v.宣战 | |
 
 ## 风格化
 
@@ -109,3 +97,5 @@ Declare ->
 ## 支持
 
 本插件文本量较大，若翻译有帮助到你，你可以考虑给这个储存库**上颗星星**，抑或是在 [爱发电](https://afdian.net/a/ForestRealm) 赞助我。
+
+你也可以点一个 `Watch` 以在翻译更新时收到 Github 的邮件通知。
