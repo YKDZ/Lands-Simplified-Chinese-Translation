@@ -6,7 +6,9 @@
 
 当前对应的插件版本：[7.16.15](https://www.spigotmc.org/resources/lands-%E2%AD%95-land-claim-plugin-%E2%9C%85-grief-prevention-protection-gui-management-nations-wars-1-20-support.53313/updates)
 
-另外 [此处](https://forest-development.gitbook.io/lands-zh-cn-wiki/) 还有本人维护的官方 Wiki 的简体中文翻译版本。
+~~另外 [此处](https://forest-development.gitbook.io/lands-zh-cn-wiki/) 还有本人维护的官方 Wiki 的简体中文翻译版本。~~
+
+不再维护 WIKI 翻译。
 
 ## 安装使用
 
@@ -54,7 +56,7 @@
 | Role | 职位 | 用于城镇或玩家联邦权限控制的容器 |
 | Owner | 所有者 | |
 | Tenant | 住户 | 区域的租客和买主都用这个词表示 |
-| Trust | v.邀请, 加入 | 对应其他领地插件中的 invite，在玩家眼中相当于 “被” join |
+| Trust | 邀请, 加入 | 对应其他领地插件中的 invite，在玩家眼中相当于 “被” join |
 | Trusted Player | 成员 | |
 | Untrust | 移出 | 对应其他领地插件中的 kick，在玩家眼中相当于 “被” leave |
 | Claim | v.占领 n.领土 | |
