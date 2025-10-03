@@ -1,0 +1,22 @@
+# Here you can edit all dialogs.
+#
+# If you encounter any issues or have questions:
+# Discord: https://discord.incredibleplugins.com
+#
+# Wiki: https://wiki.incredibleplugins.com/general/locale-and-config/dialogs
+
+dialogs:
+  input:
+    title: 输入
+    inputs:
+      text:
+        label: 文本
+      player:
+        label: 玩家
+    buttons:
+      confirm:
+        label: "&a确认"
+        tooltip: 点此确认输入.
+      discard:
+        label: "&c放弃"
+        tooltip: 点此放弃输入.
