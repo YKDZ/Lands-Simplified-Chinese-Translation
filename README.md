@@ -14,7 +14,7 @@
 
 如果你从未修改过插件的配置文件，你大可以将所有文件直接放入 `plugins/Lands` 中并重启服务器以自动同步可能的更新。
 
-如果你曾经修改过插件的配置文件，建议你只将 `Language/zh-CN_gui.yml` 以及 `Language/zh-CN.yml` 放入对应文件夹中，并将另外的配置文件作为对照，修改你目前的配置文件，以防丢失任何数据。
+如果你曾经修改过插件的配置文件，建议你只将 `Language/zh-CN_gui.yml`、`Language/zh-CN_dialogs.yml` 以及 `Language/zh-CN.yml` 放入对应文件夹中，并将另外的配置文件作为对照，修改你目前的配置文件，以防丢失任何数据。
 
 别忘记将 `config.yml` 中的 `general.language` 键修改为 `zh-CN`。
 
