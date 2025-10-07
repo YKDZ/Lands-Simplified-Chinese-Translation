@@ -14,9 +14,9 @@ dialogs:
         label: 玩家
     buttons:
       confirm:
-        label: "&a确认"
+        label: '&a确认'
         tooltip: 点此确认输入.
       discard:
-        label: "&c放弃"
+        label: '&c放弃'
         tooltip: 点此放弃输入.
     title: 输入
