@@ -1329,8 +1329,10 @@ wars:
       broadcast:
         won: '&7{winner}&7 以点数 &3 {winner_points}&7 vs.&3 {loser_points}&7 赢得了与 {loser}&7
           的战争. 这场战争共持续了&5 {time}&7.'
-        surrendered: '{loser} &7在&3 {loser_points}&7 点数时投降了. 战争结束, 他们向 {winner} &8(&3{winner_points}&7
-          点数&8)&7支付了&c {tribute} &7赔偿金. 这场战争共持续了&5 {time}&7.'
+        surrendered:
+          war: '{loser} &7以点数&3 {loser_points}&7 投降了. 战争已结束, 他们向他们的敌人 {winner} &8(&3{winner_points}&7
+            点数&8)&7 支付了&c {tribute}&7 赔偿金. 战争共持续了&5 {time}&7.'
+          preparation: '{loser} &7在战争准备阶段投降并向他们的敌人 {winner}&7 支付了&c {tribute}&7 赔偿金.'
         draw: '&7{attacker} &7与 {defender} &7间的战争以点数&3 {points}&7 平局收场. 这场战争共持续了&5
           {time}&7.'
     kill:
