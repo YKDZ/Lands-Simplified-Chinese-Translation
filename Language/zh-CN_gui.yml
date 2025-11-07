@@ -650,13 +650,6 @@ gui:
     title: '&8杂项设置'
     items:
       default:
-        name:
-          name: '&6&l城镇名'
-          lore:
-          - '&8✖ &7设置城镇的新名字.'
-          - '   &7&l当前: &7{name}'
-          material: NAME_TAG
-          slots: 20
         title:
           name: '&6&l进入消息'
           lore:
@@ -686,6 +679,18 @@ gui:
           - ''
           - '&8✖ &3丢弃键'
           - '   &7重置为默认图标.'
+        name-tag:
+          material: NAME_TAG
+          slots: 20
+          lore:
+          - '&8✖ &b左键'
+          - '   &7为城镇设置新名称.'
+          - '    &8• &7&l当前: &7{name}'
+          - '&8✖ &9右键'
+          - '   &7为你的城镇设置新标签.'
+          - '   &7它充当你城镇名称的简写.'
+          - '    &8• &7&l当前: &7{tag}'
+          name: '&6&l城镇名称 & 标签'
       patches:
         all:
           category:

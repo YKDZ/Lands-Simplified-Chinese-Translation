@@ -1149,6 +1149,7 @@ lands:
       no-location: '&c无法找到一个符合条件的目的地.' # &8Please adjust your max and min distance settings and set the world spawn (/setworldspawn)
       searching: '#t#&6查询[newline]&7目的地...'
       success: '&7你被随机传送到了 &8(&7X: {x} Z: {z}&8)&7. 你花费了&c {cost}&7.'
+      end: '&c在末地中不能使用随机传送
     deposit:
       number: '&7你需要指定存款金额. 使用 &e/lands deposit &8<&e数量&8> &7或 &e/lands deposit &8<&e城镇&8>
         <&3数量&8>&7.'
