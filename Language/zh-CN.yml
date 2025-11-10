@@ -294,6 +294,7 @@ general:
         enemy: 政敌
         here: 当前位置
         land_or_here: 城镇 | 此处
+        tag: 标签
   value:
     none: '&8无'
     unlimited: '&a无限'
@@ -571,6 +572,7 @@ lands:
       exists: '&c名为&4 {area} &c的子区域已经存在于城镇&4 {land} &c中了.'
       not-exist: '&c子区域&4 {area} &c不存在于城镇&4 {land} &c中.'
       default: '&c你不能对城镇&4 {land} &c的默认总区域 &4{area} &c这样做.'
+      max: '&c你已经达到了城镇&4 {land}&c 可拥有的最大子区域数量 &4 {max}&c 个&7, 且子区域&6 {area}&7 还不存在.'
     event:
       fly:
         counter: '#t#&6飞行模式即将关闭[newline]&7倒计时 &3{sec} &7秒'
@@ -803,7 +805,6 @@ lands:
           untrusted: '&c你不能在当前位置为城镇&4 {land} &c这么做. &7你不是这个城镇的成员.'
         area: '&c你不能在城镇&4 {land}&c 的子区域&4 {area} &c中这么做.'
       no-edit-land: '&c你还未选择编辑一个城镇. &7使用 &e/lands edit &8<&e城镇名&8> &7来选择城镇作为编辑对象.'
-      name-exists: '&c名称&4 {name} &c已经被其它城镇或联邦使用了. &7请换一个名字.'
       swear-word: '&c删除了一个不文明用语. &7请文明用语. 词语:&c {word}'
       wilderness: '&c你当前不处于城镇领土内. &7请先去往城镇领土内以执行该操作. &7你可以使用 &e/view &7查看你附近的城镇.'
       player-self: '&c你不能对自己这么做.'
@@ -855,12 +856,10 @@ lands:
         spam: '&c你当前已有正在执行的命令或动作. &7请等待它完成后再输入下一条命令.'
       object:
         name:
-          exists: '&c&4名称{name} &c已被其他城镇或联邦占用.
-            &7你需要选择另一个名称.'
+          exists: '&c&4名称{name} &c已被其他城镇或联邦占用. &7你需要选择另一个名称.'
           same: '&c名称&4 {name} &c与当前设置的名称相同.'
         tag:
-          exists: '&c标签&4 {tag} &c已被其他城镇或联邦占用.
-            &7你需要选择另一个标签.'
+          exists: '&c标签&4 {tag} &c已被其他城镇或联邦占用. &7你需要选择另一个标签.'
           same: '&c标签&4 {tag} &c与当前设置的标签相同.'
     create:
       land-other: '&c你不能在拥有自己城镇的同时加入其他城镇. &7你需要先离开城镇&2 {land}&7.'
@@ -1157,7 +1156,7 @@ lands:
       no-location: '&c无法找到一个符合条件的目的地.' # &8Please adjust your max and min distance settings and set the world spawn (/setworldspawn)
       searching: '#t#&6查询[newline]&7目的地...'
       success: '&7你被随机传送到了 &8(&7X: {x} Z: {z}&8)&7. 你花费了&c {cost}&7.'
-      end: '&c在末地中不能使用随机传送
+      end: '&c在末地中不能使用随机传送'
     deposit:
       number: '&7你需要指定存款金额. 使用 &e/lands deposit &8<&e数量&8> &7或 &e/lands deposit &8<&e城镇&8>
         <&3数量&8>&7.'
