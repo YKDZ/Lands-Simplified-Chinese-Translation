@@ -3565,3 +3565,12 @@ skulls:
     material: DARK_OAK_FENCE
   area_sub:
     material: OAK_FENCE
+common_item-model:
+  items:
+    default:
+      # This is just an exmaple that displays each player head as a 2D head model of the 3rd party plugin Nexo.
+      player_head:
+        # enabled: false disables this entry
+        enabled: false
+        material: PLAYER_HEAD
+        item-model: nexo:2d_player_head
