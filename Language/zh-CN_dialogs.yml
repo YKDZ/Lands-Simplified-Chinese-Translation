@@ -20,3 +20,25 @@ dialogs:
         label: '&c放弃'
         tooltip: 点此放弃输入.
     title: 输入
+  land_create:
+    title: 创建城镇
+    inputs:
+      name:
+        label: 名称
+      tag:
+        label: 标签
+    bodies:
+      info:
+        text: 创建城镇将会花费&4 {cost}&r. 如果空间足够, 城镇将会占领&3 {chunks}&r 个区块.
+      tag:
+        text: 标签是你城镇名称的简写.
+        item:
+          material: NAME_TAG
+          hide-tooltip: true
+    buttons:
+      confirm:
+        label: '&a创建'
+        tooltip: 点击创建新城镇.
+      discard:
+        label: '&c取消'
+        tooltip: 点击取消城镇创建.
