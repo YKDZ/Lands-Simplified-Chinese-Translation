@@ -42,3 +42,25 @@ dialogs:
       discard:
         label: '&c取消'
         tooltip: 点击取消城镇创建.
+  nation_create:
+    title: 创建新联邦
+    inputs:
+      name:
+        label: 名称
+      tag:
+        label: 标签
+    bodies:
+      info:
+        text: 创建新联邦将花费&4 {cost}&r.
+      tag:
+        text: 标签是你联邦名称的简写.
+        item:
+          material: NAME_TAG
+          hide-tooltip: true
+    buttons:
+      confirm:
+        label: '&a创建'
+        tooltip: 点击创建新联邦.
+      discard:
+        label: '&c取消'
+        tooltip: 点击取消联邦创建.
