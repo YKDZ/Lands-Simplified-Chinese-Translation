@@ -432,7 +432,9 @@ help:
       admin:
         main: '[T]&e{parent} {subcmd} {args} &8- &7管理员命令[H]&7点击复制.[/H][SC]{fullcmd}[/SC][/T]'
         listperms: '[T]&e{parent} {subcmd} {args} &8- &7查看该玩家拥有的权限[H]&7点击复制.[/H][SC]{fullcmd}[/SC][/T]'
-        debug: '[T]&e{parent} {subcmd} &8- &7展示加载的数据[H]&点击执行.[/H][C]{fullcmd}[/C][/T]'
+        debug:
+          main: '[T]&e{parent} {subcmd} &8- &7展示已加载数据的统计[H]&7点击执行.[/H][C]{fullcmd}[/C][/T]'
+          tasks: '[T]&e{parent} {subcmd} &8- &7展示周期任务H]&7点击执行.[/H][C]{fullcmd}[/C][/T]'
         reload: '[T]&e{parent} {subcmd} &8- &7重载配置文件和语言文件[H]&7点击执行.[/H][C]{fullcmd}[/C][/T]'
         about: '[T]&e{parent} {subcmd} &8- &7展示关于 Lands 插件的信息[H]&7点击执行.[/H][C]{fullcmd}[/C][/T]'
         chatspy: '[T]&e{parent} {subcmd} {args} &8- &7监听聊天信息[H]&7点击复制.[/H][SC]{fullcmd}[/SC][/T]'
