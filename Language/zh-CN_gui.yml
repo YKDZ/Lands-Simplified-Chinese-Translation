@@ -1589,6 +1589,17 @@ gui:
           - '&8✖ &3丢弃键'
           - '   &7撤回邀请.'
           name: '&e&l{merge} &7- &6&l合并请求'
+        entry_object_owner_land:
+          lore:
+          - '&7将此玩家设为城镇 &2{land}&7所有者.'
+          - ''
+          - '&6&l信息'
+          - ' &8• &7发送时间:&5 {time}'
+          - ' &8• &7申请人: {sender}'
+          - ''
+          - '&8✖ &3丢弃键'
+          - '   &7撤回邀请.'
+          name: '&e&l{player} &7- &6&l所有者更换请求'
   list_area_roles:
     title: '&8{area} &7> &8职位'
     items:
