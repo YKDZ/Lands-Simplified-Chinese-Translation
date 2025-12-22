@@ -68,6 +68,9 @@ general:
     east: 东
     south: 南
     west: 西
+  search-by:
+    name: 名称
+    tag: 标签
 
 skull:
   area:
@@ -2921,8 +2924,8 @@ gui:
           material: SPYGLASS
           slots: 43
           lore:
-          - '&8✖ &7按名称查找.'
-          - '   &8• &7当前查找: {search}'
+          - '&8✖ &7按名称或标签查找.'
+          - '   &8• &7当前模式: {search}'
           - ''
           - '&8✖ &3丢弃键'
           - '   &7重置查找'
