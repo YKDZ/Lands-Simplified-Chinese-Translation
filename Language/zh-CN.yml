@@ -295,6 +295,7 @@ general:
         here: 当前位置
         land_or_here: 城镇 | 此处
         tag: 标签
+        permission: 权限
   value:
     none: '&8无'
     unlimited: '&a无限'
@@ -451,13 +452,7 @@ help:
             camp: '[T]&e{parent} {subcmd} {args} &8- &7给予露营地方块[H]&7点击复制.[/H][SC]{fullcmd}[/SC][/T]'
             captureflag: '[T]&e{parent} {subcmd} {args} &8- &7给予战旗[H]&7点击复制.[/H][SC]{fullcmd}[/SC][/T]'
             claimblock: '[T]&e{parent} {subcmd} {args} &8- &7给予占领方块[H]&7点击复制.[/H][SC]{fullcmd}[/SC][/T]'
-            permission:
-              main: '[T]&e{parent} {subcmd} {args} &8- &7修改数字权限[H]&7点击复制.[/H][SC]{fullcmd}[/SC][/T]'
-              chunks: '[T]&e{parent} {subcmd} {args} &8- &7修改最大区块数[H]&7点击复制.[/H][SC]{fullcmd}[/SC][/T]'
-              chunks-support: '[T]&e{parent} {subcmd} {args} &8- &7修改提供区块数[H]&7点击复制.[/H][SC]{fullcmd}[/SC][/T]'
-              lands: '[T]&e{parent} {subcmd} {args} &8- &7修改最大成员城镇数[H]&7点击复制.[/H][SC]{fullcmd}[/SC][/T]'
-              members: '[T]&e{parent} {subcmd} {args} &8- &7修改最大玩家成员数[H]&7点击复制.[/H][SC]{fullcmd}[/SC][/T]'
-              ownlands: '[T]&e{parent} {subcmd} {args} &8- &7修改最大建立城镇数[H]&7点击复制.[/H][SC]{fullcmd}[/SC][/T]'
+            permission: {}
             first-join-items: '[T]&e{parent} {subcmd} {args} &8- &7给予启用的首次加入物品[H]&7点击复制.[/H][SC]{fullcmd}[/SC][/T]'
         
         resetworld: '[T]&e{parent} {subcmd} {args} &8- &7删除某世界中的所有领土[H]&7点击复制.[/H][SC]{fullcmd}[/SC][/T]'
@@ -853,6 +848,7 @@ lands:
         category: '&c你的输入&4 {input} &c不是一个类别. &7参数 {pos}: {expected}'
         funds: '&c你的输入&4 {input} &c不是一个金额. &7参数 {pos}: {expected}'
         time: '&c你的输入&4 {input} &c不是一个时间. &7参数 {pos}: {expected}. 正确实例: 1h'
+        permission: '&c你的输入&4 {input} &c不是一个城镇权限限制. &7参数 {pos}: {expected}'
       action:
         cooldown: '&c你现在不能这么做. &7你需要等待&5 {time}&7.'
         spam: '&c你当前已有正在执行的命令或动作. &7请等待它完成后再输入下一条命令.'
