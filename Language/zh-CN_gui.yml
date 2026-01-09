@@ -2171,6 +2171,13 @@ gui:
           lore:
           - '&8✖ &7使这个城镇无法加入任何战争.'
           - '    &8• &7这个设置仅对服务器管理员可见.'
+        entry_copper_golem:
+          material: COPPER_GOLEM_STATUE
+          name: '&6&l铜傀儡: {enabled}'
+          lore:
+          - '&8✖ &7是否启用来自这个城镇其他'
+          - '   &7子区域的铜傀儡?'
+          - '    &8• &7在荒野生成的铜傀儡总是被禁用.'
   list_player_invites:
     title: '&8收到的邀请'
     items:
