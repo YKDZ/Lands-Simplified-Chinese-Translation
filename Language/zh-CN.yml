@@ -172,9 +172,11 @@ general:
       renamed: '&7{0} 将城镇名称从 {1} 修改为 {2}.'
     member:
       join: '&7玩家 {0} 加入城镇.'
-      leave: '&7玩家 {0} 退出城镇.'
-      ban: '&c玩家 {0} 被拉黑.'
       owner: '&7玩家 {0} 现在是新的城镇所有者.'
+      remove:
+        left: '&7玩家 {0} 离开了城镇.'
+        unclaimed: '&7玩家 {0} 离开了城镇. 他们占领的 {1} 个区块被取消占领，因为该城镇无法再占领更多区块.'
+        banned: '&c玩家 {0} 已被城镇封禁.'
     economy:
       upkeep:
         warning: '&c无法支付维护费: {0}'
@@ -295,7 +297,7 @@ general:
         here: 当前位置
         land_or_here: 城镇 | 此处
         tag: 标签
-        permission: 权限
+        limit: 限制
   value:
     none: '&8无'
     unlimited: '&a无限'
@@ -452,8 +454,8 @@ help:
             camp: '[T]&e{parent} {subcmd} {args} &8- &7给予露营地方块[H]&7点击复制.[/H][SC]{fullcmd}[/SC][/T]'
             captureflag: '[T]&e{parent} {subcmd} {args} &8- &7给予战旗[H]&7点击复制.[/H][SC]{fullcmd}[/SC][/T]'
             claimblock: '[T]&e{parent} {subcmd} {args} &8- &7给予占领方块[H]&7点击复制.[/H][SC]{fullcmd}[/SC][/T]'
-            permission: {}
             first-join-items: '[T]&e{parent} {subcmd} {args} &8- &7给予启用的首次加入物品[H]&7点击复制.[/H][SC]{fullcmd}[/SC][/T]'
+            limit: '[T]&e{parent} {subcmd} {args} &8- &7修改编号权限[H]&7点击复制.[/H][SC]{fullcmd}[/SC][/T]'
         
         resetworld: '[T]&e{parent} {subcmd} {args} &8- &7删除某世界中的所有领土[H]&7点击复制.[/H][SC]{fullcmd}[/SC][/T]'
         hologram:
@@ -582,6 +584,7 @@ lands:
         camp: '#t#&2&l{land}[newline]&3{title}'
         admin: '#t#&2&l{land}[newline]{title}'
         pvp-warning: '#a#&c你进入了可 PVP 子区域.'
+        permanent: '#a#&7你目前位于 {object}&7.'
       leave:
         land: '#t#&2&l荒野[newline]&7清风拂面'
         camp: '#t#&2&l荒野[newline]&7清风拂面'
@@ -848,7 +851,7 @@ lands:
         category: '&c你的输入&4 {input} &c不是一个类别. &7参数 {pos}: {expected}'
         funds: '&c你的输入&4 {input} &c不是一个金额. &7参数 {pos}: {expected}'
         time: '&c你的输入&4 {input} &c不是一个时间. &7参数 {pos}: {expected}. 正确实例: 1h'
-        permission: '&c你的输入&4 {input} &c不是一个城镇权限限制. &7参数 {pos}: {expected}'
+        limit: '&c你的输入&4 {input} &c不是一个有效的限制. &7参数 {pos}: {expected}'
       action:
         cooldown: '&c你现在不能这么做. &7你需要等待&5 {time}&7.'
         spam: '&c你当前已有正在执行的命令或动作. &7请等待它完成后再输入下一条命令.'
@@ -927,7 +930,9 @@ lands:
       success: '&7成功占领区块 &8(&7城镇:&2 {land} &7X: {x} Z: {z}&8) &7花费&c {cost}&7. 下一次占领将花费&c
         {next}&7.'
       already-claimed: '&c你的选区中有一个已经属于其它城镇的区块 &8(&7X: {x} Z: {z}&8)&c. &7它属于城镇&2 {land}&7.'
-      max-chunk: '&c你不能为这个城镇占领&4 {chunks}个 &c以上的区块. &7城镇&2 {land} &7可占领的最大数量是&3 {max}个&7.' # &8Permission: lands.chunks.<number>
+      max-chunk:
+        land: '&c你不能为城镇&4 {land} &c再占领&4 {chunks} &c个区块. &7该城镇最多可占领&3 {max} &7个区块.[V] &8权限: lands.chunks.<number>[/V]'
+        personal: '&c你不能为任何城镇再占领&4 {chunks} &c个区块. &7你在所有城镇中总共最多可占领&3 {max} &7个区块.'
       selection:
         success: '&7你成功为城镇&2 {land}&7 占领了&3 {chunks}个 &7区块&7. 你花费了&c {cost}&7.'
       radius:
@@ -1108,7 +1113,9 @@ lands:
         success: '&7成功接受了来自城镇&2 {land} &7的邀请.'
         broadcast: '&2{land} &8| &7玩家&3 {player} &7现在是城镇的一名成员.'
         owner:
-          max: '&c你不能拥有更多城镇了. &7你已经达到了最大数量上限&3 {max}&7 个.'
+          max:
+            lands: '&c你不能再拥有更多城镇了. &7你已达到最大城镇数上限&3 {max}&7个.'
+            chunks: '&c你不能拥有这个城镇, 因为你无法再占领&4 {chunks}&7 个区块. &7你还有&3 {max}&7 个区块可占领.'
           success: '&7你同意了来自城镇&2 {land} &7的请求. 你现在是城镇&2 {land} &7的所有者了.'
       banned: '&c你不能加入城镇&4 {land}&c 的子区域&4 {area}&c. &7这个子区域将你拉黑了.'
     setowner:
@@ -1125,8 +1132,9 @@ lands:
       cooldown: '&c每&4 {cooldown}&c 内只能更改一次城镇所有者. &7请等待&5 {time}&7 后再试.'
       max:
         ownlands: '&c玩家&4 {player} &c不能再拥有更多城镇了. &7他已经达到了可拥有的城镇数上限&3 {max}个&7.'
-        chunks: '&c玩家&4 {player} &c不能成为这个城镇的所有者. &7这个城镇有&3 {chunks}个 &7区块的领土, 这超过了该玩家的城镇可以拥有的最大区块数&4
-          {max}个&7.'
+        chunks:
+          land: '&c玩家&4 {player} &c不能拥有这个城镇. &7他们只能拥有最多&3 {max} &c个区块大小的城镇.'
+          player: '&c玩家&4 {player} &c不能拥有这个城镇. &7他们无法再占领&4 {chunks} &c个区块.'
     deny:
       not-exist: '&c你没有任何来自城镇&4 {land} &c的邀请或邀请已过期.'
       success: '&7你成功拒绝了来自城镇&2 {land}&7 的邀请.'

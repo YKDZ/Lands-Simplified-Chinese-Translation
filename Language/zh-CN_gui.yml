@@ -102,20 +102,6 @@ gui:
           - '&8✖ &7点击查看你收到的所有邀请.'
           material: WRITABLE_BOOK
           slots: 13
-        limitation:
-          name: '&c&l你的权益'
-          lore:
-          - '&8• &7最多创建&3 {ownlands} &7个城镇:'
-          - '   &e/lands create'
-          - '&8• &7单个城镇最多拥有&3 {chunks} &7个区块:'
-          - '   &e/lands claim'
-          - '&8• &7单个城镇最多拥有&3 {members} &7名成员:'
-          - '   &e/lands trust'
-          - '&7&m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━'
-          - '&8• &7最多加入&3 {lands} &7个城镇'
-          - '&8• &7为你加入的城镇提供 &3{support-chunks} &7最大区块数'
-          material: INHERIT
-          slots: 17
         flags:
           name: '&6&l设置'
           lore:
@@ -149,6 +135,21 @@ gui:
           name: '&6&l地图'
           lore:
           - '&8✖ &7查看城镇地图.'
+        limits:
+          material: INHERIT
+          slots: 17
+          lore:
+          - '&8• &7可创建&3 {player_lands_owned} &7个城镇'
+          - '  &e/lands create'
+          - '&8• &7可占领区块'
+          - '  &8- &7总共 &3{player_chunks_used}&7 /&3 {player_chunks}&7 个区块'
+          - '  &8- &7每个城镇最多占领: &3{land_chunks}&7 个区块'
+          - '  &e/lands claim'
+          - '&8• &7每城镇可拥有&3 {land_members} &7个成员'
+          - '  &e/lands trust'
+          - '&8• &7可加入&3 {player_lands_trusted} &7个城镇'
+          - '  &e/lands accept'
+          name: '&6&l你的限制'
       patches:
         basic:
           lands:
@@ -240,26 +241,6 @@ gui:
           - '&c露营地无法拥有外交关系.'
           material: LIME_BANNER
           slots: 13
-        stats:
-          name: '&6&l统计数据'
-          lore:
-          - '&7传送点: {world}, x={x}, z={z}'
-          - '&7区块数: {chunks} / {chunks_max}'
-          - '&7成员: {members} / {members_max}'
-          - ''
-          - '&6&l经济:'
-          - ' &8• &7城镇'
-          - '   &7金库存款: {balance}'
-          - '   &7占领下一个区块花费: {chunk_cost}'
-          - '   &7维护费:&c {upkeep}'
-          - '   &7支付时间: {upkeep_next} 后'
-          - ''
-          - ' &8• &4你'
-          - '   &7存款: {balance_player}'
-          - '   &7税费:&c {taxes}'
-          - '   &7赋税时间: &7{taxes_next} 后'
-          material: skin:d01afe973c5482fdc71e6aa10698833c79c437f21308ea9a1a095746ec274a0f
-          slots: 16
         level_camp:
           material: EXPERIENCE_BOTTLE
           slots: 14
@@ -294,6 +275,27 @@ gui:
           name: '&4&l空间不足'
           lore:
           - '&c你当前所处的位置没有足够的空间以放置城镇核心.'
+        statistics:
+          material: skin:d01afe973c5482fdc71e6aa10698833c79c437f21308ea9a1a095746ec274a0f
+          slots: 16
+          lore:
+          - '&7传送点: {world}, x={x}, z={z}'
+          - '&7联邦: {nation}'
+          - '&7大小: {chunks} 区块 / {chunks_max}'
+          - '&7成员数: {members} / {members_max}'
+          - ''
+          - '&6&l经济状况'
+          - ' &8• &7城镇'
+          - '   &7金库余额: {balance}'
+          - '   &7下一次占领区块花费: {chunk_cost}'
+          - '   &7维护费:&c {upkeep}'
+          - '    &8• &7下次支付时间: {upkeep_next}'
+          - ' &8• &4个人'
+          - '   &7Total claimed chunks:&3 {player_chunks_used}&7 /&3 {player_chunks}&7'
+          - '   &7Balance: {balance_player}'
+          - '   &7Taxes of&c {taxes} &7in:'
+          - '   &7{taxes_next}'
+          name: '&6&lStatistics'
       patches:
         basic:
           stats:
@@ -315,6 +317,9 @@ gui:
             slots: 29
           various:
             slots: 31
+          statistics:
+            material: skin:d01afe973c5482fdc71e6aa10698833c79c437f21308ea9a1a095746ec274a0f
+            slots: 17
   area:
     title: '&8{area}'
     items:
