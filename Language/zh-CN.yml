@@ -931,7 +931,8 @@ lands:
         {next}&7.'
       already-claimed: '&c你的选区中有一个已经属于其它城镇的区块 &8(&7X: {x} Z: {z}&8)&c. &7它属于城镇&2 {land}&7.'
       max-chunk:
-        land: '&c你不能为城镇&4 {land} &c再占领&4 {chunks} &c个区块. &7该城镇最多可占领&3 {max} &7个区块.[V] &8权限: lands.chunks.<number>[/V]'
+        land: '&c你不能为城镇&4 {land} &c再占领&4 {chunks} &c个区块. &7该城镇最多可占领&3 {max} &7个区块.[V]
+          &8权限: lands.chunks.<number>[/V]'
         personal: '&c你不能为任何城镇再占领&4 {chunks} &c个区块. &7你在所有城镇中总共最多可占领&3 {max} &7个区块.'
       selection:
         success: '&7你成功为城镇&2 {land}&7 占领了&3 {chunks}个 &7区块&7. 你花费了&c {cost}&7.'
