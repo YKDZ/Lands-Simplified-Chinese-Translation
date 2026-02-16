@@ -310,6 +310,10 @@ general:
     friday: 星期五
     saturday: 星期六
   combat-logout: '{player} 因为在战斗中离开服务器而被杀死了 (战斗标记).'
+  input:
+    name: Name
+    tag: Tag
+    title: Title
 
 # /<cmd> help
 help:
@@ -818,15 +822,6 @@ lands:
 
           &7其它城镇可以邀请你: &e/lands trust
           [T]&7创建自己的城镇: &e/lands create[H]&7点击复制.[/H][SC]lands create[/SC][/T]
-      name:
-        number: '&c你不能在这个名称中使用数字. &7请仅使用字母. 发现的数字:&3 {invalid}'
-        character: '&c你不能在这个名称中使用符号. &7请仅使用字母或数字. &7发现的符号:&3 {invalid}'
-        color: '&c你不能在这个名称中使用颜色代码. &7请将其移除.'
-        length: '&c名称过长. &7最大长度为&3 {max} &7字 &8(&7你的: {input}&8字)&7. &8颜色代码长度也包括在内.
-          &7请换一个更短的名字.'
-        empty: '&c名称不存在. &7除颜色代码外请至少输入一个字符.'
-        format: '&c你不能在这个名称中使用格式代码, 如粗体字符等等. &7请删除你输入中的这些字符.'
-        reserved: '&c名称&4 {reserved}&c 被保留以用于其他目的. &7请选择另外的名称.'
       money:
         fallback: '&7提示:&c {cost} &7被从你的个人账户中扣除了, 因为你城镇&2 {land} &7的金库存款不足以支付. 点击存款:
           [T]&8[&f点击&8][H]&7点击向城镇 {land} 的金库存款.[/H][SC]{cmd}[/SC][/T]'
@@ -852,6 +847,14 @@ lands:
         funds: '&c你的输入&4 {input} &c不是一个金额. &7参数 {pos}: {expected}'
         time: '&c你的输入&4 {input} &c不是一个时间. &7参数 {pos}: {expected}. 正确实例: 1h'
         limit: '&c你的输入&4 {input} &c不是一个有效的限制. &7参数 {pos}: {expected}'
+        text:
+          number: '&c你不能为&4 "{input}"&c 输入数字. &7找到的数字:&3 {invalid}'
+          reserved: '&c文本&4 {reserved}&c 已被保留用于其他目的. &7请为&3 "{input}"&7 选择其他输入.'
+          character: '&c你只能为&4 "{input}"&c 输入字母和数字. &7无效字符:&3 {invalid}'
+          color: '&c你不能为&4 "{input}"&c 使用颜色代码.'
+          format: '&c你不能为&4 "{input}"&c 使用格式化文本, 如粗体等.'
+          length: '&c你为&4 "{input}"&c 输入的文本太长了. &7最大长度为&3 {max} &7个字符 &8(&7你输入了: {submitted}&8)&7.'
+          empty: '&c你为&4 "{input}"&c 输入的文本无效. &7你需要输入至少一个非颜色代码的字符.'
       action:
         cooldown: '&c你现在不能这么做. &7你需要等待&5 {time}&7.'
         spam: '&c你当前已有正在执行的命令或动作. &7请等待它完成后再输入下一条命令.'
