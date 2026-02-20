@@ -311,9 +311,10 @@ general:
     saturday: 星期六
   combat-logout: '{player} 因为在战斗中离开服务器而被杀死了 (战斗标记).'
   input:
-    name: Name
-    tag: Tag
-    title: Title
+    name: 名称
+    tag: 标签
+    title: 标题
+  enabled: '&a已启用'
 
 # /<cmd> help
 help:
@@ -481,9 +482,9 @@ help:
             modify: '[T]&e{parent} {subcmd} {args} &8- &7增加 (+) 或减少 (-) 护盾时长[H]&7点击复制.[/H][SC]{fullcmd}[/SC][/T]'
             set: '[T]&e{parent} {subcmd} {args} &8- &7设置时长[H]&7点击复制.[/H][SC]{fullcmd}[/SC][/T]'
           addrole: '[T]&e{parent} {subcmd} {args} &8- &7向 roles.yml 添加自定义职位[H]&7点击复制.[/H][SC]{fullcmd}[/SC][/T]'
-          syncpermissions: '[T]&e{parent} {subcmd} &8- &7同步权限限制[H]&7点击执行.[/H][C]{fullcmd}[/C][/T]'
           removespawn: '[T]&e{parent} {subcmd} {args} &8- &7移除城镇的传送点[H]&7点击复制.[/H][SC]{fullcmd}[/SC][/T]'
         deleteinactive: '[T]&e{parent} {subcmd} &8- &7删除不活跃的玩家的数据[H]&7点击执行.[/H][C]{fullcmd}[/C][/T]'
+        refreshlimits: '[T]&e{parent} {subcmd} &8- &7同步玩家、城镇和联邦限制[H]&7点击执行.[/H][C]{fullcmd}[/C][/T]'
       storage: '[T]&e{parent} {subcmd} &8- &7打开城镇仓库[H]&7点击执行.[/H][C]{fullcmd}[/C][/T]'
     
     # /wars
