@@ -1519,7 +1519,7 @@ nations:
   command:
     chat:
       activated: '&7成功启用了联邦聊天频道.'
-      deactivated: '&7成功仅用了联邦聊天频道.'
+      deactivated: '&7成功禁用了联邦聊天频道.'
       none: '&c没有可以聊天的联邦. &7使用 [T]&e/nations chat toggle &8[&8点击&8][H]&7点击关闭联邦聊天频道.[/H][C]nations
         chat toggle[/C][/T] &7关闭联邦聊天频道.'
       format:
