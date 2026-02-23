@@ -93,7 +93,7 @@ gui:
         all-lands:
           name: '&9&l所有城镇'
           lore:
-          - '&8✖ &7点击查看森林里所有的城镇'
+          - '&8✖ &7点击查看服务器内所有的城镇'
           material: skin:c9c8881e42915a9d29bb61a16fb26d059913204d265df5b439b3d792acd56
           slots: 29
         invites:

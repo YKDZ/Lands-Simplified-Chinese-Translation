@@ -1422,7 +1422,7 @@ wars:
           [T]&7✖ 管理外交关系[H]&7点此管理你的外交关系.[/H][C]{cmd}[/C][/T]
       war-shield: '&c你不能对 {object}&c 宣战. &7它的战争护盾还能生效&5 {time}&7.'
       no-nation: '&c你不能对&4 {land}&c 宣战. &7你只能对联邦的成员城镇宣战.'
-      admin: '&c你不能对森林公共城镇宣战.'
+      admin: '&c你不能对服务器公共城镇宣战.'
       nation: '&c你不能对 {object}&c 宣战. &7它与你属于同一个联邦&9 {nation}&7.'
       online: '&c你当前不能对 {object}&c 宣战. &7对方至少需要有一个成员在线.'
       broadcast: '&7{attacker} &7对 {defender}&7 宣战了. 战争将在&5 {time}&7 后开始.'
