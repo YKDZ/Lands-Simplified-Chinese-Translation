@@ -7,7 +7,7 @@
 
 general:
   prefix:
-    normal: '&8[&2Lands&8] '
+    normal: ''
     help: '&8[&2Lands&8] &7用法: '
   wYes: '&a是'
   wNo: '&c否'
@@ -29,8 +29,8 @@ general:
     description:
       default: '&7新占领的区块默认属于这个子区域.'
       sub: '&7这是子区域, 你可以单独指定职位和权限等.'
-      rented: '&7这个子区域被 {player} 租用了.'
-      sold: '&7这个子区域被卖给了 {player}.'
+      rented: '&a这个子区域被 {player} 租用了.'
+      sold: '&a这个子区域被卖给了 {player}.'
   time:
     days: 天
     hours: 小时
@@ -55,9 +55,10 @@ general:
       land:
         description: '<div class="\&quot;infowindow\&quot;"><span style="font-size:
           200%;"><span style="color: {land_color};">{land}</span><br /></span>{title}</div>
-          <ul> <li class="\&quot;infowindow\&quot;">等级: {level}</li> <li class="\&quot;infowindow\&quot;">领土区块:
-          {chunks}</li> <li class="\&quot;infowindow\&quot;">成员 ({members_amount}):
-          {members}</li> </ul>'
+          <ul> <li class="\&quot;infowindow\&quot;">等级: {level}</li> <li class="\&quot;infowindow\&quot;">金库余额:
+          {balance}</li> <li class="\&quot;infowindow\&quot;">领土区块: {chunks}</li>
+          <li class="\&quot;infowindow\&quot;">成员 ({members_amount}): {members}</li>
+          </ul>'
         spawn: '<div class="\&quot;infowindow\&quot;"><span style="font-size: 200%;"><span
           style="color: {land_color};">传送点</span></span></div> <div class="\&quot;infowindow\&quot;"><br
           />是否开放: {public}</div> <ul> <li>如果这个传送点对游客开放, 每个人都可以通过 /lands spawn {land}
@@ -65,11 +66,12 @@ general:
       nation:
         description: '<div class="\&quot;infowindow\&quot;"><span style="font-size:
           200%;"><span style="color: {land_color};">{land}</span><br /></span>{title}</div>
-          <ul> <li class="\&quot;infowindow\&quot;">等级: {level}</li> <li class="\&quot;infowindow\&quot;">领土区块:
-          {chunks}</li> <li class="\&quot;infowindow\&quot;">成员 ({members_amount}):
-          {members}</li> </ul> <p><strong>这个城镇属于联邦 {nation}:</strong></p> <ul> <li>等级:
-          {level_nation}</li> <li>首都: {capital}</li> <li>城镇 (总玩家数: {members_amount_nation}):
-          {lands}</li> </ul>'
+          <ul> <li class="\&quot;infowindow\&quot;">等级: {level}</li> <li class="\&quot;infowindow\&quot;">金库余额:
+          {balance}</li> <li class="\&quot;infowindow\&quot;">领土区块: {chunks}</li>
+          <li class="\&quot;infowindow\&quot;">成员 ({members_amount}): {members}</li>
+          </ul> <p><strong>这个城镇属于联邦 {nation}:</strong></p> <ul> <li>等级: {level_nation}</li>
+          <li>首都: {capital}</li> <li>城镇 (总玩家数: {members_amount_nation}): {lands}</li>
+          </ul>'
       capital:
         spawn: '<div class="\&quot;infowindow\&quot;"><span style="font-size: 200%;"><span
           style="color: {land_color};">首都传送点</span><br /></span>这个传送点属于联邦 {nation}
@@ -79,19 +81,21 @@ general:
       land:
         description: '<div class="\&quot;infowindow\&quot;"><span style="font-size:
           200%;"><span style="color: {land_color};">{land}</span><br /></span>{title}</div>
-          <ul> <li class="\&quot;infowindow\&quot;">等级: {level}</li> <li class="\&quot;infowindow\&quot;">领土区块:
-          {chunks}</li> <li class="\&quot;infowindow\&quot;">成员 ({members_amount}):
-          {members}</li> </ul>'
+          <ul> <li class="\&quot;infowindow\&quot;">等级: {level}</li> <li class="\&quot;infowindow\&quot;">金库余额:
+          {balance}</li> <li class="\&quot;infowindow\&quot;">领土区块: {chunks}</li>
+          <li class="\&quot;infowindow\&quot;">成员 ({members_amount}): {members}</li>
+          </ul>'
         spawn: '城镇 {land} 的传送点. 是否开放: {public}. 如果这个传送点对游客开放, 每个人都可以通过 /lands spawn
           {land} 传送到这里.'
       nation:
         description: '<div class="\&quot;infowindow\&quot;"><span style="font-size:
           200%;"><span style="color: {land_color};">{land}</span><br /></span>{title}</div>
-          <ul> <li class="\&quot;infowindow\&quot;">等级: {level}</li> <li class="\&quot;infowindow\&quot;">领土区块:
-          {chunks}</li> <li class="\&quot;infowindow\&quot;">成员 ({members_amount}):
-          {members}</li> </ul> <p><strong>这个城镇属于联邦 {nation}:</strong></p> <ul> <li>等级:
-          {level_nation}</li> <li>首都: {capital}</li> <li>城镇 (总玩家数: {members_amount_nation}):
-          {lands}</li> </ul>'
+          <ul> <li class="\&quot;infowindow\&quot;">等级: {level}</li> <li class="\&quot;infowindow\&quot;">金库余额:
+          {balance}</li> <li class="\&quot;infowindow\&quot;">领土区块: {chunks}</li>
+          <li class="\&quot;infowindow\&quot;">成员 ({members_amount}): {members}</li>
+          </ul> <p><strong>这个城镇属于联邦 {nation}:</strong></p> <ul> <li>等级: {level_nation}</li>
+          <li>首都: {capital}</li> <li>城镇 (总玩家数: {members_amount_nation}): {lands}</li>
+          </ul>'
       capital:
         spawn: '<div class="\&quot;infowindow\&quot;"><span style="font-size: 200%;"><span
           style="color: {land_color};">首都传送点</span><br /></span>This spawn belongs
@@ -102,9 +106,10 @@ general:
       land:
         description: '<div class="\&quot;infowindow\&quot;"><span style="font-size:
           200%;"><span style="color: {land_color};">{land}</span><br /></span>{title}</div>
-          <ul> <li class="\&quot;infowindow\&quot;">等级: {level}</li> <li class="\&quot;infowindow\&quot;">领土区块:
-          {chunks}</li> <li class="\&quot;infowindow\&quot;">成员 ({members_amount}):
-          {members}</li> </ul>'
+          <ul> <li class="\&quot;infowindow\&quot;">等级: {level}</li> <li class="\&quot;infowindow\&quot;">金库余额:
+          {balance}</li> <li class="\&quot;infowindow\&quot;">领土区块: {chunks}</li>
+          <li class="\&quot;infowindow\&quot;">成员 ({members_amount}): {members}</li>
+          </ul>'
         spawn: '<div class="\&quot;infowindow\&quot;"><span style="font-size: 200%;"><span
           style="color: {land_color};">Spawnpoint</span></span></div> <div class="\&quot;infowindow\&quot;"><br
           />是否开放: {public}</div> <ul> <li>如果这个传送点对游客开放, 每个人都可以通过 /lands spawn {land}
@@ -112,11 +117,12 @@ general:
       nation:
         description: '<div class="\&quot;infowindow\&quot;"><span style="font-size:
           200%;"><span style="color: {land_color};">{land}</span><br /></span>{title}</div>
-          <ul> <li class="\&quot;infowindow\&quot;">等级: {level}</li> <li class="\&quot;infowindow\&quot;">领土区块:
-          {chunks}</li> <li class="\&quot;infowindow\&quot;">成员 ({members_amount}):
-          {members}</li> </ul> <p><strong>这个城镇属于联邦 {nation}:</strong></p> <ul> <li>等级:
-          {level_nation}</li> <li>首都: {capital}</li> <li>城镇 (总玩家数: {members_amount_nation}):
-          {lands}</li> </ul>'
+          <ul> <li class="\&quot;infowindow\&quot;">等级: {level}</li> <li class="\&quot;infowindow\&quot;">金库余额:
+          {balance}</li> <li class="\&quot;infowindow\&quot;">领土区块: {chunks}</li>
+          <li class="\&quot;infowindow\&quot;">成员 ({members_amount}): {members}</li>
+          </ul> <p><strong>这个城镇属于联邦 {nation}:</strong></p> <ul> <li>等级: {level_nation}</li>
+          <li>首都: {capital}</li> <li>城镇 (总玩家数: {members_amount_nation}): {lands}</li>
+          </ul>'
       capital:
         spawn: '<div class="\&quot;infowindow\&quot;"><span style="font-size: 200%;"><span
           style="color: {land_color};">首都传送点</span><br /></span>这个传送点属于联邦 {nation}.</div><div
@@ -126,9 +132,10 @@ general:
       land:
         description: '<div class="\&quot;infowindow\&quot;"><span style="font-size:
           200%;"><span style="color: {land_color};">{land}</span><br /></span>{title}</div>
-          <ul> <li class="\&quot;infowindow\&quot;">等级: {level}</li> <li class="\&quot;infowindow\&quot;">领土区块:
-          {chunks}</li> <li class="\&quot;infowindow\&quot;">成员 ({members_amount}):
-          {members}</li> </ul>'
+          <ul> <li class="\&quot;infowindow\&quot;">等级: {level}</li> <li class="\&quot;infowindow\&quot;">金库余额:
+          {balance}</li> <li class="\&quot;infowindow\&quot;">领土区块: {chunks}</li>
+          <li class="\&quot;infowindow\&quot;">成员 ({members_amount}): {members}</li>
+          </ul>'
         spawn: '<div class="\&quot;infowindow\&quot;"><span style="font-size: 200%;"><span
           style="color: {land_color};">传送点</span></span></div> <div class="\&quot;infowindow\&quot;"><br
           />对所有人开放 {public}</div> <ul> <li>如果这个传送点对所有人开放, 每个人都可以使用 /lands spawn {land}
@@ -136,11 +143,12 @@ general:
       nation:
         description: '<div class="\&quot;infowindow\&quot;"><span style="font-size:
           200%;"><span style="color: {land_color};">{land}</span><br /></span>{title}</div>
-          <ul> <li class="\&quot;infowindow\&quot;">等级: {level}</li> <li class="\&quot;infowindow\&quot;">领土区块:
-          {chunks}</li> <li class="\&quot;infowindow\&quot;">成员 ({members_amount}):
-          {members}</li> </ul> <p><strong>这个城镇属于联邦 {nation}:</strong></p> <ul> <li>等级:
-          {level_nation}</li> <li>首都: {capital}</li> <li>成员城镇 (总玩家数: {members_amount_nation}):
-          {lands}</li> </ul>'
+          <ul> <li class="\&quot;infowindow\&quot;">等级: {level}</li> <li class="\&quot;infowindow\&quot;">金库余额:
+          {balance}</li> <li class="\&quot;infowindow\&quot;">领土区块: {chunks}</li>
+          <li class="\&quot;infowindow\&quot;">成员 ({members_amount}): {members}</li>
+          </ul> <p><strong>这个城镇属于联邦 {nation}:</strong></p> <ul> <li>等级: {level_nation}</li>
+          <li>首都: {capital}</li> <li>成员城镇 (总玩家数: {members_amount_nation}): {lands}</li>
+          </ul>'
       capital:
         spawn: '<div class="\&quot;infowindow\&quot;"><span style="font-size: 200%;"><span
           style="color: {land_color};">首都传送点</span><br /></span>这个传送点属于联邦 {nation}.</div><div
@@ -190,8 +198,7 @@ general:
               请及时向城镇金库存款以避免此类情况发生.'
           nation:
             normal: '&c你需要支付&4 {0}&c 维护费, 时限为 {1}, 但 {2} 的资金不足.'
-            delete: '&c你需要支付&4 {0}&c 维护费, 时限为 {1}, 但 {2} 的资金不足. &7这将会导致部分最新占领的领土归于无主.
-              请及时向城镇金库存款以避免此类情况发生.'
+            delete: '&c你需要支付&4 {0}&c 维护费, 时限为 {1}, 但 {2} 的资金不足. &7这将会导致联邦被解散。请及时向联邦金库存入资金以避免此类情况发生。'
       bank:
         withdraw: '&c玩家 {0} 从金库取出了 {1}. 金库存款: {2}'
         deposit: '&7玩家 {0} 向金库存入了 {1}. 金库存款: {2}'
@@ -210,8 +217,8 @@ general:
           received: '&c{0} &c向我们发送了战争申请. 同意命令: &e/wars declare {1}'
           denied: '&7战争申请被 {0} &7拒绝了.'
       surrender:
-        sent: '&c在战争中投降. 向政敌支付了 {0} 作为赔款.'
-        received: '&7政敌 {0} &7投降了. 收到了赔款 {1}.'
+        sent: '&c在战争中投降. 向敌人支付了 {0} 作为赔款.'
+        received: '&7敌人 {0} &7投降了. 收到了赔款 {1}.'
       end:
         won: '&7我们以 {1} &7分赢得了与敌人 {0} &7的战争. &7他们只有 &3{2}&7 分. 战争持续了 &5{3}&7.'
         draw: '&7与 {0} &7的战争以 &3{1} &7分的平局告终.'
@@ -236,31 +243,31 @@ general:
         accepted: '&7我们现在与 {0} &7是盟友关系.'
         remove: '&7我们与 {0} &7解除了盟友关系.'
       enemy:
-        add: '&7我们现在是 {0} &7的政敌.'
+        add: '&7我们现在是 {0} &7的敌人.'
         offer: '&7{0} &7想要与我们和解.'
-        accepted: '&7我们不再是 {0} &7的政敌.'
+        accepted: '&7我们不再是 {0} &7的敌人.'
     storage:
       entry: '&r{item}&r x {amount}'
       message: '&7玩家 {0} 修改了仓库. 被拿取的物品: {1}&7 - 被放入的物品: {2}'
   
   wars:
     object:
-      enemy: '&c政敌'
+      enemy: '&c敌人'
       ally: '&a盟友'
     nametag:
-      enemy: '&c政敌 &8| '
+      enemy: '&c敌人 &8| '
       ally: '&a盟友 &8| '
     state:
       preparation: '&a准备中'
       fight: '&c战斗中'
   relation:
     ally: '&a盟友'
-    enemy: '&c政敌'
+    enemy: '&c敌人'
     neutral: '&7中立'
   command:
     argument:
-      optional: '&8<&e{arg}&8>'
-      required: '&8[&e{arg}&8]'
+      optional: '&8[&e{arg}&8]'
+      required: '&8<&e{arg}&8>'
       type:
         land: 城镇名
         cmd: 命令
@@ -293,7 +300,7 @@ general:
         preparation_time: 准备时长
         category: 类别
         ally: 盟友
-        enemy: 政敌
+        enemy: 敌人
         here: 当前位置
         land_or_here: 城镇 | 此处
         tag: 标签
@@ -362,9 +369,9 @@ help:
         main: '[T]&e{parent} {subcmd} &8- &7放弃占领的区块[H]&7也可以放弃占领 &e/lands selection
           &7命令选中的区块. &7点击执行.[/H][C]{fullcmd}[/C][/T]'
         auto: '[T]&e{parent} {subcmd} &8- &7放弃占领走过的区块[H]&7这将放弃占领走过的所有区块. 点击执行.[/H][C]{fullcmd}[/C][/T]'
-        all: '[T]&e{parent} {subcmd} &8- &7Unclaim all chunks[H]&7Click to copy.[/H][SC]{fullcmd}[/SC][/T]'
-        radius: '[T]&e{parent} {subcmd} {args} &8- &7Unclaim radius[H]&7Unclaim all
-          chunks in a specified radius. Click to copy.[/H][SC]{fullcmd}[/SC][/T]'
+        all: '[T]&e{parent} {subcmd} &8- &7解除占领所有区块[H]&7点击复制.[/H][SC]{fullcmd}[/SC][/T]'
+        radius: '[T]&e{parent} {subcmd} {args} &8- &7解除占领半径内的区块[H]&7解除占领指定半径内的所有区块.
+          点击复制.[/H][SC]{fullcmd}[/SC][/T]'
       delete: '[T]&e{parent} delete {args} &8- &7解散城镇[H]&7点击复制.[/H][SC]{fullcmd}[/SC][/T]'
       trust: '[T]&e{parent} {subcmd} {args} &8- &7邀请玩家[H]&7使用 * 指代子区域名可以使这个玩家加入城镇中的所有子区域.
         &7点击复制.[/H][SC]{fullcmd}[/SC][/T]'
@@ -426,15 +433,15 @@ help:
           tenant: '[T]&e{parent} {subcmd} &8- &7踢出住户[H]&7直接踢出住户并向他们支付违约金. &7点击执行.[/H][C]{fullcmd}[/C][/T]'
       level: '[T]&e{parent} {subcmd} &8- &7查看升级进度[H]&7查看城镇升级的进程以及下一级带来的奖励. &7点击执行.[/H][C]{fullcmd}[/C][/T]'
       relations:
-        main: '[T]&e{parent} {subcmd} {args} &8- &7管理外交关系[H]&7将城镇或联邦设为你的盟友或政敌. 点击复制.[/H][SC]{fullcmd}[/SC][/T]'
+        main: '[T]&e{parent} {subcmd} {args} &8- &7管理外交关系[H]&7将城镇或联邦设为你的盟友或敌人. 点击复制.[/H][SC]{fullcmd}[/SC][/T]'
         allies:
           main: '[T]&e{parent} {subcmd} {args} &8- &7管理盟友[H]&7将城镇或联邦设为你的盟友. 点击复制.[/H][SC]{fullcmd}[/SC][/T]'
           add: '[T]&e{parent} {subcmd} {args} &8- &7添加盟友[H]&7将城镇或联邦设为你的盟友. 点击复制.[/H][SC]{fullcmd}[/SC][/T]'
           remove: '[T]&e{parent} {subcmd} {args} &8- &7移除盟友[H]&7与你的盟友解除友好关系. 点击复制.[/H][SC]{fullcmd}[/SC][/T]'
         enemies:
-          main: '[T]&e{parent} {subcmd} {args} &8- &7管理政敌[H]&7将城镇或联邦设为你的政敌. 点击复制.[/H][SC]{fullcmd}[/SC][/T]'
-          add: '[T]&e{parent} {subcmd} {args} &8- &7添加政敌[H]&7将联邦或城镇设为你的政敌. 点击复制.[/H][SC]{fullcmd}[/SC][/T]'
-          remove: '[T]&e{parent} {subcmd} {args} &8- &7移除政敌[H]&7向你的政敌发送和解书. 点击复制.[/H][SC]{fullcmd}[/SC][/T]'
+          main: '[T]&e{parent} {subcmd} {args} &8- &7管理敌人[H]&7将城镇或联邦设为你的敌人. 点击复制.[/H][SC]{fullcmd}[/SC][/T]'
+          add: '[T]&e{parent} {subcmd} {args} &8- &7添加敌人[H]&7将联邦或城镇设为你的敌人. 点击复制.[/H][SC]{fullcmd}[/SC][/T]'
+          remove: '[T]&e{parent} {subcmd} {args} &8- &7移除敌人[H]&7向你的敌人发送和解书. 点击复制.[/H][SC]{fullcmd}[/SC][/T]'
       
       # Admin Commands: /lands admin
       admin:
@@ -446,7 +453,7 @@ help:
         reload: '[T]&e{parent} {subcmd} &8- &7重载配置文件和语言文件[H]&7点击执行.[/H][C]{fullcmd}[/C][/T]'
         about: '[T]&e{parent} {subcmd} &8- &7展示关于 Lands 插件的信息[H]&7点击执行.[/H][C]{fullcmd}[/C][/T]'
         chatspy: '[T]&e{parent} {subcmd} {args} &8- &7监听聊天信息[H]&7点击复制.[/H][SC]{fullcmd}[/SC][/T]'
-        dismiss: '[T]&e{parent} {subcmd} {args} &8- &7取消注释[H]&7点击执行.[/H][C]{fullcmd}[/C][/T]'
+        dismiss: '[T]&e{parent} {subcmd} {args} &8- &7忽略通知[H]&7点击执行.[/H][C]{fullcmd}[/C][/T]'
         import: '[T]&e{parent} {subcmd} {args} &8- &7从第三方插件导入城镇[H]&7点击复制.[/H][SC]{fullcmd}[/SC][/T]'
         menu: '[T]&e{parent} {subcmd} {args} &8- &7打开管理员菜单[H]&7点击执行.[/H][C]{fullcmd}[/C][/T]'
         migratedb: '[T]&e{parent} {subcmd} {args} &8- &7迁移数据库[H]&7点击复制.[/H][SC]{fullcmd}[/SC][/T]'
@@ -495,7 +502,7 @@ help:
         captureflag: '[T]&e{parent} {subcmd} &8- &7查看战旗配方[H]&7点击执行.[/H][C]{fullcmd}[/C][/T]'
       menu: '[T]&e{parent} {subcmd} {args} &8- &7打开战争菜单[H]&7点击执行.[/H][C]{fullcmd}[/C][/T]'
       deny: '[T]&e{parent} {subcmd} &8- &7撤回已发送的宣战书[H]&7点击执行.[/H][C]{fullcmd}[/C][/T]'
-      spawn: '[T]&e{parent} {subcmd} &8- &7传送到政敌城镇的位置[H]&7点击执行.[/H][C]{fullcmd}[/C][/T]'
+      spawn: '[T]&e{parent} {subcmd} &8- &7传送到敌人城镇的位置[H]&7点击执行.[/H][C]{fullcmd}[/C][/T]'
       
       # Admin Commands: /wars admin
       admin:
@@ -523,15 +530,15 @@ help:
       list: '[T]&e{parent} {subcmd} {args} &8- &7列出所有联邦[H]&7点击执行.[/H][C]{fullcmd}[/C][/T]'
       top: '[T]&e{parent} {subcmd} &8- &7查看联邦排行榜[H]&7点击执行.[/H][C]{fullcmd}[/C][/T]'
       relations:
-        main: '[T]&e{parent} {subcmd} {args} &8- &7管理外交关系[H]&7将城镇或联邦设为你的盟友或政敌. 点击复制.[/H][SC]{fullcmd}[/SC][/T]'
+        main: '[T]&e{parent} {subcmd} {args} &8- &7管理外交关系[H]&7将城镇或联邦设为你的盟友或敌人. 点击复制.[/H][SC]{fullcmd}[/SC][/T]'
         allies:
           main: '[T]&e{parent} {subcmd} {args} &8- &7管理盟友[H]&7将城镇或联邦设为你的盟友. 点击复制.[/H][SC]{fullcmd}[/SC][/T]'
           add: '[T]&e{parent} {subcmd} {args} &8- &7添加盟友[H]&7将城镇或联邦设为你的盟友. 点击复制.[/H][SC]{fullcmd}[/SC][/T]'
           remove: '[T]&e{parent} {subcmd} {args} &8- &7移除盟友[H]&7与你的盟友解除友好关系. 点击复制.[/H][SC]{fullcmd}[/SC][/T]'
         enemies:
-          main: '[T]&e{parent} {subcmd} {args} &8- &7管理政敌[H]&7将城镇或联邦设为你的政敌. 点击复制.[/H][SC]{fullcmd}[/SC][/T]'
-          add: '[T]&e{parent} {subcmd} {args} &8- &7添加政敌[H]&7将城镇或联邦设为你的政敌. 点击复制.[/H][SC]{fullcmd}[/SC][/T]'
-          remove: '[T]&e{parent} {subcmd} {args} &8- &7移除政敌[H]&7向你的政敌发送和解书. 点击复制.[/H][SC]{fullcmd}[/SC][/T]'
+          main: '[T]&e{parent} {subcmd} {args} &8- &7管理敌人[H]&7将城镇或联邦设为你的敌人. 点击复制.[/H][SC]{fullcmd}[/SC][/T]'
+          add: '[T]&e{parent} {subcmd} {args} &8- &7添加敌人[H]&7将城镇或联邦设为你的敌人. 点击复制.[/H][SC]{fullcmd}[/SC][/T]'
+          remove: '[T]&e{parent} {subcmd} {args} &8- &7移除敌人[H]&7向你的敌人发送和解书. 点击复制.[/H][SC]{fullcmd}[/SC][/T]'
 
 # /lands
 lands:
@@ -570,7 +577,7 @@ lands:
       combat:
         attacker: '&c你不被允许在这里攻击玩家. &7这个子区域属于城镇&2 {land}&7.'
         target: '&c你的攻击目标不被允许在这里战斗. &7你同样也不能攻击他. &7这个子区域属于城镇&2 {land}&7.'
-        ally: '&c你不能在荒野攻击这个玩家, 因为他是你城镇的一名成员. &7你可以通过调整城镇子区域设置来制作竞技场.'
+        ally: '&c你不能在荒野攻击这个玩家，因为他是你城镇的成员。&7你可以在自己的领地内通过允许PVP来设置竞技场。'
         wilderness: '&c你不能攻击这个玩家, 因为他在荒野, 而你站在城镇领土里.'
     area:
       exists: '&c名为&4 {area} &c的子区域已经存在于城镇&4 {land} &c中了.'
@@ -610,7 +617,7 @@ lands:
       plugin: '&c传送被终止了.'
       unsafe: |
         &7传送被终止了, 传送目的地可能不安全.
-          [T]&2✔ 仍然传送:[H]&7警告: 传送目的地可能会致你于死地.[/H][C]{cmd}[/C][/T]
+          [T]&2✔ 仍然传送:[H]&7你还有 {time} 确认本次传送。警告：传送目的地可能不安全，可能导致死亡。[/H][C]{cmd}[/C][/T]
       corrected: '&7原先的传送目的地不安全. &7你被传送到了附近安全的位置.'
       combat: '&c你不能在战斗过程中传送. &7请等待&5 {time} &7秒战斗状态解除后再进行传送.'
     claimblock:
@@ -618,7 +625,7 @@ lands:
       success: '&7你获得了&3 {blocks} &7个占领方块. &7将它们放置在荒野区块中以占领它.'
     capture:
       dropped: '&c一些战旗掉到了地上. &7你的背包空间不足.'
-      success: '&7你获得了&3 {blocks} &7个战旗. &7将它们放置在政敌的领土中以占领他们的子区域.'
+      success: '&7你获得了&3 {blocks} &7个战旗. &7将它们放置在敌人的领土中以占领他们的子区域.'
     camp:
       dropped: '&c一些露营地方块掉到了地上. &7你的背包空间不足.'
       success: '&7你获得了&3 {blocks} &7个露营地方块. &7将他们放在地上以创建露营地.'
@@ -672,7 +679,7 @@ lands:
           &7你的城镇&2 {land}&7 有 {amount} 条新的日志箱信息. 最新一条: {latest}
             [T]&7✖ 查看: &e/{cmd} &8[点击][H]&7点击查看这些日志信息[/H][C]{cmd}[/C][/T]
     rented:
-      edit: '&c你不能拿在子区域&4 {area}&c 正在出租或已被出售时这样做. &7移除住户: &e/{cmd}'
+      edit: '&c你不能在子区域&4 {area}&c 正在出租或已被出售时这样做. &7移除住户: &e/{cmd}'
       tenant: '&c你不能编辑子区域&4 {area}&c 的住户&4 {player}&c. &7移除住户: &e/{cmd}'
     block-selection:
       rental:
@@ -817,7 +824,7 @@ lands:
       land-not-trusted: '&c玩家&4 {player} &7不是城镇&4 {land} &c的成员. 你需要先使用 &e/lands trust
         &7邀请他加入城镇.'
       area-not-trusted: '&c你不能在这里这么做. &7你不是城镇&6 {land}&7 的子区域&2 {area} &7的成员.'
-      number: '&c你的输入&4 {input} &c不是一个数组. &7参数&3 {argument} &7需要是一个数字.'
+      number: '&c你的输入&4 {input} &c不是一个数字. &7参数&3 {argument} &7需要是一个数字.'
       none: |
         &c你不是任何城镇的成员.
 
@@ -1208,8 +1215,7 @@ lands:
     view:
       disabled: '&7成功关闭当前子区域可视化.'
       wilderness: '&7已启用子区域可视化. &7你目前处于荒野.'
-      tool: '&7你指向的子区域是荒野. [T]&7点此占领这个子区域.[H]&7点击占领你指向的区块.[/H][C]lands claim mlc {world}
-        {x} {z}[/C][/T]'
+      tool: '&7你指向的子区域是荒野. [T]&7点此占领这个子区域.[H]&7点击占领你指向的区块.[/H][C]{fullcmd}[/C][/T]'
       y-level: '&7你目前的位置是荒野, 但这个区块已经被城镇&2 {land} &7在其它高度上占领了.'
       y-lock:
         enabled: '&c成功关闭高度跟随: &7子区域边界不再随你升降.'
@@ -1299,14 +1305,14 @@ lands:
           success: '&7成功将 {target}&7 从盟友列表中移除. 你 &8(&7{object}&8) 将不再是他们的盟友.'
       enemies:
         add:
-          already: '&7{target} &7已经是 {object}&7 的政敌了.'
+          already: '&7{target} &7已经是 {object}&7 的敌人了.'
           revoked: '&7你 &8(&7{object}&8) 撤回了对 {target}&7 的和解请求.'
           nation: |
             &c你不能与城镇&4 {land} &c敌对. &7这个城镇的外交关系由联邦&9 {nation}&7 统一管理.
               [T]&7✖ 与联邦&9 {nation} &7敌对.[H]&7点此与联邦&9 {nation} &7成为敌对关系.[/H][C]{cmd}[/C][/T]
           success: '&7你 &8(&7{object}&8) &7和 {target} &7现在互相敌对了.'
           broadcast: '&7{object} &7和 {target} &7现在互相敌对了.'
-          max: '&4{object} &c不能有更多政敌了. &7它已经达到了最大政敌数量上限&3 {max} &7个.'
+          max: '&4{object} &c不能有更多敌人了. &7它已经达到了最大敌人数量上限&3 {max} &7个.'
         remove:
           already: '&7{target} &7不与&7 {object}&7 敌对.'
           success: '&7成功向 {target}&7 发送和解请求. 如果他们同意, 你 &8(&7{object}&8) &7将不再与他们敌对.'
@@ -1415,8 +1421,8 @@ wars:
       not-allowed: '&c你无权代表 {object}&c 宣战. &7只有它的所有者才能这么做.'
       member: '&c你不能对 {object}&c 宣战. &7你和敌方的所有者是同一个城镇或联邦的成员.'
       enemies: |
-        &c你需要先与&4 {object} &c成为政敌关系.
-          [T]&7✖ 宣布敌对[H]&7点击将 {object} &7宣布为政敌来与它开战.[/H][C]{cmd}[/C][/T]
+        &c你需要先与&4 {object} &c成为敌人关系.
+          [T]&7✖ 宣布敌对[H]&7点击将 {object} &7宣布为敌人来与它开战.[/H][C]{cmd}[/C][/T]
       ally: |
         &c你不能对盟友 {object}&c 宣战.
           [T]&7✖ 管理外交关系[H]&7点此管理你的外交关系.[/H][C]{cmd}[/C][/T]
@@ -1557,8 +1563,8 @@ nations:
         &7联邦&9 {nation} &7邀请你的城镇&2 {land} &7加入他们.
           [T]&2✔ 同意 &8[&8点击&8][H]&7点此接受邀请.[/H][C]nations accept {nation}[/C][/T]
           [T]&c✘ 拒绝 &8[&8点击&8][H]&7点此拒绝邀请.[/H][C]nations deny {nation}[/C][/T]
-      max-distance: '&c城镇&4 {land} &c距离联邦&4 {nation}&c 的首都太远了. &7最大距离:&3 {max}格&7,
-        当前距离:&3 {distance}格&7'
+      max-distance: '&c城镇&4 {land} &c距离联邦&4 {nation}&c 的首都太远了. &7最大距离:&3 {max} 个区块&7,
+        当前距离:&3 {distance} 个区块&7'
     accept:
       war: '&c你当前不能加入联邦. &7联邦&9 {nation} &7正在与 {object}&7 进行战争. 请在战争结束后再试.'
       none: '&c你的城镇&4 {land} &c没有收到联邦&9 {nation}&c 的任何邀请. &7他们可以使用 &e/nations trust&7
