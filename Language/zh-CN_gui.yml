@@ -93,7 +93,7 @@ gui:
         all-lands:
           name: '&9&l所有城镇'
           lore:
-          - '&8✖ &7点击查看服务器内所有的城镇'
+          - '&8✖ &7点击查看服务器里所有的城镇'
           material: skin:c9c8881e42915a9d29bb61a16fb26d059913204d265df5b439b3d792acd56
           slots: 29
         invites:
@@ -291,11 +291,11 @@ gui:
           - '   &7维护费:&c {upkeep}'
           - '    &8• &7下次支付时间: {upkeep_next}'
           - ' &8• &4个人'
-          - '   &7Total claimed chunks:&3 {player_chunks_used}&7 /&3 {player_chunks}&7'
-          - '   &7Balance: {balance_player}'
-          - '   &7Taxes of&c {taxes} &7in:'
+          - '   &7已认领区块总数:&3 {player_chunks_used}&7 /&3 {player_chunks}&7'
+          - '   &7余额: {balance_player}'
+          - '   &7缴纳税款&c {taxes} &7于:'
           - '   &7{taxes_next}'
-          name: '&6&lStatistics'
+          name: '&6&l统计信息'
       patches:
         basic:
           stats:
@@ -1054,9 +1054,9 @@ gui:
           material: LIME_BANNER
           slots: 20
         enemies:
-          name: '&c&l政敌'
+          name: '&c&l敌人'
           lore:
-          - '&8✖ &7管理你的政敌名单.'
+          - '&8✖ &7管理你的敌人名单.'
           material: RED_BANNER
           slots: 22
         offer_sent:
@@ -2496,7 +2496,7 @@ gui:
           - '    &7获取更多关于他们的信息.'
         entry_enemy:
           material: INHERIT
-          name: '&c&l政敌 {object}'
+          name: '&c&l敌人 {object}'
           lore:
           - '&8✖ &3丢弃键'
           - '   &7发送和解请求.'
@@ -2517,9 +2517,9 @@ gui:
           lore:
           - '&4{object} &c已经达到了他们的最大盟友数 &4{max}'
         child_failure_max_enemies:
-          name: '&4&l最大政敌数'
+          name: '&4&l最大敌人数'
           lore:
-          - '&4{object} &c已经达到了他们的最大政敌数 &4{max}.'
+          - '&4{object} &c已经达到了他们的最大敌人数 &4{max}.'
   list_admin_wilderness_roleflags:
     title: '&8玩家设置'
     items:
@@ -2745,9 +2745,9 @@ gui:
         enemies:
           material: RED_BANNER
           slots: 25
-          name: '&c&l政敌'
+          name: '&c&l敌人'
           lore:
-          - '&8✖ &7查看政敌.'
+          - '&8✖ &7查看敌人.'
           - '   &8• &7数量: {enemies}'
     title: '&8外交关系'
   player-management:
@@ -3564,7 +3564,7 @@ physical:
   capture_flag:
     lore:
     - '&7在战争期间将它放置在'
-    - '&7政敌的领土中从而占领它.'
+    - '&7敌人的领土中从而占领它.'
     name: '&2&l战旗'
     material: BEACON
   currency:
