@@ -7,7 +7,7 @@
 
 general:
   prefix:
-    normal: ''
+    normal: '&8[&2Lands&8] '
     help: '&8[&2Lands&8] &7用法: '
   wYes: '&a是'
   wNo: '&c否'
