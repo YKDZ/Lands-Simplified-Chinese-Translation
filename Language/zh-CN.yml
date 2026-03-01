@@ -298,6 +298,8 @@ general:
         land_or_here: 城镇 | 此处
         tag: 标签
         limit: 限制
+        state: 状态
+        visitor: 访客
   value:
     none: '&8无'
     unlimited: '&a无限'
@@ -484,7 +486,10 @@ help:
           addrole: '[T]&e{parent} {subcmd} {args} &8- &7向 roles.yml 添加自定义职位[H]&7点击复制.[/H][SC]{fullcmd}[/SC][/T]'
           removespawn: '[T]&e{parent} {subcmd} {args} &8- &7移除城镇的传送点[H]&7点击复制.[/H][SC]{fullcmd}[/SC][/T]'
         deleteinactive: '[T]&e{parent} {subcmd} &8- &7删除不活跃的玩家的数据[H]&7点击执行.[/H][C]{fullcmd}[/C][/T]'
-        refreshlimits: '[T]&e{parent} {subcmd} &8- &7同步玩家、城镇和联邦限制[H]&7点击执行.[/H][C]{fullcmd}[/C][/T]'
+        limits:
+          main: '[T]&e{parent} {subcmd} {args} &8- &7刷新或迁移限制[H]&7点击复制.[/H][SC]{fullcmd}[/SC][/T]'
+          refresh: '[T]&e{parent} {subcmd} &8- &7同步玩家、城镇和联邦限制[H]&7点击执行.[/H][C]{fullcmd}[/C][/T]'
+          migrate: '[T]&e{parent} {subcmd} &8- &7迁移权限到新的限制[H]&7点击执行.[/H][C]{fullcmd}[/C][/T]'
       storage: '[T]&e{parent} {subcmd} &8- &7打开城镇仓库[H]&7点击执行.[/H][C]{fullcmd}[/C][/T]'
     
     # /wars
@@ -1333,6 +1338,11 @@ lands:
           confirm: |
             &c执行这个命令可能使一个城镇拥有多个同样的职位. &7例如新创建的城镇已经从 roles.yml 继承了权限, 再重复执行这个命令将会导致这个城镇有两个相同职位. &7请确认操作:
               [T]&2✔ 确认[H]&7确认这个操作.[/H][C]{fullcmd}[/C][/T]
+      limits:
+        migrate:
+          confirm: |
+            &c请确认你已在 {file} 中配置了所有限制包. 将旧权限迁移到新限制中会计算编号权限与限制包之间的差异.&7 因此所有限制包都应在迁移前配置好. 否则你可能得不到正确的结果.&4 建议你在执行此操作前备份数据库.
+              [T]&2✔ 确认: &e/{fullcmd} &8[点击][H]&7点击此处确认此操作.[/H][C]{fullcmd}[/C][/T]
 # /wars
 wars:
   message:

@@ -295,7 +295,7 @@ gui:
           - '   &7Balance: {balance_player}'
           - '   &7Taxes of&c {taxes} &7in:'
           - '   &7{taxes_next}'
-          name: '&6&lStatistics'
+          name: '&6&l统计信息'
       patches:
         basic:
           stats:
@@ -320,6 +320,9 @@ gui:
           statistics:
             material: skin:d01afe973c5482fdc71e6aa10698833c79c437f21308ea9a1a095746ec274a0f
             slots: 17
+            name: '&6&l统计信息'
+            lore: '&7传送点: {world}, x={x}, z={z}[newline]&7占领区块: {chunks} / {chunks_max}[newline]&7成员数:
+              {members} / {members_max}'
   area:
     title: '&8{area}'
     items:
