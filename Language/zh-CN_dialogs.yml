@@ -29,7 +29,7 @@ dialogs:
         label: 标签
     bodies:
       info:
-        text: 创建城镇将会花费&4 {cost}&r. 如果空间足够, 城镇将会占领&3 {chunks}&r 个区块.
+        text: 创建城镇将会花费&4 {cost}&r. 如果空间足够，将为你的新城镇占领&3 {chunks}&r 个区块.
       tag:
         text: 标签是你城镇名称的简写.
         item:
@@ -40,8 +40,8 @@ dialogs:
         label: '&a创建'
         tooltip: 点击创建新城镇.
       discard:
-        label: '&c取消'
-        tooltip: 点击取消城镇创建.
+        label: '&c放弃'
+        tooltip: 点击放弃城镇创建.
   nation_create:
     title: 创建新联邦
     inputs:
@@ -62,5 +62,5 @@ dialogs:
         label: '&a创建'
         tooltip: 点击创建新联邦.
       discard:
-        label: '&c取消'
-        tooltip: 点击取消联邦创建.
+        label: '&c放弃'
+        tooltip: 点击放弃联邦创建.
