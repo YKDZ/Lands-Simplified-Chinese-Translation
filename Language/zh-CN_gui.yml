@@ -291,9 +291,9 @@ gui:
           - '   &7维护费:&c {upkeep}'
           - '    &8• &7下次支付时间: {upkeep_next}'
           - ' &8• &4个人'
-          - '   &7已认领区块总数:&3 {player_chunks_used}&7 /&3 {player_chunks}&7'
+          - '   &7已占领区块总数:&3 {player_chunks_used}&7 /&3 {player_chunks}&7'
           - '   &7余额: {balance_player}'
-          - '   &7缴纳税款&c {taxes} &7于:'
+          - '   &7距收取 &c{taxes} &7税金还有:'
           - '   &7{taxes_next}'
           name: '&6&l统计信息'
       patches:
