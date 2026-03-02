@@ -107,7 +107,6 @@ land:
       - player_setrole
       - player_untrust
       - player_ban
-      - chestprotect_lock
     
     # This role can be deleted, in case you don't want it.
     admin:
@@ -147,7 +146,6 @@ land:
       - player_ban
       - setting_edit_land
       - setting_edit_role
-      - chestprotect_lock
     
     # NOTE: The member role can not be deleted.
     member:
@@ -179,7 +177,6 @@ land:
       - trample_farmland
       - vehicle_use
       - item_pickup
-      - chestprotect_lock
     
     # This role can be deleted, in case you don't want it.
     nation:
