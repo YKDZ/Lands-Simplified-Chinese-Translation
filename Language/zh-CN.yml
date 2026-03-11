@@ -470,6 +470,7 @@ help:
             claimblock: '[T]&e{parent} {subcmd} {args} &8- &7给予占领方块[H]&7点击复制.[/H][SC]{fullcmd}[/SC][/T]'
             first-join-items: '[T]&e{parent} {subcmd} {args} &8- &7给予启用的首次加入物品[H]&7点击复制.[/H][SC]{fullcmd}[/SC][/T]'
             limit: '[T]&e{parent} {subcmd} {args} &8- &7修改编号权限[H]&7点击复制.[/H][SC]{fullcmd}[/SC][/T]'
+          limits: '[T]&e{parent} {subcmd} &8- &7查看玩家限制[H]&7点击复制.[/H][SC]{fullcmd}[/SC][/T]'
         
         resetworld: '[T]&e{parent} {subcmd} {args} &8- &7删除某世界中的所有领土[H]&7点击复制.[/H][SC]{fullcmd}[/SC][/T]'
         hologram:
@@ -492,6 +493,7 @@ help:
             set: '[T]&e{parent} {subcmd} {args} &8- &7设置时长[H]&7点击复制.[/H][SC]{fullcmd}[/SC][/T]'
           addrole: '[T]&e{parent} {subcmd} {args} &8- &7向 roles.yml 添加自定义职位[H]&7点击复制.[/H][SC]{fullcmd}[/SC][/T]'
           removespawn: '[T]&e{parent} {subcmd} {args} &8- &7移除城镇的传送点[H]&7点击复制.[/H][SC]{fullcmd}[/SC][/T]'
+          limits: '[T]&e{parent} {subcmd} &8- &7View land limits[H]&7Click to execute.[/H][C]{fullcmd}[/C][/T]'
         deleteinactive: '[T]&e{parent} {subcmd} &8- &7删除不活跃的玩家的数据[H]&7点击执行.[/H][C]{fullcmd}[/C][/T]'
         limits:
           main: '[T]&e{parent} {subcmd} {args} &8- &7刷新或迁移限制[H]&7点击复制.[/H][SC]{fullcmd}[/SC][/T]'
