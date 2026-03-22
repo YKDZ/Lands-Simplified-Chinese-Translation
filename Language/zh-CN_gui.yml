@@ -135,21 +135,21 @@ gui:
           name: '&6&l地图'
           lore:
           - '&8✖ &7查看城镇地图.'
-        limits:
+        limit:
           material: INHERIT
           slots: 17
           lore:
-          - '&8• &7可创建&3 {player_lands_owned} &7个城镇'
+          - '&8• &7Create&3 {player_lands_owned} &7lands'
           - '  &e/lands create'
-          - '&8• &7可占领区块'
-          - '  &8- &7总共 &3{player_chunks_used}&7 /&3 {player_chunks}&7 个区块'
-          - '  &8- &7每个城镇最多占领: &3{land_chunks}&7 个区块'
+          - '&8• &7Claim chunks'
+          - '  &8- &3{player_chunks_used}&7 /&3 {player_chunks}&7 chunks in total'
+          - '  &8- &7max land size: &3{land_size}&7 chunks'
           - '  &e/lands claim'
-          - '&8• &7每城镇可拥有&3 {land_members} &7个成员'
+          - '&8• &7Trust&3 {land_members} &7members per land'
           - '  &e/lands trust'
-          - '&8• &7可加入&3 {player_lands_trusted} &7个城镇'
+          - '&8• &7Join&3 {player_lands_trusted} &7lands'
           - '  &e/lands accept'
-          name: '&6&l你的限制'
+          name: '&6&lYour Limits'
       patches:
         basic:
           lands:
@@ -629,12 +629,6 @@ gui:
     title: '&8玩家 {player}'
     items:
       default:
-        max-chunks:
-          name: '&6&l提供最大区块数'
-          lore:
-          - '&7这个玩家可以提升&3 {chunks} &7你城镇的最大区块数'
-          material: skin:8449b9318e33158e64a46ab0de121c3d40000e3332c1574932b3c849d8fa0dc2
-          slots: 22
         lands:
           name: '&6&l拥有城镇 &8(&7{amount}&8)'
           lore:
@@ -656,6 +650,22 @@ gui:
           - '&8• &7最后上线: &5{seen}'
           - '   &7离线时间: &5{offline}'
           - '&8• &7游玩时长: &5{playtime}'
+        land_size_general:
+          material: skin:8449b9318e33158e64a46ab0de121c3d40000e3332c1574932b3c849d8fa0dc2
+          slots: 22
+          lore:
+          - '&7每个被信任的玩家都会将你的'
+          - '&7城镇最大尺寸增加&3 {chunks} &7区块.'
+          - ''
+          - ' &8• &7城镇所有者不包括在内.'
+          name: '&6&l城镇规模提升'
+        land_size:
+          material: skin:8449b9318e33158e64a46ab0de121c3d40000e3332c1574932b3c849d8fa0dc2
+          slots: 22
+          lore:
+          - '&7这个玩家为将你的'
+          - '&7城镇最大尺寸增加了&3 {chunks} &7个区块.'
+          name: '&6&l城镇规模提升'
   
   land_various:
     title: '&8杂项设置'
