@@ -12,19 +12,19 @@ land:
       enabled: true
       name: '&e成员募集中 ☺'
       description:
-        - '&7这个城镇正在募集新成员.'
+      - '&7这个城镇正在募集新成员.'
     shop:
       enabled: true
       name: '&c商店 $'
       description:
-        - '&7这个城镇中有商店.'
+      - '&7这个城镇中有商店.'
     pvp:
       enabled: true
       name: '&4PvP 场地 ⚔'
       description:
-        - '&7这个城镇中有 PVP 场地.'
+      - '&7这个城镇中有 PVP 场地.'
     mobfarm:
       enabled: true
       name: '&9生物农场'
       description:
-        - '&7这个城镇中有生物农场.'
+      - '&7这个城镇中有生物农场.'
