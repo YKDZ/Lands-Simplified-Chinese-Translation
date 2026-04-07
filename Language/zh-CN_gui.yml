@@ -2034,7 +2034,7 @@ gui:
         entry_wind_burst:
           material: WIND_CHARGE
           name: '&6&l使用风爆: {enabled}'
-          lore: '&8✖ &7是否允许这个职位使用风爆附魔和风弹物品?[newline]    &8• &7如果允许, 玩家可以使用[ newline]      &7带有风爆附魔的重锤攻击来开关门.[newline][newline]   &7解锁:
+          lore: '&8✖ &7是否允许这个职位使用风爆附魔和风弹物品?[newline]    &8• &7如果允许, 玩家可以使用[ newline]      &7风弹来开关门等.[newline][newline]   &7解锁:
             {unlocked}'
   list_area_settings:
     title: '&8{area} &7> &8环境设置'
