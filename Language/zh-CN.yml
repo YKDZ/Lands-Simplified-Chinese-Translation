@@ -1137,9 +1137,6 @@ lands:
         success: '&7成功接受了来自城镇&2 {land} &7的邀请.'
         broadcast: '&2{land} &8| &7玩家&3 {player} &7现在是城镇的一名成员.'
         owner:
-          max:
-            lands: '&c你不能再拥有更多城镇了. &7你已达到最大城镇数上限&3 {max}&7个.'
-            chunks: '&c你不能拥有这个城镇, 因为你无法再占领&4 {chunks}&7 个区块. &7你还有&3 {max}&7 个区块可占领.'
           success: '&7你同意了来自城镇&2 {land} &7的请求. 你现在是城镇&2 {land} &7的所有者了.'
       banned: '&c你不能加入城镇&4 {land}&c 的子区域&4 {area}&c. &7这个子区域将你拉黑了.'
     setowner:
@@ -1154,11 +1151,22 @@ lands:
             [T]&2✔ 接受: &e/{cmd_accept} &8[&8点击&8][H]&7点此同意邀请.[/H][C]{cmd_accept}[/C][/T]
             [T]&c✘ 拒绝: &e/{cmd_deny} &8[&8点击&8][H]&7点此拒绝邀请.[/H][C]{cmd_deny}[/C][/T]
       cooldown: '&c每&4 {cooldown}&c 内只能更改一次城镇所有者. &7请等待&5 {time}&7 后再试.'
-      max:
-        ownlands: '&c玩家&4 {player} &c不能再拥有更多城镇了. &7他已经达到了可拥有的城镇数上限&3 {max}个&7.'
-        chunks:
-          land: '&c玩家&4 {player} &c不能拥有这个城镇. &7他们只能拥有最多&3 {max} &c个区块大小的城镇.'
-          player: '&c玩家&4 {player} &c不能拥有这个城镇. &7他们无法再占领&4 {chunks} &c个区块.'
+      inviter:
+        max:
+          ownlands: '&c玩家&4 {player} &c不能拥有更多城镇了. &7他们已经达到了最大值&3 {max} &7个城镇.'
+          chunks:
+            land: '&c玩家&4 {player} &c不能拥有这个城镇. &7他们只能拥有最大为&c {max}&7 区块的城镇.'
+            player: '&c玩家&4 {player} &c不能拥有这个城镇. &7他们无法再声明&3 {chunks}&7 个额外区块, 因为他们只剩下&3
+              {chunks_left}&7 个区块.'
+      target:
+        max:
+          ownlands: '&cYou can''t own any more lands. &7You''ve reached your maximum
+            amount of&3 {max}&7 lands.'
+          chunks:
+            land: '&cYou can only own lands with a maximum size of&4 {max}&c chunks.
+              &7The land&2 {land}&7 has&3 {chunks}&7 claimed.'
+            player: '&cYou can''t own this land, because you can''t claim&4 {chunks}&c
+              more chunks. &7You have only&3 {chunks_left}&7 chunk claims left.'
     deny:
       not-exist: '&c你没有任何来自城镇&4 {land} &c的邀请或邀请已过期.'
       success: '&7你成功拒绝了来自城镇&2 {land}&7 的邀请.'
