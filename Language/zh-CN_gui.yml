@@ -2201,6 +2201,12 @@ gui:
           - '&8✖ &7是否启用来自这个城镇其他'
           - '   &7子区域的铜傀儡?'
           - '    &8• &7在荒野生成的铜傀儡总是被禁用.'
+        entry_lavaflow_allow:
+          material: LAVA_BUCKET
+          lore: '&8✖ &7是否允许荒野[newline]   &7或其他领地的岩浆[newline]   &7流入你的城镇?[newline]    &8•
+            &7&l如果开启:[newline]      &7玩家将可以通过[newline]      &7在荒野倾倒岩浆来[newline]      &7破坏你的领地.[newline]   &7Unlocked:
+            {unlocked}'
+          name: '&6&l岩浆流动: {enabled}'
   list_player_invites:
     title: '&8收到的邀请'
     items:
