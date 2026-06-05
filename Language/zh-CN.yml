@@ -1060,7 +1060,7 @@ lands:
           行以下命令以移除租客 &e/{cmd} &8[点击] &7需要站在这个子区域内.[H]&7点击以移除租客.[/H][C]{cmd}[/C][/T]'\n"
         success: '&7成功解散了城镇&2 {land}&7. 你拿回了&e {back}&7.'
     trust:
-      own-land: '&c玩家&4 {player} &c不能被邀请加入其他城镇. &7他不能在拥有自己城镇的情况下加入其它人的城镇. 他需要先删除自己的城镇&2
+      own-land: '&c玩家&4 {player} &c不能被邀请加入其他城镇. &7他不能在拥有自己城镇的情况下加入其它人的城镇. 他需要先解散自己的城镇&2
         {land} &7.'
       max-lands: '&7玩家&3 {player} &7已经达到了最大加入城镇数量.' # &8Permission: lands.lands.<number>
       max-members: '&c无法使玩家&4 {player} &c加入城镇&4 {land}&c. &7你的城镇&2 {land} &7达到了最大成员数&3
@@ -1075,9 +1075,6 @@ lands:
           [T]&7玩家&3 {player} &7邀请你加入城镇&2 {land}&7 的子区域&6 {area} &7.[H]&7点击开启邀请菜单.[/H][C]lands invites[/C][/T] &7税务:&c {tax}
             [T]&2✔ 同意 &8[&8点击&8][H]&7点击同意这个邀请.[/H][C]lands accept {land}[/C][/T]
             [T]&c✘ 拒绝 &8[&8点击&8][H]&7点击拒绝这个邀请.[/H][C]lands deny {land}[/C][/T]
-        banned: |
-          &c你不能邀请&4 {player}&c 加入城镇&4 {land}&c 的子区域&4 {area} &c. &7他被这个子区域拉黑了.
-            [T]&2✔ 解禁: &e/{cmd} &8[&8点击&8][H]&7点此将玩家移出子区域黑名单.[/H][C]{cmd}[/C][/T]
       land:
         invited: '&c玩家&4 {player} &c已被邀请过加入城镇&4 {land}&c 了. &7邀请在&5 {time} &7前被发送.'
         trusted: '&7玩家&3 {player} &7已经加入过城镇&2 {land}&7 了.'
@@ -1086,11 +1083,32 @@ lands:
           [T]&7玩家&3 {player} &7邀请你加入城镇&2 {land}&7.[H]&7点击打开邀请菜单.[/H][C]lands invites[/C][/T] &7税务:&c {tax}
             [T]&2✔ 同意 &8[&8点击&8][H]&7点此同意邀请.[/H][C]lands accept {land}[/C][/T]
             [T]&c✘ 拒绝 &8[&8点击&8][H]&7点此拒绝邀请.[/H][C]lands deny {land}[/C][/T]
-        banned: |
-          &c你不能邀请&4 {player}&c 加入城镇&4 {land}&c. &7他被城镇拉黑了.
-            [T]&2✔ 解禁: &e/{cmd} &8[&8点击&8][H]&7点此将玩家移出城镇黑名单.[/H][C]{cmd}[/C][/T]
       flag: '&c玩家&4 {player}&c 不想收到任何城镇的邀请. &7他可以使用 &8/&3{cmd}&7 调整这个设置.'
       server-admin: '&7你是服务器城镇管理员, 成功绕过邀请, 直接让玩家加入城镇. &8权限: {permission}'
+      inviter:
+        own-land: '&c玩家&4 {player} &c不能被邀请加入其他城镇. &7他不能同时是城镇的所有者和其他城镇的成员. 他需要先解散自己的城镇&2
+          {land}&7.'
+        max: '&c玩家&4 {player} &c不能再加入更多城镇了. &7他已经达到了可加入的城镇数量最大值&3 {max}&7.'
+        max-members: '&c不能邀请玩家&4 {player} &c加入&4 {land}&c. &7你的城镇&2 {land} &7r已经达到了最大成员数&3
+          {members}&7.'
+        war: '&c你现在不能邀请玩家. &7{object}&7 正在与 {enemy} &7进行战争. &7请在战争结束后再试.'
+        land:
+          banned: |
+            &c你不能邀请玩家&4 {player}&c 进入城镇&4 {land}&c. &7他被整个城镇拉黑了.
+              [T]&2✔ 移出黑名单: &e/{cmd} &8[点击][H]&7点此将玩家移出全城镇黑名单.[/H][C]{cmd}[/C][/T]
+        area:
+          banned: |
+            &c你不能邀请玩家&4 {player}&c 进入城镇 &4 {land}&c 的子区域&4 {area}&c. &7他被拉黑了.
+              [T]&2✔ 移出黑名单: &e/{cmd} &8[点击][H]&7点此将玩家移出黑名单.[/H][C]{cmd}[/C][/T]
+      target:
+        own-land: '&c你不能加入这个城镇. &7你需要先删除自己的城镇&2 {land}&7.'
+        max: '&c你不能加入更多城镇了. &7你已达到了可以加入的最大城镇数量&3 {max}&7.'
+        max-members: '&c你目前不能加入城镇&4 {land}&c. &7他们已达到最大成员数&3 {members}&7.'
+        war: '&c你目前不能加入城镇&4 {object}&c. &7他们正在与 {enemy}&7 进行战争. &7在战争结束后再试.'
+        land:
+          banned: '&c你不能加入城镇&4 {land}&c. &7你被整个城镇拉黑了.'
+        area:
+          banned: '&c你不能加入城镇 &4{land}&c 的子区域&4 {area}&c. &7你被这个子区域拉黑了.'
     untrust:
       owner: '&c城镇所有者不能被移出城镇. [T]&7可以用 &e/{cmd}&7 制定新所有者.[H]&7点击复制命令.[/H][SC]{cmd}[/SC][/T]'
       area:
