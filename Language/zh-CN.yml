@@ -876,7 +876,8 @@ lands:
           length: '&c你为&4 "{input}"&c 输入的文本太长了. &7最大长度为&3 {max} &7个字符 &8(&7你输入了: {submitted}&8)&7.'
           empty: '&c你为&4 "{input}"&c 输入的文本无效. &7你需要输入至少一个非颜色代码的字符.'
           spaces: '&c你不能在&4 "{input}"&c 中使用空格.'
-          min-length: '&c你插入的文本&4 "{input}"&c 太短了. &7最小长度是&3 {min} &7字符 &8(&7你的是: {submitted}&8)&7.'
+          min-length: '&c你插入的文本&4 "{input}"&c 太短了. &7最小长度是&3 {min} &7字符 &8(&7你的是:
+            {submitted}&8)&7.'
       action:
         cooldown: '&c你现在不能这么做. &7你需要等待&5 {time}&7.'
         spam: '&c你当前已有正在执行的命令或动作. &7请等待它完成后再输入下一条命令.'
