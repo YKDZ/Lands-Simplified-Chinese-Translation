@@ -2,32 +2,34 @@
 
 先前曾咨询过插件作者，发现他们采用的翻译维护平台真的很难用，故自行开设储存库维护简体中文翻译。
 
-纯手动翻译，不使用任何 AI 翻译或通篇机器翻译。
+当前对应的插件版本：[8.0.0](https://www.spigotmc.org/resources/1lands-%E2%AD%95-land-claim-plugin-%E2%9C%85-grief-prevention-protection-gui-management-nations-wars-1-20-support.53313/updates)
 
-当前对应的插件版本：[7.28.1](https://www.spigotmc.org/resources/1lands-%E2%AD%95-land-claim-plugin-%E2%9C%85-grief-prevention-protection-gui-management-nations-wars-1-20-support.53313/updates)
-
-~~另外 [此处](https://forest-development.gitbook.io/lands-zh-cn-wiki/) 还有本人维护的官方 Wiki 的简体中文翻译版本。~~
-
-不再维护 WIKI 翻译。
+> 注意 `8.0.0` 版本 Lands 进行了整个语言文件的大规模重构，且无法对老版本配置进行自动转换，因此你可能需要备份之前的 `Language/` 等、引入我更新后的语言文件并重新进行风格化等配置。
+> 翻译整体也趁机进行了重制，若你发现任何缺漏错误请在 Issues 中反馈。
 
 ## 安装使用
 
 如果你从未修改过插件的配置文件，你大可以将所有文件直接放入 `plugins/Lands` 中并重启服务器以自动同步可能的更新。
 
-如果你曾经修改过插件的配置文件，建议你只将 `Language/zh-CN_gui.yml`、`Language/zh-CN_dialogs.yml` 以及 `Language/zh-CN.yml` 放入对应文件夹中，并将另外的配置文件作为对照，修改你目前的配置文件，以防丢失任何数据。
+如果你曾经修改过插件的配置文件，建议你只将 `Locale/*` 放入对应文件夹中，并将另外的配置文件作为对照，修改你目前的配置文件，以防丢失任何数据。
 
 别忘记将 `config.yml` 中的 `general.language` 键修改为 `zh-CN`。
 
 ## 翻译内容
 
-| 源文件                     | 翻译后                     |
-| -------------------------- | -------------------------- |
-| Language/en-US_dialogs.yml | Language/zh-CN_dialogs.yml |
-| Language/en-US_gui.yml     | Language/zh-CN_gui.yml     |
-| Language/en-US.yml         | Language/zh-CN.yml         |
-| categories.yml             | categories.yml             |
-| levels.yml                 | levels.yml                 |
-| roles.yml                  | roles.yml                  |
+| 源文件                           | 翻译后                           |
+| -------------------------------- | -------------------------------- |
+| Locale/en-US_dialogs.yml         | Locale/zh-CN_dialogs.yml         |
+| Locale/en-US_gui.yml             | Locale/zh-CN_gui.yml             |
+| Locale/en-US.yml                 | Locale/zh-CN.yml                 |
+| Locale/Nations/en-US_dialogs.yml | Locale/Nations/zh-CN_dialogs.yml |
+| Locale/Nations/en-US_gui.yml     | Locale/Nations/zh-CN_gui.yml     |
+| Locale/Nations/en-US.yml         | Locale/Nations/zh-CN.yml         |
+| Locale/Wars/en-US_gui.yml        | Locale/Wars/zh-CN_gui.yml        |
+| Locale/Wars/en-US.yml            | Locale/Wars/zh-CN.yml            |
+| categories.yml                   | categories.yml                   |
+| levels.yml                       | levels.yml                       |
+| roles.yml                        | roles.yml                        |
 
 仅翻译了可以显示在游戏内的文本，没有翻译配置文件注释等不重要的文本（因为量大且难以维护）。
 
@@ -99,7 +101,7 @@
 
 ## 支持
 
-本插件文本量较大，若翻译有帮助到你，你可以考虑给这个储存库**上颗星星**，抑或是在 [爱发电](https://afdian.net/a/ForestRealm) 赞助我。
+本插件文本量较大，若翻译有帮助到你，你可以考虑给这个储存库**上颗星星**。
 
 你也可以点一个 `Watch` 以在翻译更新时收到 Github 的邮件通知。
 

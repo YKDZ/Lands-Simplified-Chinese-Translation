@@ -1,0 +1,89 @@
+# Here you can edit all dialogs.
+#
+# If you encounter any issues or have questions:
+# Discord: https://discord.incredibleplugins.com
+#
+# Wiki: https://wiki.incredibleplugins.com/general/locale-and-config/dialogs
+
+dialogs:
+  input:
+    title: 输入
+    inputs:
+      text:
+        label: 文本
+      player:
+        label: 玩家
+    buttons:
+      confirm:
+        label: <t:positive>确认
+        tooltip: 点此确认输入.
+      discard:
+        label: <t:negative>放弃
+        tooltip: 点此放弃输入.
+  add_member:
+    title: 添加玩家
+    inputs:
+      name:
+        label: 玩家
+    buttons:
+      add:
+        label: <t:positive>添加
+        tooltip: 将此玩家永久添加为成员.
+      add-temporary:
+        label: <t:regular_value>临时加入
+        tooltip: 将此玩家添加为限时成员.
+      discard:
+        label: <t:negative>放弃
+        tooltip: 点击放弃.
+  add_member_duration:
+    title: 临时成员
+    inputs:
+      days:
+        type: number-range
+        label: 天
+        label-format: '<v:label>: <v:value>'
+        start: 0
+        end: 30
+        step: 1
+        initial: 0
+      hours:
+        type: number-range
+        label: 小时
+        label-format: '<v:label>: <v:value>'
+        start: 0
+        end: 23
+        step: 1
+        initial: 0
+    bodies:
+      info:
+        text: 玩家仅在选定时长内作为成员. 临时成员无需缴纳税费, 且无法占领或取消占领, 除非该玩家同时也是其他子区域的永久成员.
+    buttons:
+      add:
+        label: <t:positive>添加
+        tooltip: 将此玩家添加为成员, 有效期为选定时长.
+      back:
+        label: <t:regular>返回
+        tooltip: 返回.
+  land_create:
+    title: 创建城镇
+    inputs:
+      name:
+        label: 名称
+      tag:
+        label: 标签
+    bodies:
+      info:
+        text: 创建此城镇需要花费<t:cost> <v:cost></t>. 如果空间足够, 将为你的新城镇占领<t:regular_value> <v:chunks></t>
+          个区块.
+      tag:
+        text: 标签是你城镇名称的简写.
+        item:
+          material: NAME_TAG
+          hide-tooltip: true
+    buttons:
+      confirm:
+        label: <t:positive>创建
+        tooltip: 点击创建新城镇.
+      discard:
+        label: <t:negative>放弃
+        tooltip: 点击放弃创建城镇.

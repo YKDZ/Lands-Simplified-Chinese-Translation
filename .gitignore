@@ -1,9 +1,10 @@
 .vscode
 .history
 Data/
-Language/en-US*.yml
-
 Logs/
+
+Locale/**/en-US*
+Locale/theme.yml
 
 config.yml
 changelog.txt

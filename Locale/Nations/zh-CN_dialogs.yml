@@ -1,0 +1,30 @@
+# Here you can edit all dialogs.
+#
+# If you encounter any issues or have questions:
+# Discord: https://discord.incredibleplugins.com
+#
+# Wiki: https://wiki.incredibleplugins.com/general/locale-and-config/dialogs
+
+dialogs:
+  nation_create:
+    title: 创建新联邦
+    inputs:
+      name:
+        label: 名称
+      tag:
+        label: 标签
+    bodies:
+      info:
+        text: 创建此联邦将花费<t:cost> <v:cost></t>.
+      tag:
+        text: 标签是你联邦名称的简写.
+        item:
+          material: NAME_TAG
+          hide-tooltip: true
+    buttons:
+      confirm:
+        label: <t:positive>创建
+        tooltip: 点击创建新联邦.
+      discard:
+        label: <t:negative>放弃
+        tooltip: 点击放弃创建联邦.

@@ -1,0 +1,291 @@
+# Here you can edit all GUI menus.
+#
+# If you encounter any issues or have questions:
+# Discord: https://discord.incredibleplugins.com
+#
+# Wiki: https://wiki.incredibleplugins.com/general/menus/gui-menus
+
+general:
+  inbox-filter:
+    war: <t:negative>战争 ⚔</t>
+  war:
+    defenders: <t:positive>守方</t>
+    attackers: <t:negative>攻方</t>
+
+physical:
+  capture_flag:
+    name: <t:regular_heading>战旗
+    lore:
+    - <t:regular>在战争期间将这面战旗放置在政敌的城镇上
+    - 以占领该城镇.
+
+gui:
+  war:
+    title: <t:menu_title>战争
+    items:
+      default:
+        war_attackers:
+          name: <t:negative_heading>攻方 <v:object>
+          lore:
+          - <t:decoration>✖ </t><t:regular>查看所有攻方城镇.
+          - '   玩家数: <t:regular_value><v:players></t>'
+          - ''
+          - <t:regular_heading>进度</t>
+          - ' <t:decoration>• </t><t:regular>占领区块数: <t:regular_value><v:cap></t>'
+          - ' <t:decoration>• </t><t:regular>击杀数: <t:regular_value><v:kills></t>'
+          - '   <t:decoration>= </t><t:regular_value><v:points></t> / <t:regular_value><v:towin></t>
+            <t:regular>获胜所需点数'
+          - '   <v:bar>'
+          material: IRON_SWORD
+          slots: 11
+        war_defenders:
+          name: <t:positive_heading>守方 <v:object>
+          lore:
+          - <t:decoration>✖ </t><t:regular>查看所有守方城镇.
+          - '   玩家数: <t:regular_value><v:players></t>'
+          - ''
+          - <t:regular_heading>进度</t>
+          - ' <t:decoration>• </t><t:regular>占领区块数: <t:regular_value><v:cap></t>'
+          - ' <t:decoration>• </t><t:regular>击杀数: <t:regular_value><v:kills></t>'
+          - '   <t:decoration>= </t><t:regular_value><v:points></t> / <t:regular_value><v:towin></t>
+            <t:regular>获胜所需点数'
+          - '   <v:bar>'
+          material: SHIELD
+          slots: 12
+        war_points:
+          name: <t:regular_heading>点数分布
+          lore:
+          - <t:regular>一方需要<t:regular_value> <v:points> </t>点才能获胜.
+          - ' <t:decoration>• </t><t:regular>击杀: <t:regular_value><v:p_kill> </t>点'
+          - ' <t:decoration>• </t><t:regular>占领区块: <t:regular_value><v:p_cap> </t>点'
+          - '    <t:decoration>• </t><t:regular>要占领政敌的子区域'
+          - '      请将战旗放置其中. 你可以在此菜单中'
+          - '      查看战旗的合成配方.'
+          - ''
+          - ' <t:decoration>• </t><t:regular>如果没有任何一方达到<t:regular_value> <v:points>
+            </t>点, 战争'
+          - '   将在<t:time> <v:time> </t>后超时结束.'
+          material: IRON_INGOT
+          slots: 13
+        war_points_declaration:
+          name: <t:regular_heading>点数分布
+          lore:
+          - <t:regular>一方需要<t:regular_value> <v:points> </t>点才能获胜.
+          - ' <t:decoration>• </t><t:regular>击杀: <t:regular_value><v:p_kill> </t>点'
+          - ' <t:decoration>• </t><t:regular>占领区块: <t:regular_value><v:p_cap> </t>点'
+          - '    <t:decoration>• </t><t:regular>要占领政敌的子区域'
+          - '      请将战旗放置其中. 你可以在此菜单中'
+          - '      查看战旗的合成配方.'
+          - ''
+          - ' <t:decoration>• </t><t:regular>战争将于<t:time> <v:time> </t>后开始.'
+          material: IRON_INGOT
+          slots: 13
+        child_failure_permission:
+          name: <t:error_heading>无权操作
+          lore:
+          - <t:error>无权对
+          - <t:decoration>(</t><t:error_value><v:object></t>)<t:error>执行此操作.
+          - ' <t:decoration>• </t><t:regular>所有者可以授予你'
+          - '   执行此操作的权限.'
+          - '   标志: <t:regular_value><v:flag></t>'
+        child_failure_surrender:
+          name: <t:error_heading>投降被拒绝
+          lore:
+          - <t:error>政敌不允许
+          - 你投降.
+          - ' <t:decoration>• </t><t:regular>这是因为对方没有'
+          - '   设置赔偿金. 对方可以在'
+          - '   战争菜单中设置.'
+        tribute_attacker_mutual:
+          name: <t:regular_heading>赔偿金:</t><t:cost> <v:tribute></t>
+          lore:
+          - <t:decoration>✖ </t><t:regular>在这场战争中投降
+          - '   你需要支付<t:cost> <v:tribute-att></t>'
+          - '   作为支付给守方的赔偿金.'
+          - '    <t:decoration>• </t><t:regular>如果赔偿金为 0:'
+          - '      守方将无法投降.'
+          - '    <t:decoration>• </t><t:regular><b>如果守方投降:'
+          - '      <!b>守方需要向你支付<t:cost> <v:tribute></t>.'
+          material: GOLD_INGOT
+          slots: 29
+        recipe:
+          name: <t:regular_heading>战旗配方
+          lore:
+          - <t:decoration>✖</t> <t:regular>点击此处
+          - '   查看战旗的合成配方.'
+          material: BEACON
+          slots: 15
+        tribute_defender:
+          name: <t:regular_heading>投降:</t><t:cost> <v:tribute></t>
+          lore:
+          - <t:decoration>✖ </t><t:regular>在这场战争中投降
+          - '    <t:decoration>• </t><t:regular>你需要支付<t:cost> <v:tribute></t>'
+          - '      作为支付给攻方的赔偿金.'
+          - '    <t:decoration>• </t><t:regular>如果赔偿金为 0:'
+          - '      攻方不会接受投降.'
+          material: GOLD_INGOT
+          slots: 29
+        child_failure_none:
+          name: <t:error_heading>无占领区块
+          lore:
+          - <t:error>政敌 <t:error_value><v:enemy></t> 没有可供传送的占领区块.
+        child_failure_attacker:
+          name: <t:error_heading>无法投降
+          lore:
+          - <t:error>攻方不能在战争中投降.
+        flags:
+          name: <t:regular_heading>生效设置
+          lore:
+          - '<t:regular>参与战争的玩家可以在受影响的城镇中进行以下操作:'
+          - <v:settings>
+          material: IRON_PICKAXE
+          slots: 14
+        child_failure_cost:
+          name: <t:error_heading>余额不足
+          lore:
+          - <t:error>你<t:decoration> (</t><t:error_value><v:object></t>) <t:error>没有足够的资金支付
+          - 金额为<t:error_value> <v:tribute> </t>的赔偿金.
+        spawn:
+          name: <t:regular_heading>传送点
+          lore:
+          - <t:regular>传送到政敌的边境.
+          material: ENDER_PEARL
+          slots: 9
+        declaration_start:
+          name: <t:regular_heading>开始
+          lore:
+          - <t:regular>战争将在<t:time> <v:time> </t>后开始.
+          - 在此之前, 双方都有时间准备.
+          material: CLOCK
+          slots: 15
+        tribute_attacker:
+          name: <t:regular_heading>赔偿金:</t><t:cost> <v:tribute></t>
+          lore:
+          - <t:decoration>✖ </t><t:click>左键</t>
+          - '   <t:regular>修改这场战争的赔偿金.'
+          - '    <t:decoration>• </t><t:regular>如果赔偿金为 0:'
+          - '      守方将无法投降.'
+          - '    <t:decoration>• </t><t:regular>如果守方投降:'
+          - '      守方需要支付<t:cost> <v:tribute> </t>给你.'
+          - ''
+          - <t:decoration>✖ </t><t:click>右键</t>
+          - '   <t:regular>如果你作为攻方想要投降, 需要支付'
+          - '   <t:cost><v:tribute-att></t> 给守方.'
+          material: GOLD_INGOT
+          slots: 29
+  list_wars:
+    title: <t:menu_title>正在进行的战争
+    items:
+      default:
+        entry_object:
+          name: <t:regular_heading><v:attacker> vs. <v:defender>
+          lore:
+          - ' <t:decoration>• </t><t:regular>进度:<t:regular_value> <v:points></t> <t:decoration>/</t><t:regular_value>
+            <v:points_towin></t> <t:regular>点'
+          - '   <t:regular_value><v:points_bar></t>'
+          - ''
+          - ' <t:decoration>• </t><t:regular>时限: <t:time><v:timeout></t>'
+          - ' <t:decoration>• </t><t:regular>攻方: <v:attacker>'
+          - ' <t:decoration>• </t><t:regular>守方: <v:defender>'
+          material: IRON_SWORD
+  list_war_lands:
+    title: <t:menu_title><v:team>
+    items:
+      default:
+        entry_object:
+          name: <t:entry_heading><v:land>
+          lore:
+          - <t:user_content><v:title></t>
+          - <t:decoration>✖ </t><t:regular>查看此城镇的信息.
+          material: INHERIT
+        entry_object_ally:
+          name: <t:entry_heading>盟友 <v:land>
+          lore:
+          - <t:user_content><v:title></t>
+          - <t:decoration>✖ </t><t:regular>查看此城镇的信息.
+          material: INHERIT
+  war-declaration_tribute:
+    title: <t:menu_title>赔偿金
+    items:
+      default:
+        cancel-declaration:
+          name: <t:error_heading>取消本场战争的宣战书
+          lore:
+          - <t:decoration>✖ </t><t:regular>在发送给政敌前
+          - '   放弃这份宣战书.'
+          material: skin:548d7d1e03e1af145b0125ab841285672b421265da2ab915015f9058438ba2d8
+          slots: 37
+        send-declaration:
+          name: <t:positive_heading>发送本场战争的宣战书
+          lore:
+          - <t:decoration>✖ </t><t:regular>将本场战争的宣战书
+          - '   发送给政敌.'
+          material: skin:ffec3d25ae0d147c342c45370e0e43300a4e48a5b43f9bb858babff756144dac
+          slots: 45
+        refresh_minus-1:
+          name: <t:negative_heading>减少 <!b><v:value>
+          material: REDSTONE
+          slots: 20
+          data:
+            modify: 1000
+        refresh_minus-2:
+          name: <t:negative_heading>减少 <!b><v:value>
+          material: REDSTONE
+          slots: 21
+          data:
+            modify: 100
+        refresh_minus-3:
+          name: <t:negative_heading>减少 <!b><v:value>
+          material: REDSTONE
+          slots: 22
+          data:
+            modify: 1
+        child_max-tribute:
+          name: <t:error_heading>已达最大值
+          lore:
+          - <t:error>赔偿金不能高于<t:error_value> <v:max></t>.
+          - ' <t:decoration>• </t><t:regular>赔偿金上限取决于'
+          - '   政敌的金库余额.'
+        refresh_plus-3:
+          name: <t:positive_heading>增加 <!b><v:value>
+          material: GLOWSTONE_DUST
+          slots: 26
+          data:
+            modify: 1000
+        refresh_plus-1:
+          name: <t:positive_heading>增加 <!b><v:value>
+          material: GLOWSTONE_DUST
+          slots: 24
+          data:
+            modify: 1
+        refresh_plus-2:
+          name: <t:positive_heading>增加 <!b><v:value>
+          material: GLOWSTONE_DUST
+          slots: 25
+          data:
+            modify: 100
+        tribute:
+          name: <t:regular_heading>赔偿金:</t> <t:regular_value><v:tribute></t>
+          lore:
+          - <t:regular>政敌需要支付这笔赔偿金才能投降.
+          - ' <t:decoration>• </t><t:regular><b>最高赔偿金:<!b><t:limit> <v:max></t>'
+          - '   这取决于政敌的金库余额.'
+          - ' <t:decoration>• </t><t:regular><b>如果赔偿金设置为 0:'
+          - '   <!b>政敌将无法投降.'
+          material: GOLD_INGOT
+          slots: 23
+  war_capture_recipe:
+    title: <t:menu_title>战旗配方
+  war_info:
+    title: <t:menu_title>战争信息
+    items:
+      default:
+        war_attackers:
+          material: IRON_SWORD
+          slots: 21
+        war_defenders:
+          material: SHIELD
+          slots: 23
+        war_points:
+          material: IRON_INGOT
+          slots: 25
