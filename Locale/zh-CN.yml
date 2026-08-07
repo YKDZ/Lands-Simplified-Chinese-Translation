@@ -199,6 +199,7 @@ general:
         limit: 限制
         state: 状态
         visitor: 访客
+        duration: 持续时间
 
 help:
   help:

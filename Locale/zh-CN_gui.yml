@@ -30,6 +30,13 @@ general:
   value:
     none: <red>无</red>
     unlimited: <green>无限</green>
+    click:
+      primary: <t:decoration>✖</t> <t:click>左键点击<newline>   </t>
+      secondary: <t:decoration>✖</t> <t:click>右键点击<newline>   </t>
+      tertiary: <t:decoration>✖</t> <t:click>SHIFT + 左键点击<newline>   </t>
+      quaternary: <t:decoration>✖</t> <t:click>SHIFT + 右键点击<newline>   </t>
+      remove: <t:decoration>✖</t> <t:click>丢弃键<newline>   </t>
+      label: <t:regular><v:label></t>
   enabled: <green>允许</green>
   offline: <red>离线</red>
   never: <t:regular>从不</t>
@@ -361,6 +368,8 @@ gui:
           - '   <t:regular>重置为默认值.'
           material: INHERIT
           slots: 13
+          bedrock:
+            detail: true
         taxes:
           name: '<t:regular_heading>缴纳税费: <v:current>'
           lore:
@@ -874,6 +883,8 @@ gui:
           - '   <t:decoration>• 此设置也可以在职位设置中编辑.</t>'
           material: ENDER_PEARL
           slots: 9
+          bedrock:
+            detail: true
         child_failure_land:
           name: <t:error_heading>必须设置在城镇内
           lore:
@@ -1448,6 +1459,8 @@ gui:
           - '   <t:regular>设置传送点.'
           material: ENDER_PEARL
           slots: 9
+          bedrock:
+            detail: true
         roles:
           name: <t:regular_heading>职位
           lore:
@@ -1489,6 +1502,8 @@ gui:
           - '   <t:regular>移除此报价.'
           material: INHERIT
           slots: 34
+          bedrock:
+            detail: true
         rental_setup_change_rent:
           name: <t:regular_heading>修改出租报价
           lore:
@@ -1503,6 +1518,8 @@ gui:
           - '   <t:regular>移除此报价.'
           material: INHERIT
           slots: 34
+          bedrock:
+            detail: true
         child_failure_spawn_area:
           name: <t:error_heading>必须在子区域内
           lore:
@@ -1547,6 +1564,8 @@ gui:
           - <t:decoration>✖ </t><t:click>丢弃键</t>
           - '   <t:regular>移出'
           material: INHERIT
+          bedrock:
+            detail: true
         child_failure_edit_player_area:
           name: <t:error_heading>职位优先级不足
           lore:
@@ -1591,6 +1610,8 @@ gui:
           - <t:decoration>✖ </t><t:click>丢弃键</t>
           - '   <t:regular>移出'
           material: INHERIT
+          bedrock:
+            detail: true
         entry_area_temporary:
           name: <t:entry_heading><v:player>
           lore:
@@ -1606,6 +1627,8 @@ gui:
           - <t:decoration>✖ </t><t:click>丢弃键</t>
           - '   <t:regular>移出'
           material: INHERIT
+          bedrock:
+            detail: true
         child_failure_access:
           name: <t:error_heading>无权限
           lore:
@@ -1752,6 +1775,8 @@ gui:
           - <t:decoration>✖ </t><t:click>丢弃键</t>
           - '   <t:regular>拒绝申请.'
           material: INHERIT
+          bedrock:
+            detail: true
         membership_accept:
           name: '<t:regular_heading>自动接受: <v:status>'
           lore:
@@ -1785,6 +1810,8 @@ gui:
           - <t:decoration>✖ </t><t:click>右键</t>
           - '   <t:regular>查看这个城镇的概况信息'
           material: INHERIT
+          bedrock:
+            detail: true
         entry_camp_own:
           name: <t:entry_heading><v:land>
           lore:
@@ -1797,6 +1824,8 @@ gui:
           - <t:decoration>✖ </t><t:click>右键</t>
           - '   <t:regular>查看这个露营地的概况信息.'
           material: INHERIT
+          bedrock:
+            detail: true
         entry_camp:
           name: <t:entry_heading><v:land>
           lore:
@@ -1809,6 +1838,8 @@ gui:
           - <t:decoration>✖ </t><t:click>右键</t>
           - '   <t:regular>查看这个露营地的概况信息.'
           material: INHERIT
+          bedrock:
+            detail: true
         entry_land:
           name: <t:entry_heading><v:land>
           lore:
@@ -1822,6 +1853,8 @@ gui:
           - '   <t:regular>查看这个城镇的概况'
           - '   信息.'
           material: INHERIT
+          bedrock:
+            detail: true
         entry_land_edit:
           material: skin:eef425b4db7d62b200e89c013e421a9e110bfb27f2d8b9f5884d10104d00f4f4
         entry_camp_edit:
@@ -2015,6 +2048,8 @@ gui:
           - <t:error>该城镇暂不招收新成员
           material: BOOKSHELF
           slots: 33
+          bedrock:
+            detail: true
         level:
           name: <t:regular_heading>等级
           lore:
@@ -2049,6 +2084,8 @@ gui:
           - '   <t:regular>撤回加入申请.'
           material: BOOKSHELF
           slots: 33
+          bedrock:
+            detail: true
         war:
           name: '<t:regular_heading>胜率:'
           lore:
@@ -2102,6 +2139,8 @@ gui:
           - <t:decoration>✖ </t><t:click>按住潜行键并右键点击</t>
           - '   <t:regular>降低优先级.'
           material: INHERIT
+          bedrock:
+            detail: true
         entry_object_normal:
           name: <t:entry_heading><v:role>
           lore:
@@ -2114,6 +2153,8 @@ gui:
           - <t:decoration>✖ </t><t:click>丢弃键</t>
           - '   <t:regular>删除此职位.'
           material: INHERIT
+          bedrock:
+            detail: true
         entry_object_system:
           name: <t:entry_heading><v:role>
           lore:
@@ -2287,6 +2328,8 @@ gui:
           - <t:decoration>✖ </t><t:click>丢弃键</t>
           - '   <t:regular>删除此子区域.'
           material: ACACIA_FENCE
+          bedrock:
+            detail: true
         child_failure_untrusted:
           name: <t:error_heading>尚未加入
           lore:
@@ -2327,6 +2370,8 @@ gui:
           - <t:decoration>✖ </t><t:click>丢弃键</t>
           - '   <t:regular>移出黑名单'
           material: INHERIT
+          bedrock:
+            detail: true
         entry_area:
           name: <t:entry_heading><v:player>
           lore:
@@ -2335,6 +2380,8 @@ gui:
           - <t:decoration>✖ </t><t:click>丢弃键</t>
           - '   <t:regular>移出黑名单'
           material: INHERIT
+          bedrock:
+            detail: true
         refresh_toggle:
           name: '<t:regular_heading>仅显示当前子区域: <v:current>'
           lore:
@@ -2405,6 +2452,8 @@ gui:
           - <t:decoration>✖ </t><t:click>按住切换键并点击右键</t>
           - '   <t:regular>撤回加入申请.'
           material: INHERIT
+          bedrock:
+            detail: true
         entry_nation:
           name: <t:regular_heading>#<v:pos></t> <t:entity_nation><b><v:nation></t>
           lore:
@@ -2417,6 +2466,8 @@ gui:
           - <t:decoration>✖ </t><t:click>右键</t>
           - '   <t:regular>查看更多信息.'
           material: INHERIT
+          bedrock:
+            detail: true
         refresh_sorting:
           name: '<t:regular_heading>分类方式: <v:current>'
           lore:
@@ -2434,6 +2485,8 @@ gui:
           - '   <t:regular>重置搜索'
           material: SPYGLASS
           slots: 43
+          bedrock:
+            detail: true
         entry_land:
           name: <t:regular_heading>#<v:pos></t> <t:entity_land><b><v:land></t>
           lore:
@@ -2448,6 +2501,8 @@ gui:
           - <t:decoration>✖ </t><t:click>右键</t>
           - '   <t:regular>查看更多信息.'
           material: INHERIT
+          bedrock:
+            detail: true
   list_inbox:
     title: <t:menu_title>日志箱
     items:
@@ -2467,6 +2522,8 @@ gui:
           - <t:decoration>✖ </t><t:regular>点击删除.
           material: PAPER
           slots: 10-36
+          bedrock:
+            detail: true
         refresh_clear:
           name: <t:regular_heading>清空
           lore:
@@ -2521,18 +2578,24 @@ gui:
           - ' <t:decoration>• </t><t:regular>城镇所有者不计入其中.'
           material: skin:8449b9318e33158e64a46ab0de121c3d40000e3332c1574932b3c849d8fa0dc2
           slots: 22
+          bedrock:
+            detail: true
         land_size:
           name: <t:regular_heading>城镇规模提升
           lore:
           - <t:regular>此玩家会使城镇最大规模增加<t:regular_value> <v:chunks></t> 个区块.
           material: skin:8449b9318e33158e64a46ab0de121c3d40000e3332c1574932b3c849d8fa0dc2
           slots: 22
+          bedrock:
+            detail: true
         lands:
           name: <t:regular_heading>拥有的城镇</t> <t:decoration>(</t><t:regular_value><v:amount></t><t:decoration>)</t>
           lore:
           - <t:regular_value><v:lands></t>
           material: OAK_SIGN
           slots: 24
+          bedrock:
+            detail: true
         areas:
           name: <t:regular_heading>已加入的子区域</t> <t:decoration>(</t><t:regular_value><v:amount></t><t:decoration>)</t>
           lore:
@@ -2540,6 +2603,8 @@ gui:
           - <t:regular_value><v:areas></t>
           material: OAK_FENCE
           slots: 26
+          bedrock:
+            detail: true
         time:
           name: <t:regular_heading>最后上线时间和游玩时长
           lore:
@@ -2548,6 +2613,8 @@ gui:
           - '<t:decoration>• </t><t:regular>游戏时长: <t:time><v:playtime></t>'
           material: CLOCK
           slots: 20
+          bedrock:
+            detail: true
   relations:
     title: <t:menu_title>外交关系
     items:
@@ -2601,6 +2668,8 @@ gui:
           - <t:decoration>✖ </t><t:click>丢弃键</t>
           - '   <t:regular>撤销此提议.'
           material: INHERIT
+          bedrock:
+            detail: true
         entry_offer_ally_sender:
           name: <t:entry_heading><v:object>
           lore:
@@ -2615,6 +2684,8 @@ gui:
           - <t:decoration>✖ </t><t:click>丢弃键</t>
           - '   <t:regular>撤销此提议.'
           material: INHERIT
+          bedrock:
+            detail: true
         remove:
           name: <t:negative_heading>Remove
           material: skin:548d7d1e03e1af145b0125ab841285672b421265da2ab915015f9058438ba2d8
@@ -2633,6 +2704,8 @@ gui:
           - <t:decoration>✖ </t><t:click>丢弃键</t>
           - '   <t:regular>拒绝此提议.'
           material: INHERIT
+          bedrock:
+            detail: true
         child_failure_war:
           name: <t:error_heading>即将开始或正在进行的战争
           lore:
@@ -2664,6 +2737,8 @@ gui:
           - <t:decoration>✖ </t><t:click>丢弃键</t>
           - '   <t:regular>拒绝此提议.'
           material: INHERIT
+          bedrock:
+            detail: true
         entry_ally:
           name: <t:entry_heading>Ally <v:object>
           lore:
@@ -2675,6 +2750,8 @@ gui:
           - <t:decoration>✖ </t><t:click>丢弃键</t>
           - '   <t:regular>移除盟友.'
           material: INHERIT
+          bedrock:
+            detail: true
         remove_nation:
           name: <t:regular_heading>由联邦管理
           lore:
@@ -2693,6 +2770,8 @@ gui:
           - <t:decoration>✖ </t><t:click>丢弃键</t>
           - '   <t:regular>发送和解提议.'
           material: INHERIT
+          bedrock:
+            detail: true
         child_failure_nation:
           name: <t:error_heading>由联邦管理
           lore:

@@ -2,7 +2,7 @@
 
 先前曾咨询过插件作者，发现他们采用的翻译维护平台真的很难用，故自行开设储存库维护简体中文翻译。
 
-当前对应的插件版本：[8.0.0](https://www.spigotmc.org/resources/1lands-%E2%AD%95-land-claim-plugin-%E2%9C%85-grief-prevention-protection-gui-management-nations-wars-1-20-support.53313/updates)
+当前对应的插件版本：[8.0.1](https://www.spigotmc.org/resources/1lands-%E2%AD%95-land-claim-plugin-%E2%9C%85-grief-prevention-protection-gui-management-nations-wars-1-20-support.53313/updates)
 
 > 注意 `8.0.0` 版本 Lands 进行了整个语言文件的大规模重构，且无法对老版本配置进行自动转换，因此你可能需要备份之前的 `Language/` 等、引入我更新后的语言文件并重新进行风格化等配置。
 > 翻译整体也趁机进行了重制，若你发现任何缺漏错误请在 Issues 中反馈。

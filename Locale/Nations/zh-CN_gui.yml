@@ -188,6 +188,8 @@ gui:
           - <t:decoration>✖ </t><t:click>丢弃键</t>
           - '   <t:regular>将城镇移出联邦.'
           material: INHERIT
+          bedrock:
+            detail: true
         remove:
           name: <t:negative_heading>移除城镇
           lore:
@@ -209,6 +211,8 @@ gui:
           - <t:decoration>✖ </t><t:click>右键</t>
           - '   <t:regular>查看联邦概况信息.'
           material: INHERIT
+          bedrock:
+            detail: true
         entry_nation:
           name: <t:entry_heading><v:nation>
           lore:
@@ -220,5 +224,7 @@ gui:
           - <t:decoration>✖ </t><t:click>右键</t>
           - '   <t:regular>查看联邦概况信息.'
           material: INHERIT
+          bedrock:
+            detail: true
         entry_nation_edit:
           material: skin:eef425b4db7d62b200e89c013e421a9e110bfb27f2d8b9f5884d10104d00f4f4

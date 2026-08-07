@@ -173,6 +173,8 @@ gui:
           - '   <t:cost><v:tribute-att></t> 给守方.'
           material: GOLD_INGOT
           slots: 29
+          bedrock:
+            detail: true
   list_wars:
     title: <t:menu_title>正在进行的战争
     items:
