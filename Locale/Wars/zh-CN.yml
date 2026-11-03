@@ -11,77 +11,136 @@ general:
       type:
         tribute: 赔偿金
         preparation_time: 准备时长
+        team: team
   inbox:
     war:
       shield: <t:regular>获得额外战争护盾时长<t:time> <v:0></t>. 总计:<t:time> <v:1></t>
       start: <t:regular>对<t:entity_land> <v:0> </t>的战争已经开始. 最大持续时长:<t:time> <v:1></t>
       declaration:
         sent: <t:regular>已向<t:entity_land> <v:0> </t>宣战. 战争将在<t:time> <v:1> </t>后开始.
-        received: <t:negative_value><v:0></t> <t:negative>已向我们宣战. <t:regular>战争将在<t:time>
-          <v:1> </t>后开始.
+        received: <t:negative_value><v:0></t> <t:negative>已向我们宣战. <t:regular>战争将在<t:time> <v:1> </t>后开始.
         mutual:
           sent: <t:regular>已向<t:entity_land> <v:0> </t>发送战争请求. 对方需要接受.
           received: '<t:negative_value><v:0></t> <t:negative>发送了战争请求. 接受: <t:cmd>/<v:1></t>'
-          denied: <t:regular><t:entity_land> <v:0> </t>已拒绝战争请求.
+          denied: <t:regular><t:entity_land> <v:0> </t>已拒绝互相宣战书.
       surrender:
-        sent: <t:negative>已在战争中投降. 向敌方支付<t:negative_value> <v:0> </t>作为赔偿金.
-        received: <t:regular>敌方<t:entity_land> <v:0> </t>已投降. 收到<t:regular_value>
-          <v:1> </t>作为赔偿金.
+        sent: <t:negative>We surrendered to<t:negative_value> <v:0></t>. They robbed<t:cost> <v:1></t> from us.
+        received: <t:regular>The enemy<t:entity_land> <v:0></t> surrendered to us. We robbed<t:cost> <v:1></t> from them.
+        vassal:
+          subjugated: <t:negative>We surrendered to<t:negative_value> <v:0></t> <t:negative>- our land is now their vassal.
+          received: <t:regular>The enemy<t:entity_land> <v:0></t> <t:regular>surrendered - we subjugated them as our vassals.
+        independence:
+          won: <t:positive><v:0> <t:positive>surrendered - we won our independence and are free!
+          lost: <t:negative>We surrendered our independence war against<t:negative_value> <v:0></t> <t:negative>- we remain a vassal.
+          overlord-lost: <t:negative>We surrendered - our vassal<t:entity_land> <v:0></t> <t:negative>is now independent.
+          overlord-won: <t:regular>Our vassal<t:entity_land> <v:0></t> <t:regular>surrendered its independence war - they remain our vassal.
+        annex:
+          sent: <t:negative>We surrendered to<t:negative_value> <v:0></t> <t:negative>and were annexed - our lands were unclaimed.
+          received: <t:regular>The enemy<t:entity_land> <v:0></t> <t:regular>surrendered - we annexed them and unclaimed their lands.
+        raid:
+          sent: <t:negative>We surrendered to<t:negative_value> <v:0></t> <t:negative>- our lands are being raided for the next<t:time> <v:1></t>.
+          received: <t:regular>The enemy<t:entity_land> <v:0></t> <t:regular>surrendered - we're raiding their lands for the next<t:time> <v:1></t>.
       end:
-        won: <t:regular>我们赢得了对<t:entity_land> <v:0> </t>的战争, 得分为<t:regular_value>
-          <v:1></t>. 对方只有<t:regular_value> <v:2> </t>分. 战争持续了<t:time> <v:3></t>.
-        draw: <t:regular>对<t:entity_land> <v:0> </t>的战争以平局结束, 得分为<t:regular_value>
-          <v:1></t>.
-        lost: <t:regular>我们输掉了对<t:entity_land> <v:0> </t>的战争, 得分为<t:regular_value>
-          <v:1></t>. 对方有<t:regular_value> <v:2> </t>分. 战争持续了<t:time> <v:3></t>.
+        won: <t:regular>We've won the war against the enemy<t:entity_land> <v:0></t> with<t:regular_value> <v:1></t> points. They only had<t:regular_value> <v:2></t> points. We robbed<t:cost> <v:4></t> from them. The war took <t:time><v:3></t>.
+        draw: <t:regular>对<t:entity_land> <v:0> </t>的战争以平局结束, 得分为<t:regular_value> <v:1></t>.
+        lost: <t:regular>We've lost the war against the enemy<t:entity_land> <v:0></t> with<t:regular_value> <v:1></t> points. They had<t:regular_value> <v:2></t> points. They robbed<t:cost> <v:4></t> from us. The war took <t:time><v:3></t>.
+        vassal:
+          lost: <t:negative>We lost the war against<t:negative_value> <v:0></t> <t:negative>- our land is now their vassal.
+          freed: <t:positive>Our land was set free and is now independent after<t:negative_value> <v:0></t> <t:positive>won the war.
+          won: <t:regular>We won the war against the enemy<t:entity_land> <v:0></t> <t:regular>and subjugated them - their lands are now our vassals. The war took <t:time><v:1></t>.
+        annex:
+          lost: <t:negative>We lost the war against<t:negative_value> <v:0></t> <t:negative>and were annexed - our lands were unclaimed. The war took <t:time><v:1></t>.
+          won: <t:regular>We won the war against the enemy<t:entity_land> <v:0></t> <t:regular>and annexed them - their lands were unclaimed. The war took <t:time><v:1></t>.
+        independence:
+          overlord-won: <t:regular>We won the war and crushed the rebellion of our vassal<t:entity_land> <v:0></t> <t:regular>- they remain our vassal.
+          won: <t:positive>Our land won its independence war against<t:negative_value> <v:0></t> <t:positive>and is free!
+          overlord-lost: <t:negative>We lost the war - our vassal<t:entity_land> <v:0></t> <t:negative>won its independence and left our nation.
+          lost: <t:negative>Our independence war against<t:negative_value> <v:0></t> <t:negative>failed - we are a vassal again.
+        raid:
+          won: <t:regular>We won the war against the enemy<t:entity_land> <v:0></t> <t:regular>and are raiding their lands for the next<t:time> <v:1></t>.
+          raided: <t:negative>We lost the war against<t:negative_value> <v:0></t> <t:negative>and our lands are being raided by them for the next<t:time> <v:1></t>.
+      koth:
+        postponed: <t:regular>The KotH war against<t:entity_land> <v:0></t> is waiting for a free arena. It will start automatically once one frees up.
   wars:
     object:
       enemy: <t:error_value>政敌</t>
-      ally: <t:regular_value>Ally</t>
+      ally: <t:regular_value>盟友</t>
     nametag:
       enemy: <t:error_value>政敌 </t><t:decoration>| </t>
       ally: <t:regular_value>盟友 </t><t:decoration>| </t>
     state:
       preparation: <t:positive>准备中</t>
       fight: <t:negative>战斗中</t>
+    goal:
+      independence:
+        outcome:
+          attacker-wins: <t:positive><v:winner> <t:regular>breaks free from<t:regular_value> <v:loser></t> <t:regular>and becomes independent.
+          defender-wins: <t:negative><v:loser> <t:regular>stays a vassal of<t:regular_value> <v:winner></t><t:regular>.
+        name: Independence
+      skirmish:
+        name: Skirmish
+        outcome: <t:regular><v:winner> <t:regular>robs<t:cost> <v:robbery></t> from <v:loser><t:regular>.
+      vassal:
+        outcome: <t:negative><v:loser><t:regular>'s lands are subjugated as vassals of <v:winner><t:regular>.
+        name: Vassalage
+      raid:
+        outcome: <t:negative><v:winner> <t:regular>raids <v:loser><t:regular>'s lands.
+        name: Raid
+      annex:
+        outcome: <t:negative><v:loser><t:regular>'s lands are annexed (unclaimed) by <v:winner><t:regular>.
+        name: Annexation
+    mode:
+      koth_land:
+        description: "<t:regular>Each team places a control point in its own land during preparation, then scores by holding the enemy's point. <t:error>Both lands become battlegrounds: the enemy can break and place all blocks to reach your point."
+        name: King of the Hill (Player Lands)
+      koth:
+        name: King of the Hill (Server Arena)
+        description: <t:regular>Score points by holding the arena's control point - the longer your team holds it, the more it scores. Kills don't count.
+      skirmish:
+        name: Skirmish
+        description: <t:regular>Score points by killing enemy players and capturing their land with capture flags.
+      points:
+        total: <t:regular_value><v:points></t><t:regular>/</t><t:regular_value><v:towin></t>
+    koth:
+      admin:
+        status:
+          incomplete: <t:error>Incomplete</t>
+          in-use: <t:regular_value>In use</t>
+          ready: <t:positive>Ready</t>
 
 wars:
   message:
     noaccess:
       wilderness: '<t:error>参与战争时, 不能在荒野中这样做. <t:decoration>标志: </t><t:regular_value><v:flag></t>'
-      general: '<t:error>在当前对城镇<t:error_value> <v:land> </t>的战争中, 不能这样做. <t:decoration>标志:
-        </t><t:regular_value><v:flag></t>'
-      pillage: <t:error>守方在线人数不足时, 你不能掠夺城镇<t:error_value> <v:land></t>. <t:regular>请等待至少<t:limit>
-        <v:defenders> </t>名守方在城镇<t:entity_land> <v:land> </t>中在线.
-      allies: <t:error>在这场战争中, 你只能侵略攻方<t:error_value> <v:attacker> </t>和守方<t:error_value>
-        <v:defender></t>. <t:regular>不能侵略任一方的盟友.
+      general: '<t:error>You can only perform certain actions in enemy land<t:error_value> <v:land></t> <t:error>during a war or raid. <t:decoration>Flag: </t><t:regular_value><v:flag></t>'
+      pillage: <t:error>守方在线人数不足时, 你不能掠夺城镇<t:error_value> <v:land></t>. <t:regular>请等待至少<t:limit> <v:defenders> </t>名守方在城镇<t:entity_land> <v:land> </t>中在线.
+      allies: <t:error>在这场战争中, 你只能侵略攻方<t:error_value> <v:attacker> </t>和守方<t:error_value> <v:defender></t>. <t:regular>不能侵略任一方的盟友.
+      block-break: <t:error>You can only break a limited set of blocks in enemy land<t:error_value> <v:land></t> <t:error>during a war or raid.
+      block-place: <t:error>You can only place a limited set of blocks in enemy land<t:error_value> <v:land></t> <t:error>during a war or raid.
     start:
-      broadcast: <t:regular><v:attacker> <t:regular>与 <v:defender> <t:regular>之间的战争开始了.
-        战争将在<t:time> <v:time> </t>后结束.
+      broadcast: <t:regular><v:attacker> <t:regular>与 <v:defender> <t:regular>之间的战争开始了. 战争将在<t:time> <v:time> </t>后结束.
     end:
       broadcast:
-        won: <t:regular><v:winner> <t:regular>赢得了对 <v:loser> <t:regular>的战争, 比分为<t:regular_value>
-          <v:winner_points> </t>比<t:regular_value> <v:loser_points></t>. 战争持续了<t:time>
-          <v:time></t>.
+        won: <t:regular><v:winner><t:regular> won the war against <v:loser><t:regular> with<t:regular_value> <v:winner_points></t> vs.<t:regular_value> <v:loser_points></t> points, robbing<t:cost> <v:robbery></t>. It took<t:time> <v:time></t>.
         surrendered:
-          war: <v:loser> <t:regular>以<t:regular_value> <v:loser_points> </t>分投降. 战争结束,
-            他们将<t:cost> <v:tribute> </t>赔偿金支付给政敌 <v:winner><t:decoration>(</t><t:regular_value><v:winner_points>
-            </t><t:regular>分<t:decoration>)</t><t:regular>. 战争持续了<t:time> <v:time></t>.
-          preparation: <v:loser> <t:regular>在战争准备阶段投降, 并将<t:cost> <v:tribute> </t>赔偿金支付给政敌
-            <v:winner><t:regular>.
-        draw: <t:regular><v:attacker> <t:regular>与 <v:defender> <t:regular>之间的战争以平局结束,
-          得分为<t:regular_value> <v:points></t>. 战争持续了<t:time> <v:time></t>.
+          annex: <v:loser> <t:regular>surrendered to <v:winner><t:regular> and was annexed - their lands were unclaimed.
+          skirmish: <v:loser> <t:regular>surrendered to <v:winner><t:regular>, robbed of<t:cost> <v:robbery></t>.
+          vassal: <v:loser> <t:regular>surrendered to <v:winner><t:regular> and is now their vassal.
+          raid: <v:loser> <t:regular>surrendered to <v:winner><t:regular>, who is raiding their lands for<t:time> <v:time></t>.
+        draw: <t:regular><v:attacker> <t:regular>与 <v:defender> <t:regular>之间的战争以平局结束, 得分为<t:regular_value> <v:points></t>. 战争持续了<t:time> <v:time></t>.
+        vassal: <t:regular><v:winner><t:regular> subjugated <v:loser><t:regular> as a vassal. It took<t:time> <v:time></t>.
+        annex: <t:regular><v:winner><t:regular> annexed <v:loser><t:regular> and unclaimed their lands. It took<t:time> <v:time></t>.
+        independence:
+          won: <t:positive><v:vassal><t:regular> won its independence from <v:overlord><t:regular>.
+          lost: <t:regular><v:overlord><t:regular> crushed the rebellion of <v:vassal><t:regular>.
+        raid: <t:regular><v:winner><t:regular> won the war against <v:loser><t:regular> and is raiding their lands for<t:time> <v:time></t>.
     kill:
       target:
-        attackers: <t:regular>我们的队友<t:regular_value> <v:attacker> </t>被守方<t:regular_value>
-          <v:defender> </t>击杀了.
-        defenders: <t:regular>我们的队友<t:regular_value> <v:defender> </t>被攻方<t:regular_value>
-          <v:attacker> </t>击杀了.
+        attackers: <t:regular>我们的队友<t:regular_value> <v:attacker> </t>被守方<t:regular_value> <v:defender> </t>击杀了.
+        defenders: <t:regular>我们的队友<t:regular_value> <v:defender> </t>被攻方<t:regular_value> <v:attacker> </t>击杀了.
       killer:
-        attackers: '<t:regular>我们的队友<t:regular_value> <v:attacker> </t>击杀了守方<t:regular_value>
-          <v:defender></t>: <t:positive><b>+ <v:points> 分'
-        defenders: '<t:regular>我们的队友<t:regular_value> <v:defender> </t>击杀了攻方<t:regular_value>
-          <v:attacker></t>: <t:positive><b>+ <v:points> 分'
+        attackers: '<t:regular>我们的队友<t:regular_value> <v:attacker> </t>击杀了守方<t:regular_value> <v:defender></t>: <t:positive><b>+ <v:points> 分'
+        defenders: '<t:regular>我们的队友<t:regular_value> <v:defender> </t>击杀了攻方<t:regular_value> <v:attacker></t>: <t:positive><b>+ <v:points> 分'
     capture:
       place:
         wilderness: <t:error>不能在荒野放置战旗. <t:regular>你需要将它放置在政敌的城镇内.
@@ -89,106 +148,103 @@ wars:
         region: <t:error>无法在这里放置战旗. <t:regular>它会与另一个战旗的占领区域重叠.
         outskirts: <t:error>无法在这里放置战旗. <t:regular>你必须将它放置在城镇的外围.
         state: <t:error>你目前未与城镇<t:error_value> <v:land> </t>交战, 或战争尚未开始.
-        y: <t:error>无法在这里放置战旗. <t:regular>放置高度必须在<t:limit> <v:min> </t>到<t:limit>
-          <v:max> </t>格之间.
+        y: <t:error>无法在这里放置战旗. <t:regular>放置高度必须在<t:limit> <v:min> </t>到<t:limit> <v:max> </t>格之间.
         already: <t:error>无法在这里放置战旗. <t:regular>这个区块已经放置了一面战旗.
         space: <t:error>无法在这里放置战旗. <t:regular>这个位置没有足够的空间.
         cooldown: <t:error>你的队伍还需等待<t:error_value> <v:time> </t>后才能再次放置战旗.
         max: <t:error>你的队伍已同时放置<t:error_value> <v:max> </t>面战旗, 达到数量上限.
-        invader: '<title><t:success>战旗<subtitle><t:success>已放置在政敌城镇: <v:land>, <v:x>,
-          <v:y>, <v:z><actionbar><t:success>加入他们, 共同占领该子区域.'
-        defender: '<title><t:error>战旗<subtitle><t:error>已放置在我方城镇: <v:land>, <v:x>,
-          <v:y>, <v:z><actionbar><t:error>前往此处, 加入守方.'
+        invader: '<title><t:success>战旗<subtitle><t:success>已放置在政敌城镇: <v:land>, <v:x>, <v:y>, <v:z><actionbar><t:success>加入他们, 共同占领该子区域.'
+        defender: '<title><t:error>战旗<subtitle><t:error>已放置在我方城镇: <v:land>, <v:x>, <v:y>, <v:z><actionbar><t:error>前往此处, 加入守方.'
+        koth:
+          no-permission: <t:error>You're not allowed to set up KotH arenas.
+          not-in-arena: <t:error>You must stand inside a designated KotH arena to set its capture point. <t:regular>Create one first with<t:cmd> /<v:cmd_create></t>.
+          success: <t:success>KotH arena flag placed.
+          break-in-war: <t:error>You can't break the arena point while a war is using this arena.
+          removed: <t:regular>Removed the arena point. <t:regular>Run<t:cmd> /<v:cmd_setflag></t> <t:regular>where you want it to set it again.
+          exists: <t:error>This KotH arena already has a capture point. <t:regular>Break the existing one first to move it.
+          ready: <t:positive>The KotH arena is now fully set up and ready for war.
+          needs-spawns: <t:regular>Set both team spawns (<t:cmd>/<v:cmd_setspawn_attacker><t:regular> / <t:cmd><v:cmd_setspawn_defender><t:regular>) to finish setting up the arena.
       destroy:
-        presence: <t:error>目前无法破坏这面战旗. <t:regular>该子区域仍有<t:regular_value> <v:players>
-          </t>名来自政敌阵营的玩家.
+        presence: <t:error>目前无法破坏这面战旗. <t:regular>该子区域仍有<t:regular_value> <v:players> </t>名来自政敌阵营的玩家.
         invader: <title><t:error>战旗<subtitle><t:error>政敌城镇 <v:land> 中的战旗已被摧毁
-        defender: <title><t:success>战旗<subtitle><t:success>已从我方城镇 <v:land> 中移除<actionbar><t:success><b>+
-          <v:points> 点数
+        defender: <title><t:success>战旗<subtitle><t:success>已从我方城镇 <v:land> 中移除<actionbar><t:success><b>+ <v:points> 点数
         invaders-break: <t:error>入侵者不能破坏自己的战旗.
       progress:
         none:
-          area: <bossbar:white:solid><t:regular>占领暂停 - <t:regular_value><v:progress>%</t>
-            - 没有任何一方人数占优
-          broadcast: '<bossbar:white:solid><t:regular>占领暂停 - <t:regular_value><v:progress>%</t>,
-            x: <t:regular_value><v:x></t>, y: <t:regular_value><v:y></t>, z: <t:regular_value><v:z></t>'
+          area: <bossbar:white:solid><t:regular>占领暂停 - <t:regular_value><v:progress>%</t> - 没有任何一方人数占优
+          broadcast: '<bossbar:white:solid><t:regular>占领暂停 - <t:regular_value><v:progress>%</t>, x: <t:regular_value><v:x></t>, y: <t:regular_value><v:y></t>, z: <t:regular_value><v:z></t>'
         invaders:
-          broadcast: '<bossbar:red:solid><t:error>政敌正在占领 - <v:progress>%, <v:invaders>
-            名入侵者, x: <v:x>, y: <v:y>, z: <v:z>'
-          invaders: <bossbar:red:solid><t:error>我方正在占领 - <v:progress>%, <v:defenders>
-            名守方玩家
-          defenders: <bossbar:red:solid><t:error>政敌正在占领 - <v:progress>%, <v:invaders>
-            名入侵者
+          broadcast: '<bossbar:red:solid><t:error>政敌正在占领 - <v:progress>%, <v:invaders> 名入侵者, x: <v:x>, y: <v:y>, z: <v:z>'
+          invaders: <bossbar:red:solid><t:error>我方正在占领 - <v:progress>%, <v:defenders> 名守方玩家
+          defenders: <bossbar:red:solid><t:error>政敌正在占领 - <v:progress>%, <v:invaders> 名入侵者
         defenders:
-          broadcast: '<bossbar:green:solid><t:positive>我方正在夺回 - <v:progress>%, <v:invaders>
-            名入侵者, x: <v:x>, y: <v:y>, z: <v:z>'
-          invaders: <bossbar:red:solid><t:error>守方正在夺回 - <v:progress>%, <v:defenders>
-            名守方玩家
-          defenders: <bossbar:green:solid><t:positive>我方正在夺回 - <v:progress>%, <v:invaders>
-            名入侵者
+          broadcast: '<bossbar:green:solid><t:positive>我方正在夺回 - <v:progress>%, <v:invaders> 名入侵者, x: <v:x>, y: <v:y>, z: <v:z>'
+          invaders: <bossbar:red:solid><t:error>守方正在夺回 - <v:progress>%, <v:defenders> 名守方玩家
+          defenders: <bossbar:green:solid><t:positive>我方正在夺回 - <v:progress>%, <v:invaders> 名入侵者
       health:
         status: '<bossbar:white:solid><t:regular>战旗生命值: <t:regular_value><v:health>%</t>'
         invaders: <t:positive>你的战旗状态良好! <t:positive><b>+<v:points> <!b><t:regular>点数已计入你的队伍.
         defenders: <t:positive>政敌的战旗已被削弱! <t:positive><b>+<v:points> <!b><t:regular>点数已获得.
-        damage: '<t:regular>战旗: <t:error_value>-<v:damage> </t>点生命值 <t:decoration>|
-          </t><t:error_value><v:health>%</t> <t:regular>剩余生命值.'
-      online: '<actionbar><t:error>无法占领: 至少需要<t:error_value> <v:min> </t>名来自城镇<t:error_value>
-        <v:land> </t>的玩家在线.'
+        damage: '<t:regular>战旗: <t:error_value>-<v:damage> </t>点生命值 <t:decoration>| </t><t:error_value><v:health>%</t> <t:regular>剩余生命值.'
+      online: '<actionbar><t:error>无法占领: 至少需要<t:error_value> <v:min> </t>名来自城镇<t:error_value> <v:land> </t>的玩家在线.'
       success:
-        invader: <title><t:success>占领点<subtitle><t:success>我方占领了 <v:chunks> 个属于 <v:land>
-          的区块<actionbar><t:success><b>+ <v:points> 分
-        defender: <title><t:error>占领点<subtitle><t:error>政敌占领了 <v:chunks> 个属于 <v:land>
-          的区块
+        invader: <title><t:success>占领点<subtitle><t:success>我方占领了 <v:chunks> 个属于 <v:land> 的区块<actionbar><t:success><b>+ <v:points> 分
+        defender: <title><t:error>占领点<subtitle><t:error>政敌占领了 <v:chunks> 个属于 <v:land> 的区块
+    koth:
+      hold-reward: <actionbar><t:positive>Holding the point:<t:positive_value> +<v:points></t> points
+      land:
+        start: <t:regular>The war has started! Capture the enemy's KotH point to score - and defend your own, which they'll be coming for.
+        place:
+          no-war: <t:error>You have no player-land KotH war in preparation here. <t:regular>Stand in your own land during your KotH war's preparation to set your point.
+          set: <t:success>Your KotH point is set in your land<t:entity_land> <v:land></t>. <t:regular>Defend it - once the war starts the enemy will come to capture it, while you go for theirs.
+          replaced: <t:success>Your KotH point was moved. <t:regular>The enemy will have to capture it at its new location.
+          broadcast: <title><t:regular>KotH Point<subtitle><t:regular><v:land>, <v:x>, <v:y>, <v:z><actionbar><t:regular>A team's point was placed.
+          wrong-land: <t:error>Set your team's KotH point in your own main land<t:error_value> <v:land></t> (a nation fights over its capital).
+        draw: <t:regular>The KotH war between <v:attacker> <t:regular>and <v:defender> <t:regular>ended in a draw - not enough points were placed.
+        reminder: <t:regular>Set your team's KotH point in your land<t:entity_land> <v:land></t> before the war starts in<t:time> <v:time></t> <t:regular>- stand where you want it and run <hover:show_text:"<t:regular>Sets your KotH point at your current position."><click:run_command:"/<v:cmd>"><t:cmd>/<v:cmd></t></click></hover>.
+        fallback-arena: <t:regular>Not every team placed its KotH point in time - the war has moved to an admin arena instead.
+        break: <t:error>Your KotH point can't be broken by hand. <t:regular>To move it, stand where you want it and run <hover:show_text:"<t:regular>Removes the current point and sets it at your position."><click:run_command:"/<v:cmd>"><t:cmd>/<v:cmd></t></click></hover>.
+      bar:
+        defender: <bossbar:green:solid><t:positive>Defender holds the point</t> <t:decoration>-</t> <t:regular_value>Attacker <v:attacker></t> <t:decoration>vs</t> <t:positive_value>Defender <v:defender></t> <t:decoration>·</t> <t:regular>first to<t:regular_value> <v:towin> <t:regular>points
+        attacker: <bossbar:red:solid><t:error>Attacker holds the point</t> <t:decoration>-</t> <t:error_value>Attacker <v:attacker></t> <t:decoration>vs</t> <t:regular_value>Defender <v:defender></t> <t:decoration>·</t> <t:regular>first to<t:regular_value> <v:towin> <t:regular>points
+        neutral: <bossbar:white:solid><t:regular>The point is contested</t> <t:decoration>-</t> <t:regular_value>Attacker <v:attacker></t> <t:decoration>vs</t> <t:regular_value>Defender <v:defender></t> <t:decoration>·</t> <t:regular>first to<t:regular_value> <v:towin> <t:regular>points
+      arena:
+        start: <t:regular>The war has started! You've been sent to your team's spawn - reach and hold the arena point to score.
+      captured-teleport: <t:regular>The arena point was captured and has reset - you were sent back to your team's spawn.
   command:
     declare:
-      not-allowed: <t:error>无权代表<t:error_value> <v:object> </t>发动战争. <t:regular><v:object>
-        <t:regular>的领袖需要执行此操作.
-      hours: '<t:error>只能在以下战争时段宣战:<t:error_value> <v:hours></t> <t:decoration>(</t><t:regular>当前时间:<t:time>
-        <v:current></t>, 时区: <t:time><v:timezone></t><t:decoration>)</t>'
+      not-allowed: <t:error>无权代表<t:error_value> <v:object> </t>发动战争. <t:regular><v:object> <t:regular>的领袖需要执行此操作.
+      hours: '<t:error>只能在以下战争时段宣战:<t:error_value> <v:hours></t> <t:decoration>(</t><t:regular>当前时间:<t:time> <v:current></t>, 时区: <t:time><v:timezone></t><t:decoration>)</t>'
       enemies: |
         <t:error>必须先将<t:error_value> <v:object> </t>设为政敌, 才能通过宣战发动战争.
-          <hover:show_text:"<t:regular>点击此处将 <v:object> <t:regular>设为政敌, 以便向其宣战."><click:run_command:"/<v:cmd>"><t:regular>✖ 设为政敌: <t:cmd>/<v:cmd> </t><t:click>[点击]</t></click></hover>
+          <hover:show_text:"<t:regular>点击此处将 <v:object> <t:regular>设为政敌, 以便向其宣战."><click:run_command:"/<v:cmd>"><t:regular>✖ 设为政敌: <t:cmd>/<v:cmd> </t><java><t:click>[点击]</t></java></click></hover>
       ally: |
         <t:error>不能向盟友<t:error_value> <v:object> </t>宣战, 盟友之间不能互相发动战争.
-          <hover:show_text:"<t:regular>点击此处管理外交关系."><click:run_command:"/<v:cmd>"><t:regular>✖ 管理外交关系: <t:cmd>/<v:cmd> </t><t:click>[点击]</t></click></hover>
-      nation: <t:error>不能向<t:error_value> <v:object> </t>宣战. <t:regular>对方与你同属联邦<t:entity_nation>
-        <v:nation></t>, 不能互相发动战争.
+          <hover:show_text:"<t:regular>点击此处管理外交关系."><click:run_command:"/<v:cmd>"><t:regular>✖ 管理外交关系: <t:cmd>/<v:cmd> </t><java><t:click>[点击]</t></java></click></hover>
+      nation: <t:error>不能向<t:error_value> <v:object> </t>宣战. <t:regular>对方与你同属联邦<t:entity_nation> <v:nation></t>, 不能互相发动战争.
       min-balance:
-        attacker: '<t:error>无法发送这份宣战书. <t:regular>攻方 <v:object> <t:regular>的余额至少需要达到<t:limit>
-          <v:min> </t>才能发动战争. 请向城镇金库存款: <hover:show_text:"<t:regular>点击此处向城镇金库中存入
-          <v:min>."><click:run_command:"/<v:cmd>"><t:cmd>/<v:cmd> </t><t:click>[点击]</t></click></hover>'
-        defender: <t:error>守方 <v:object> <t:error>的余额过低. <t:regular>只能攻击余额至少为<t:limit>
-          <v:min> </t>的其他目标.
+        attacker: '<t:error>无法发送这份宣战书. <t:regular>攻方 <v:object> <t:regular>的余额至少需要达到<t:limit> <v:min> </t>才能发动战争. 请向城镇金库存款: <hover:show_text:"<t:regular>点击此处向城镇金库中存入 <v:min>."><click:run_command:"/<v:cmd>"><t:cmd>/<v:cmd> </t><java><t:click>[点击]</t></java></click></hover>'
+        defender: <t:error>守方 <v:object> <t:error>的余额过低. <t:regular>只能攻击余额至少为<t:limit> <v:min> </t>的其他目标.
       min-chunks:
-        attacker: '<t:error>无法发送这份宣战书. <t:regular>攻方 <v:object> <t:regular>需要至少拥有<t:limit>
-          <v:min> </t>个区块才能发动战争. 占领区块: <hover:show_text:"<t:regular>点击此处占领."><click:run_command:"/<v:cmd>"><t:cmd>/<v:cmd>
-          </t><t:click>[点击]</t></click></hover>'
-        defender: <t:error>守方 <v:object> <t:error>的占领区块数过少. <t:regular>只能攻击至少拥有<t:limit>
-          <v:min> </t>个区块的其他目标.
+        attacker: '<t:error>无法发送这份宣战书. <t:regular>攻方 <v:object> <t:regular>需要至少拥有<t:limit> <v:min> </t>个区块才能发动战争. 占领区块: <hover:show_text:"<t:regular>点击此处占领."><click:run_command:"/<v:cmd>"><t:cmd>/<v:cmd> </t><java><t:click>[点击]</t></java></click></hover>'
+        defender: <t:error>守方 <v:object> <t:error>的领土区块数过少. <t:regular>只能攻击至少拥有<t:limit> <v:min> </t>个区块的其他目标.
       min-age:
-        attacker: <t:error>无法发送这份宣战书. <t:regular>攻方 <v:object> <t:regular>的成立时间至少达到<t:time>
-          <v:min></t>, 才能发动战争.
-        defender: <t:error>守方 <v:object> <t:error>的成立时间过短. <t:regular>只能攻击成立时间至少达到<t:time>
-          <v:min> </t>的其他目标.
+        attacker: <t:error>无法发送这份宣战书. <t:regular>攻方 <v:object> <t:regular>的成立时间至少达到<t:time> <v:min></t>, 才能发动战争.
+        defender: <t:error>守方 <v:object> <t:error>的成立时间过短. <t:regular>只能攻击成立时间至少达到<t:time> <v:min> </t>的其他目标.
       online: <t:error>无法发送这份宣战书. <t:regular><v:object> <t:regular>至少需要有一名玩家在线.
-      broadcast: <t:regular><v:attacker> <t:regular>已向 <v:defender> <t:regular>宣战.
-        这场战争将在<t:time> <v:time> </t>后开始.
+      broadcast: <t:regular><v:attacker> <t:regular>已向 <v:defender> <t:regular>宣战. 这场战争将在<t:time> <v:time> </t>后开始.
       success:
-        normal: <t:regular>你 <t:decoration>(<v:object></t><t:decoration>) </t><t:regular>已成功向
-          <v:enemy> <t:regular>宣战. 战争将在<t:time> <v:time> </t>后开始.
+        normal: <t:regular>你 <t:decoration>(<v:object></t><t:decoration>) </t><t:regular>已成功向 <v:enemy> <t:regular>宣战. 战争将在<t:time> <v:time> </t>后开始.
         mutual:
-          sent: <t:regular>你 <t:decoration>(<v:object></t><t:decoration>) </t><t:regular>已向
-            <v:enemy> <t:regular>发送战争请求. 对方需要接受该请求, 战争才能开始.
-      target: <t:regular>政敌 <v:attacker> <t:regular>已向 <v:defender> <t:decoration>(</t><t:regular>你<t:decoration>)</t><t:regular>宣战.
-        战争将在<t:time> <v:time> </t>后开始.
+          sent: <t:regular>你 <t:decoration>(<v:object></t><t:decoration>) </t><t:regular>已向 <v:enemy> <t:regular>发送战争请求. 对方需要接受该请求, 战争才能开始.
+      target: <t:regular>政敌 <v:attacker> <t:regular>已向 <v:defender> <t:decoration>(</t><t:regular>你<t:decoration>)</t><t:regular>宣战. 战争将在<t:time> <v:time> </t>后开始.
       already:
         attacker: <t:error>无法加入另一场战争. <t:regular><v:object> <t:regular>当前的战争必须先结束.
         defender: <t:error>你现在不能向他们宣战. <t:regular>目标 <v:object> <t:regular>已经处于战争中.
       min-players:
-        attacker: <t:error>你无法参与战争, 因为<t:error_value> <v:object> </t>需要更多成员. <t:regular>攻方宣战所需的最低成员数为<t:limit>
-          <v:min> </t>人.
-        defender: <t:error>无法向<t:error_value> <v:object> </t>宣战, 因为对方需要更多成员. <t:regular>这场战争要求守方至少有<t:limit>
-          <v:min> </t>名成员.
+        attacker: <t:error>你无法参与战争, 因为<t:error_value> <v:object> </t>需要更多成员. <t:regular>攻方宣战所需的最低成员数为<t:limit> <v:min> </t>人.
+        defender: <t:error>无法向<t:error_value> <v:object> </t>宣战, 因为对方需要更多成员. <t:regular>守方至少需要有<t:limit> <v:min> </t>名成员才能收到宣战书.
+      level-difference: <t:error>You can't declare war against<t:error_value> <v:defender></t><t:error>. <t:regular>They're too far from <v:attacker><t:regular> in level <t:decoration>(</t><t:regular><v:defender_level> <t:regular>vs <v:attacker_level><t:decoration>)</t><t:regular>. You can only declare war within<t:limit> <v:max></t> level(s).
     deny:
       attacker: <t:error>攻方不能拒绝自己的宣战书. <t:regular>只有守方可以这样做.
       success: <t:regular>你已成功拒绝 <v:object> <t:regular>向政敌 <v:enemy><t:regular> 发起的宣战书.
@@ -196,221 +252,231 @@ wars:
       mutual: <t:error>你现在不能打开战争菜单. <t:regular>对 <v:object> <t:regular>的宣战书尚未被接受.
     info:
       war: |
-        <t:regular_heading>当前战争:</t>
-        <t:decoration>- </t><t:regular>攻方 <v:attacker><t:regular>:
-             <t:decoration>• </t><t:regular>占领数: <t:regular_value><v:att_cap></t>
-             <t:decoration>• </t><t:regular>击杀数: <t:regular_value><v:att_kills></t>
-               <t:decoration>= </t><t:regular_value><v:att_points></t> / <t:regular_value><v:towin></t> <t:regular>获胜所需点数
-               <v:att_bar>
-        <t:decoration>- </t><t:regular>守方 <v:defender><t:regular>:
-             <t:decoration>• </t><t:regular>占领数: <t:regular_value><v:def_cap></t>
-             <t:decoration>• </t><t:regular>击杀数: <t:regular_value><v:def_kills></t>
-               <t:decoration>= </t><t:regular_value><v:def_points></t> / <t:regular_value><v:towin></t> <t:regular>获胜所需点数
-               <v:def_bar>
+        <t:regular_heading>Current War:</t>
+        <t:decoration>- </t><t:regular>Attacker <v:attacker><t:regular>: <v:att_score>
+        <t:decoration>- </t><t:regular>Defender <v:defender><t:regular>: <v:def_score>
 
-        <t:regular>超时:<t:time> ~<v:time></t>
-        <hover:show_text:"<t:regular>点击此处打开战争菜单."><click:run_command:"/<v:cmd>"><t:regular>更多信息: <t:cmd>/<v:cmd> </t><t:click>[点击]</t></click></hover>
+        <t:regular>Timeout:<t:time> <v:time></t>
+        <hover:show_text:"<t:regular>Click here to open the war menu."><click:run_command:"/<v:cmd>"><t:regular>More info: <t:cmd>/<v:cmd> </t><java><t:click>[CLICK]</t></java></click></hover>
       declaration:
         normal: |
-          <t:regular_heading>宣战书:</t>
-            <t:decoration>• </t><t:regular>攻方: <v:attacker>
-            <t:decoration>• </t><t:regular>守方: <v:defender>
-            <t:decoration>• </t><t:regular>开战倒计时:
-              <t:time>~<v:time></t>
+          <t:regular_heading>War Declaration:</t>
+            <t:decoration>• </t><t:regular>Attacker: <v:attacker>
+            <t:decoration>• </t><t:regular>Defender: <v:defender>
+            <t:decoration>• </t><t:regular>Starts in:
+              <t:time><v:time></t>
 
-          <hover:show_text:"<t:regular>点击此处打开战争菜单."><click:run_command:"/<v:cmd>"><t:regular>更多信息: <t:cmd>/<v:cmd> </t><t:click>[点击]</t></click></hover>
+          <hover:show_text:"<t:regular>Click here to open the war menu."><click:run_command:"/<v:cmd>"><t:regular>More info: <t:cmd>/<v:cmd> </t><java><t:click>[CLICK]</t></java></click></hover>
         mutual:
           defender: |
-            <t:regular_heading>宣战书:</t>
-              <t:decoration>• </t><t:regular>攻方: <v:attacker>
-              <t:decoration>• </t><t:regular>守方: <v:defender>
-              <t:decoration>• </t><t:regular>如果你在战争中投降:
-                赔偿金:<t:cost> <v:tribute></t>
+            <t:regular_heading>War Declaration:</t>
+              <t:decoration>• </t><t:regular>Attacker: <v:attacker>
+              <t:decoration>• </t><t:regular>Defender: <v:defender>
 
-            <hover:show_text:"<t:regular>点击此处接受宣战书."><click:run_command:"/<v:cmd_accept>"><t:positive>✔ 接受: <t:cmd>/<v:cmd_accept> </t><t:click>[点击]</t></click></hover>
-            <hover:show_text:"<t:regular>点击此处拒绝宣战书."><click:run_command:"/<v:cmd_deny>"><t:negative>✘ 拒绝: <t:cmd>/<v:cmd_deny> </t><t:click>[点击]</t></click></hover>
+            <hover:show_text:"<t:regular>Click here to accept the war declaration."><click:run_command:"/<v:cmd_accept>"><t:positive>✔ Accept: <t:cmd>/<v:cmd_accept> </t><java><t:click>[CLICK]</t></java></click></hover>
+            <hover:show_text:"<t:regular>Click here to deny the war declaration."><click:run_command:"/<v:cmd_deny>"><t:negative>✘ Deny: <t:cmd>/<v:cmd_deny> </t><java><t:click>[CLICK]</t></java></click></hover>
           attacker: |
-            <t:regular_heading>宣战书:</t>
-              <t:decoration>• </t><t:regular>攻方: <v:attacker>
-              <t:decoration>• </t><t:regular>守方: <v:defender>
-              <t:decoration>• </t><t:regular>如果守方在战争中投降:
-                赔偿金:<t:cost> <v:tribute></t>
+            <t:regular_heading>War Declaration:</t>
+              <t:decoration>• </t><t:regular>Attacker: <v:attacker>
+              <t:decoration>• </t><t:regular>Defender: <v:defender>
 
-            <t:regular>守方尚未接受
-            宣战书.
+            <t:regular>The defender hasn't accepted
+            the declaration yet.
+    koth:
+      admin:
+        setspawn:
+          set-incomplete: <t:regular>Set the<t:regular_value> <v:team></t> spawn. <t:regular>The arena still needs its capture flag and/or the other team's spawn.
+          usage: <t:error>Specify which team's spawn to set - attacker or defender.
+          set-complete: <t:regular>Set the<t:regular_value> <v:team></t> spawn. <t:positive>The arena is now complete and can be used in wars.
+        no-arena: <t:error>There's no KoTH arena in the area you're standing in. <t:regular>Create one first.
+        exists: <t:error>There's already a KoTH arena in the area you're standing in.
+        created: <t:regular>Created the KoTH arena. <t:regular>Now stand where the capture point should be and run <hover:show_text:"<t:regular>Sets the arena''s capture point at your position."><click:run_command:"/<v:cmd_setflag>"><t:cmd>/<v:cmd_setflag></t></click></hover>, then set both team spawns (<t:cmd><v:cmd_setspawn_attacker><t:regular> / <t:cmd><v:cmd_setspawn_defender><t:regular>). It can't be used in a war until it's complete.
+        not-in-area: <t:error>You need to stand in a sub area to run this command.
+        removed: <t:regular>Removed the KoTH arena. <t:regular>The capture point and the sub area were left untouched.
 help:
   command:
     wars:
-      menu: <hover:show_text:"<t:regular>点击执行."><click:run_command:"/<v:fullcmd>"><t:cmd><v:parent>
-        <v:subcmd> <v:args> </t><t:decoration>- </t><t:regular>打开战争菜单</click></hover>
-      deny: <hover:show_text:"<t:regular>点击执行."><click:run_command:"/<v:fullcmd>"><t:cmd><v:parent>
-        <v:subcmd> </t><t:decoration>- </t><t:regular>拒绝战争宣战请求</click></hover>
-      spawn: <hover:show_text:"<t:regular>点击执行."><click:run_command:"/<v:fullcmd>"><t:cmd><v:parent>
-        <v:subcmd> </t><t:decoration>- </t><t:regular>传送到政敌处</click></hover>
-      declare: <hover:show_text:"<t:regular>点击复制."><click:suggest_command:"/<v:fullcmd>"><t:cmd><v:parent>
-        <v:subcmd> <v:args> - </t><t:regular>发起战争的宣战请求</click></hover>
-      list: <hover:show_text:"<t:regular>点击执行."><click:run_command:"/<v:fullcmd>"><t:cmd><v:parent>
-        <v:subcmd> - </t><t:regular>查看进行中的战争</click></hover>
+      menu: <hover:show_text:"<t:regular>点击执行."><click:run_command:"/<v:fullcmd>"><t:cmd><v:parent> <v:subcmd> <v:args> </t><t:decoration>- </t><t:regular>打开战争菜单</click></hover>
+      deny: <hover:show_text:"<t:regular>点击执行."><click:run_command:"/<v:fullcmd>"><t:cmd><v:parent> <v:subcmd> </t><t:decoration>- </t><t:regular>拒绝互相宣战书</click></hover>
+      spawn: <hover:show_text:"<t:regular>点击执行."><click:run_command:"/<v:fullcmd>"><t:cmd><v:parent> <v:subcmd> </t><t:decoration>- </t><t:regular>传送到政敌处</click></hover>
+      declare: <hover:show_text:"<t:regular>点击复制."><click:suggest_command:"/<v:fullcmd>"><t:cmd><v:parent> <v:subcmd> <v:args> - </t><t:regular>发起战争的宣战请求</click></hover>
+      list: <hover:show_text:"<t:regular>点击执行."><click:run_command:"/<v:fullcmd>"><t:cmd><v:parent> <v:subcmd> - </t><t:regular>查看进行中的战争</click></hover>
       info:
-        main: <hover:show_text:"<t:regular>点击执行."><click:run_command:"/<v:fullcmd>"><t:cmd><v:parent>
-          <v:subcmd> <v:args> </t><t:decoration>- </t><t:regular>查看战争信息</click></hover>
-        captureflag: <hover:show_text:"<t:regular>点击执行."><click:run_command:"/<v:fullcmd>"><t:cmd><v:parent>
-          <v:subcmd> </t><t:decoration>- </t><t:regular>查看战旗配方</click></hover>
+        main: <hover:show_text:"<t:regular>点击执行."><click:run_command:"/<v:fullcmd>"><t:cmd><v:parent> <v:subcmd> <v:args> </t><t:decoration>- </t><t:regular>查看战争信息</click></hover>
+        captureflag: <hover:show_text:"<t:regular>点击执行."><click:run_command:"/<v:fullcmd>"><t:cmd><v:parent> <v:subcmd> </t><t:decoration>- </t><t:regular>查看战旗配方</click></hover>
       admin:
-        main: <hover:show_text:"<t:regular>点击复制."><click:suggest_command:"/<v:fullcmd>"><t:cmd><v:parent>
-          <v:subcmd> <v:args> </t><t:decoration>- </t><t:regular>战争管理</click></hover>
-        start: <hover:show_text:"<t:regular>点击复制."><click:suggest_command:"/<v:fullcmd>"><t:cmd><v:parent>
-          <v:subcmd> <v:args> </t><t:decoration>- </t><t:regular>开始战争</click></hover>
-        end: <hover:show_text:"<t:regular>点击复制."><click:suggest_command:"/<v:fullcmd>"><t:cmd><v:parent>
-          <v:subcmd> <v:args> </t><t:decoration>- </t><t:regular>结束战争</click></hover>
+        main: <hover:show_text:"<t:regular>点击复制."><click:suggest_command:"/<v:fullcmd>"><t:cmd><v:parent> <v:subcmd> <v:args> </t><t:decoration>- </t><t:regular>战争管理</click></hover>
+        start: <hover:show_text:"<t:regular>点击复制."><click:suggest_command:"/<v:fullcmd>"><t:cmd><v:parent> <v:subcmd> <v:args> </t><t:decoration>- </t><t:regular>开始战争</click></hover>
+        end: <hover:show_text:"<t:regular>点击复制."><click:suggest_command:"/<v:fullcmd>"><t:cmd><v:parent> <v:subcmd> <v:args> </t><t:decoration>- </t><t:regular>结束战争</click></hover>
     lands:
       land:
         war:
-          main: <hover:show_text:"<t:regular>向政敌宣战或管理正在进行的战争. 点击复制."><click:suggest_command:"/<v:fullcmd>"><t:cmd><v:parent>
-            <v:subcmd> <v:args> </t><t:decoration>- </t><t:regular>管理战争</click></hover>
-          menu: <hover:show_text:"<t:regular>点击复制."><click:suggest_command:"/<v:fullcmd>"><t:cmd><v:parent>
-            <v:subcmd> <v:args> </t><t:decoration>- </t><t:regular>战争菜单</click></hover>
-          declare: <hover:show_text:"<t:regular>点击复制战争命令."><click:suggest_command:"/<v:fullcmd>"><t:cmd><v:parent>
-            <v:subcmd> <v:args> </t><t:decoration>- </t><t:regular>宣战</click></hover>
-          info:
-            main: <hover:show_text:"<t:regular>点击执行."><click:run_command:"/<v:fullcmd>"><t:cmd><v:parent>
-              <v:subcmd> <v:args> </t><t:decoration>- </t><t:regular>查看战争信息</click></hover>
-            captureflag: <hover:show_text:"<t:regular>点击执行."><click:run_command:"/<v:fullcmd>"><t:cmd><v:parent>
-              <v:subcmd> </t><t:decoration>- </t><t:regular>查看战旗配方</click></hover>
-          spawn: <hover:show_text:"<t:regular>点击复制."><click:suggest_command:"/<v:fullcmd>"><t:cmd><v:parent>
-            <v:subcmd> </t><t:decoration>- </t><t:regular>传送到战争出生点</click></hover>
-          decline: <hover:show_text:"<t:regular>拒绝对方的宣战请求. 点击执行."><click:run_command:"/<v:fullcmd>"><t:cmd><v:parent>
-            <v:subcmd> </t><t:decoration>- </t><t:regular>拒绝战争请求</click></hover>
+          info: {}
       admin:
         land:
-          war:
-            main: <hover:show_text:"<t:regular>点击复制."><click:suggest_command:"/<v:fullcmd>"><t:cmd><v:parent>
-              <v:subcmd> <v:args> </t><t:decoration>- </t><t:regular>特殊战争管理</click></hover>
-            start: <hover:show_text:"<t:regular>点击复制."><click:suggest_command:"/<v:fullcmd>"><t:cmd><v:parent>
-              <v:subcmd> <v:args> </t><t:decoration>- </t><t:regular>开始战争</click></hover>
-            end: <hover:show_text:"<t:regular>点击复制."><click:suggest_command:"/<v:fullcmd>"><t:cmd><v:parent>
-              <v:subcmd> <v:args> </t><t:decoration>- </t><t:regular>结束战争</click></hover>
+          war: {}
           shield:
-            main: <hover:show_text:"<t:regular>点击复制."><click:suggest_command:"/<v:fullcmd>"><t:cmd><v:parent>
-              <v:subcmd> </t><t:decoration>- </t><t:regular>修改战争护盾时长</click></hover>
-            modify: <hover:show_text:"<t:regular>点击复制."><click:suggest_command:"/<v:fullcmd>"><t:cmd><v:parent>
-              <v:subcmd> <v:args> </t><t:decoration>- </t><t:regular>增加 (+) 或减少 (-)
-              护盾时长</click></hover>
-            set: <hover:show_text:"<t:regular>点击复制."><click:suggest_command:"/<v:fullcmd>"><t:cmd><v:parent>
-              <v:subcmd> <v:args> </t><t:decoration>- </t><t:regular>设置时长</click></hover>
+            main: <hover:show_text:"<t:regular>点击复制."><click:suggest_command:"/<v:fullcmd>"><t:cmd><v:parent> <v:subcmd> </t><t:decoration>- </t><t:regular>修改战争护盾时长</click></hover>
+            modify: <hover:show_text:"<t:regular>点击复制."><click:suggest_command:"/<v:fullcmd>"><t:cmd><v:parent> <v:subcmd> <v:args> </t><t:decoration>- </t><t:regular>增加 (+) 或减少 (-) 护盾时长</click></hover>
+            set: <hover:show_text:"<t:regular>点击复制."><click:suggest_command:"/<v:fullcmd>"><t:cmd><v:parent> <v:subcmd> <v:args> </t><t:decoration>- </t><t:regular>设置时长</click></hover>
         player:
           give:
-            captureflag: <hover:show_text:"<t:regular>点击复制."><click:suggest_command:"/<v:fullcmd>"><t:cmd><v:parent>
-              <v:subcmd> <v:args> </t><t:decoration>- </t><t:regular>给予战旗</click></hover>
+            captureflag: <hover:show_text:"<t:regular>点击复制."><click:suggest_command:"/<v:fullcmd>"><t:cmd><v:parent> <v:subcmd> <v:args> </t><t:decoration>- </t><t:regular>给予战旗</click></hover>
+        war:
+          koth:
+            create: <hover:show_text:"<t:regular>Click to execute."><click:run_command:"/<v:fullcmd>"><t:cmd><v:parent> <v:subcmd> </t><t:decoration>- </t><t:regular>Create KoTH arena</click></hover>
+            setspawn: <hover:show_text:"<t:regular>Click to copy."><click:suggest_command:"/<v:fullcmd>"><t:cmd><v:parent> <v:subcmd> <v:args> </t><t:decoration>- </t><t:regular>Set a team's arena spawn</click></hover>
+            setflag: <hover:show_text:"<t:regular>Click to execute."><click:run_command:"/<v:fullcmd>"><t:cmd><v:parent> <v:subcmd> </t><t:decoration>- </t><t:regular>Set the arena's capture point</click></hover>
+            main: <hover:show_text:"<t:regular>Click to copy."><click:suggest_command:"/<v:fullcmd>"><t:cmd><v:parent> <v:subcmd> <v:args> </t><t:decoration>- </t><t:regular>Manage KoTH arenas</click></hover>
+            list: <hover:show_text:"<t:regular>Click to execute."><click:run_command:"/<v:fullcmd>"><t:cmd><v:parent> <v:subcmd> </t><t:decoration>- </t><t:regular>List KoTH arenas</click></hover>
+            remove: <hover:show_text:"<t:regular>Click to execute."><click:run_command:"/<v:fullcmd>"><t:cmd><v:parent> <v:subcmd> </t><t:decoration>- </t><t:regular>Remove KoTH arena</click></hover>
+          end: <hover:show_text:"<t:regular>Click to copy."><click:suggest_command:"/<v:fullcmd>"><t:cmd><v:parent> <v:subcmd> <v:args> </t><t:decoration>- </t><t:regular>End a war</click></hover>
+          main: <hover:show_text:"<t:regular>Click to copy."><click:suggest_command:"/<v:fullcmd>"><t:cmd><v:parent> <v:subcmd> <v:args> </t><t:decoration>- </t><t:regular>War administration</click></hover>
+      war:
+        main: <hover:show_text:"<t:regular>Declare war on an enemy or manage an ongoing war. Click to copy."><click:suggest_command:"/<v:fullcmd>"><t:cmd><v:parent> <v:subcmd> <v:args> </t><t:decoration>- </t><t:regular>Manage war</click></hover>
+        koth:
+          set: <hover:show_text:"<t:regular>Stand where you want your KotH point, then execute."><click:run_command:"/<v:fullcmd>"><t:cmd><v:parent> <v:subcmd> </t><t:decoration>- </t><t:regular>Set your KotH point</click></hover>
+          main: <hover:show_text:"<t:regular>Click to copy."><click:suggest_command:"/<v:fullcmd>"><t:cmd><v:parent> <v:subcmd> <v:args> </t><t:decoration>- </t><t:regular>Player-land KotH point</click></hover>
+        menu: <hover:show_text:"<t:regular>Click to copy."><click:suggest_command:"/<v:fullcmd>"><t:cmd><v:parent> <v:subcmd> <v:args> </t><t:decoration>- </t><t:regular>War menu</click></hover>
+        decline: <hover:show_text:"<t:regular>Decline a mutual war declaration. Click to execute."><click:run_command:"/<v:fullcmd>"><t:cmd><v:parent> <v:subcmd> </t><t:decoration>- </t><t:regular>Decline war</click></hover>
+        info:
+          main: <hover:show_text:"<t:regular>Click to execute."><click:run_command:"/<v:fullcmd>"><t:cmd><v:parent> <v:subcmd> <v:args> </t><t:decoration>- </t><t:regular>View war information</click></hover>
+          captureflag: <hover:show_text:"<t:regular>Click to execute."><click:run_command:"/<v:fullcmd>"><t:cmd><v:parent> <v:subcmd> </t><t:decoration>- </t><t:regular>View captureflag recipe</click></hover>
+        spawn: <hover:show_text:"<t:regular>Click to copy."><click:suggest_command:"/<v:fullcmd>"><t:cmd><v:parent> <v:subcmd> </t><t:decoration>- </t><t:regular>Teleport to war spawn</click></hover>
+        declare: <hover:show_text:"<t:regular>Click to copy."><click:suggest_command:"/<v:fullcmd>"><t:cmd><v:parent> <v:subcmd> <v:args> </t><t:decoration>- </t><t:regular>Declare war</click></hover>
 
 lands:
   command:
     land:
       bank:
-        withdraw:
-          war: <t:error>你现在不能这样做. <t:regular><v:object> <t:regular>正在与 <v:enemy><t:regular>
-            进行战争. <t:regular>请在战争结束后重试.
-      claim:
-        war: <t:error>你不能在与<t:error_value> <v:object> </t>的战争中占领区块.
-      delete:
-        war: <t:error>你无法删除城镇<t:error_value> <v:object></t>, 因为它正处于与<t:error_value>
-          <v:enemy> </t>的战争中.
+        withdraw: {}
+      claim: {}
+      delete: {}
       member:
         add:
-          inviter:
-            war: <t:error>你现在无法添加玩家. <t:regular><v:object> <t:regular>正在与 <v:enemy>
-              <t:regular>交战. <t:regular>请在战争结束后重试.
-          target:
-            war: <t:error>你现在无法加入城镇<t:error_value> <v:object></t>. <t:regular>该城镇正在与
-              <v:enemy> <t:regular>交战. <t:regular>请在战争结束后重试.
+          inviter: {}
+          target: {}
       war:
-        no-war: <t:error><t:error_value> <v:object> </t>没有即将开始或正在进行的战争. <t:regular>目前一切和平.
         declare:
-          confirm: |
-            <t:regular>请确认你<t:decoration> (</t><t:regular><v:attacker><t:decoration>) </t><t:regular>要向 <v:defender> <t:regular>宣战:
-              <hover:show_text:"<t:regular>点击此处确认此次战争操作."><click:run_command:"/<v:fullcmd>"><t:positive>✔ 确认: <t:cmd>/<v:fullcmd> </t><t:click>[点击]</t></click></hover>
-          admin: <t:error>你不能向服务器公共城镇宣战.
-          peaceful: <t:error>此城镇已被服务器管理员标记为和平状态. <t:regular>无法参与任何战争.
-          no-nation: <t:error>你不能攻击城镇<t:error_value> <v:land></t>. <t:regular>该城镇必须属于联邦才能参与战争.
-          member: <t:error>你不能向<t:error_value> <v:object> </t>宣战. <t:regular>你或政敌首领是共同城镇和/或联邦中的受信任成员,
-            因此无法发起战争.
-          enemies: |
-            <t:error>你必须先将<t:error_value> <v:object> </t>设为政敌, 才能发起战争.
-              <hover:show_text:"<t:regular>点击此处将 <v:object> <t:regular>设为政敌, 以便向其宣战."><click:run_command:"/<v:cmd>"><t:regular>✖ 设为政敌: <t:cmd>/<v:cmd> </t><t:click>[点击]</t></click></hover>
-          war-shield: <t:error>你目前不能向<t:error_value> <v:object> </t>宣战. <t:regular>对方在接下来<t:time>
-            <v:time> </t>内拥有战争护盾.
-          days: '<t:error>你只能在以下日期宣战并发起战争:<t:error_value> <v:days></t> <t:decoration>(</t><t:regular>当前日期:<t:time>
-            <v:current></t>, 时区: <t:time><v:timezone></t><t:decoration>)</t>'
-          hours: '<t:error>你只能在以下时段宣战并发起战争:<t:error_value> <v:hours></t> <t:decoration>(</t><t:regular>当前时间:<t:time>
-            <v:current></t>, 时区: <t:time><v:timezone></t><t:decoration>)</t>'
           success:
-            mutual:
-              accepted: <t:regular>你<t:decoration> (<v:object></t><t:decoration>)
-                </t><t:regular>已接受针对政敌 <v:enemy> <t:regular>的宣战. 战争将在<t:time> <v:time>
-                </t>后开始.
-        decline:
-          ongoing: <t:error>你不能拒绝正在进行的针对政敌<t:error_value> <v:enemy> </t>的战争. <t:regular>你只能拒绝针对
-            <v:object> <t:regular>的宣战书.
-        spawn:
-          none: <t:error>政敌<t:error_value> <v:enemy> </t>没有可供传送到的占领区块.
-          success: <t:regular>你已传送到政敌 <v:enemy><t:regular> 的边境附近.
+            mutual: {}
+        decline: {}
+        spawn: {}
       area:
         member:
           add:
-            inviter:
-              war: <t:error>你现在不能添加玩家. <t:regular><v:object> <t:regular>与政敌 <v:enemy>
-                <t:regular>的战争正在进行. <t:regular>请在战争结束后重试.
-            target:
-              war: <t:error>你现在不能加入城镇<t:error_value> <v:object></t>. <t:regular>该城镇与政敌
-                <v:enemy> <t:regular>的战争正在进行. <t:regular>请在战争结束后重试.
-      spawn:
-        war: <t:error>你目前不能传送到城镇<t:error_value> <v:land> </t>的传送点. <t:regular>该城镇目前处于战争中,
-          这场战争将在<t:time> <v:time> </t>后结束.
+            inviter: {}
+            target: {}
+      spawn: {}
       unclaim:
-        all:
-          war: <t:error>你现在不能这样做. <t:regular><v:object> <t:regular>正在与 <v:enemy><t:regular>
-            进行战争. <t:regular>请在战争结束后重试.
-        war: <t:error>你现在不能这样做. <t:regular><v:object> <t:regular>正在与 <v:enemy><t:regular>
-          进行战争. <t:regular>请在战争结束后重试.
+        all: {}
+    war:
+      declare:
+        days: "<t:error>You can only declare war at the following days:<t:error_value> <v:days></t> <t:decoration>(</t><t:regular>current day:<t:time> <v:current></t>, time zone: <t:time><v:timezone></t><t:decoration>)</t>"
+        enemies: |
+          <t:error>You must add<t:error_value> <v:object></t> as an enemy first.
+            <hover:show_text:"<t:regular>Click here to add <v:object> <t:regular>as an enemy in order to declare war on them."><click:run_command:"/<v:cmd>"><t:regular>✖ Add as Enemy: <t:cmd>/<v:cmd> </t><java><t:click>[CLICK]</t></java></click></hover>
+        confirm: |
+          <t:regular>Please confirm that you <t:decoration>(</t><t:regular><v:attacker><t:decoration>) </t><t:regular>want to declare war against <v:defender><t:regular>:
+            <hover:show_text:"<t:regular>Click here to confirm this action."><click:run_command:"/<v:fullcmd>"><t:positive>✔ Confirm: <t:cmd>/<v:fullcmd> </t><java><t:click>[CLICK]</t></java></click></hover>
+        hours: "<t:error>You can only declare war during the following hours:<t:error_value> <v:hours></t> <t:decoration>(</t><t:regular>current time:<t:time> <v:current></t>, time zone: <t:time><v:timezone></t><t:decoration>)</t>"
+        vassal: <t:error>Your land<t:error_value> <v:land></t> is a vassal and can't declare war. <t:regular>It can only wage an independence war against its overlord.
+        no-nation: <t:error>You can't attack land<t:error_value> <v:land></t>. <t:regular>They must be part of a nation to be engaged in a war.
+        member: <t:error>You can't declare war against<t:error_value> <v:object></t>. <t:regular>You or the enemy leader are trusted in common lands and / or a nation.
+        peaceful: <t:error>This land has been marked as peaceful by a server admin. <t:regular>It can't engage in any wars.
+        shield:
+          confirm: |
+            <t:regular>Declaring war against <v:defender> <t:regular>will remove your active war shield <t:decoration>(</t><t:time><v:shield></t> <t:regular>left</t><t:decoration>)</t><t:regular> and leave you attackable.
+              <hover:show_text:"<t:regular>Click here to declare war and drop your shield."><click:run_command:"/<v:fullcmd>"><t:positive>✔ Confirm: <t:cmd>/<v:fullcmd> </t><java><t:click>[CLICK]</t></java></click></hover>
+        admin: <t:error>You can't declare war against admin lands.
+        success:
+          mutual:
+            accepted: <t:regular>You <t:decoration>(<v:object></t><t:decoration>) </t><t:regular>accepted the war against <v:enemy><t:regular>. The war will start in<t:time> <v:time></t>.
+        war-shield: <t:error>You currently can't declare war against<t:error_value> <v:object></t>. <t:regular>They have a war shield for the next<t:time> <v:time></t>.
+      independence:
+        cooldown: <t:error>Your land<t:error_value> <v:land></t> can't declare independence yet. <t:regular>Try again in<t:time> <v:time></t>.
+        disabled: <t:error>Independence wars are disabled on this server.
+        not-vassal: <t:error>Your land<t:error_value> <v:land></t> isn't a vassal, so it has no overlord to break free from.
+        success: <t:regular>Your land<t:entity_land> <v:land></t> declared independence from nation<t:entity_nation> <v:nation></t>. The war will start in<t:time> <v:time></t>.
+        confirm: |
+          <t:regular>Please confirm that you want to declare independence from nation<t:entity_nation> <v:nation></t> with land<t:entity_land> <v:land></t>. The land leaves the nation and a war against it starts:
+            <hover:show_text:"<t:regular>Click here to confirm this action."><click:run_command:"/<v:fullcmd>"><t:positive>✔ Confirm: <t:cmd>/<v:fullcmd> </t><java><t:click>[CLICK]</t></java></click></hover>
+      spawn:
+        success: <t:regular>You were teleported near the border of enemy <v:enemy><t:regular>.
+        arena-success: <t:regular>You were teleported to your team's arena spawn.
+        none: <t:error>The enemy<t:error_value> <v:enemy></t> has no claims to teleport to.
+      no-war: <t:error>There aren't any upcoming or active wars for<t:error_value> <v:object></t>. <t:regular>Everything is peaceful.
+      decline:
+        ongoing: <t:error>You can't deny the ongoing war against<t:error_value> <v:enemy></t>. <t:regular>You can only deny war declarations for <v:object><t:regular>.
+    delete:
+      war: <t:error>You can't delete land<t:error_value> <v:object></t>, because it's at war with<t:error_value> <v:enemy></t>.
+    spawn:
+      war: <t:error>You currently can't teleport to the spawn of land<t:error_value> <v:land></t>. <t:regular>They're currently engaged in a war, that will end in<t:time> <v:time></t>.
+    claim:
+      war: <t:error>You can't claim while being engaged in a war against<t:error_value> <v:object></t>.
+    unclaim:
+      war: <t:error>You can't do this right now. <t:regular><v:object> <t:regular>is currently engaged in a war against <v:enemy><t:regular>. <t:regular>Please try again after the war is over.
+      all:
+        war: <t:error>You can't do this right now. <t:regular><v:object> <t:regular>is currently engaged in a war against <v:enemy><t:regular>. <t:regular>Please try again after the war is over.
+    area:
+      member:
+        trust:
+          target:
+            war: <t:error>You can't join land<t:error_value> <v:object></t> right now. <t:regular>It is engaged in a war against <v:enemy><t:regular>. <t:regular>Try again when the war is over.
+          inviter:
+            war: <t:error>You can't add players right now. <t:regular><v:object><t:regular> is currently engaged in a war against <v:enemy><t:regular>. <t:regular>Please try again after the war is over.
+    member:
+      trust:
+        target:
+          war: <t:error>You can't join land<t:error_value> <v:object></t> right now. <t:regular>It is engaged in a war against <v:enemy><t:regular>. <t:regular>Try again when the war is over.
+        inviter:
+          war: <t:error>You can't add players right now. <t:regular><v:object><t:regular> is currently engaged in a war against <v:enemy><t:regular>. <t:regular>Please try again after the war is over.
+    bank:
+      withdraw:
+        war: <t:error>You can't do this right now. <t:regular><v:object> <t:regular>is currently engaged in a war against <v:enemy><t:regular>. <t:regular>Please try again after the war is over.
   message:
     blacklist:
       war: <t:error>你不能在参与战争时使用这个命令.
     capture:
       dropped: <t:error>一些战旗掉在了地上. <t:regular>你的背包没有剩余空间.
-      success: <t:regular>你获得了<t:regular_value> <v:blocks> </t>面战旗. <t:regular>在战争期间,
-        将它们放置在政敌的占领区块中, 开始占领一个子区域.
-    war: <t:error>你现在不能这样做. <t:regular><v:object> <t:regular>正在与 <v:enemy><t:regular>
-      进行战争. <t:regular>请在战争结束后重试.
+      success: <t:regular>你获得了<t:regular_value> <v:blocks> </t>面战旗. <t:regular>在战争期间, 将它们放置在政敌领土中, 开始占领一个子区域.
+    war: <t:error>你现在不能这样做. <t:regular><v:object> <t:regular>正在与 <v:enemy><t:regular> 进行战争. <t:regular>请在战争结束后重试.
 nations:
   command:
     nation:
       war:
-        no-war: <t:error><t:error_value> <v:object> </t>没有即将开始或正在进行的战争. <t:regular>目前一切和平.
         declare:
-          confirm: |
-            <t:regular>请确认你<t:decoration> (</t><t:regular><v:attacker><t:decoration>) </t><t:regular>要向 <v:defender> <t:regular>宣战:
-              <hover:show_text:"<t:regular>点击此处确认此次战争操作."><click:run_command:"/<v:fullcmd>"><t:positive>✔ 确认: <t:cmd>/<v:fullcmd> </t><t:click>[点击]</t></click></hover>
-          admin: <t:error>你不能向服务器公共城镇宣战.
-          peaceful: <t:error>此城镇已被服务器管理员标记为和平状态. <t:regular>无法参与任何战争.
-          no-nation: <t:error>你不能攻击城镇<t:error_value> <v:land></t>. <t:regular>该城镇必须属于联邦才能参与战争.
-          member: <t:error>无法向<t:error_value> <v:object> </t>宣战 (发动战争). <t:regular>你或政敌的首领在共同的城镇和/或联邦中是受信任的成员.
-          enemies: |
-            <t:error>你必须先将<t:error_value> <v:object> </t>添加为政敌.
-              <hover:show_text:"<t:regular>点击此处将 <v:object> <t:regular>添加为政敌, 以便向其发动战争 (宣战)."><click:run_command:"/<v:cmd>"><t:regular>✖ 添加为政敌: <t:cmd>/<v:cmd> </t><t:click>[点击]</t></click></hover>
-          war-shield: <t:error>当前无法向<t:error_value> <v:object> </t>宣战. <t:regular>对方在接下来的<t:time>
-            <v:time> </t>内拥有战争护盾.
-          days: <t:error>只能在以下日期宣战 (发动战争):<t:error_value> <v:days></t> <t:decoration>(</t><t:regular>当前日期:<t:time>
-            <v:current></t>, 时区:<t:time> <v:timezone></t><t:decoration>)</t>
-          hours: <t:error>只能在以下时间宣战 (发动战争):<t:error_value> <v:hours></t> <t:decoration>(</t><t:regular>当前时间:<t:time>
-            <v:current></t>, 时区:<t:time> <v:timezone></t><t:decoration>)</t>
           success:
-            mutual:
-              accepted: <t:regular>你 <t:decoration>(<v:object></t><t:decoration>)
-                </t><t:regular>同意与 <v:enemy> <t:regular>开战. 战争将在<t:time> <v:time>
-                </t>后开始.
-        decline:
-          ongoing: <t:error>无法拒绝与<t:error_value> <v:enemy> </t>正在进行的战争. <t:regular>你只能拒绝针对
-            <v:object> <t:regular>的宣战书.
-        spawn:
-          none: <t:error>政敌<t:error_value> <v:enemy> </t>没有可供传送的领土.
-          success: <t:regular>你已传送到政敌 <v:enemy><t:regular> 的边境附近.
+            mutual: {}
+        decline: {}
+        spawn: {}
+    war:
+      declare:
+        no-nation: <t:error>You can't attack land<t:error_value> <v:land></t>. <t:regular>They must be part of a nation to be engaged in a war.
+        peaceful: <t:error>This land has been marked as peaceful by a server admin. <t:regular>It can't engage in any wars.
+        shield:
+          confirm: |
+            <t:regular>Declaring war against <v:defender> <t:regular>will remove your active war shield <t:decoration>(</t><t:time><v:shield></t> <t:regular>left</t><t:decoration>)</t><t:regular> and leave you attackable.
+              <hover:show_text:"<t:regular>Click here to declare war and drop your shield."><click:run_command:"/<v:fullcmd>"><t:positive>✔ Confirm: <t:cmd>/<v:fullcmd> </t><java><t:click>[CLICK]</t></java></click></hover>
+        war-shield: <t:error>You currently can't declare war against<t:error_value> <v:object></t>. <t:regular>They have a war shield for the next<t:time> <v:time></t>.
+        hours: "<t:error>You can only declare war during the following hours:<t:error_value> <v:hours></t> <t:decoration>(</t><t:regular>current time:<t:time> <v:current></t>, time zone: <t:time><v:timezone></t><t:decoration>)</t>"
+        success:
+          mutual:
+            accepted: <t:regular>You <t:decoration>(<v:object></t><t:decoration>) </t><t:regular>accepted the war against <v:enemy><t:regular>. The war will start in<t:time> <v:time></t>.
+        member: <t:error>You can't declare war against<t:error_value> <v:object></t>. <t:regular>You or the enemy leader are trusted in common lands and / or a nation.
+        days: "<t:error>You can only declare war at the following days:<t:error_value> <v:days></t> <t:decoration>(</t><t:regular>current day:<t:time> <v:current></t>, time zone: <t:time><v:timezone></t><t:decoration>)</t>"
+        admin: <t:error>You can't declare war against admin lands.
+        confirm: |
+          <t:regular>Please confirm that you <t:decoration>(</t><t:regular><v:attacker><t:decoration>) </t><t:regular>want to declare war against <v:defender><t:regular>:
+            <hover:show_text:"<t:regular>Click here to confirm this action."><click:run_command:"/<v:fullcmd>"><t:positive>✔ Confirm: <t:cmd>/<v:fullcmd> </t><java><t:click>[CLICK]</t></java></click></hover>
+        vassal: <t:error>Your land<t:error_value> <v:land></t> is a vassal and can't declare war. <t:regular>It can only wage an independence war against its overlord.
+        enemies: |
+          <t:error>You must add<t:error_value> <v:object></t> as an enemy first.
+            <hover:show_text:"<t:regular>Click here to add <v:object> <t:regular>as an enemy in order to declare war on them."><click:run_command:"/<v:cmd>"><t:regular>✖ Add as Enemy: <t:cmd>/<v:cmd> </t><java><t:click>[CLICK]</t></java></click></hover>
+      spawn:
+        arena-success: <t:regular>You were teleported to your team's arena spawn.
+        none: <t:error>The enemy<t:error_value> <v:enemy></t> has no claims to teleport to.
+        success: <t:regular>You were teleported near the border of enemy <v:enemy><t:regular>.
+      decline:
+        ongoing: <t:error>You can't deny the ongoing war against<t:error_value> <v:enemy></t>. <t:regular>You can only deny war declarations for <v:object><t:regular>.
+      no-war: <t:error>There aren't any upcoming or active wars for<t:error_value> <v:object></t>. <t:regular>Everything is peaceful.

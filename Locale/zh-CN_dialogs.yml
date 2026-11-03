@@ -28,10 +28,10 @@ dialogs:
     buttons:
       add:
         label: <t:positive>添加
-        tooltip: 将此玩家永久添加为成员.
+        tooltip: 让此玩家永久加入.
       add-temporary:
         label: <t:regular_value>临时加入
-        tooltip: 将此玩家添加为限时成员.
+        tooltip: 让此玩家限时加入.
       discard:
         label: <t:negative>放弃
         tooltip: 点击放弃.
@@ -60,7 +60,7 @@ dialogs:
     buttons:
       add:
         label: <t:positive>添加
-        tooltip: 将此玩家添加为成员, 有效期为选定时长.
+        tooltip: 让此玩家加入, 有效期为选定时长.
       back:
         label: <t:regular>返回
         tooltip: 返回.
@@ -73,8 +73,7 @@ dialogs:
         label: 标签
     bodies:
       info:
-        text: 创建此城镇需要花费<t:cost> <v:cost></t>. 如果空间足够, 将为你的新城镇占领<t:regular_value> <v:chunks></t>
-          个区块.
+        text: 创建此城镇需要花费<t:cost> <v:cost></t>. 如果空间足够, 将为你的新城镇占领<t:regular_value> <v:chunks></t> 个区块.
       tag:
         text: 标签是你城镇名称的简写.
         item:
@@ -87,3 +86,72 @@ dialogs:
       discard:
         label: <t:negative>放弃
         tooltip: 点击放弃创建城镇.
+  confirm:
+    buttons:
+      discard:
+        tooltip: Click to cancel.
+        label: <t:negative>Cancel
+      confirm:
+        label: <t:positive>Confirm
+        tooltip: Click here to confirm.
+    bodies:
+      info:
+        text: <v:message>
+    title: Confirm
+value:
+  confirm:
+    admin:
+      database:
+        restore:
+          confirm: <t:negative>Erase all current Lands data and replace it with the selected backup?</t> <t:regular>Anything saved since that backup was taken is lost. The server restarts right after the restore. If your restart script isn't set up, start it again yourself.
+      land:
+        addrole:
+          confirm: <t:negative>Add this role?</t> <t:regular>Lands that already have it, for example new lands that got it from roles.yml, then have it twice. Running this again for the same role adds it again.
+      limits:
+        migrate:
+          confirm: "<t:negative>Migrate the old limit permissions to the limit packs?</t> <t:regular>Configure all limit packs in <v:file> first: the difference between a numbered permission and its pack is calculated from them. Take a backup of your database to be able to revert it."
+    claim:
+      merge:
+        confirm: <t:regular>Merge the land <t:entity_land><v:merge></t> into <t:entity_land><v:land></t> for <t:cost><v:cost></t>?
+    delete:
+      confirm: <t:regular>Delete the land <t:entity_land><v:land></t>? This can't be undone.
+    general:
+      input:
+        confirm: <t:regular>Run <t:cmd>/<v:input></t>?
+    leave:
+      confirm: <t:regular>Leave the land <t:entity_land><v:land></t>? The <t:regular_value><v:chunks></t> chunks you claimed may be unclaimed.
+    member:
+      setowner:
+        confirm: <t:regular>Make <t:regular_value><v:player></t> the new owner of the land <t:entity_land><v:land></t>?
+    nation:
+      leave:
+        confirm: <t:regular>Leave the nation <t:entity_nation><v:nation></t> with the land <t:entity_land><v:land></t>?
+    nations:
+      delete:
+        confirm: <t:regular>Delete the nation <t:entity_nation><v:nation></t>? This can't be undone.
+      member:
+        setcapital:
+          confirm: <t:regular>Make the land <t:entity_land><v:land></t> the new capital of the nation <t:entity_nation><v:nation></t>?
+      war:
+        declare:
+          confirm: <t:regular>Declare war against <v:defender><t:regular> as <v:attacker><t:regular>?
+          shield:
+            confirm: <t:regular>Declare war against <v:defender><t:regular>? This removes your war shield <t:decoration>(</t><t:time><v:shield></t> left<t:decoration>)</t> and leaves you attackable.
+    rental:
+      buy:
+        confirm: <t:regular>Buy the land <t:entity_land><v:land></t> for <t:cost><v:price></t>? Its members are untrusted once you bought it.
+        confirm-area: <t:regular>Buy the area <t:regular_value><v:area></t> of <t:entity_land><v:land></t> for <t:cost><v:price></t>?
+        confirm-land: <t:regular>Buy the land <t:entity_land><v:land></t> for <t:cost><v:price></t>?
+      remove:
+        tenant:
+          confirm: <t:regular>Pay <t:cost><v:cost></t> as compensation to remove the tenant <t:regular_value><v:player></t>?
+    unclaim:
+      all:
+        confirm: <t:regular>Unclaim all claims of the land <t:entity_land><v:land></t>?
+    war:
+      declare:
+        confirm: <t:regular>Declare war against <v:defender><t:regular> as <v:attacker><t:regular>?
+        shield:
+          confirm: <t:regular>Declare war against <v:defender><t:regular>? This removes your war shield <t:decoration>(</t><t:time><v:shield></t> left<t:decoration>)</t> and leaves you attackable.
+      independence:
+        confirm: <t:regular>Declare independence from the nation <t:entity_nation><v:nation></t>? The land <t:entity_land><v:land></t> leaves it and a war against it starts.

@@ -7,7 +7,7 @@
 
 general:
   affiliation:
-    nation: <t:decoration>[</t><t:entity_nation><v:nation> </t>|<t:entity_land> <v:land></t>]
+    nation: <t:decoration>[</t><t:entity_nation><v:nation> </t><t:decoration>|</t><t:entity_land> <v:land></t><t:decoration>]</t>
   command:
     argument:
       type:
@@ -18,12 +18,9 @@ general:
       upkeep:
         alert:
           nation:
-            normal: <t:error>你需要在<t:error_value> <v:1></t> 内支付<t:error_value> <v:0></t>
-              维护费, 但<t:error_value> <v:2></t> 资金不足.
-            delete: <t:error>你需要在<t:error_value> <v:1></t> 内支付<t:error_value> <v:0></t>
-              维护费, 但<t:error_value> <v:2></t> 资金不足. <t:regular>这会导致联邦被删除. 请存入资金以避免这种情况.
-        nation: <t:error>联邦<t:error_value> <v:0></t> 因首都余额不足, 未能支付<t:error_value>
-          <v:1></t> 维护费, 已被删除.
+            normal: <t:error>你需要在<t:error_value> <v:1></t> 内支付<t:error_value> <v:0></t> 维护费, 但<t:error_value> <v:2></t> 资金不足.
+            delete: <t:error>你需要在<t:error_value> <v:1></t> 内支付<t:error_value> <v:0></t> 维护费, 但<t:error_value> <v:2></t> 资金不足. <t:regular>这会导致联邦被删除. 请存入资金以避免这种情况.
+        nation: <t:error>联邦<t:error_value> <v:0></t> 因首都余额不足, 未能支付<t:error_value> <v:1></t> 维护费, 已被删除.
     nation:
       general:
         created: <t:regular>联邦<t:entity_nation> <v:0></t> 已创建.
@@ -41,54 +38,38 @@ general:
   integration:
     bluemap:
       capital:
-        spawn: '<div class="\&quot;infowindow\&quot;"><span style="font-size: 200%;"><span
-          style="color: <v:land_color>;">首都传送点</span><br /></span>此传送点属于联邦 <v:nation>
-          的首都.</div><div class="\&quot;infowindow\&quot;"><br />对非成员开放: <v:public></div><ul><li>如果此传送点对非成员开放,
-          任何人都可执行 /<v:cmd> 传送到这里.</li></ul>'
+        spawn: '<div class="\&quot;infowindow\&quot;"><span style="font-size: 200%;"><span style="color: <v:land_color>;">首都传送点</span><br /></span>此传送点属于联邦 <v:nation> 的首都.</div><div class="\&quot;infowindow\&quot;"><br />对未加入或被移出联邦的玩家开放: <v:public></div><ul><li>如果此传送点对未加入或被移出联邦的玩家开放, 任何人都可执行 /<v:cmd> 传送到这里.</li></ul>'
       nation:
         description: |
           <div><span style="font-size: 200%;"><span style="color: <v:land_color>;"><v:land></span><br /></span><v:title></div><ul><li>等级: <v:level></li><li>余额: <v:balance></li><li>区块: <v:chunks></li><li>创建时间: <v:created_at></li><li>成员 (<v:members_amount>): <v:members></li></ul><p><strong>这个城镇属于联邦 <v:nation>:</strong></p><ul><li>等级: <v:level_nation></li><li>首都: <v:capital></li><li>成立时间: <v:nation_created_at></li><li>城镇 (数量: <v:lands_amount>, 成员: <v:members_amount_nation>): <v:lands></li></ul>
     dynmap:
       capital:
-        spawn: '<div class="\&quot;infowindow\&quot;"><span style="font-size: 200%;"><span
-          style="color: <v:land_color>;">首都传送点</span><br /></span>此传送点属于联邦 <v:nation>
-          的首都.</div><div class="\&quot;infowindow\&quot;"><br />对非成员开放: <v:public></div><ul><li>如果此传送点对非成员开放,
-          任何人都可执行 /<v:cmd> 传送到这里.</li></ul>'
+        spawn: '<div class="\&quot;infowindow\&quot;"><span style="font-size: 200%;"><span style="color: <v:land_color>;">首都传送点</span><br /></span>此传送点属于联邦 <v:nation> 的首都.</div><div class="\&quot;infowindow\&quot;"><br />对未加入或被移出联邦的玩家开放: <v:public></div><ul><li>如果此传送点对未加入或被移出联邦的玩家开放, 任何人都可执行 /<v:cmd> 传送到这里.</li></ul>'
       nation:
         description: |
           <div><span style="font-size: 200%;"><span style="color: <v:land_color>;"><v:land></span><br /></span><v:title></div><ul><li>等级: <v:level></li><li>余额: <v:balance></li><li>区块: <v:chunks></li><li>创建时间: <v:created_at></li><li>成员 (<v:members_amount>): <v:members></li></ul><p><strong>这个城镇属于联邦 <v:nation>:</strong></p><ul><li>等级: <v:level_nation></li><li>首都: <v:capital></li><li>成立时间: <v:nation_created_at></li><li>城镇 (数量: <v:lands_amount>, 成员: <v:members_amount_nation>): <v:lands></li></ul>
     pl3xmap:
       capital:
-        spawn: '<div class="\&quot;infowindow\&quot;"><span style="font-size: 200%;"><span
-          style="color: <v:land_color>;">首都传送点</span><br /></span>此传送点属于联邦 <v:nation>
-          的首都.</div><div class="\&quot;infowindow\&quot;"><br />对未加入或被移出联邦的玩家开放: <v:public></div><ul><li>如果此传送点对未加入或被移出联邦的玩家开放,
-          任何人都可执行 /<v:cmd> 传送到这里.</li></ul>'
+        spawn: '<div class="\&quot;infowindow\&quot;"><span style="font-size: 200%;"><span style="color: <v:land_color>;">首都传送点</span><br /></span>此传送点属于联邦 <v:nation> 的首都.</div><div class="\&quot;infowindow\&quot;"><br />对未加入或被移出联邦的玩家开放: <v:public></div><ul><li>如果此传送点对未加入或被移出联邦的玩家开放, 任何人都可执行 /<v:cmd> 传送到这里.</li></ul>'
       nation:
         description: |
           <div><span style="font-size: 200%;"><span style="color: <v:land_color>;"><v:land></span><br /></span><v:title></div><ul><li>等级: <v:level></li><li>余额: <v:balance></li><li>区块: <v:chunks></li><li>创建时间: <v:created_at></li><li>成员 (<v:members_amount>): <v:members></li></ul><p><strong>这个城镇属于联邦 <v:nation>:</strong></p><ul><li>等级: <v:level_nation></li><li>首都: <v:capital></li><li>成立时间: <v:nation_created_at></li><li>城镇 (数量: <v:lands_amount>, 成员: <v:members_amount_nation>): <v:lands></li></ul>
     squaremap:
       capital:
-        spawn: '<div class="\&quot;infowindow\&quot;"><span style="font-size: 200%;"><span
-          style="color: <v:land_color>;">首都传送点</span><br /></span>此传送点属于联邦 <v:nation>
-          的首都.</div><div class="\&quot;infowindow\&quot;"><br />对未加入或被移出联邦的玩家开放: <v:public></div><ul><li>如果此传送点对未加入或被移出联邦的玩家开放,
-          任何人都可执行 /<v:cmd> 传送到这里.</li></ul>'
+        spawn: '<div class="\&quot;infowindow\&quot;"><span style="font-size: 200%;"><span style="color: <v:land_color>;">首都传送点</span><br /></span>此传送点属于联邦 <v:nation> 的首都.</div><div class="\&quot;infowindow\&quot;"><br />对未加入或被移出联邦的玩家开放: <v:public></div><ul><li>如果此传送点对未加入或被移出联邦的玩家开放, 任何人都可执行 /<v:cmd> 传送到这里.</li></ul>'
       nation:
         description: |
           <div><span style="font-size: 200%;"><span style="color: <v:land_color>;"><v:land></span><br /></span><v:title></div><ul><li>等级: <v:level></li><li>余额: <v:balance></li><li>区块: <v:chunks></li><li>创建时间: <v:created_at></li><li>成员 (<v:members_amount>): <v:members></li></ul><p><strong>这个城镇属于联邦 <v:nation>:</strong></p><ul><li>等级: <v:level_nation></li><li>首都: <v:capital></li><li>成立时间: <v:nation_created_at></li><li>城镇 (数量: <v:lands_amount>, 成员: <v:members_amount_nation>): <v:lands></li></ul>
   top:
     hologram:
       nation:
-        title: '<t:regular><st>━━━━━━━━━━━━━━‹━<!st> <t:prefix>联邦排行榜前 10 名 </t><t:decoration>(</t><t:regular>总数:
-          <t:regular_value><v:total></t><t:decoration>) </t><t:regular><st>━›━━━━━━━━━━━━━━'
-        entry: <t:regular_heading>#<v:pos> <t:prefix><v:object> </t><t:regular_value><v:sorting>:</t><t:regular_value>
-          <v:value></t>
-        footer: '<t:regular><st>━━━━━━━━━━━━━━‹━<!st> <t:prefix>联邦排行榜前 10 名 </t><t:decoration>(</t><t:regular>总数:
-          <t:regular_value><v:total></t><t:decoration>) </t><t:regular><st>━›━━━━━━━━━━━━━━'
+        title: '<t:decoration>━━━━━━━━━━━━━━‹━ <t:prefix>Top 10 Nations </t><t:decoration>(</t><t:regular>Total: <t:regular_value><v:total></t><t:decoration>) </t><t:decoration>━›━━━━━━━━━━━━━━'
+        entry: <t:regular_heading>#<v:pos> <t:prefix><v:object> </t><t:regular_value><v:sorting>:</t><t:regular_value> <v:value></t>
+        footer: '<t:decoration>━━━━━━━━━━━━━━‹━ <t:prefix>Top 10 Nations </t><t:decoration>(</t><t:regular>Total: <t:regular_value><v:total></t><t:decoration>) </t><t:decoration>━›━━━━━━━━━━━━━━'
 
 nations:
   message:
-    current-war: <t:error>你现在不能这么做. <t:regular>你的联邦<t:entity_nation> <v:nation></t>
-      目前正处于战争状态. <t:regular>请在战争结束后重试.
+    current-war: <t:error>你现在不能这么做. <t:regular>你的联邦<t:entity_nation> <v:nation></t> 目前正处于战争状态. <t:regular>请在战争结束后重试.
     untrusted: <t:error>你不是联邦<t:error_value> <v:nation></t> 的成员.
   command:
     general:
@@ -96,165 +77,146 @@ nations:
         <t:error>你的城镇<t:error_value> <v:land></t> 不属于任何联邦.
 
           <t:regular>任何联邦都可以邀请你的城镇: <t:cmd>/<v:cmd_trust>
-          </t><hover:show_text:"<t:regular>点击复制."><click:suggest_command:"/<v:cmd>"><t:regular>创建自己的联邦: <t:cmd>/<v:cmd> </t><t:click>[点击]</t></click></hover>
+          </t><hover:show_text:"<t:regular>点击复制."><click:suggest_command:"/<v:cmd>"><t:regular>创建自己的联邦: <t:cmd>/<v:cmd> </t><java><t:click>[点击]</t></java></click></hover>
     create:
       camp: |
         <t:error>你不能以露营地 <t:decoration>(</t><t:error_value><v:land></t>) <t:error>作为首都建立联邦.
-          <hover:show_text:"<t:regular>创建城镇. 点击复制."><click:suggest_command:"/<v:cmd_create>"><t:regular>✖ 创建城镇: <t:cmd>/<v:cmd_create> </t><t:click>[点击]</t></click></hover>
-      already: <t:error>你的城镇<t:error_value> <v:land></t> 已经属于联邦<t:error_value> <v:nation></t>.
-        <t:regular>你的城镇需要先退出该联邦, 执行 <t:cmd>/<v:cmd></t><t:regular>.
-      war: <t:error>你不能在以城镇<t:error_value> <v:land></t> 为首都时建立联邦, 因其仍处于与<t:error_value>
-        <v:object></t> 的战争中. <t:regular>请在战争结束后重试.
-      level: '<t:error>你目前不能建立联邦. <t:regular>你的城镇<t:entity_land> <v:land></t> 至少需要达到<t:regular_value>
-        <v:level> </t>级 <t:decoration>(</t><t:regular>当前: <t:regular_value><v:current></t><t:decoration>)</t><t:regular>.'
-      success: <t:regular>已成功创建联邦<t:entity_nation> <v:nation></t>, 并将城镇<t:entity_land>
-        <v:land></t> 设为首都. <hover:show_text:"<t:regular>打开菜单."><click:run_command:"/<v:cmd>"><t:regular>点击此处打开菜单.</click></hover>
+          <hover:show_text:"<t:regular>创建城镇. 点击复制."><click:suggest_command:"/<v:cmd_create>"><t:regular>✖ 创建城镇: <t:cmd>/<v:cmd_create> </t><java><t:click>[点击]</t></java></click></hover>
+      already: <t:error>你的城镇<t:error_value> <v:land></t> 已经属于联邦<t:error_value> <v:nation></t>. <t:regular>你的城镇需要先退出该联邦, 执行 <t:cmd>/<v:cmd></t><t:regular>.
+      war: <t:error>你不能在以城镇<t:error_value> <v:land></t> 为首都时建立联邦, 因其仍处于与<t:error_value> <v:object></t> 的战争中. <t:regular>请在战争结束后重试.
+      level: '<t:error>你目前不能建立联邦. <t:regular>你的城镇<t:entity_land> <v:land></t> 至少需要达到<t:regular_value> <v:level> </t>级 <t:decoration>(</t><t:regular>当前: <t:regular_value><v:current></t><t:decoration>)</t><t:regular>.'
+      success: <t:regular>已成功创建联邦<t:entity_nation> <v:nation></t>, 并将城镇<t:entity_land> <v:land></t> 设为首都. <hover:show_text:"<t:regular>打开菜单."><click:run_command:"/<v:cmd>"><t:regular>点击此处打开菜单.</click></hover>
     nation:
       chat:
-        activated: <t:regular>成功启用了联邦聊天频道. 在公开聊天中发送消息即可在联邦聊天频道发言.
-        deactivated: <t:regular>成功禁用了联邦聊天频道.
-        none: |
-          <t:error>未找到所属联邦, 无法使用联邦聊天频道.
-            <hover:show_text:"<t:regular>点击此处关闭聊天模式."><click:run_command:"/<v:cmd>"><t:regular>✖ <t:regular>关闭聊天模式: <t:cmd>/<v:cmd> </t><t:click>[点击]</t></click></hover>
-        format:
-          minecraft: <noprefix><t:entity_nation>联邦 <v:nation></t> <t:decoration>|
-            </t><t:regular_value><v:player_display></t> »<t:user_content> <v:message></t>
-          discord: <noprefix><t:entity_nation>联邦 <v:nation></t> <t:decoration>| </t><t:entity_nation>Discord
-            </t><t:regular_value><v:player_display></t> <t:decoration>»</t><t:user_content>
-            <v:message></t>
-          spy: <noprefix><t:decoration>[</t><t:negative>聊天监听<t:decoration>] </t><t:entity_nation>联邦
-            <v:nation> </t>| <t:regular_value><v:player_display> </t>»<t:user_content>
-            <v:message></t>
-      delete:
-        confirm: |
-          <t:regular>请点击下方确认解散联邦<t:entity_nation> <v:nation></t>:
-            <hover:show_text:"<t:regular>点击此处确认此操作."><click:run_command:"/<v:fullcmd>"><t:success>✔ 确认: <t:cmd>/<v:fullcmd> </t><t:click>[点击]</t></click></hover>
-        war: <t:error>当前无法解散你的联邦. <t:regular>联邦<t:entity_nation> <v:nation> </t>正在与
-          <v:object><t:regular> 交战. 请在战争结束后重试.
-        success: <t:regular>已成功解散此联邦<t:decoration> (</t><t:regular>联邦:<t:entity_nation>
-          <v:nation></t><t:decoration>)</t><t:regular>.
-      rename:
-        success: <t:regular>已成功将此联邦重命名为<t:regular_value> <v:name></t><t:decoration>
-          (</t><t:regular>联邦:<t:entity_nation> <v:nation></t><t:decoration>)</t><t:regular>.
-          已支付<t:cost> <v:cost></t>.
+        format: {}
+      delete: {}
+      rename: {}
       member:
-        add:
-          camp: <t:error>露营地不能成为联邦成员. <t:regular>城镇<t:entity_land> <v:land></t> 是一个露营地.
-          max-distance: <t:error>城镇<t:error_value> <v:land></t> 距离联邦<t:error_value>
-            <v:nation></t> 的首都太远. <t:regular>最大距离:<t:limit> <v:max> 个方块</t>, 实际距离:<t:regular_value>
-            <v:distance> 个方块</t>
-          already: <t:error>城镇<t:error_value> <v:land></t> 已经属于联邦<t:error_value> <v:nation></t>.
-            <t:regular>需要先执行 <t:cmd>/<v:cmd></t><t:regular>, 让该城镇退出联邦.
-          added: <t:regular>已成功将你的城镇<t:entity_land> <v:land></t> 添加为你的联邦<t:entity_nation>
-            <v:nation> </t>的成员.
-          success: <t:regular>你已成功邀请城镇<t:entity_land> <v:land></t> 加入你的联邦<t:entity_nation>
-            <v:nation></t>.
-          target: |
-            <t:regular>联邦<t:entity_nation> <v:nation></t> 邀请你的城镇<t:entity_land> <v:land></t> 加入该联邦.
-              <hover:show_text:"<t:regular>点击此处接受邀请."><click:run_command:"/<v:cmd_accept>"><t:success>✔ 接受: <t:cmd>/<v:cmd_accept> </t><t:click>[点击]</t></click></hover>
-              <hover:show_text:"<t:regular>点击此处拒绝邀请."><click:run_command:"/<v:cmd_deny>"><t:negative>✘ 拒绝: <t:cmd>/<v:cmd_deny> </t><t:click>[点击]</t></click></hover>
-        remove:
-          capital: <t:error>无法将这个城镇移出联邦. <t:regular>城镇<t:entity_land> <v:land></t>
-            是联邦<t:entity_nation> <v:nation></t> 的首都.
-          already: <t:error>城镇<t:error_value> <v:land></t> 不是联邦<t:error_value> <v:nation></t>
-            的成员.
-          success: <t:regular>已成功将城镇<t:entity_land> <v:land></t> 移出联邦<t:entity_nation>
-            <v:nation></t>.
-          noaccess: '<t:error>你无权对联邦<t:error_value> <v:nation> </t>执行此操作. <t:decoration>标志:
-            </t><t:regular_value><v:flag></t>'
-        setcapital:
-          confirm: |
-            <t:regular>请确认是否要将城镇<t:entity_land> <v:land></t> 设为联邦<t:entity_nation> <v:nation></t> 的新首都:
-              <hover:show_text:"<t:regular>点击此处确认操作."><click:run_command:"/<v:fullcmd>"><t:success>✔ 确认: <t:cmd>/<v:fullcmd> </t><t:click>[点击]</t></click></hover>
-          level: '<t:error>无法将城镇<t:error_value> <v:land></t> 设为联邦<t:error_value> <v:nation></t>
-            的新首都. <t:regular>城镇等级至少需要达到<t:regular_value> <v:level></t> <t:decoration>(</t><t:regular>当前:
-            <t:regular_value><v:current></t><t:decoration>)</t><t:regular>.'
-          success: <t:regular>已成功将城镇<t:entity_land> <v:land></t> 设为联邦<t:entity_nation>
-            <v:nation></t> 的新首都.
-          not-trusted: <t:error>城镇<t:error_value> <v:land></t> 不属于你的联邦<t:error_value>
-            <v:nation></t>.
+        add: {}
+        remove: {}
+        setcapital: {}
+    chat:
+      format:
+        discord: <noprefix><t:entity_nation>Nation <v:nation></t> <t:decoration>| </t><t:entity_nation>Discord </t><t:regular_value><v:player_display></t> <t:decoration>»</t><t:user_content> <v:message></t>
+        minecraft: <noprefix><t:entity_nation>Nation <v:nation></t> <t:decoration>| </t><t:regular_value><v:player_display></t> »<t:user_content> <v:message></t>
+        spy: <noprefix><t:decoration>[</t><t:negative>ChatSpy<t:decoration>] </t><t:entity_nation>Nation <v:nation> </t>| <t:regular_value><v:player_display> </t>»<t:user_content> <v:message></t>
+      none: |
+        <t:error>No nation found for nation chat.
+          <hover:show_text:"<t:regular>Click here to deactivate the chat mode."><click:run_command:"/<v:cmd>"><t:regular>✖ <t:regular>Disable chat mode: <t:cmd>/<v:cmd> </t><java><t:click>[CLICK]</t></java></click></hover>
+      deactivated: <t:regular>Successfully deactivated nation chat.
+      activated: <t:regular>Activated nation chat. Send a message in public chat to chat with your nation.
+    member:
+      untrust:
+        already: <t:error>Land<t:error_value> <v:land></t> isn't a member of nation<t:error_value> <v:nation></t>.
+        noaccess: "<t:error>You're not allowed to do this for nation<t:error_value> <v:nation></t>. <t:decoration>Flag: </t><t:regular_value><v:flag></t>"
+        success: <t:regular>You successfully removed land<t:entity_land> <v:land></t> from nation<t:entity_nation> <v:nation></t>.
+        capital: <t:error>You can't remove this land. <t:regular>Land<t:entity_land> <v:land></t> is the capital of nation<t:entity_nation> <v:nation></t>.
+      setcapital:
+        level: "<t:error>You can't set the land<t:error_value> <v:land></t> as the new capital of nation<t:error_value> <v:nation></t>. <t:regular>It needs to be at least level<t:regular_value> <v:level></t> <t:decoration>(</t><t:regular>current: <t:regular_value><v:current></t><t:decoration>)</t><t:regular>."
+        success: <t:regular>Successfully set the land<t:entity_land> <v:land></t> as the new capital of nation<t:entity_nation> <v:nation></t>.
+        not-trusted: <t:error>The land<t:error_value> <v:land></t> isn't a member of your nation<t:error_value> <v:nation></t>.
+        confirm: |
+          <t:regular>Please confirm that you want to set land<t:entity_land> <v:land></t> as the new capital of nation<t:entity_nation> <v:nation></t>:
+            <hover:show_text:"<t:regular>Click here to confirm this action."><click:run_command:"/<v:fullcmd>"><t:success>✔ Confirm: <t:cmd>/<v:fullcmd> </t><java><t:click>[CLICK]</t></java></click></hover>
+        vassal: <t:error>The land<t:error_value> <v:land></t> is a vassal of nation<t:error_value> <v:nation></t> <t:error>and can't be made its capital.
+      trust:
+        target: |
+          <t:regular>Nation<t:entity_nation> <v:nation></t> invited your land<t:entity_land> <v:land></t> to join them.
+            <hover:show_text:"<t:regular>Click here to accept this invite."><click:run_command:"/<v:cmd_accept>"><t:success>✔ Accept: <t:cmd>/<v:cmd_accept> </t><java><t:click>[CLICK]</t></java></click></hover>
+            <hover:show_text:"<t:regular>Click here to deny this invite."><click:run_command:"/<v:cmd_deny>"><t:negative>✘ Deny: <t:cmd>/<v:cmd_deny> </t><java><t:click>[CLICK]</t></java></click></hover>
+        already: <t:error>The land<t:error_value> <v:land></t> is already part of the nation<t:error_value> <v:nation></t>. <t:regular>They need to leave it first by using <t:cmd>/<v:cmd></t><t:regular>.
+        success: <t:regular>You successfully invited land<t:entity_land> <v:land></t> to join your nation<t:entity_nation> <v:nation></t>.
+        max-distance: <t:error>The land<t:error_value> <v:land></t> is too far away from the capital of nation<t:error_value> <v:nation></t>. <t:regular>Max:<t:limit> <v:max> block(s)</t>, actual distance:<t:regular_value> <v:distance> block(s)</t>
+        camp: <t:error>Camps can't be part of nations. <t:regular>The land<t:entity_land> <v:land></t> is a camp.
+        added: <t:regular>You successfully added your land<t:entity_land> <v:land></t> as a member of your nation<t:entity_nation> <v:nation></t>.
+    rename:
+      success: <t:regular>Successfully set the new name<t:regular_value> <v:name></t> for this nation <t:decoration>(</t><t:regular>Nation:<t:entity_nation> <v:nation></t><t:decoration>)</t><t:regular>. You paid<t:cost> <v:cost></t>.
+    delete:
+      success: <t:regular>Successfully deleted this nation <t:decoration>(</t><t:regular>Nation:<t:entity_nation> <v:nation></t><t:decoration>)</t><t:regular>.
+      confirm: |
+        <t:regular>Please confirm the deletion of nation<t:entity_nation> <v:nation></t> by clicking below:
+          <hover:show_text:"<t:regular>Click here to confirm this action."><click:run_command:"/<v:fullcmd>"><t:success>✔ Confirm: <t:cmd>/<v:fullcmd> </t><java><t:click>[CLICK]</t></java></click></hover>
+      war: <t:error>You currently can't delete your nation. <t:regular>Nation<t:entity_nation> <v:nation></t> is currently engaged in a war against <v:object><t:regular>. Please try again when the war is over.
 
 help:
   command:
     nations:
-      create: <hover:show_text:"<t:regular>点击复制."><click:suggest_command:"/<v:fullcmd>"><t:cmd><v:parent>
-        <v:subcmd> <v:args> </t><t:decoration>- </t><t:regular>创建联邦</click></hover>
-      list: <hover:show_text:"<t:regular>点击执行."><click:run_command:"/<v:fullcmd>"><t:cmd><v:parent>
-        <v:subcmd> <v:args> </t><t:decoration>- </t><t:regular>列出所有联邦</click></hover>
+      create: <hover:show_text:"<t:regular>点击复制."><click:suggest_command:"/<v:fullcmd>"><t:cmd><v:parent> <v:subcmd> <v:args> </t><t:decoration>- </t><t:regular>创建联邦</click></hover>
+      list: <hover:show_text:"<t:regular>点击执行."><click:run_command:"/<v:fullcmd>"><t:cmd><v:parent> <v:subcmd> <v:args> </t><t:decoration>- </t><t:regular>列出所有联邦</click></hover>
       nation:
-        main: <hover:show_text:"<t:regular>点击复制."><click:suggest_command:"/<v:fullcmd>"><t:cmd><v:parent>
-          <v:subcmd> <v:args> </t><t:decoration>- </t><t:regular>管理联邦</click></hover>
-        menu: <hover:show_text:"<t:regular>点击执行."><click:run_command:"/<v:fullcmd>"><t:cmd><v:parent>
-          <v:subcmd> <v:args> </t><t:decoration>- </t><t:regular>打开菜单</click></hover>
-        chat: <hover:show_text:"<t:regular>点击复制."><click:suggest_command:"/<v:fullcmd>"><t:cmd><v:parent>
-          <v:subcmd> <v:args> </t><t:decoration>- </t><t:regular>联邦聊天频道</click></hover>
-        info: <hover:show_text:"<t:regular>点击执行."><click:run_command:"/<v:fullcmd>"><t:cmd><v:parent>
-          <v:subcmd> <v:args> </t><t:decoration>- </t><t:regular>查看信息</click></hover>
-        delete: <hover:show_text:"<t:regular>点击复制."><click:suggest_command:"/<v:fullcmd>"><t:cmd><v:parent>
-          <v:subcmd> </t><t:decoration>- </t><t:regular>删除联邦</click></hover>
-        rename: <hover:show_text:"<t:regular>点击复制."><click:suggest_command:"/<v:fullcmd>"><t:cmd><v:parent>
-          <v:subcmd> </t><t:decoration>- </t><t:regular>重命名联邦</click></hover>
-        spawn: <hover:show_text:"<t:regular>点击复制."><click:suggest_command:"/<v:fullcmd>"><t:cmd><v:parent>
-          <v:subcmd> </t><t:decoration>- </t><t:regular>首都传送点</click></hover>
-        member:
-          main: <hover:show_text:"<t:regular>点击复制."><click:suggest_command:"/<v:fullcmd>"><t:cmd><v:parent>
-            <v:subcmd> <v:args> </t><t:decoration>- </t><t:regular>管理成员</click></hover>
-          menu: <hover:show_text:"<t:regular>点击复制."><click:suggest_command:"/<v:fullcmd>"><t:cmd><v:parent>
-            <v:subcmd> <v:args> </t><t:decoration>- </t><t:regular>查看已加入的城镇</click></hover>
-          setcapital: <hover:show_text:"<t:regular>点击复制."><click:suggest_command:"/<v:fullcmd>"><t:cmd><v:parent>
-            <v:subcmd> <v:args> </t><t:decoration>- </t><t:regular>设置首都</click></hover>
-          add: <hover:show_text:"<t:regular>点击复制."><click:suggest_command:"/<v:fullcmd>"><t:cmd><v:parent>
-            <v:subcmd> <v:args> </t><t:decoration>- </t><t:regular>邀请城镇</click></hover>
-          remove: <hover:show_text:"<t:regular>点击复制."><click:suggest_command:"/<v:fullcmd>"><t:cmd><v:parent>
-            <v:subcmd> <v:args> </t><t:decoration>- </t><t:regular>移除城镇</click></hover>
+        member: {}
         relation:
-          main: <hover:show_text:"<t:regular>将城镇和联邦设为盟友或政敌. 点击复制."><click:suggest_command:"/<v:fullcmd>"><t:cmd><v:parent>
-            <v:subcmd> <v:args> </t><t:decoration>- </t><t:regular>管理外交关系</click></hover>
-          ally:
-            main: <hover:show_text:"<t:regular>将城镇和联邦设为盟友. 点击复制."><click:suggest_command:"/<v:fullcmd>"><t:cmd><v:parent>
-              <v:subcmd> <v:args> </t><t:decoration>- </t><t:regular>管理盟友</click></hover>
-            add: <hover:show_text:"<t:regular>将城镇或联邦设为盟友. 点击复制."><click:suggest_command:"/<v:fullcmd>"><t:cmd><v:parent>
-              <v:subcmd> <v:args> </t><t:decoration>- </t><t:regular>添加盟友</click></hover>
-            remove: <hover:show_text:"<t:regular>结束与盟友的外交关系. 点击复制."><click:suggest_command:"/<v:fullcmd>"><t:cmd><v:parent>
-              <v:subcmd> <v:args> </t><t:decoration>- </t><t:regular>移除盟友</click></hover>
-          enemy:
-            main: <hover:show_text:"<t:regular>将城镇和联邦设为政敌. 点击复制."><click:suggest_command:"/<v:fullcmd>"><t:cmd><v:parent>
-              <v:subcmd> <v:args> </t><t:decoration>- </t><t:regular>管理政敌</click></hover>
-            add: <hover:show_text:"<t:regular>向城镇或联邦宣战, 并将其设为政敌. 点击复制."><click:suggest_command:"/<v:fullcmd>"><t:cmd><v:parent>
-              <v:subcmd> <v:args> </t><t:decoration>- </t><t:regular>添加政敌</click></hover>
-            remove: <hover:show_text:"<t:regular>向政敌发送解除敌对关系的请求. 点击复制."><click:suggest_command:"/<v:fullcmd>"><t:cmd><v:parent>
-              <v:subcmd> <v:args> </t><t:decoration>- </t><t:regular>移除政敌</click></hover>
+          ally: {}
+          enemy: {}
         war:
-          main: <hover:show_text:"<t:regular>向政敌宣战或管理正在进行的战争. 点击复制."><click:suggest_command:"/<v:fullcmd>"><t:cmd><v:parent>
-            <v:subcmd> <v:args> </t><t:decoration>- </t><t:regular>管理战争</click></hover>
-          menu: <hover:show_text:"<t:regular>点击复制."><click:suggest_command:"/<v:fullcmd>"><t:cmd><v:parent>
-            <v:subcmd> <v:args> </t><t:decoration>- </t><t:regular>战争菜单</click></hover>
-          declare: <hover:show_text:"<t:regular>点击复制战争命令."><click:suggest_command:"/<v:fullcmd>"><t:cmd><v:parent>
-            <v:subcmd> <v:args> </t><t:decoration>- </t><t:regular>宣战</click></hover>
-          info:
-            main: <hover:show_text:"<t:regular>点击执行."><click:run_command:"/<v:fullcmd>"><t:cmd><v:parent>
-              <v:subcmd> <v:args> </t><t:decoration>- </t><t:regular>查看战争信息</click></hover>
-            captureflag: <hover:show_text:"<t:regular>点击执行."><click:run_command:"/<v:fullcmd>"><t:cmd><v:parent>
-              <v:subcmd> </t><t:decoration>- </t><t:regular>查看战旗配方</click></hover>
-          spawn: <hover:show_text:"<t:regular>点击复制."><click:suggest_command:"/<v:fullcmd>"><t:cmd><v:parent>
-            <v:subcmd> </t><t:decoration>- </t><t:regular>传送到战争出生点</click></hover>
-          decline: <hover:show_text:"<t:regular>拒绝双方的宣战请求. 点击执行."><click:run_command:"/<v:fullcmd>"><t:cmd><v:parent>
-            <v:subcmd> </t><t:decoration>- </t><t:regular>拒绝战争</click></hover>
+          info: {}
+      war:
+        koth:
+          main: <hover:show_text:"<t:regular>Click to copy."><click:suggest_command:"/<v:fullcmd>"><t:cmd><v:parent> <v:subcmd> <v:args> </t><t:decoration>- </t><t:regular>Player-land KotH point</click></hover>
+          set: <hover:show_text:"<t:regular>Stand where you want your KotH point, then execute."><click:run_command:"/<v:fullcmd>"><t:cmd><v:parent> <v:subcmd> </t><t:decoration>- </t><t:regular>Set your KotH point</click></hover>
+        declare: <hover:show_text:"<t:regular>Click to copy."><click:suggest_command:"/<v:fullcmd>"><t:cmd><v:parent> <v:subcmd> <v:args> </t><t:decoration>- </t><t:regular>Declare war</click></hover>
+        info:
+          captureflag: <hover:show_text:"<t:regular>Click to execute."><click:run_command:"/<v:fullcmd>"><t:cmd><v:parent> <v:subcmd> </t><t:decoration>- </t><t:regular>View captureflag recipe</click></hover>
+          main: <hover:show_text:"<t:regular>Click to execute."><click:run_command:"/<v:fullcmd>"><t:cmd><v:parent> <v:subcmd> <v:args> </t><t:decoration>- </t><t:regular>View war information</click></hover>
+        main: <hover:show_text:"<t:regular>Declare war on an enemy or manage an ongoing war. Click to copy."><click:suggest_command:"/<v:fullcmd>"><t:cmd><v:parent> <v:subcmd> <v:args> </t><t:decoration>- </t><t:regular>Manage war</click></hover>
+        spawn: <hover:show_text:"<t:regular>Click to copy."><click:suggest_command:"/<v:fullcmd>"><t:cmd><v:parent> <v:subcmd> </t><t:decoration>- </t><t:regular>Teleport to war spawn</click></hover>
+        decline: <hover:show_text:"<t:regular>Decline a mutual war declaration. Click to execute."><click:run_command:"/<v:fullcmd>"><t:cmd><v:parent> <v:subcmd> </t><t:decoration>- </t><t:regular>Decline war</click></hover>
+        menu: <hover:show_text:"<t:regular>Click to copy."><click:suggest_command:"/<v:fullcmd>"><t:cmd><v:parent> <v:subcmd> <v:args> </t><t:decoration>- </t><t:regular>War menu</click></hover>
+      member:
+        trust: <hover:show_text:"<t:regular>Click to copy."><click:suggest_command:"/<v:fullcmd>"><t:cmd><v:parent> <v:subcmd> <v:args> </t><t:decoration>- </t><t:regular>Invite land</click></hover>
+        main: <hover:show_text:"<t:regular>Click to copy."><click:suggest_command:"/<v:fullcmd>"><t:cmd><v:parent> <v:subcmd> <v:args> </t><t:decoration>- </t><t:regular>Manage members</click></hover>
+        menu: <hover:show_text:"<t:regular>Click to copy."><click:suggest_command:"/<v:fullcmd>"><t:cmd><v:parent> <v:subcmd> <v:args> </t><t:decoration>- </t><t:regular>Show trusted lands</click></hover>
+        setcapital: <hover:show_text:"<t:regular>Click to copy."><click:suggest_command:"/<v:fullcmd>"><t:cmd><v:parent> <v:subcmd> <v:args> </t><t:decoration>- </t><t:regular>Set capital</click></hover>
+        untrust: <hover:show_text:"<t:regular>Click to copy."><click:suggest_command:"/<v:fullcmd>"><t:cmd><v:parent> <v:subcmd> <v:args> </t><t:decoration>- </t><t:regular>Remove land</click></hover>
+      trust: <hover:show_text:"<t:regular>Click to copy."><click:suggest_command:"/<v:fullcmd>"><t:cmd><v:parent> <v:subcmd> <v:args> </t><t:decoration>- </t><t:regular>Invite land to nation</click></hover>
+      rename: <hover:show_text:"<t:regular>Click to copy."><click:suggest_command:"/<v:fullcmd>"><t:cmd><v:parent> <v:subcmd> </t><t:decoration>- </t><t:regular>Rename nation</click></hover>
+      menu:
+        close: <hover:show_text:"<t:regular>Click to execute."><click:run_command:"/<v:fullcmd>"><t:cmd><v:parent> <v:subcmd> </t><t:decoration>- </t><t:regular>Close your open menu</click></hover>
+        nation:
+          lands: <hover:show_text:"<t:regular>Click to execute."><click:run_command:"/<v:fullcmd>"><t:cmd><v:parent> <v:subcmd> </t><t:decoration>- </t><t:regular>Open nation's lands menu</click></hover>
+          effects: <hover:show_text:"<t:regular>Click to execute."><click:run_command:"/<v:fullcmd>"><t:cmd><v:parent> <v:subcmd> </t><t:decoration>- </t><t:regular>Open effects menu</click></hover>
+          taxes: <hover:show_text:"<t:regular>Click to execute."><click:run_command:"/<v:fullcmd>"><t:cmd><v:parent> <v:subcmd> </t><t:decoration>- </t><t:regular>Open taxes menu</click></hover>
+          level: <hover:show_text:"<t:regular>Click to execute."><click:run_command:"/<v:fullcmd>"><t:cmd><v:parent> <v:subcmd> </t><t:decoration>- </t><t:regular>Open level requirements menu</click></hover>
+          inbox: <hover:show_text:"<t:regular>Click to execute."><click:run_command:"/<v:fullcmd>"><t:cmd><v:parent> <v:subcmd> </t><t:decoration>- </t><t:regular>Open inbox menu</click></hover>
+          relations: <hover:show_text:"<t:regular>Click to execute."><click:run_command:"/<v:fullcmd>"><t:cmd><v:parent> <v:subcmd> </t><t:decoration>- </t><t:regular>Open relations menu</click></hover>
+          main: <hover:show_text:"<t:regular>Click to execute."><click:run_command:"/<v:fullcmd>"><t:cmd><v:parent> <v:subcmd> </t><t:decoration>- </t><t:regular>Open your nation's menu</click></hover>
+          options: <hover:show_text:"<t:regular>Click to execute."><click:run_command:"/<v:fullcmd>"><t:cmd><v:parent> <v:subcmd> </t><t:decoration>- </t><t:regular>Open options menu</click></hover>
+        nations: <hover:show_text:"<t:regular>Click to execute."><click:run_command:"/<v:fullcmd>"><t:cmd><v:parent> <v:subcmd> </t><t:decoration>- </t><t:regular>Open your nations menu</click></hover>
+        main: <hover:show_text:"<t:regular>Click to execute."><click:run_command:"/<v:fullcmd>"><t:cmd><v:parent> <v:subcmd> </t><t:decoration>- </t><t:regular>Menu</click></hover>
+      relation:
+        enemy:
+          add: <hover:show_text:"<t:regular>Declare a land or nation an enemy. Click to copy."><click:suggest_command:"/<v:fullcmd>"><t:cmd><v:parent> <v:subcmd> <v:args> </t><t:decoration>- </t><t:regular>Add enemy</click></hover>
+          main: <hover:show_text:"<t:regular>Add lands and nations as your enemies. Click to copy."><click:suggest_command:"/<v:fullcmd>"><t:cmd><v:parent> <v:subcmd> <v:args> </t><t:decoration>- </t><t:regular>Manage enemies</click></hover>
+          remove: <hover:show_text:"<t:regular>Send neutralization request to an enemy. Click to copy."><click:suggest_command:"/<v:fullcmd>"><t:cmd><v:parent> <v:subcmd> <v:args> </t><t:decoration>- </t><t:regular>Remove enemy</click></hover>
+        ally:
+          add: <hover:show_text:"<t:regular>Add a land or nation as your ally. Click to copy."><click:suggest_command:"/<v:fullcmd>"><t:cmd><v:parent> <v:subcmd> <v:args> </t><t:decoration>- </t><t:regular>Add ally</click></hover>
+          remove: <hover:show_text:"<t:regular>End relation with an ally. Click to copy."><click:suggest_command:"/<v:fullcmd>"><t:cmd><v:parent> <v:subcmd> <v:args> </t><t:decoration>- </t><t:regular>Remove ally</click></hover>
+          main: <hover:show_text:"<t:regular>Add lands and nations as your allies. Click to copy."><click:suggest_command:"/<v:fullcmd>"><t:cmd><v:parent> <v:subcmd> <v:args> </t><t:decoration>- </t><t:regular>Manage allies</click></hover>
+        main: <hover:show_text:"<t:regular>Add lands and nations as your allies or enemies. Click to copy."><click:suggest_command:"/<v:fullcmd>"><t:cmd><v:parent> <v:subcmd> <v:args> </t><t:decoration>- </t><t:regular>Manage relations</click></hover>
+      spawn: <hover:show_text:"<t:regular>Click to copy."><click:suggest_command:"/<v:fullcmd>"><t:cmd><v:parent> <v:subcmd> <v:args> </t><t:decoration>- </t><t:regular>Teleport to nation spawn</click></hover>
+      delete: <hover:show_text:"<t:regular>Click to copy."><click:suggest_command:"/<v:fullcmd>"><t:cmd><v:parent> <v:subcmd> </t><t:decoration>- </t><t:regular>Delete nation</click></hover>
+      chat: <hover:show_text:"<t:regular>Click to copy."><click:suggest_command:"/<v:fullcmd>"><t:cmd><v:parent> <v:subcmd> <v:args> </t><t:decoration>- </t><t:regular>Nation chat</click></hover>
+      untrust: <hover:show_text:"<t:regular>Click to copy."><click:suggest_command:"/<v:fullcmd>"><t:cmd><v:parent> <v:subcmd> <v:args> </t><t:decoration>- </t><t:regular>Remove land from nation</click></hover>
+      info: <hover:show_text:"<t:regular>Click to execute."><click:run_command:"/<v:fullcmd>"><t:cmd><v:parent> <v:subcmd> <v:args> </t><t:decoration>- </t><t:regular>View information</click></hover>
+      admin:
+        main: <hover:show_text:"<t:regular>Click to copy."><click:suggest_command:"/<v:fullcmd>"><t:cmd><v:parent> <v:subcmd> <v:args> </t><t:decoration>- </t><t:regular>Nation administration</click></hover>
+        nation:
+          level: <hover:show_text:"<t:regular>Click to copy."><click:suggest_command:"/<v:fullcmd>"><t:cmd><v:parent> <v:subcmd> <v:args> </t><t:decoration>- </t><t:regular>Set the level of a nation</click></hover>
+          main: <hover:show_text:"<t:regular>Click to copy."><click:suggest_command:"/<v:fullcmd>"><t:cmd><v:parent> <v:subcmd> <v:args> </t><t:decoration>- </t><t:regular>Manage a nation</click></hover>
+          shield:
+            main: <hover:show_text:"<t:regular>Click to copy."><click:suggest_command:"/<v:fullcmd>"><t:cmd><v:parent> <v:subcmd> <v:args> </t><t:decoration>- </t><t:regular>Manage the war shield of a nation</click></hover>
+            modify: <hover:show_text:"<t:regular>Click to copy."><click:suggest_command:"/<v:fullcmd>"><t:cmd><v:parent> <v:subcmd> <v:args> </t><t:decoration>- </t><t:regular>Add (+) or remove (-) war shield time</click></hover>
+            set: <hover:show_text:"<t:regular>Click to copy."><click:suggest_command:"/<v:fullcmd>"><t:cmd><v:parent> <v:subcmd> <v:args> </t><t:decoration>- </t><t:regular>Set the war shield</click></hover>
     lands:
       land:
-        nation:
-          main: <hover:show_text:"<t:regular>管理此城镇与所属联邦的外交关系. 点击复制."><click:suggest_command:"/<v:fullcmd>"><t:cmd><v:parent>
-            <v:subcmd> <v:args> </t><t:decoration>- </t><t:regular>管理外交关系</click></hover>
-          menu: <hover:show_text:"<t:regular>点击复制."><click:suggest_command:"/<v:fullcmd>"><t:cmd><v:parent>
-            <v:subcmd> <v:args> </t><t:decoration>- </t><t:regular>查看联邦</click></hover>
-          leave: <hover:show_text:"<t:regular>点击复制."><click:suggest_command:"/<v:fullcmd>"><t:cmd><v:parent>
-            <v:subcmd> <v:args> </t><t:decoration>- </t><t:regular>退出联邦</click></hover>
-          accept: <hover:show_text:"<t:regular>点击复制."><click:suggest_command:"/<v:fullcmd>"><t:cmd><v:parent>
-            <v:subcmd> <v:args> </t><t:decoration>- </t><t:regular>接受联邦邀请</click></hover>
-          decline: <hover:show_text:"<t:regular>点击复制."><click:suggest_command:"/<v:fullcmd>"><t:cmd><v:parent>
-            <v:subcmd> <v:args> </t><t:decoration>- </t><t:regular>拒绝联邦邀请</click></hover>
-          delete: <hover:show_text:"<t:regular>点击复制."><click:suggest_command:"/<v:fullcmd>"><t:cmd><v:parent>
-            <v:subcmd> </t><t:decoration>- </t><t:regular>删除联邦</click></hover>
+        nation: {}
+      nation:
+        accept: <hover:show_text:"<t:regular>Click to copy."><click:suggest_command:"/<v:fullcmd>"><t:cmd><v:parent> <v:subcmd> <v:args> </t><t:decoration>- </t><t:regular>Accept nation invite</click></hover>
+        main: <hover:show_text:"<t:regular>Manage this land's relation to its nation. Click to copy."><click:suggest_command:"/<v:fullcmd>"><t:cmd><v:parent> <v:subcmd> <v:args> </t><t:decoration>- </t><t:regular>Manage nation</click></hover>
+        decline: <hover:show_text:"<t:regular>Click to copy."><click:suggest_command:"/<v:fullcmd>"><t:cmd><v:parent> <v:subcmd> <v:args> </t><t:decoration>- </t><t:regular>Decline nation invite</click></hover>
+        delete: <hover:show_text:"<t:regular>Click to copy."><click:suggest_command:"/<v:fullcmd>"><t:cmd><v:parent> <v:subcmd> </t><t:decoration>- </t><t:regular>Delete nation</click></hover>
+        menu: <hover:show_text:"<t:regular>Click to copy."><click:suggest_command:"/<v:fullcmd>"><t:cmd><v:parent> <v:subcmd> <v:args> </t><t:decoration>- </t><t:regular>View nation</click></hover>
+        leave: <hover:show_text:"<t:regular>Click to copy."><click:suggest_command:"/<v:fullcmd>"><t:cmd><v:parent> <v:subcmd> <v:args> </t><t:decoration>- </t><t:regular>Leave nation</click></hover>
 
 lands:
   command:
@@ -265,62 +227,64 @@ lands:
       area:
         member:
           setrole:
-            cant-set:
-              nation: <t:error>无法设置<t:error_value> <v:role> </t>职位. <t:regular>此职位会自动分配给与城镇<t:entity_land>
-                <v:land> </t>属于同一联邦的玩家.
+            cant-set: {}
       claim:
-        chunk-distance:
-          nation: <t:error>这里离城镇<t:error_value> <v:land> </t>太近. <t:regular>由于这些城镇属于联邦,
-            最小距离为<t:limit> <v:distance> 个区块</t>.
-        merge:
-          nation: |
-            <t:error>无法将城镇<t:error_value> <v:merge></t> 合并到<t:error_value> <v:land></t>. <t:regular>城镇<t:entity_land> <v:merge></t> 是联邦<t:entity_nation> <v:nation></t> 的首都.
-              <hover:show_text:"<t:regular>点击此处更改联邦的首都, 这样即可合并城镇 <v:merge>. 点击复制."><click:suggest_command:"/<v:cmd> "><t:regular>✖ 更改首都: <t:cmd>/<v:cmd> </t><t:click>[点击]</t></click></hover>
-      delete:
-        nation: '<t:error>无法删除此城镇, 因为它是联邦<t:error_value> <v:nation></t> 的首都. <t:regular>请先解散联邦:
-          <t:cmd>/<v:cmd></t>'
+        chunk-distance: {}
+        merge: {}
+      delete: {}
       member:
         setrole:
-          cant-set:
-            nation: <t:error>无法设置<t:error_value> <v:role></t> 职位. <t:regular>此职位会自动分配给与城镇
-              <t:entity_land><v:land></t> 同属一个联邦的玩家.
+          cant-set: {}
       nation:
-        accept:
-          none: <t:error>你的城镇<t:error_value> <v:land></t> 未收到联邦<t:error_value> <v:nation></t>
-            的邀请. <t:regular>该联邦可以执行 <t:cmd>/<v:cmd></t><t:regular> 来邀请你的城镇.
-          war: <t:error>你现在不能这么做. <t:regular><v:object> <t:regular> 正在与 <v:enemy><t:regular>
-            进行战争. <t:regular>请在战争结束后再试.
-          current-war: <t:error>现在无法加入此联邦. <t:regular>联邦<t:entity_nation> <v:nation></t>
-            正在与 <v:object><t:regular> 交战. 请在战争结束后重试.
-          already: <t:error>你的城镇<t:error_value> <v:land></t> 已经属于联邦<t:error_value>
-            <v:nation></t>. <t:regular>请先执行 <t:cmd>/<v:cmd></t><t:regular> 让该城镇退出联邦.
-          success: <t:regular>你的城镇<t:entity_land> <v:land></t> 现已属于联邦<t:entity_nation>
-            <v:nation></t>.
-        leave:
-          confirm: |
-            <t:regular>请确认是否要让联邦<t:entity_nation> <v:nation></t> 中的城镇<t:entity_land> <v:land></t> 退出该联邦:
-              <hover:show_text:"<t:regular>点击此处确认此操作."><click:run_command:"/<v:fullcmd>"><t:success>✔ 确认: <t:cmd>/<v:fullcmd> </t><t:click>[点击]</t></click></hover>
-          capital: <t:error>你的城镇<t:error_value> <v:land> </t>无法退出联邦<t:error_value>
-            <v:nation></t>, 因为该城镇是此联邦的首都. <t:regular>如需解散联邦, 请执行 <t:cmd>/<v:cmd></t><t:regular>.
-          war: <t:error>你现在不能这么做. <t:regular><v:object> <t:regular>正在与 <v:enemy><t:regular>
-            进行战争. <t:regular>请在战争结束后再试.
-          current-war: <t:error>现在无法退出此联邦. <t:regular>联邦<t:entity_nation> <v:nation></t>
-            正在与 <v:object><t:regular> 交战. 这场战争将在<t:time> <v:time></t> 后结束.
-          success: <t:regular>联邦<t:entity_nation> <v:nation></t> 中的城镇 <t:entity_land>
-            <v:land></t> 已成功退出该联邦.
-        decline:
-          none: <t:error>你的城镇<t:error_value> <v:land></t> 未收到联邦<t:error_value> <v:nation></t>
-            的邀请. <t:regular>该联邦可以执行 <t:cmd>/<v:cmd></t><t:regular> 来邀请你的城镇.
-          success: <t:regular>你已成功拒绝联邦<t:entity_nation> <v:nation></t> 的邀请.
+        accept: {}
+        leave: {}
+        decline: {}
     relations:
       allies:
         add:
           nation: |
             <t:error>无法与城镇<t:error_value> <v:land></t> 结成联盟. <t:regular>该城镇由联邦<t:entity_nation> <v:nation></t> 管理.
-              <hover:show_text:"<t:regular>点击此处向联邦<t:entity_nation> <v:nation></t> 发送联盟请求."><click:run_command:"/<v:cmd>"><t:regular>✖ 改为向联邦<t:entity_nation> <v:nation></t> 发送联盟请求: <t:cmd>/<v:cmd> </t><t:click>[点击]</t></click></hover>
+              <hover:show_text:"<t:regular>点击此处向联邦<t:entity_nation> <v:nation></t> 发送联盟请求."><click:run_command:"/<v:cmd>"><t:regular>✖ 改为向联邦<t:entity_nation> <v:nation></t> 发送联盟请求: <t:cmd>/<v:cmd> </t><java><t:click>[点击]</t></java></click></hover>
       enemies:
         add:
           nation: |
             <t:error>无法将城镇<t:error_value> <v:land> </t>设为政敌. <t:regular>该城镇由联邦<t:entity_nation> <v:nation> </t>管理.
-              <hover:show_text:"<t:regular>点击此处向联邦<t:entity_nation> <v:nation> </t>宣战."><click:run_command:"/<v:cmd>"><t:regular>✖ 改为向联邦<t:entity_nation> <v:nation></t> 宣战: <t:cmd>/<v:cmd> </t><t:click>[点击]</t></click></hover>
+              <hover:show_text:"<t:regular>点击此处将联邦<t:entity_nation> <v:nation> </t>设为政敌."><click:run_command:"/<v:cmd>"><t:regular>✖ 改为将联邦<t:entity_nation> <v:nation></t> 设为政敌: <t:cmd>/<v:cmd> </t><java><t:click>[点击]</t></java></click></hover>
       nation: <t:error>所有外交关系均由联邦<t:error_value> <v:nation></t> 管理, 你的城镇属于该联邦.
+    nation:
+      leave:
+        war: <t:error>You can't do this right now. <t:regular><v:object> <t:regular>is currently engaged in a war against <v:enemy><t:regular>. <t:regular>Please try again after the war is over.
+        success: <t:regular>You successfully left nation<t:entity_nation> <v:nation></t> with land<t:entity_land> <v:land></t>.
+        current-war: <t:error>You can't leave this nation right now. <t:regular>Nation<t:entity_nation> <v:nation></t> is currently engaged in a war against <v:object><t:regular>. Your war will be over in<t:time> <v:time></t>.
+        vassal: <t:error>Your land<t:error_value> <v:land></t> can't leave nation<t:error_value> <v:nation></t>, because it is a vassal. <t:regular>Only the nation can release it.
+        capital: <t:error>Your land<t:error_value> <v:land></t> can't leave nation<t:error_value> <v:nation></t>, because the land is the capital of this nation. <t:regular>To delete your nation, execute <t:cmd>/<v:cmd></t><t:regular>.
+        confirm: |
+          <t:regular>Please confirm that you want to leave nation<t:entity_nation> <v:nation></t> with land<t:entity_land> <v:land></t>:
+            <hover:show_text:"<t:regular>Click here to confirm this action."><click:run_command:"/<v:fullcmd>"><t:success>✔ Confirm: <t:cmd>/<v:fullcmd> </t><java><t:click>[CLICK]</t></java></click></hover>
+      accept:
+        current-war: <t:error>You can't join this nation right now. <t:regular>Nation<t:entity_nation> <v:nation></t> is currently engaged in a war against <v:object><t:regular>. Please try again once their war is over.
+        already: <t:error>Your land<t:error_value> <v:land></t> is already part of nation<t:error_value> <v:nation></t>. <t:regular>You need to leave it first by executing <t:cmd>/<v:cmd></t><t:regular>.
+        success: <t:regular>Your land<t:entity_land> <v:land></t> is now part of nation<t:entity_nation> <v:nation></t>.
+        none: <t:error>Your land<t:error_value> <v:land></t> didn't receive any invite from nation<t:error_value> <v:nation></t>. <t:regular>They can invite your land by executing <t:cmd>/<v:cmd></t><t:regular>.
+        war: <t:error>You can't do this right now. <t:regular><v:object> <t:regular>is currently engaged in a war against <v:enemy><t:regular>. <t:regular>Please try again after the war is over.
+      decline:
+        success: <t:regular>You successfully denied the invite from nation<t:entity_nation> <v:nation></t>.
+        none: <t:error>Your land<t:error_value> <v:land></t> didn't receive any invite from nation<t:error_value> <v:nation></t>. <t:regular>They can invite your land by executing <t:cmd>/<v:cmd></t><t:regular>.
+    claim:
+      merge:
+        nation: |
+          <t:error>You can't merge land<t:error_value> <v:merge></t> into<t:error_value> <v:land></t>. <t:regular>Land<t:entity_land> <v:merge></t> is the capital of nation<t:entity_nation> <v:nation></t>.
+            <hover:show_text:"<t:regular>Click here to change the nation's capital. This will allow you to merge land <v:merge>. Click to copy."><click:suggest_command:"/<v:cmd> "><t:regular>✖ Change capital: <t:cmd>/<v:cmd> </t><java><t:click>[CLICK]</t></java></click></hover>
+      chunk-distance:
+        nation: <t:error>This is too near to land<t:error_value> <v:land></t>. <t:regular>The minimum distance is<t:limit> <v:distance> chunk(s)</t>, because they're part of a nation.
+    delete:
+      nation: "<t:error>You can't delete this land, because it's the capital of nation<t:error_value> <v:nation></t>. <t:regular>You need to delete the nation first: <t:cmd>/<v:cmd></t>"
+    member:
+      setrole:
+        cant-set:
+          nation: <t:error>You can't set the<t:error_value> <v:role></t> role. <t:regular>This role is automatically assigned to players that are part of the same nation as land <t:entity_land><v:land></t>.
+    area:
+      member:
+        setrole:
+          cant-set:
+            nation: <t:error>You can't set the<t:error_value> <v:role></t> role. <t:regular>This role is automatically assigned to players that are part of the same nation as land <t:entity_land><v:land></t>.

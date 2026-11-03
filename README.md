@@ -2,12 +2,7 @@
 
 先前曾咨询过插件作者，发现他们采用的翻译维护平台真的很难用，故自行开设储存库维护简体中文翻译。
 
-当前对应的插件版本：[8.0.1](https://www.spigotmc.org/resources/1lands-%E2%AD%95-land-claim-plugin-%E2%9C%85-grief-prevention-protection-gui-management-nations-wars-1-20-support.53313/updates)
-
-> 注意 `8.0.0` 版本 Lands 进行了整个语言文件的大规模重构，且无法对老版本配置进行自动转换，因此你可能需要备份之前的 `Language/` 等、引入我更新后的语言文件并重新进行风格化等配置。
-> 翻译整体也趁机进行了重制，若你发现任何缺漏错误请在 Issues 中反馈。
->
-> 2026.08.17：由于 8.0.0 大更新后语言文件不再激进自动更新，且近期语言文件大规模破坏性更新频发，保持手工翻译且仍跟上这个更新效率已经不可能。同时近期正值我的本地化工具链更新迭代，因此本仓库的文件翻译暂时停止更新。上游稳定 / 工具链更新完成后我会第一时间恢复。
+当前对应的插件版本：[9.1.1](https://www.spigotmc.org/resources/1lands-%E2%AD%95-land-claim-plugin-%E2%9C%85-grief-prevention-protection-gui-management-nations-wars-1-20-support.53313/updates)
 
 ## 安装使用
 
@@ -19,19 +14,18 @@
 
 ## 翻译内容
 
-| 源文件                           | 翻译后                           |
-| -------------------------------- | -------------------------------- |
-| Locale/en-US_dialogs.yml         | Locale/zh-CN_dialogs.yml         |
-| Locale/en-US_gui.yml             | Locale/zh-CN_gui.yml             |
-| Locale/en-US.yml                 | Locale/zh-CN.yml                 |
+| 源文件 | 翻译后 |
+| --- | --- |
+| Locale/en-US.yml | Locale/zh-CN.yml |
+| Locale/Nations/en-US.yml | Locale/Nations/zh-CN.yml |
+| Locale/Wars/en-US.yml | Locale/Wars/zh-CN.yml |
+| Locale/en-US_dialogs.yml | Locale/zh-CN_dialogs.yml |
 | Locale/Nations/en-US_dialogs.yml | Locale/Nations/zh-CN_dialogs.yml |
-| Locale/Nations/en-US_gui.yml     | Locale/Nations/zh-CN_gui.yml     |
-| Locale/Nations/en-US.yml         | Locale/Nations/zh-CN.yml         |
-| Locale/Wars/en-US_gui.yml        | Locale/Wars/zh-CN_gui.yml        |
-| Locale/Wars/en-US.yml            | Locale/Wars/zh-CN.yml            |
-| categories.yml                   | categories.yml                   |
-| levels.yml                       | levels.yml                       |
-| roles.yml                        | roles.yml                        |
+| Locale/en-US_gui.yml | Locale/zh-CN_gui.yml |
+| Locale/Nations/en-US_gui.yml | Locale/Nations/zh-CN_gui.yml |
+| Locale/Wars/en-US_gui.yml | Locale/Wars/zh-CN_gui.yml |
+| categories.yml | categories.yml |
+| roles.yml | roles.yml |
 
 仅翻译了可以显示在游戏内的文本，没有翻译配置文件注释等不重要的文本（因为量大且难以维护）。
 
@@ -89,25 +83,22 @@
 
 本翻译假定插件是被一个类似 `EarthMC` 的传统城镇服务器使用。你应该根据自己的服务器类型并参照上方的词汇对照表修改翻译来适配服务器玩法，为自己的玩家创造更加沉浸式的体验。
 
-## 更新
+## 下载与更新
 
-本储存库仅储存最新版本的插件翻译，不归档老版本。
+本仓库主分支提供当前版本的翻译。每次正式发布都会在 [Releases](https://github.com/YKDZ/Lands-Simplified-Chinese-Translation/releases) 保存当次文件，可按插件版本选择下载。
 
-本储存库将随着插件更新而及时同步翻译（可能有几天的延迟）。
+请下载 Release 附件中的 `lands-版本-zh-CN-r修订号.zip`。解压后直接得到 `Locale/` 等目录及配置文件；安装方式见上文。相同插件版本的翻译修订用 `r1`、`r2` 等区分。
 
-目前使用 Lands 插件自带的语言文件更新功能来获取并翻译新增的文本，这可能导致各个翻译键在文件中的位置与原版英文翻译不同。这**不会**影响翻译文件的使用。
+历史归档保留当时的内容，不随新版本更新。升级插件或替换翻译前，请备份现有配置，并确认下载版本适用于你的插件。
 
 ## 贡献
 
-若发现遗漏或错误的翻译条目（包括但不限于样式代码缺漏、错字漏字、同词异译等），烦请在 **Issues** 处指出，会在第一时间进行修复。
+若发现遗漏或错误的翻译条目（包括但不限于样式代码缺漏、错字漏字、同词异译等），烦请在本仓库的 [Issues](https://github.com/YKDZ/Lands-Simplified-Chinese-Translation/issues) 中反馈。
+
+如需直接提交修改，请前往 [翻译维护仓库](https://github.com/YKDZ/Lands-Translation-Maintenance) 提交 Pull Request。
 
 ## 支持
 
 本插件文本量较大，若翻译有帮助到你，你可以考虑给这个储存库**上颗星星**。
 
 你也可以点一个 `Watch` 以在翻译更新时收到 Github 的邮件通知。
-
-
-
-
-

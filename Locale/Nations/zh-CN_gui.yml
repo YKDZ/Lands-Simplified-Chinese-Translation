@@ -10,6 +10,7 @@ general:
     role:
       capital: <t:entity_land><b>首都</t>
       land: <t:entity_land><b>城镇</t>
+      vassal: <t:negative><b>Vassal</t>
 
 gui:
   nation:
@@ -19,103 +20,115 @@ gui:
         role:
           name: <t:regular_heading>联邦职位
           lore:
-          - <t:decoration>✖ </t><t:regular>为联邦成员配置
-          - '   在该联邦的每个城镇中'
-          - '   可执行的操作.'
+            - <t:decoration>✖ </t><t:regular>Configure what nation members
+            - "   can do in each land that is part"
+            - "   of this nation."
+            - ""
+            - <t:decoration>✖ </t><t:negative>Vassal lands don't receive this role
+            - "   and their players can't use it on your lands."
           material: INHERIT
           slots: 30
         level:
           name: <t:regular_heading>等级
           lore:
-          - <t:decoration>✖ </t><t:regular>查看升级进度和属性.
+            - <t:decoration>✖ </t><t:regular>View level progression and
+            - "   attributes."
           material: EXPERIENCE_BOTTLE
           slots: 15
         war:
           name: <t:negative_heading>战争进行中
           lore:
-          - <t:decoration>✖ </t><t:regular>查看当前战争的信息.
+            - <t:decoration>✖ </t><t:regular>Get information about
+            - "   the current war."
           material: IRON_SWORD
           slots: 12
         taxes:
           name: <t:regular_heading>税费
           lore:
-          - <t:decoration>✖ </t><t:regular>按规模向此联邦内的
-          - '   城镇征收税费.'
+            - <t:decoration>✖ </t><t:regular>Tax lands that are part of
+            - "   this nation by their size."
+            - ""
+            - "   <t:decoration>• </t><t:regular>Member tax:<t:cost> <v:tax></t>"
+            - "   <t:decoration>• </t><t:regular>Vassal tax:<t:cost> <v:vassal_tax></t>"
           material: GOLD_INGOT
           slots: 29
         child_failure_spawn_teleport:
           name: <t:error_heading>不允许传送
           lore:
-          - <t:error>你无权传送到
-          - 联邦首都的传送点.
-          - ' <t:decoration>• </t><t:regular>首都所有者可以为你的'
-          - '   职位授予此权限.'
+            - <t:error>You're not allowed to teleport
+            - to the capital's spawn.
+            - " <t:decoration>• </t><t:regular>The capital's owner can give your"
+            - "   role permission to do so."
         effects:
           name: <t:regular_heading>效果
           lore:
-          - <t:decoration>✖ </t><t:regular>设置在你的联邦内启用的效果.
-          - '   这些效果可通过提升联邦等级解锁.'
+            - <t:decoration>✖ </t><t:regular>Set effects to be active within
+            - "   your nation. Effects can be unlocked"
+            - "   through nation level progression."
           material: POTION
           slots: 31
         spawn:
-          name: <t:regular_heading>首都传送
+          name: <t:regular_heading>传送点
           lore:
-          - <t:decoration>✖ </t><t:regular>传送到联邦首都的传送点.
+            - <t:decoration>✖ </t><t:regular>Teleport to the capital's spawn.
           material: ENDER_PEARL
           slots: 9
         stats:
-          name: <t:regular_heading>统计数据
+          name: <t:regular_heading>统计信息
           lore:
-          - '<t:regular>成员总数: <t:regular_value><v:members></t>'
-          - ''
-          - <t:regular_heading>经济状况</t>
-          - ' <t:decoration>• </t><t:regular>联邦'
-          - '   余额: <t:regular_value><v:balance></t>'
-          - '   联邦需支付<t:cost> <v:upkeep> </t>维护费,'
-          - '   将在<t:time> <v:upkeep_next> </t>后支付.'
-          - ' <t:decoration>• </t><t:regular>下次向城镇收税的时间为'
-          - <t:time><v:upkeep_next_land></t>.
+            - "<t:regular>Total players: <t:regular_value><v:members></t>"
+            - ""
+            - <t:regular_heading>Economy</t>
+            - " <t:decoration>• </t><t:regular>Nation"
+            - "   Balance: <t:regular_value><v:balance></t>"
+            - "   Nation pays<t:cost> <v:upkeep></t> upkeep"
+            - "   in <t:time><v:upkeep_next></t>."
+            - " <t:decoration>• </t><t:regular>Next land tax collection in"
+            - <t:time><v:upkeep_next_land></t>.
           material: skin:d01afe973c5482fdc71e6aa10698833c79c437f21308ea9a1a095746ec274a0f
           slots: 16
         lands:
           name: <t:regular_heading>城镇列表
           lore:
-          - <t:decoration>✖ </t><t:regular>管理属于此联邦的城镇.
+            - <t:decoration>✖ </t><t:regular>Manage lands that are part
+            - "   of this nation."
           material: skin:8449b9318e33158e64a46ab0de121c3d40000e3332c1574932b3c849d8fa0dc2
           slots: 11
         no-war:
           name: <t:positive_heading>和平
           lore:
-          - <t:regular>你的联邦目前未参与任何战争. 一切安宁.
+            - <t:regular>Your nation isn't engaged in any
+            - war. Everything is peaceful.
           material: WOODEN_SWORD
           slots: 12
         relations:
           name: <t:regular_heading>外交关系
           lore:
-          - <t:decoration>✖ </t><t:regular>管理你与其他
-          - '   城镇和联邦之间的外交关系.'
+            - <t:decoration>✖ </t><t:regular>Manage your relations with other
+            - "   lands and nations."
           material: LIME_BANNER
           slots: 14
         inbox:
           name: <t:regular_heading>日志箱</t> <t:decoration>(</t><t:regular_value><v:amount></t><t:decoration>)</t>
           lore:
-          - <t:decoration>✖ </t><t:regular>查看日志箱中的消息.
-          - ''
-          - <t:regular_value><v:inbox></t>
+            - <t:decoration>✖ </t><t:regular>View inbox messages.
+            - ""
+            - <t:regular_value><v:inbox></t>
           material: skin:6bf3fcdccffd963e4334818108e1e9ae3a80566d0d3d2d4ab3051a2cd811348c
           slots: 13
         various:
           name: <t:regular_heading>杂项设置
           lore:
-          - <t:decoration>✖ </t><t:regular>编辑联邦名称, 标签图标等.
+            - <t:decoration>✖ </t><t:regular>Edit the nation name, tag
+            - "   icon etc."
           material: BEACON
           slots: 32
         child_failure_spawn_none:
           name: <t:error_heading>无传送点
           lore:
-          - <t:error>联邦首都尚未设置传送点.
-          - ' <t:decoration>• </t><t:regular>设置传送点:'
-          - '   <t:cmd>/<v:cmd></t>'
+            - <t:error>The capital hasn't set a spawn yet.
+            - " <t:decoration>• </t><t:regular>Set spawn point:"
+            - "   <t:cmd>/<v:cmd></t>"
   nation_various:
     title: <t:menu_title>杂项
     items:
@@ -127,37 +140,40 @@ gui:
         object_icon:
           slots: 26
   list_nation_effects:
-    title: <t:menu_title>加成
+    title: <t:menu_title>效果
     items:
       default:
         child_failure_max:
           name: <t:error_heading>最大效果数
           lore:
-          - <t:error>你的联邦已达到同时激活<t:error_value> <v:max> </t>个效果的上限.
-          - ' <t:decoration>• </t><t:regular>提升联邦等级后, 你可以同时'
-          - '   激活更多效果.'
+            - <t:error>Your nation reached its maximum
+            - amount of<t:error_value> <v:max></t> concurrent
+            - active effects.
+            - " <t:decoration>• </t><t:regular>You can have more effects"
+            - "   active at the same time, by"
+            - "   reaching a higher level."
         child_failure_locked:
           name: <t:error_heading>等级过低
           lore:
-          - <t:error>你的联邦需要达到
-          - 等级<t:error_value> <v:level> </t>后
-          - 才能激活此效果.
+            - <t:error>Your nation needs to reach
+            - level<t:error_value> <v:level></t> before you're
+            - able to activate this effect.
         entry_object:
           name: '<t:entry_heading><v:effect>: <v:active>'
           lore:
-          - <t:decoration>✖ </t><t:regular>是否应在你的联邦
-          - '   城镇内启用此效果?'
+            - <t:decoration>✖ </t><t:regular>Should this effect be active
+            - "   within your nation's lands?"
           material: POTION
         entry_object_locked:
           name: <t:entry_heading><v:effect>
           lore:
-          - '<t:regular>解锁等级: <t:regular_value><v:level></t>'
+            - "<t:regular>Unlocks at level: <t:regular_value><v:level></t>"
           material: POTION
         entry_object_active:
           name: '<t:entry_heading><v:effect>: <v:active>'
           lore:
-          - <t:decoration>✖ </t><t:regular>是否应在你的联邦
-          - '   城镇内启用此效果?'
+            - <t:decoration>✖ </t><t:regular>Should this effect be active
+            - "   within your nation's lands?"
           enchanted: true
           material: POTION
   list_nation_lands:
@@ -167,33 +183,31 @@ gui:
         add:
           name: <t:positive_heading>邀请城镇
           lore:
-          - <t:decoration>✖ </t><t:regular>邀请城镇加入你的联邦.
-          - '   可用:<t:regular_value> <v:lands></t> <t:decoration>/</t><t:limit> <v:max></t>'
+            - <t:decoration>✖ </t><t:regular>Invite a land to join your nation.
+            - "   Available:<t:regular_value> <v:lands></t> <t:decoration>/</t><t:limit> <v:max></t>"
           material: skin:ffec3d25ae0d147c342c45370e0e43300a4e48a5b43f9bb858babff756144dac
           slots: 39
         members_online:
           name: <t:regular_heading>在线成员
           lore:
-          - <t:decoration>✖ </t><t:regular>查看在线成员.
+            - <t:decoration>✖ </t><t:regular>View members that are online.
           material: CLOCK
           slots: 41
         entry_object:
-          name: <t:entry_heading><v:land>
+          name: <t:entry_heading><v:prefix><v:land>
           lore:
-          - '<t:regular>标题:'
-          - <t:user_content><v:title></t>
-          - ''
-          - <t:decoration>✖ </t><t:click>左键</t>
-          - '   <t:regular>查看信息.'
-          - <t:decoration>✖ </t><t:click>丢弃键</t>
-          - '   <t:regular>将城镇移出联邦.'
+            - "<t:regular>Title:"
+            - <t:user_content><v:title></t>
+            - ""
+            - <action:primary><label>View Information</label></action>
+            - <action:remove><label>Remove from Nation</label></action>
           material: INHERIT
           bedrock:
             detail: true
         remove:
           name: <t:negative_heading>移除城镇
           lore:
-          - <t:decoration>✖ </t><t:regular>将城镇移出你的联邦.
+            - <t:decoration>✖ </t><t:regular>Remove a land from your nation.
           material: skin:548d7d1e03e1af145b0125ab841285672b421265da2ab915015f9058438ba2d8
           slots: 43
   list_player_nations:
@@ -203,26 +217,24 @@ gui:
         entry_nation_own:
           name: <t:entry_heading><v:nation>
           lore:
-          - <t:regular>你拥有这个联邦.
-          - ' <t:decoration>• </t><t:regular>城镇: <t:regular_value><v:lands></t>'
-          - ' <t:decoration>• </t><t:regular>区块数: <t:regular_value><v:chunks></t>'
-          - ' <t:decoration>• </t><t:regular>成员数: <t:regular_value><v:members></t>'
-          - <t:decoration>✖ </t><t:regular>打开联邦菜单.
-          - <t:decoration>✖ </t><t:click>右键</t>
-          - '   <t:regular>查看联邦概况信息.'
+            - <t:regular>You own this nation.
+            - " <t:decoration>• </t><t:regular>Lands: <t:regular_value><v:lands></t>"
+            - " <t:decoration>• </t><t:regular>Chunks: <t:regular_value><v:chunks></t>"
+            - " <t:decoration>• </t><t:regular>Total members: <t:regular_value><v:members></t>"
+            - <action:primary><label>Open Nation Menu</label></action>
+            - <action:secondary><label>View Information</label></action>
           material: INHERIT
           bedrock:
             detail: true
         entry_nation:
           name: <t:entry_heading><v:nation>
           lore:
-          - <t:regular>你是这个联邦的成员.
-          - ' <t:decoration>• </t><t:regular>城镇: <t:regular_value><v:lands></t>'
-          - ' <t:decoration>• </t><t:regular>区块数: <t:regular_value><v:chunks></t>'
-          - ' <t:decoration>• </t><t:regular>成员数: <t:regular_value><v:members></t>'
-          - <t:decoration>✖ </t><t:regular>打开联邦菜单.
-          - <t:decoration>✖ </t><t:click>右键</t>
-          - '   <t:regular>查看联邦概况信息.'
+            - <t:regular>You're trusted in this nation.
+            - " <t:decoration>• </t><t:regular>Lands: <t:regular_value><v:lands></t>"
+            - " <t:decoration>• </t><t:regular>Total chunks: <t:regular_value><v:chunks></t>"
+            - " <t:decoration>• </t><t:regular>Total members: <t:regular_value><v:members></t>"
+            - <action:primary><label>Open Nation Menu</label></action>
+            - <action:secondary><label>View Information</label></action>
           material: INHERIT
           bedrock:
             detail: true
