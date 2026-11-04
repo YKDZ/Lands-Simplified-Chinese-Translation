@@ -86,15 +86,6 @@ nations:
       war: <t:error>你不能在以城镇<t:error_value> <v:land></t> 为首都时建立联邦, 因其仍处于与<t:error_value> <v:object></t> 的战争中. <t:regular>请在战争结束后重试.
       level: '<t:error>你目前不能建立联邦. <t:regular>你的城镇<t:entity_land> <v:land></t> 至少需要达到<t:regular_value> <v:level> </t>级 <t:decoration>(</t><t:regular>当前: <t:regular_value><v:current></t><t:decoration>)</t><t:regular>.'
       success: <t:regular>已成功创建联邦<t:entity_nation> <v:nation></t>, 并将城镇<t:entity_land> <v:land></t> 设为首都. <hover:show_text:"<t:regular>打开菜单."><click:run_command:"/<v:cmd>"><t:regular>点击此处打开菜单.</click></hover>
-    nation:
-      chat:
-        format: {}
-      delete: {}
-      rename: {}
-      member:
-        add: {}
-        remove: {}
-        setcapital: {}
     chat:
       format:
         discord: <noprefix><t:entity_nation>Nation <v:nation></t> <t:decoration>| </t><t:entity_nation>Discord </t><t:regular_value><v:player_display></t> <t:decoration>»</t><t:user_content> <v:message></t>
@@ -143,13 +134,6 @@ help:
     nations:
       create: <hover:show_text:"<t:regular>点击复制."><click:suggest_command:"/<v:fullcmd>"><t:cmd><v:parent> <v:subcmd> <v:args> </t><t:decoration>- </t><t:regular>创建联邦</click></hover>
       list: <hover:show_text:"<t:regular>点击执行."><click:run_command:"/<v:fullcmd>"><t:cmd><v:parent> <v:subcmd> <v:args> </t><t:decoration>- </t><t:regular>列出所有联邦</click></hover>
-      nation:
-        member: {}
-        relation:
-          ally: {}
-          enemy: {}
-        war:
-          info: {}
       war:
         koth:
           main: <hover:show_text:"<t:regular>Click to copy."><click:suggest_command:"/<v:fullcmd>"><t:cmd><v:parent> <v:subcmd> <v:args> </t><t:decoration>- </t><t:regular>Player-land KotH point</click></hover>
@@ -208,8 +192,6 @@ help:
             modify: <hover:show_text:"<t:regular>Click to copy."><click:suggest_command:"/<v:fullcmd>"><t:cmd><v:parent> <v:subcmd> <v:args> </t><t:decoration>- </t><t:regular>Add (+) or remove (-) war shield time</click></hover>
             set: <hover:show_text:"<t:regular>Click to copy."><click:suggest_command:"/<v:fullcmd>"><t:cmd><v:parent> <v:subcmd> <v:args> </t><t:decoration>- </t><t:regular>Set the war shield</click></hover>
     lands:
-      land:
-        nation: {}
       nation:
         accept: <hover:show_text:"<t:regular>Click to copy."><click:suggest_command:"/<v:fullcmd>"><t:cmd><v:parent> <v:subcmd> <v:args> </t><t:decoration>- </t><t:regular>Accept nation invite</click></hover>
         main: <hover:show_text:"<t:regular>Manage this land's relation to its nation. Click to copy."><click:suggest_command:"/<v:fullcmd>"><t:cmd><v:parent> <v:subcmd> <v:args> </t><t:decoration>- </t><t:regular>Manage nation</click></hover>
@@ -223,22 +205,6 @@ lands:
     general:
       input:
         nation: <t:error>联邦<t:error_value> <v:input> </t>不存在.
-    land:
-      area:
-        member:
-          setrole:
-            cant-set: {}
-      claim:
-        chunk-distance: {}
-        merge: {}
-      delete: {}
-      member:
-        setrole:
-          cant-set: {}
-      nation:
-        accept: {}
-        leave: {}
-        decline: {}
     relations:
       allies:
         add:

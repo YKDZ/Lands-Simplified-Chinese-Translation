@@ -41,8 +41,6 @@ gui:
             - "   <t:regular>Score: <v:score>"
           material: SHIELD
           slots: 12
-        war_points: {}
-        war_points_declaration: {}
         child_failure_permission:
           name: <t:error_heading>无权操作
           lore:
@@ -52,7 +50,6 @@ gui:
             - "   permission to do so."
             - "   Flag: <t:regular_value><v:flag></t>"
         child_failure_surrender: {}
-        tribute_attacker_mutual: {}
         recipe:
           name: <t:regular_heading>战旗配方
           lore:
@@ -60,7 +57,6 @@ gui:
             - "   of the capture flag item."
           material: BEACON
           slots: 16
-        tribute_defender: {}
         child_failure_none:
           name: <t:error_heading>暂无领土
           lore:
@@ -89,9 +85,6 @@ gui:
             - Until then each team has time to prepare.
           material: CLOCK
           slots: 15
-        tribute_attacker:
-          bedrock:
-            detail: true
         goal:
           material: WRITABLE_BOOK
           slots: 14
@@ -166,19 +159,6 @@ gui:
             - <t:user_content><v:title></t>
             - <t:decoration>✖ </t><t:regular>View information about this land.
           material: INHERIT
-  war-declaration_tribute:
-    items:
-      default:
-        cancel-declaration: {}
-        send-declaration: {}
-        refresh_minus-1: {}
-        refresh_minus-2: {}
-        refresh_minus-3: {}
-        child_max-tribute: {}
-        refresh_plus-3: {}
-        refresh_plus-1: {}
-        refresh_plus-2: {}
-        tribute: {}
   war_capture_recipe:
     title: <t:menu_title>战旗配方
   war_info:

@@ -309,12 +309,8 @@ help:
         start: <hover:show_text:"<t:regular>点击复制."><click:suggest_command:"/<v:fullcmd>"><t:cmd><v:parent> <v:subcmd> <v:args> </t><t:decoration>- </t><t:regular>开始战争</click></hover>
         end: <hover:show_text:"<t:regular>点击复制."><click:suggest_command:"/<v:fullcmd>"><t:cmd><v:parent> <v:subcmd> <v:args> </t><t:decoration>- </t><t:regular>结束战争</click></hover>
     lands:
-      land:
-        war:
-          info: {}
       admin:
         land:
-          war: {}
           shield:
             main: <hover:show_text:"<t:regular>点击复制."><click:suggest_command:"/<v:fullcmd>"><t:cmd><v:parent> <v:subcmd> </t><t:decoration>- </t><t:regular>修改战争护盾时长</click></hover>
             modify: <hover:show_text:"<t:regular>点击复制."><click:suggest_command:"/<v:fullcmd>"><t:cmd><v:parent> <v:subcmd> <v:args> </t><t:decoration>- </t><t:regular>增加 (+) 或减少 (-) 护盾时长</click></hover>
@@ -347,29 +343,6 @@ help:
 
 lands:
   command:
-    land:
-      bank:
-        withdraw: {}
-      claim: {}
-      delete: {}
-      member:
-        add:
-          inviter: {}
-          target: {}
-      war:
-        declare:
-          success:
-            mutual: {}
-        decline: {}
-        spawn: {}
-      area:
-        member:
-          add:
-            inviter: {}
-            target: {}
-      spawn: {}
-      unclaim:
-        all: {}
     war:
       declare:
         days: "<t:error>You can only declare war at the following days:<t:error_value> <v:days></t> <t:decoration>(</t><t:regular>current day:<t:time> <v:current></t>, time zone: <t:time><v:timezone></t><t:decoration>)</t>"
@@ -443,13 +416,6 @@ lands:
     war: <t:error>你现在不能这样做. <t:regular><v:object> <t:regular>正在与 <v:enemy><t:regular> 进行战争. <t:regular>请在战争结束后重试.
 nations:
   command:
-    nation:
-      war:
-        declare:
-          success:
-            mutual: {}
-        decline: {}
-        spawn: {}
     war:
       declare:
         no-nation: <t:error>You can't attack land<t:error_value> <v:land></t>. <t:regular>They must be part of a nation to be engaged in a war.

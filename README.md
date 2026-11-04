@@ -44,40 +44,46 @@
 
 本插件使用了数个赋予了特殊含义的名词和动词（术语），它们的翻译可能随着服务器的玩法和性质等而改变，故提供术语表，方便使用 `VSCode` 等编辑器的**批量修改功能**快速地进行匹配和替换以满足各类服务器的需求。
 
-| 术语                     | 翻译            | 备注                                                    |
-| ------------------------ | --------------- | ------------------------------------------------------- |
-| Nation                   | 联邦            |                                                         |
-| Capital                  | 首都            | 建立联邦的那个城镇                                      |
-| Land                     | 城镇            |                                                         |
-| Area                     | 子区域          | 城镇领土内划出的小区域                                  |
-| Camp                     | 露营地          | 临时、固定大小的城镇，通过放置一个营火道具创建          |
-| Wilderness               | 荒野            | 没有被占领的区块                                        |
-| Role                     | 职位            | 用于城镇或联邦的成员权限控制                            |
-| Owner                    | 所有者          |                                                         |
-| Tenant                   | 住户            | 区域的租客和买主都用这个词表示                          |
-| Trust                    | 邀请, 加入      | 对应其他领地插件中的 invite，在玩家眼中相当于 “被” join |
-| Trusted Player           | 成员            |                                                         |
-| Untrust                  | 移出            | 对应其他领地插件中的 kick，在玩家眼中相当于 “被” leave  |
-| Claim                    | v.占领 n.领土   |                                                         |
-| Unclaim                  | 取消占领        |                                                         |
-| Natural Flags / Settings | 环境设置        | 区域中是否能刷怪、TNT 是否可以破坏方块等                |
-| Role Flags / Settings    | 职位设置        | 职位中的玩家是否可以破坏方块等                          |
-| Mainblock                | 城镇核心        | 城镇被创建时自动产生的方块结构                          |
-| Bank                     | 金库            | 城镇和联邦的 “银行”                                     |
-| Storage                  | 仓库            | 城镇核心具有的储存物品的虚拟空间                        |
-| Upkeep                   | 维护费          | 城镇和联邦需要定时向服务器支付的款项                    |
-| Taxes                    | 税费            | 城镇或联邦成员需要定时向所属城镇或联邦支付的款项        |
-| Relation                 | 外交关系        | 城镇或联邦等在战争中的关系                              |
-| Ally                     | 盟友            |                                                         |
-| Enemy                    | 政敌            |                                                         |
-| Neutral                  | 中立            |                                                         |
-| War                      | 战争            |                                                         |
-| Capture Block / Flag     | 战旗            | 战争中攻方用于占领守方领土的信标道具                    |
-| Attacker                 | 攻方            |                                                         |
-| Defender                 | 守方            |                                                         |
-| Tribute                  | 赔偿金          | 战争中一方投降后需要向另一方支付的款项                  |
-| Shield                   | 战争护盾        | 保护城镇或联邦免于战争的时间                            |
-| Declare                  | n.宣战书 v.宣战 |                                                         |
+| 术语 | 翻译 | 备注 |
+| --- | --- | --- |
+| nation, nations | 联邦, 国家 | 由城镇组成的实体。 |
+| capital, capitals | 首都 | 建立联邦的城镇。 |
+| land, lands | 城镇 | Lands 插件中的城镇领地实体；产品名 Lands 不适用此术语。 |
+| area, areas | 子区域 | 城镇领土内划出的小区域。 |
+| spawn, spawn point, spawnpoint, land spawn, area spawn, nation spawn, world spawn, world's spawn | 传送点 | 为城镇、子区域或联邦设置，供玩家传送前往的固定位置；世界默认出生位置不适用此译法。 |
+| camp, camps | 露营地 | 临时、固定大小的城镇。 |
+| wilderness | 荒野 | 没有被占领的区块。 |
+| role, roles | 职位 | 城镇或联邦成员的权限控制。 |
+| owner, owners | 所有者 | README 将该词列为 Lands 玩法中的领域术语。 |
+| tenant, tenants | 住户 | 租用或购买子区域的玩家, 统一称为住户; 包括租客和子区域买主。 |
+| trust, trusts, trusted, trusting | 邀请, 加入 | 对应其他领地插件的 invite；从玩家视角也可表达为被加入。 |
+| trusted player, trusted players | 成员 | 已受信任并获得成员身份的玩家。 |
+| untrust, untrusted, untrusting | 移出 | 对应其他领地插件的 kick。 |
+| claim, claims, claimed, claiming | 占领 | 动词义；与名词义领土区分。 |
+| claim, claims | 领土 | 名词义；与动词义占领区分。 |
+| unclaim, unclaims, unclaimed, unclaiming | 取消占领, 未占领, 解除占领, 取消 | README 将该词列为 Lands 玩法中的领域术语。 |
+| natural flag, natural flags, natural setting, natural settings | 环境设置 | 影响区域环境行为，例如刷怪或 TNT 对方块的影响。 |
+| role flag, role flags, role setting, role settings | 职位设置 | 控制职位玩家的权限，例如能否破坏方块。 |
+| mainblock, mainblocks, main block, main blocks | 城镇核心 | 城镇创建时自动产生的方块结构。 |
+| bank, banks | 金库 | 城镇和联邦的“银行”。 |
+| storage | 仓库 | 城镇核心中的虚拟物品空间。 |
+| upkeep | 维护费 | 城镇和联邦定期向服务器支付的款项。 |
+| tax, taxes | 税费 | 成员定期向所属城镇或联邦支付的款项。 |
+| relation, relations | 外交关系 | 城镇、联邦等在战争中的关系。 |
+| ally, allies | 盟友 | README 将该词列为 Lands 玩法中的领域术语。 |
+| enemy, enemies | 政敌 | README 将该词列为 Lands 玩法中的领域术语。 |
+| neutral, neutrals | 中立 | README 将该词列为 Lands 玩法中的领域术语。 |
+| war, wars | 战争 | README 将该词列为 Lands 玩法中的领域术语。 |
+| capture block, capture blocks, capture flag, capture flags | 战旗 | 战争中攻方用于占领守方领土的信标道具；此完整短语不等同于普通动词 capture。 |
+| attacker, attackers | 攻方 | README 将该词列为 Lands 玩法中的领域术语。 |
+| defender, defenders | 守方 | README 将该词列为 Lands 玩法中的领域术语。 |
+| tribute, tributes | 赔偿金 | 一方投降后向另一方支付的款项。 |
+| war shield, war shields | 战争护盾 | 保护城镇或联邦免于战争的一段时间。 |
+| expiration shield | 过期保护 | 管理员启用后，可防止非活跃城镇因过期而被删除。 |
+| declaration, declarations, war declaration, war declarations | 宣战书 | 名词义，常见完整短语为 war declaration。 |
+| declare, declares, declared, declaring, declare war, declares war, declared war, declaring war | 宣战 | 动词义，常见完整短语为 declare war。 |
+| remove tenant, remove the tenant, remove the current tenant, removed the tenant, removed as a tenant | 解约 | 城镇方解除子区域已有的租用或购买合约, 结束住户身份并收回子区域; 与普通成员移出和撤销租售报价区分。 |
+| compensation | 补偿金 | 城镇方与住户解约时支付的补偿金, 涵盖租客和子区域买主, 不表示额外违约罚金。 |
 
 ## 风格化
 
@@ -87,15 +93,11 @@
 
 本仓库主分支提供当前版本的翻译。每次正式发布都会在 [Releases](https://github.com/YKDZ/Lands-Simplified-Chinese-Translation/releases) 保存当次文件，可按插件版本选择下载。
 
-请下载 Release 附件中的 `lands-版本-zh-CN-r修订号.zip`。解压后直接得到 `Locale/` 等目录及配置文件；安装方式见上文。相同插件版本的翻译修订用 `r1`、`r2` 等区分。
-
-历史归档保留当时的内容，不随新版本更新。升级插件或替换翻译前，请备份现有配置，并确认下载版本适用于你的插件。
-
 ## 贡献
 
-若发现遗漏或错误的翻译条目（包括但不限于样式代码缺漏、错字漏字、同词异译等），烦请在本仓库的 [Issues](https://github.com/YKDZ/Lands-Simplified-Chinese-Translation/issues) 中反馈。
+本仓库实际上是 [维护仓库](https://github.com/YKDZ/Lands-Translation-Maintenance) 的一个投影。若发现遗漏或错误的翻译条目（包括但不限于样式代码缺漏、错字漏字、同词异译等），可以在维护仓库中提交 Issue。
 
-如需直接提交修改，请前往 [翻译维护仓库](https://github.com/YKDZ/Lands-Translation-Maintenance) 提交 Pull Request。
+想要参与翻译贡献时，也请在维护仓库中进行，本仓库不应被手动提交修改。
 
 ## 支持
 
