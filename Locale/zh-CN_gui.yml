@@ -25,8 +25,8 @@ general:
     tag: <t:regular>标签</t>
   war:
     name:
-      nation: "<t:entity_nation>联邦</t> "
-      land: "<t:entity_land>城镇</t> "
+      nation: '<t:entity_nation>联邦</t> '
+      land: '<t:entity_land>城镇</t> '
   value:
     none: <red>无</red>
     unlimited: <green>无限</green>
@@ -50,7 +50,7 @@ general:
     rent: <t:regular_value>租用</t>
     rental: <t:regular_value>出租</t>
     sell: <t:regular_value>出售</t>
-    inactive: <t:regular_value>所有者不活跃</t>
+    inactive: <t:regular_value>主人不活跃</t>
     inactive_delete: <t:negative>若无人购买, 将于<t:time> <v:date></t> 后解散.
     inactive_end: <t:regular>出售中, 直至有人购买.
   top:
@@ -73,24 +73,24 @@ general:
   wnormal: <t:regular>成员</t>
   confirm:
     buy_inactive: <t:regular>确认以<t:cost> <v:price></t> 购买城镇<t:entity_land> <v:land></t> 吗? 购买后, 该城镇成员将被移出.
-    camp_place: "<t:regular>确认在此放置露营地吗?<newline><newline>半径: <t:regular_value><v:radius></t><newline>剩余时间: <t:time><v:time></t>"
+    camp_place: '<t:regular>确认在此放置露营地吗?<newline><newline>半径: <t:regular_value><v:radius></t><newline>剩余时间: <t:time><v:time></t>'
     camp_remove: <t:regular>确认移除露营地<t:entity_land> <v:land></t> 吗? 你可以取回露营地物品并在其他位置放置. 剩余时间会保留.
     war_surrender: <t:regular>确认向<t:entity_land> <v:enemy></t> 投降吗? 你方将输掉这场战争.
   expiration:
-    delete: <t:negative>若所有者未登录, 将于<t:time> <v:date></t> 后解散.
-    delete_members: <t:negative>若所有者和成员均未登录, 将于<t:time> <v:date></t> 后解散.
+    delete: <t:negative>若主人未登录, 将于<t:time> <v:date></t> 后解散.
+    delete_members: <t:negative>若主人和成员均未登录, 将于<t:time> <v:date></t> 后解散.
     empty: <t:negative>由于没有任何领土区块, 将于<t:time> <v:date></t> 后解散.
-    for_sale: <t:negative>以<t:cost> <v:price></t> 出售, 除非所有者登录.
-    for_sale_delete: <t:negative>以<t:cost> <v:price></t> 出售. 若无人购买且所有者未登录, 将于<t:time> <v:date></t> 后解散.
+    for_sale: <t:negative>以<t:cost> <v:price></t> 出售, 除非主人登录.
+    for_sale_delete: <t:negative>以<t:cost> <v:price></t> 出售. 若无人购买且主人未登录, 将于<t:time> <v:date></t> 后解散.
     never: <t:positive>不会过期</t>
-    online: <t:positive>所有者在线期间不会过期.</t>
-    protected: "<t:positive>不会解散: <v:reason></t>"
+    online: <t:positive>主人在线期间不会过期.</t>
+    protected: '<t:positive>不会解散: <v:reason></t>'
     reason:
-      bypass: 所有者永不过期
+      bypass: 主人永不过期
       shield: 过期保护
       war: 正在战争中
-    sell: <t:negative>若所有者未登录, 将于<t:time> <v:date></t> 后开始出售.
-    transfer: <t:regular>若所有者未登录, 将于<t:time> <v:date></t> 后转交给<t:regular_value> <v:player></t>.
+    sell: <t:negative>若主人未登录, 将于<t:time> <v:date></t> 后开始出售.
+    transfer: <t:regular>若主人未登录, 将于<t:time> <v:date></t> 后转交给<t:regular_value> <v:player></t>.
   level-up:
     reason:
       loading: <t:regular>正在检查升级条件.
@@ -111,44 +111,42 @@ physical:
   selection:
     name: <t:regular_heading>选区工具
     lore:
-      - <t:regular>使用此工具创建选区.
-      - "选区可用于:"
-      - " <t:decoration>• </t><t:regular>占领区块"
-      - " <t:decoration>• </t><t:regular>取消占领区块"
-      - " <t:decoration>• </t><t:regular>调整子区域大小"
+    - <t:regular>使用此工具创建选区.
+    - '选区可用于:'
+    - ' <t:decoration>• </t><t:regular>占领区块'
+    - ' <t:decoration>• </t><t:regular>取消占领区块'
+    - ' <t:decoration>• </t><t:regular>调整子区域大小'
     material: GOLDEN_HOE
   currency:
     material: GOLD_INGOT
   claim_block_radius:
     name: <t:regular_heading>范围占领方块
     lore:
-      - <t:regular>使用此方块可以占领一定半径内的区块.
-      - "将此方块放置在荒野中即可完成占领."
-      - ""
-      - " <t:decoration>• </t><t:regular>所有者:<t:regular_value> <v:owner></t>"
-      - " <t:decoration>• </t><t:regular>半径:<t:regular_value> <v:radius></t> <t:decoration>(</t><t:regular_value>= <v:chunks> 个区块</t><t:decoration>)</t>"
+    - <t:regular>将此方块放置在荒野中
+    - 可以占领一定半径内的区块.
+    - ''
+    - ' <t:decoration>• </t><t:regular>主人:<t:regular_value> <v:owner></t>'
+    - ' <t:decoration>• </t><t:regular>半径:<t:regular_value> <v:radius></t> <t:decoration>(</t><t:regular_value>= <v:chunks> 个区块</t><t:decoration>)</t>'
     material: GRASS_BLOCK
   claim_block:
     name: <t:regular_heading>占领方块
     lore:
-      - <t:regular>使用此方块可以占领一个领土区块.
-      - "将此方块放置在荒野中即可完成占领."
-      - ""
-      - " <t:decoration>• </t><t:regular>所有者:<t:regular_value> <v:owner></t>"
+    - <t:regular>将此方块放置在荒野中可以占领一个区块.
+    - ''
+    - ' <t:decoration>• </t><t:regular>主人:<t:regular_value> <v:owner></t>'
     material: GRASS_BLOCK
   info:
     name: <t:regular_heading>信息工具
     lore:
-      - <t:regular>使用此工具查看所指位置的领土信息.
+    - <t:regular>使用此工具查看所指位置的领土信息.
     material: FEATHER
   camp:
     name: <t:regular_heading>露营地
     lore:
-      - <t:regular>放置此物品创建临时露营地,
-      - "露营地到期后将自动解散"
-      - <t:time><v:time></t>.
-      - " <t:decoration>• </t><t:regular>半径:<t:regular_value> <v:radius></t>"
-      - " <t:decoration>• </t><t:regular>露营地无法扩展."
+    - <t:regular>放置此物品创建临时露营地,
+    - 露营地将在 <t:time><v:time></t> 后自动解散.
+    - ' <t:decoration>• </t><t:regular>半径:<t:regular_value> <v:radius></t>'
+    - ' <t:decoration>• </t><t:regular>露营地无法扩展.'
     material: CAMPFIRE
   main_block:
     material: BELL
@@ -158,33 +156,33 @@ common:
       child_failure_message:
         name: <t:error_heading>失败
         lore:
-          - <t:error><v:message></t>
+        - <t:error><v:message></t>
       child_success_message:
         name: <t:success_heading>成功
         lore:
-          - <t:success><v:message></t>
+        - <t:success><v:message></t>
       child_failure_teleport:
         name: <t:error_heading>传送失败
         lore:
-          - "<t:error>传送失败, 原因如下:"
-          - "<t:error_value><v:result></t>"
+        - '<t:error>传送失败, 原因如下:'
+        - <t:error_value><v:result></t>
       child_failure_player_trusted:
         name: <t:error_heading>已加入
         lore:
-          - <t:error>你已是该城镇的成员.
+        - <t:error>你已是该城镇的成员.
       child_failure_permission:
         name: <t:error_heading>权限不足
         lore:
-          - <t:error>你无权执行此操作.
+        - <t:error>你无权执行此操作.
       child_failure_teleport_enter:
         name: <t:error_heading>不允许进入
         lore:
-          - <t:error>你无权进入目标所在的子区域.
-          - " <t:decoration>• </t><t:regular>城镇所有者可以授予你相应权限."
+        - <t:error>你无权进入目标所在的子区域.
+        - ' <t:decoration>• </t><t:regular>城镇主人可以授予你相应权限.'
       refresh_page_previous:
         name: <t:regular_heading>上一页
         lore:
-          - "<t:decoration>✖ </t><t:regular>当前页: <t:regular_value><v:current></t> / <t:regular_value><v:pages></t>"
+        - '<t:decoration>✖ </t><t:regular>当前页: <t:regular_value><v:current></t> / <t:regular_value><v:pages></t>'
         material: ARROW
         slots: 38
         bedrock:
@@ -192,21 +190,21 @@ common:
       child_failure_no-item:
         name: <t:error_heading>光标处无物品
         lore:
-          - <t:error>请从物品栏中将物品拖到这里.
+        - <t:error>请从物品栏中将物品拖到这里.
       child_failure_spawn_cooldown:
         name: <t:error_heading>冷却中
         lore:
-          - <t:error>还需等待<t:error_value> <v:time></t>
-          - 才能再次传送到传送点.
+        - <t:error>还需等待<t:error_value> <v:time></t>
+        - 才能再次传送到传送点.
       child_failure_teleport_unsafe:
         name: <t:error_heading>不安全
         lore:
-          - <t:error>无法传送到此位置, 因为这里不安全.
+        - <t:error>无法传送到此位置, 因为这里不安全.
       back:
         name: <t:regular_heading>返回
         lore:
-          - <t:decoration>✖ </t><t:regular>返回到
-          - "   <t:regular_value><v:back></t>."
+        - <t:decoration>✖ </t><t:regular>返回到
+        - '   <t:regular_value><v:back></t>.'
         material: RED_STAINED_GLASS_PANE
         slots: 37
         bedrock:
@@ -214,7 +212,7 @@ common:
       refresh_page_next:
         name: <t:regular_heading>下一页
         lore:
-          - "<t:decoration>✖ </t><t:regular>当前页: <t:regular_value><v:current></t> / <t:regular_value><v:pages></t>"
+        - '<t:decoration>✖ </t><t:regular>当前页: <t:regular_value><v:current></t> / <t:regular_value><v:pages></t>'
         material: ARROW
         slots: 44
         bedrock:
@@ -222,108 +220,107 @@ common:
       child_failure_cost:
         name: <t:error_heading>余额不足
         lore:
-          - <t:error>执行此操作需要<t:cost> <v:cost></t>.
+        - <t:error>执行此操作需要<t:cost> <v:cost></t>.
       child_failure_spawn_cost:
         name: <t:error_heading>余额不足
         lore:
-          - <t:error>传送费用需要<t:cost> <v:cost></t>.
+        - <t:error>传送费用需要<t:cost> <v:cost></t>.
       child_failure_noaccess_owner:
         name: <t:error_heading>无权操作
         lore:
-          - <t:error>只有<t:error_value> <v:object></t> 的所有者才能执行此操作.
+        - <t:error>只有<t:error_value> <v:object></t> 的主人才能执行此操作.
       child_failure_spawn_teleport:
         name: <t:error_heading>不允许传送
         lore:
-          - <t:error>你无权传送到此城镇的传送点.
-          - " <t:decoration>• </t><t:regular>请联系城镇所有者授权."
+        - <t:error>你无权传送到此城镇的传送点.
+        - ' <t:decoration>• </t><t:regular>请联系城镇的主人授权.'
       child_failure_spawn_war:
         name: <t:error_heading>战争进行中
         lore:
-          - <t:error>你目前无法传送到此城镇的传送点.
-          - " <t:decoration>• </t><t:regular>该城镇正在参与战争,"
-          - "   还需等待<t:time> <v:time></t>."
+        - <t:error>你目前无法传送到此城镇的传送点.
+        - ' <t:decoration>• </t><t:regular>该城镇正在参与战争,'
+        - '   还需等待<t:time> <v:time></t>.'
       child_failure_membership-request_not-looking:
         name: <t:error_heading>未招募成员
         lore:
-          - <t:error>该城镇暂不招募新成员.
+        - <t:error>该城镇暂不招募新成员.
       child_failure_page_previous:
         name: <t:error_heading>无上一页
       child_success_player_trusted:
-        name: <t:success_heading>你已加入
+        name: <t:success_heading>加入成功
         lore:
-          - <t:success>城镇<t:entity_land> <v:land></t> 已自动接受你的申请.
-          - " <t:decoration>• </t><t:regular>离开城镇: <t:cmd>/<v:cmd></t>"
+        - <t:success>城镇<t:entity_land> <v:land></t> 已自动接受你的申请.
+        - ' <t:decoration>• </t><t:regular>离开城镇: <t:cmd>/<v:cmd></t>'
       child_failure_page_next:
         name: <t:error_heading>无下一页
       child_success_membership-request_revoked:
         name: <t:success_heading>已撤回加入申请
         lore:
-          - <t:success>已撤回你的成员申请.
+        - <t:success>已撤回你的成员申请.
       child_failure_noaccess:
         name: <t:error_heading>无权操作
         lore:
-          - <t:error>你无权执行此操作.
-          - " <t:decoration>• </t><t:regular><v:object><t:regular> 的所有者可以授予你的职位相应权限."
-          - "   设置: <t:regular_value><v:flag></t>"
+        - <t:error>你无权执行此操作.
+        - ' <t:decoration>• </t><t:regular><v:object><t:regular> 的主人可以授予你的职位相应权限.'
+        - '   设置: <t:regular_value><v:flag></t>'
       child_success_membership-request_sent:
         name: <t:success_heading>已发送加入申请
         lore:
-          - <t:regular>对方现在可以接受你的成员申请.
+        - <t:regular>对方现在可以接受你的成员申请.
       child_failure_spawn_none:
         name: <t:error_heading>无传送点
         lore:
-          - <t:error>该城镇尚未设置传送点.
-          - " <t:decoration>• </t><t:regular>设置传送点:"
-          - "   <t:cmd>/<v:cmd></t>"
+        - <t:error>该城镇尚未设置传送点.
+        - ' <t:decoration>• </t><t:regular>设置传送点:'
+        - '   <t:cmd>/<v:cmd></t>'
       category:
-        name: "<t:regular_heading>类别: <v:category>"
+        name: '<t:regular_heading>类别: <v:category>'
         lore:
-          - <t:decoration>✖ </t><t:regular>更改城镇类别.
-          - "    <t:decoration>• </t><t:regular>其他玩家可以筛选你的城镇"
-          - "      在 <t:regular_value>/<v:cmd></t> 菜单中按类别筛选."
+        - <t:decoration>✖ </t><t:regular>更改城镇类别.
+        - '    <t:decoration>• </t><t:regular>其他玩家可以筛选你的城镇'
+        - '      在 <t:regular_value>/<v:cmd></t> 菜单中按类别筛选.'
         material: BOOKSHELF
         slots: 40
       category_members:
-        name: "<t:regular_heading>类别: <v:category>"
+        name: '<t:regular_heading>类别: <v:category>'
         lore:
-          - <t:decoration>✖ </t><t:regular>更改城镇类别.
-          - "    <t:decoration>• </t><t:regular>其他玩家可以在"
-          - "      <t:cmd>/<v:cmd></t> 中按类别筛选城镇."
-          - ""
-          - "    <t:decoration>• </t><t:regular>若将你的城镇设为以下类别,"
-          - "      其他玩家就可以在城镇菜单中"
-          - "      <t:regular>向你的城镇提交加入申请:"
-          - "      <t:regular_value><v:looking></t>"
+        - <t:decoration>✖ </t><t:regular>更改城镇类别.
+        - '    <t:decoration>• </t><t:regular>其他玩家可以在'
+        - '      <t:cmd>/<v:cmd></t> 中按类别筛选城镇.'
+        - ''
+        - '    <t:decoration>• </t><t:regular>若将你的城镇设为以下类别,'
+        - '      其他玩家就可以在城镇菜单中'
+        - '      <t:regular>向你的城镇提交加入申请:'
+        - '      <t:regular_value><v:looking></t>'
         material: BOOKSHELF
         slots: 40
       child_failure_global-action:
         name: <t:error_heading>已启用显示所有子区域
         lore:
-          - <t:error>查看所有子区域时, 无法更改此设置.
-          - " <t:regular>请启用<t:regular_heading>仅查看当前子区域</t>"
-          - 再进行更改.
+        - <t:error>查看所有子区域时, 无法更改此设置.
+        - ' <t:regular>请启用<t:regular_heading>仅查看当前子区域</t> 再进行更改.'
       child_failure_nation_none:
         name: <t:error_heading>职位由联邦管理
         lore:
-          - <t:error>此职位将由你未来可能加入的联邦管理一部分
-          - " <t:decoration>• </t><t:regular>你目前尚未加入任何联邦."
+        - <t:error>此职位将由你未来可能加入的联邦管理一部分
+        - ' <t:decoration>• </t><t:regular>你目前尚未加入任何联邦.'
       object_name:
-        name: "<t:regular_heading>名称: <t:user_content><v:name></t>"
+        name: '<t:regular_heading>名称: <t:user_content><v:name></t>'
         lore:
-          - <t:decoration>✖ </t><t:regular>设置新名称.
+        - <t:decoration>✖ </t><t:regular>设置新名称.
         material: PAPER
       object_tag:
-        name: "<t:regular_heading>标签: <t:user_content><v:tag></t>"
+        name: '<t:regular_heading>标签: <t:user_content><v:tag></t>'
         lore:
-          - <t:regular>名称的简短形式.
-          - <action:primary><label>设置标签</label></action>
-          - <action:remove><label>移除标签</label></action>
+        - <t:regular>名称的简短形式.
+        - <action:primary><label>设置标签</label></action>
+        - <action:remove><label>移除标签</label></action>
         material: NAME_TAG
       object_icon:
         name: <t:regular_heading>图标
         lore:
-          - <action:primary><label>设置图标</label><desc>将物品拖到此处; 基岩版玩家也可以手持物品操作.</desc></action>
-          - <action:remove><label>恢复默认</label></action>
+        - <action:primary><label>设置图标</label><desc>将物品拖到此处; 基岩版玩家也可以手持物品操作.</desc></action>
+        - <action:remove><label>恢复默认</label></action>
         material: INHERIT
       placeholder_1:
         material: GRAY_STAINED_GLASS_PANE
@@ -340,28 +337,27 @@ gui:
         child_no-item:
           name: <t:error_heading>手中无物品
           lore:
-            - <t:regular>请将物品放在主手中.
+          - <t:regular>请将物品放在主手中.
         name:
           name: <t:regular_heading>名称
           lore:
-            - <t:decoration>✖</t> <t:regular>重命名此子区域.
-            - "   当前名称: <t:user_content><v:name></t>"
+          - <t:decoration>✖</t> <t:regular>重命名此子区域.
+          - '   当前名称: <t:user_content><v:name></t>'
           material: NAME_TAG
           slots: 20
         icon:
           name: <t:regular_heading>图标
           lore:
-            - <t:decoration>✖ </t><t:regular>将物品拖到此处以更改图标.
-            - "    <t:decoration>• </t><t:regular>这有助于你在子区域菜单中"
-            - "      找到此子区域."
+          - <t:decoration>✖ </t><t:regular>将物品拖到此处以更改图标.
+          - '    <t:decoration>• </t><t:regular>这让你更容易在子区域菜单中找到它.'
           material: INHERIT
           slots: 26
         description:
           name: <t:regular_heading>描述
           lore:
-            - "<t:decoration>✖ </t><t:regular>更改子区域描述:"
-            - "   <t:decoration>• </t><t:regular><b>当前:"
-            - "     <t:user_content><v:description></t>"
+          - '<t:decoration>✖ </t><t:regular>更改子区域描述:'
+          - '   <t:decoration>• </t><t:regular><b>当前:'
+          - '     <t:user_content><v:description></t>'
           material: OAK_SIGN
           slots: 23
   role:
@@ -371,102 +367,101 @@ gui:
         taxes_never:
           name: <t:regular_heading>此职位无需缴纳税费
           lore:
-            - <t:regular>此职位的税额无法更改.
+          - <t:regular>此职位的税额无法更改.
           material: GOLD_INGOT
           slots: 15
         settings:
           name: <t:regular_heading>行为设置
           lore:
-            - <t:decoration>✖ </t><t:regular>切换方块破坏, 容器开启等操作标记.
-            - ""
+          - <t:decoration>✖ </t><t:regular>编辑破坏方块, 开启容器等设置.
+          - ''
           material: IRON_PICKAXE
           slots: 29
         apply:
-          name: "<t:regular_heading>添加到新子区域: <v:apply>"
+          name: '<t:regular_heading>添加到新子区域: <v:apply>'
           lore:
-            - <t:decoration>✖ </t><t:regular>创建新子区域时, 是否自动添加此职位?
-            - "   同时添加其成员和权限设置"
-            - "   到新建的子区域中?"
+          - <t:decoration>✖ </t><t:regular>是否自动将此职位 (包括其成员和设置)
+          - '   添加到新建的子区域中?'
           material: OAK_FENCE
           slots: 14
         members_ally:
           name: <t:regular_heading>职位成员
           lore:
-            - <t:regular>所有未加入城镇且属于盟友城镇的玩家都会被分配此职位.
+          - <t:regular>所有未加入城镇且属于盟友城镇的玩家都会被分配此职位.
           material: skin:e8b8c6a46d87cf86a55df214cf84bf45cca25edb9a676e96364dd6a6eea235b3
           slots: 11
         icon:
           name: <t:regular_heading>图标
           lore:
-            - <action:primary><label>设置图标</label><desc>将物品拖到此处以更改职位图标.</desc></action>
-            - <action:remove><label>恢复默认</label></action>
+          - <action:primary><label>设置图标</label><desc>将物品拖到此处以更改职位图标.</desc></action>
+          - <action:remove><label>恢复默认</label></action>
           material: INHERIT
           slots: 13
           bedrock:
             detail: true
         taxes:
-          name: "<t:regular_heading>缴纳税费: <v:current>"
+          name: '<t:regular_heading>缴纳税费: <v:current>'
           lore:
-            - <t:decoration>✖ </t><t:regular>此职位成员是否需要缴纳税费?
-            - "   <t:decoration>• </t><t:regular>每隔 <t:time><v:time></t>,"
-            - "     <t:regular>城镇将收到此职位和子区域成员缴纳的 <t:regular_value> <v:taxes> 税费."
+          - <t:decoration>✖ </t><t:regular>此职位成员是否需要缴纳税费?
+          - '   <t:decoration>• </t><t:regular>每隔 <t:time><v:time></t>,'
+          - '     <t:regular>城镇将收到此职位和子区域成员缴纳的 <t:regular_value> <v:taxes> 税费.'
           material: GOLD_INGOT
           slots: 15
         apply_always:
           name: <t:regular_heading>自动将职位添加到新子区域
           lore:
-            - <t:regular>此职位(包括其成员和设置)始终会被添加到新创建的子区域中.
-            - 对于此职位, 该设置无法切换.
+          - <t:regular>此职位 (包括其成员和设置) 始终会被添加到新建的子区域中.
+          - 对于此职位, 该设置无法切换.
           material: OAK_FENCE
           slots: 14
         members_visitor:
           name: <t:regular_heading>职位成员
           lore:
-            - <t:regular>所有未加入城镇的玩家都会被分配此职位.
+          - <t:regular>所有未加入城镇的玩家都会被分配此职位.
           material: skin:e8b8c6a46d87cf86a55df214cf84bf45cca25edb9a676e96364dd6a6eea235b3
           slots: 11
         child_failure_priority:
           name: <t:error_heading>职位优先级不足
           lore:
-            - <t:error>你无权编辑此职位的设置.
-            - " <t:decoration>• </t><t:regular>此职位的优先级等于或高于你的职位."
+          - <t:error>你无权编辑此职位的设置.
+          - ' <t:decoration>• </t><t:regular>此职位的优先级等于或高于你.'
         members_nation:
           name: <t:regular_heading>职位成员
           lore:
-            - <t:regular>所有未加入城镇且属于你所在联邦的玩家都会被分配此职位.
+          - <t:regular>所有未加入城镇且属于你所在联邦的玩家都会被分配此职位.
           material: skin:e8b8c6a46d87cf86a55df214cf84bf45cca25edb9a676e96364dd6a6eea235b3
           slots: 11
         child_failure_access:
           name: <t:error_heading>职位权限不足
           lore:
-            - <t:error>你无权编辑此子区域中的的职位.
-            - " <t:decoration>• </t><t:regular>城镇所有者可以授予你的职位相应权限."
+          - <t:error>你无权编辑此子区域中的的职位.
+          - ' <t:decoration>• </t><t:regular>城镇的主人可以授予你的职位相应权限.'
         management:
           name: <t:regular_heading>管理设置
           lore:
-            - <t:decoration>✖ </t><t:regular>切换管理权限
-            - "   例如信任玩家, 邀请玩家, 占领等."
+          - <t:decoration>✖ </t><t:regular>切换管理权限
+          - '   例如信任玩家, 邀请玩家, 占领等.'
           material: GOLD_INGOT
           slots: 30
         members:
           name: <t:regular_heading>职位成员
           lore:
-            - <t:decoration>✖ </t><t:regular>查看该职位的所有成员.
+          - <t:decoration>✖ </t><t:regular>查看该职位的所有成员.
           material: skin:e8b8c6a46d87cf86a55df214cf84bf45cca25edb9a676e96364dd6a6eea235b3
           slots: 11
         name:
           name: <t:regular_heading>重命名
           lore:
-            - <t:decoration>✖ </t><t:regular>重命名此职位.
-            - "   当前名称: <t:user_content><v:name></t>"
+          - <t:decoration>✖ </t><t:regular>重命名此职位.
+          - '   当前名称: <t:user_content><v:name></t>'
           material: NAME_TAG
           slots: 12
         child_failure_nation:
           name: <t:error_heading>职位由联邦管理
           lore:
-            - <t:error>此职位部分由你的联邦管理.
-            - " <t:decoration>• </t><t:regular>只有联邦首都可以更改此设置:"
-            - "   <t:cmd>/<v:cmd></t>"
+          - <t:error>此职位部分由你的联邦管理.
+          - ' <t:decoration>• </t><t:regular>只有联邦首都可以更改此设置:'
+          - '   <t:cmd>/<v:cmd></t>'
   list_area_invites:
     title: <t:menu_title>已发送的邀请和请求
     items:
@@ -474,52 +469,52 @@ gui:
         entry_object_owner_land:
           name: <t:entry_heading><v:player> <t:decoration>-</t> 所有权请求
           lore:
-            - <t:regular>将此玩家设为城镇
-            - <t:entity_land> <v:land></t>
-            - 的新的所有者.
-            - ""
-            - <t:regular_heading>邀请信息</t>
-            - " <t:decoration>• </t><t:regular>发送时间:<t:time> <v:time></t>"
-            - " <t:decoration>• </t><t:regular>发送者: <v:sender>"
-            - ""
-            - <action:remove><label>撤回邀请</label></action>
+          - <t:regular>将此玩家设为城镇
+          - <t:entity_land> <v:land></t>
+          - 的新主人.
+          - ''
+          - <t:regular_heading>邀请信息</t>
+          - ' <t:decoration>• </t><t:regular>发送时间:<t:time> <v:time></t>'
+          - ' <t:decoration>• </t><t:regular>发送者: <v:sender>'
+          - ''
+          - <action:remove><label>撤回邀请</label></action>
         entry_object_merge:
           name: <t:entry_heading><v:merge> <t:decoration>-</t> 合并请求
           lore:
-            - <t:regular>将城镇<t:entity_land> <v:merge></t> 并入此城镇.
-            - ""
-            - <t:regular_heading>邀请信息</t>
-            - " <t:decoration>• </t><t:regular>发送时间:<t:time> <v:time></t>"
-            - " <t:decoration>• </t><t:regular>发送者: <v:sender>"
-            - " <t:decoration>• </t><t:regular>接收者: <t:regular_value><v:receiver></t>"
-            - ""
-            - <action:remove><label>撤回邀请</label></action>
+          - <t:regular>将城镇<t:entity_land> <v:merge></t> 并入此城镇.
+          - ''
+          - <t:regular_heading>邀请信息</t>
+          - ' <t:decoration>• </t><t:regular>发送时间:<t:time> <v:time></t>'
+          - ' <t:decoration>• </t><t:regular>发送者: <v:sender>'
+          - ' <t:decoration>• </t><t:regular>接收者: <t:regular_value><v:receiver></t>'
+          - ''
+          - <action:remove><label>撤回邀请</label></action>
           material: INHERIT
         entry_object_trust_area:
           name: <t:entry_heading><v:player> <t:decoration>-</t> <t:regular_heading>成员邀请
           lore:
-            - <t:regular>让此玩家加入子区域<t:regular_value> <v:area></t>.
-            - ""
-            - <t:regular_heading>邀请信息</t>
-            - " <t:decoration>• </t><t:regular>发送时间:<t:time> <v:time></t>"
-            - " <t:decoration>• </t><t:regular>发送者: <v:sender>"
-            - ""
-            - <action:remove><label>撤回邀请</label></action>
+          - <t:regular>让此玩家加入子区域<t:regular_value> <v:area></t>.
+          - ''
+          - <t:regular_heading>邀请信息</t>
+          - ' <t:decoration>• </t><t:regular>发送时间:<t:time> <v:time></t>'
+          - ' <t:decoration>• </t><t:regular>发送者: <v:sender>'
+          - ''
+          - <action:remove><label>撤回邀请</label></action>
           material: INHERIT
         child_failure_access:
           name: <t:error_heading>职位权限不足
           lore:
-            - <t:error>你无权撤回此子区域中的邀请.
-            - " <t:decoration>• </t><t:regular>城镇所有者可以授予你的职位移出玩家的权限."
+          - <t:error>你无权撤回此子区域中的邀请.
+          - ' <t:decoration>• </t><t:regular>城镇的主人可以授予你的职位移出玩家的权限.'
         entry_object_trust_land:
           name: <t:entry_heading><v:player> <t:decoration>-</t> 成员邀请
           lore:
-            - <t:regular>让此玩家加入城镇<t:entity_land> <v:land></t>.
-            - ""
-            - <t:regular_heading>邀请信息</t>
-            - <t:decoration>• </t><t:regular>发送时间:<t:time> <v:time></t>
-            - "<t:decoration>✖ </t><t:regular>发送者: <v:sender>"
-            - <action:remove><label>撤回邀请</label></action>
+          - <t:regular>让此玩家加入城镇<t:entity_land> <v:land></t>.
+          - ''
+          - <t:regular_heading>邀请信息</t>
+          - <t:decoration>• </t><t:regular>发送时间:<t:time> <v:time></t>
+          - '<t:decoration>✖ </t><t:regular>发送者: <v:sender>'
+          - <action:remove><label>撤回邀请</label></action>
           material: INHERIT
         entry_object_owner:
           material: INHERIT
@@ -530,17 +525,17 @@ gui:
         title:
           name: <t:regular_heading>宣言
           lore:
-            - <t:decoration>✖ </t><t:regular>更改玩家进入城镇时显示的消息.
-            - "    <t:decoration>• </t><t:regular_heading>当前消息</t>"
-            - "      <t:user_content><v:title></t>"
-            - "    <!b><t:decoration>• </t><t:regular_heading>可用占位符</t>"
-            - "      <!b><t:decoration>- </t><t:regular_value>%owner%</t> <t:decoration>= </t><t:regular>所有者"
-            - "      <t:decoration>- </t><t:regular_value>%level%</t> <t:decoration>= </t><t:regular>等级"
-            - "      <t:decoration>- </t><t:entity_nation>%nation%</t> <t:decoration>= </t><t:regular>联邦"
-            - "      <t:decoration>- </t><t:regular_value>%player%</t> <t:decoration>= </t><t:regular>进入的玩家"
-            - ""
-            - <action:primary><label>设置消息</label></action>
-            - "<action:secondary><label>显示: <v:show></label></action>"
+          - <t:decoration>✖ </t><t:regular>更改玩家进入城镇时显示的消息.
+          - '    <t:decoration>• </t><t:regular_heading>当前消息</t>'
+          - '      <t:user_content><v:title></t>'
+          - '    <!b><t:decoration>• </t><t:regular_heading>可用占位符</t>'
+          - '      <!b><t:decoration>- </t><t:regular_value>%owner%</t> <t:decoration>= </t><t:regular>主人'
+          - '      <t:decoration>- </t><t:regular_value>%level%</t> <t:decoration>= </t><t:regular>等级'
+          - '      <t:decoration>- </t><t:entity_nation>%nation%</t> <t:decoration>= </t><t:regular>联邦'
+          - '      <t:decoration>- </t><t:regular_value>%player%</t> <t:decoration>= </t><t:regular>进入的玩家'
+          - ''
+          - <action:primary><label>设置消息</label></action>
+          - '<action:secondary><label>显示: <v:show></label></action>'
           material: OAK_SIGN
           slots: 15
         object_name:
@@ -562,11 +557,11 @@ gui:
         tax_area:
           name: <t:regular_heading>税费:</t> <t:regular_value><v:tax></t>
           lore:
-            - <t:regular>每隔<t:time> <v:time></t>
-            - 可从城镇中此子区域的所有成员处收到
-            - 总计<t:regular_value> <v:revenue></t> <t:regular> 的税费.
-            - " <t:decoration>• </t><t:regular>收税间隔: <t:time><v:interval></t>"
-            - " <t:decoration>• </t><t:regular>玩家只需向他们加入的子区域缴税."
+          - <t:regular>每隔<t:time> <v:time></t>
+          - 可从城镇中此子区域的所有成员处收到
+          - 总计<t:regular_value> <v:revenue></t> <t:regular> 的税费.
+          - ' <t:decoration>• </t><t:regular>收税间隔: <t:time><v:interval></t>'
+          - ' <t:decoration>• </t><t:regular>玩家只需向他们加入的子区域缴税.'
           material: GOLD_INGOT
           slots: 23
         refresh_minus-1:
@@ -606,44 +601,43 @@ gui:
           data:
             modify: 50
         child_failure_value_max:
-          name: <t:error_heading>已达到最大值
+          name: <t:error_heading>已达最大值
           lore:
-            - <t:error>税费不能高于<t:error_value> <v:max></t>.
+          - <t:error>税费不能高于<t:error_value> <v:max></t>.
         tax_nation:
           name: <t:regular_heading>正在编辑 <v:editing> <t:regular_heading>税费:</t> <t:regular_value><v:active_tax></t>
           lore:
-            - <t:regular>每隔<t:time> <v:time></t>
-            - 可从联邦所有城镇中收到
-            - 总计 <t:regular_value> <v:revenue></t> <t:regular>的税费.
-            - " <t:decoration>• </t><t:regular>成员税费:<t:regular_value> <v:tax></t>"
-            - " <t:decoration>• </t><t:regular>附庸税费:<t:regular_value> <v:vassal_tax></t>"
-            - " <t:decoration>• </t><t:regular>收税间隔: <t:time><v:interval></t>"
-            - " <t:decoration>• </t><t:regular>此值是每个区块的税收,"
-            - "   因此规模较大的城镇需要缴纳更多税费."
+          - <t:regular>每隔<t:time> <v:time></t>
+          - 可从联邦所有城镇中收到
+          - 总计 <t:regular_value> <v:revenue></t> <t:regular>的税费.
+          - ' <t:decoration>• </t><t:regular>成员税费:<t:regular_value> <v:tax></t>'
+          - ' <t:decoration>• </t><t:regular>附庸税费:<t:regular_value> <v:vassal_tax></t>'
+          - ' <t:decoration>• </t><t:regular>收税间隔: <t:time><v:interval></t>'
+          - ' <t:decoration>• </t><t:regular>此值是每个区块的税收, 因此规模较大的城镇需要缴纳更多税费.'
           material: GOLD_INGOT
           slots: 23
         child_failure_value_min:
           name: <t:error_heading>已达到最小值
           lore:
-            - <t:error>税费不能低于<t:error_value> <v:min></t>.
+          - <t:error>税费不能低于<t:error_value> <v:min></t>.
         child_failure_cooldown:
           name: <t:error_heading>请稍候
           lore:
-            - <t:error>暂时无法更改税费数值.
-            - " <t:decoration>• </t><t:regular>还需等待"
-            - "   <t:time><v:time></t> 后才能再次更改."
+          - <t:error>暂时无法更改税费数值.
+          - ' <t:decoration>• </t><t:regular>还需等待'
+          - '   <t:time><v:time></t> 后才能再次更改.'
         tax_toggle:
           material: COMPARATOR
           slots: 4
           lore:
-            - <t:regular>当前 +/- 按钮用于调整
-            - <v:editing> <t:regular>税费.
-            - ""
-            - " <t:decoration>• </t><t:regular>成员税费:<t:regular_value> <v:tax></t>"
-            - " <t:decoration>• </t><t:regular>附庸税费:<t:regular_value> <v:vassal_tax></t>"
-            - ""
-            - <t:click>点击 <t:regular>切换要编辑的税费类型.
-          name: "<t:regular_heading>正在编辑: <v:editing> <t:regular_heading>税费"
+          - <t:regular>当前 +/- 按钮用于调整
+          - <v:editing> <t:regular>税费.
+          - ''
+          - ' <t:decoration>• </t><t:regular>成员税费:<t:regular_value> <v:tax></t>'
+          - ' <t:decoration>• </t><t:regular>附庸税费:<t:regular_value> <v:vassal_tax></t>'
+          - ''
+          - <t:click>点击 <t:regular>切换要编辑的税费类型.
+          name: '<t:regular_heading>正在编辑: <v:editing> <t:regular_heading>税费'
   main:
     title: <t:menu_title>城镇主菜单
     items:
@@ -651,76 +645,75 @@ gui:
         limit:
           name: <t:regular_heading>你的限制
           lore:
-            - <t:decoration>• </t><t:regular>创建<t:regular_value> <v:player_lands_owned></t> 个城镇
-            - "  <t:cmd>/<v:cmd_create></t>"
-            - <t:decoration>• </t><t:regular>占领区块
-            - "  <t:decoration>- </t>所有城镇总计最大规模: <t:regular_value><v:player_chunks_used></t><t:regular> <t:decoration>/</t> <t:regular_value><v:player_chunks></t> 个区块"
-            - "  <t:decoration>- </t><t:regular>每个城镇最大规模: <t:regular_value><v:land_size></t> 个区块"
-            - "  <t:cmd>/<v:cmd_claim></t>"
-            - <t:decoration>• </t><t:regular>每个城镇最多<t:regular_value> <v:land_members></t> 名成员
-            - "  <t:cmd>/<v:cmd_trust></t>"
-            - <t:decoration>• </t><t:regular>最多加入<t:regular_value> <v:player_lands_trusted></t> 个城镇
-            - "  <t:cmd>/<v:cmd_accept></t>"
+          - <t:decoration>• </t><t:regular>创建<t:regular_value> <v:player_lands_owned></t> 个城镇
+          - '  <t:cmd>/<v:cmd_create></t>'
+          - <t:decoration>• </t><t:regular>占领区块
+          - '  <t:decoration>- </t>所有城镇总计最大规模: <t:regular_value><v:player_chunks_used></t><t:regular> <t:decoration>/</t> <t:regular_value><v:player_chunks></t> 个区块'
+          - '  <t:decoration>- </t><t:regular>每个城镇最大规模: <t:regular_value><v:land_size></t> 个区块'
+          - '  <t:cmd>/<v:cmd_claim></t>'
+          - <t:decoration>• </t><t:regular>每个城镇最多<t:regular_value> <v:land_members></t> 名成员
+          - '  <t:cmd>/<v:cmd_trust></t>'
+          - <t:decoration>• </t><t:regular>最多加入<t:regular_value> <v:player_lands_trusted></t> 个城镇
+          - '  <t:cmd>/<v:cmd_accept></t>'
           material: INHERIT
           slots: 17
         rentable:
           name: <t:regular_heading>可租售
           lore:
-            - <t:decoration>✖ </t><t:regular>查看正在出租的子区域
-            - "   和可购买的城镇."
+          - <t:decoration>✖ </t><t:regular>查看正在出租的子区域和可购买的城镇.
           material: OAK_FENCE
           slots: 31
         lands:
           name: <t:entity_land><b>你的城镇</t>
           lore:
-            - <t:decoration>✖ </t><t:regular>管理你所属的城镇.
-            - "    <t:decoration>• </t><t:regular>拥有: <t:regular_value><v:own></t>"
-            - "    <t:decoration>• </t><t:regular>已加入: <t:regular_value><v:trusted></t>"
+          - <t:decoration>✖ </t><t:regular>管理你所属的城镇.
+          - '    <t:decoration>• </t><t:regular>拥有: <t:regular_value><v:own></t>'
+          - '    <t:decoration>• </t><t:regular>已加入: <t:regular_value><v:trusted></t>'
           material: skin:8449b9318e33158e64a46ab0de121c3d40000e3332c1574932b3c849d8fa0dc2
           slots: 11
         flags:
           name: <t:regular_heading>设置
           lore:
-            - <t:decoration>✖ </t><t:regular>编辑个人设置.
+          - <t:decoration>✖ </t><t:regular>编辑个人设置.
           material: skin:ec2ff244dfc9dd3a2cef63112e7502dc6367b0d02132950347b2b479a72366dd
           slots: 32
         invites:
           name: <t:regular_heading>邀请和请求
           lore:
-            - <t:decoration>✖ </t><t:regular>查看你收到的邀请.
-            - "   其他城镇可以邀请你加入,"
-            - "   邀请你成为新的所有者"
-            - "   或请求将你的城镇并入对方的城镇."
-            - ""
-            - "    <t:decoration>• </t><t:regular>数量: <t:regular_value><v:invites></t>"
+          - <t:decoration>✖ </t><t:regular>查看你收到的邀请.
+          - '   其他城镇可以邀请你加入,'
+          - '   邀请你成为新的主人'
+          - '   或请求将你的城镇并入对方的城镇.'
+          - ''
+          - '    <t:decoration>• </t><t:regular>数量: <t:regular_value><v:invites></t>'
           material: WRITABLE_BOOK
           slots: 13
         nations:
           name: <t:entity_nation><b>你的联邦</t>
           lore:
-            - <t:decoration>✖ </t><t:regular>查看你所属的联邦.
-            - "    <t:decoration>• </t><t:regular>拥有: <t:regular_value><v:own></t>"
-            - "    <t:decoration>• </t><t:regular>已加入: <t:regular_value><v:trusted></t>"
+          - <t:decoration>✖ </t><t:regular>查看你所属的联邦.
+          - '    <t:decoration>• </t><t:regular>拥有: <t:regular_value><v:own></t>'
+          - '    <t:decoration>• </t><t:regular>已加入: <t:regular_value><v:trusted></t>'
           material: skin:45587da7fe7336e8ab9f791ea5e2cfc8a827ca959567eb9d53a647babf948d5
           slots: 12
         all-lands:
           name: <t:entity_land><b>所有城镇</t>
           lore:
-            - <t:decoration>✖ </t><t:regular>查看服务器中的所有城镇.
-            - "    <t:decoration>• </t><t:regular>总数: <t:regular_value><v:lands></t>"
+          - <t:decoration>✖ </t><t:regular>查看服务器中的所有城镇.
+          - '    <t:decoration>• </t><t:regular>总数: <t:regular_value><v:lands></t>'
           material: skin:c9c8881e42915a9d29bb61a16fb26d059913204d265df5b439b3d792acd56
           slots: 29
         all-nations:
           name: <t:entity_nation><b>所有联邦</t>
           lore:
-            - <t:decoration>✖ </t><t:regular>查看服务器中的所有联邦.
-            - "    <t:decoration>• </t><t:regular>总数: <t:regular_value><v:nations></t>"
+          - <t:decoration>✖ </t><t:regular>查看服务器中的所有联邦.
+          - '    <t:decoration>• </t><t:regular>总数: <t:regular_value><v:nations></t>'
           material: skin:cf40942f364f6cbceffcf1151796410286a48b1aeba77243e218026c09cd1
           slots: 30
         map:
           name: <t:regular_heading>地图
           lore:
-            - <t:decoration>✖ </t><t:regular>查看领土占领地图.
+          - <t:decoration>✖ </t><t:regular>查看领土占领地图.
           material: MAP
           slots: 33
       patches:
@@ -740,45 +733,45 @@ gui:
         entry_chunk:
           name: <t:regular_heading><v:world>, <v:x>, <v:z>
           lore:
-            - <t:decoration>✖ </t><t:regular>传送至此区块.
-            - "   <t:decoration>• </t><t:regular>占领者: <t:regular_value><v:claimer></t>"
-            - "   <t:decoration>• </t><t:regular>占领时间:<t:time> <v:date></t>"
-            - "   <t:decoration>• </t><t:regular>世界: <t:regular_value><v:world></t>"
-            - "   <t:decoration>• </t><t:regular>X: <t:regular_value><v:x></t>"
-            - "   <t:decoration>• </t><t:regular>Z: <t:regular_value><v:z></t>"
+          - <t:decoration>✖ </t><t:regular>传送至此区块.
+          - '   <t:decoration>• </t><t:regular>占领者: <t:regular_value><v:claimer></t>'
+          - '   <t:decoration>• </t><t:regular>占领时间:<t:time> <v:date></t>'
+          - '   <t:decoration>• </t><t:regular>世界: <t:regular_value><v:world></t>'
+          - '   <t:decoration>• </t><t:regular>X: <t:regular_value><v:x></t>'
+          - '   <t:decoration>• </t><t:regular>Z: <t:regular_value><v:z></t>'
           material: skin:8449b9318e33158e64a46ab0de121c3d40000e3332c1574932b3c849d8fa0dc2
         entry_chunk_server:
           name: <t:entry_heading><v:server> <v:world><t:decoration>,</t> <v:x><t:decoration>,</t> <v:z>
           lore:
-            - <t:decoration>✖ </t><t:regular>传送至此区块.
-            - "   <t:decoration>• </t><t:regular>占领者: <t:regular_value><v:claimer></t>"
-            - "   <t:decoration>• </t><t:regular>占领时间:<t:time> <v:date></t>"
-            - "   <t:decoration>• </t><t:regular>服务器: <t:regular_value><v:server></t>"
-            - "   <t:decoration>• </t><t:regular>世界: <t:regular_value><v:world></t>"
-            - "   <t:decoration>• </t><t:regular>X: <t:regular_value><v:x></t>"
-            - "   <t:decoration>• </t><t:regular>Z: <t:regular_value><v:z></t>"
+          - <t:decoration>✖ </t><t:regular>传送至此区块.
+          - '   <t:decoration>• </t><t:regular>占领者: <t:regular_value><v:claimer></t>'
+          - '   <t:decoration>• </t><t:regular>占领时间:<t:time> <v:date></t>'
+          - '   <t:decoration>• </t><t:regular>服务器: <t:regular_value><v:server></t>'
+          - '   <t:decoration>• </t><t:regular>世界: <t:regular_value><v:world></t>'
+          - '   <t:decoration>• </t><t:regular>X: <t:regular_value><v:x></t>'
+          - '   <t:decoration>• </t><t:regular>Z: <t:regular_value><v:z></t>'
           material: skin:8449b9318e33158e64a46ab0de121c3d40000e3332c1574932b3c849d8fa0dc2
         child_failure_cooldown:
           name: <t:error_heading>冷却中
           lore:
-            - <t:error>还需等待<t:error_value> <v:time></t>
-            - 才能再次执行此操作.
+          - <t:error>还需等待<t:error_value> <v:time></t>
+          - 才能再次执行此操作.
         refresh_claimer:
           material: HOPPER
           slots: 41
-          name: "<t:regular_heading>占领者: <t:regular_value><v:filter></t>"
+          name: '<t:regular_heading>占领者: <t:regular_value><v:filter></t>'
           lore:
-            - <t:regular>按领土占领者筛选.
-            - ""
-            - <action:primary><label>显示你的领土</label></action>
-            - <action:secondary><label>选择玩家</label></action>
-            - <action:remove><label>清除筛选</label></action>
+          - <t:regular>按领土占领者筛选.
+          - ''
+          - <action:primary><label>显示你的领土</label></action>
+          - <action:secondary><label>选择玩家</label></action>
+          - <action:remove><label>清除筛选</label></action>
         refresh_world:
           material: skin:8449b9318e33158e64a46ab0de121c3d40000e3332c1574932b3c849d8fa0dc2
           slots: 42
           lore:
-            - <t:decoration>✖ </t><t:regular>点击切换世界.
-          name: "<t:regular_heading>世界: <v:world>"
+          - <t:decoration>✖ </t><t:regular>点击切换世界.
+          name: '<t:regular_heading>世界: <v:world>'
   list_admin_wilderness_roleflags:
     title: <t:menu_title>玩家设置
   list_level_progress:
@@ -788,65 +781,65 @@ gui:
         current:
           name: <t:regular_heading>当前:</t><t:regular> <t:regular_value><v:level></t>
           lore:
-            - "<t:regular>本级奖励:"
-            - <t:regular_value><v:attributes></t>
+          - '<t:regular>本级奖励:'
+          - <t:regular_value><v:attributes></t>
           material: OAK_SIGN
           slots: 40
         entry_done:
           name: <t:positive_heading>✔ <v:title>
           lore:
-            - <v:bar><t:regular> <t:regular_value><v:progress></t>
-            - <t:user_content><v:description></t>
+          - <v:bar><t:regular> <t:regular_value><v:progress></t>
+          - <t:user_content><v:description></t>
           material: LIME_STAINED_GLASS
         entry_loading:
           name: <t:regular><b>? <t:user_content><v:title></t>
           lore:
-            - <t:regular>正在计算当前进度,
-            - 计算完成后此物品会更新.
-            - ""
-            - <t:user_content><v:description></t>
+          - <t:regular>正在计算当前进度,
+          - 计算完成后此物品会更新.
+          - ''
+          - <t:user_content><v:description></t>
           material: GRAY_STAINED_GLASS
         entry_progress:
           name: <t:negative_heading>✘ <v:title>
           lore:
-            - <v:bar><t:regular> <t:regular_value><v:progress></t>
-            - <t:user_content><v:description></t>
+          - <v:bar><t:regular> <t:regular_value><v:progress></t>
+          - <t:user_content><v:description></t>
           material: RED_STAINED_GLASS
         level_up:
           material: EXPERIENCE_BOTTLE
           slots: 42
           lore:
-            - <action:primary><label>升级</label></action>
-            - ""
-            - <t:regular>已满足所有升级条件.</t>
-            - "<t:regular>费用: <t:cost><v:cost></t> <t:regular>从金库扣除."
-            - ""
-            - "<t:regular>升级奖励:"
-            - <t:regular_value><v:attributes></t>
+          - <action:primary><label>升级</label></action>
+          - ''
+          - <t:regular>已满足所有升级条件.</t>
+          - '<t:regular>费用: <t:cost><v:cost></t> <t:regular>从金库扣除.'
+          - ''
+          - '<t:regular>升级奖励:'
+          - <t:regular_value><v:attributes></t>
           name: <t:positive_heading>升级至 <v:level>
         level_up_locked:
           material: BEACON
           slots: 42
           lore:
-            - <v:reason>
-            - "<t:regular>费用: <t:cost><v:cost></t> <t:regular>(金库余额: <t:cost><v:bank></t><t:regular>)"
-            - ""
-            - "<t:regular>升级奖励:"
-            - <t:regular_value><v:attributes></t>
+          - <v:reason>
+          - '<t:regular>费用: <t:cost><v:cost></t> <t:regular>(金库余额: <t:cost><v:bank></t><t:regular>)'
+          - ''
+          - '<t:regular>升级奖励:'
+          - <t:regular_value><v:attributes></t>
           name: <t:regular_heading>下一级:</t><t:regular> <t:regular_value><v:level></t>
         level_up_max:
           material: NETHER_STAR
           slots: 42
           lore:
-            - <t:regular>没有更高的城镇等级.
+          - <t:regular>没有更高的城镇等级.
           name: <t:positive_heading>已达最高等级
         child_failure_level_up:
           lore:
-            - <v:reason>
+          - <v:reason>
           name: <t:error_heading>升级失败
         child_success_level_up:
           lore:
-            - <t:regular>已支付 <t:cost><v:cost></t>
+          - <t:regular>已支付 <t:cost><v:cost></t>
           name: <t:positive_heading>已升级至 <v:level>
   mainblock:
     title: <t:menu_title><v:level_prefix><v:land>
@@ -855,30 +848,30 @@ gui:
         land:
           name: <t:regular_heading>城镇
           lore:
-            - <t:decoration>✖ </t><t:regular>打开城镇<t:entity_land> <v:land></t> 菜单.
+          - <t:decoration>✖ </t><t:regular>打开城镇<t:entity_land> <v:land></t> 菜单.
           material: INHERIT
           slots: 21
         map:
           name: <t:regular_heading>地图
           lore:
-            - <t:decoration>✖ </t><t:regular>打开地图菜单.
+          - <t:decoration>✖ </t><t:regular>打开地图菜单.
           material: MAP
           slots: 25
         main:
           name: <t:regular_heading>主菜单
           lore:
-            - <t:decoration>✖ </t><t:regular>打开主菜单.
-            - "   在此切换个人设置, 查看服务器中的所有城镇等."
+          - <t:decoration>✖ </t><t:regular>打开主菜单.
+          - '   在此切换个人设置, 查看服务器中的所有城镇等.'
           material: skin:ad75fed3649f87a48e51169b57dcce6d4a8dc97db418f22d60d96c2a62b3e
           slots: 23
         mainblock_reposition:
           name: <t:regular_heading>编辑城镇核心
           lore:
-            - <t:decoration>✖ </t><t:click>左键点击</t>
-            - "   <t:regular>移除或重新放置城镇核心."
-            - "    <t:decoration>• </t><t:regular>再次放置需要:<t:cost> <v:cost></t>"
-            - <t:decoration>✖ </t><t:click>右键点击</t>
-            - "   <t:regular>切换全息显示: <t:regular_value><v:hologram></t>"
+          - <t:decoration>✖ </t><t:click>左键点击</t>
+          - '   <t:regular>移除或重新放置城镇核心.'
+          - '    <t:decoration>• </t><t:regular>再次放置需花费:<t:cost> <v:cost></t>'
+          - <t:decoration>✖ </t><t:click>右键点击</t>
+          - '   <t:regular>切换全息显示: <t:regular_value><v:hologram></t>'
           material: BELL
           slots: 45
   land:
@@ -888,60 +881,59 @@ gui:
         mainblock_set:
           name: <t:positive_heading>放置城镇核心
           lore:
-            - <t:decoration>✖ </t><t:regular>在你当前所在位置放置城镇核心.
-            - "   费用:<t:cost> <v:cost></t>"
+          - <t:decoration>✖ </t><t:regular>在你当前所在位置放置城镇核心.
+          - '   费用:<t:cost> <v:cost></t>'
           material: BELL
           slots: 45
         level:
           name: <t:regular_heading>等级
           lore:
-            - <t:decoration>✖ </t><t:regular>查看城镇等级进度和等级属性.
+          - <t:decoration>✖ </t><t:regular>查看城镇等级进度和等级属性.
           material: EXPERIENCE_BOTTLE
           slots: 14
         player-management:
           name: <t:regular_heading>玩家管理
           lore:
-            - <t:decoration>✖ </t><t:regular>管理成员, 已封禁玩家,
-            - "   邀请和成员申请."
+          - <t:decoration>✖ </t><t:regular>管理成员, 已封禁玩家, 邀请和成员申请.
           material: skin:e8b8c6a46d87cf86a55df214cf84bf45cca25edb9a676e96364dd6a6eea235b3
           slots: 12
         roles:
           name: <t:regular_heading>职位
           lore:
-            - <t:decoration>✖ </t><t:regular>查看子区域 <t:regular_value> <v:area></t> 的职位.
+          - <t:decoration>✖ </t><t:regular>查看子区域<t:regular_value> <v:area></t> 的职位.
           material: skin:e8b8c6a46d87cf86a55df214cf84bf45cca25edb9a676e96364dd6a6eea235b3
           slots: 30
         taxes:
           name: <t:regular_heading>税费
           lore:
-            - <t:decoration>✖ </t><t:regular>查看子区域<t:regular_value> <v:area></t> 的税费.
+          - <t:decoration>✖ </t><t:regular>查看子区域<t:regular_value> <v:area></t> 的税费.
           material: GOLD_INGOT
           slots: 31
         areas:
           name: <t:regular_heading>子区域
           lore:
-            - <t:decoration>✖ </t><t:regular>查看此城镇的所有子区域.
-            - "   你也可以在此菜单中创建新的子区域."
+          - <t:decoration>✖ </t><t:regular>查看此城镇的所有子区域.
+          - '   你也可以在此菜单中创建新的子区域.'
           material: OAK_FENCE
           slots: 11
         level_camp:
           name: <t:regular_heading>等级
           lore:
-            - <t:error>露营地没有等级.
+          - <t:error>露营地没有等级.
           material: EXPERIENCE_BOTTLE
           slots: 14
         land-settings:
           name: <t:regular_heading>环境设置
           lore:
-            - <t:decoration>✖ </t><t:regular>编辑子区域 <t:regular_value> <v:area></t> 的环境设置.
+          - <t:decoration>✖ </t><t:regular>编辑子区域<t:regular_value> <v:area></t> 的环境设置.
           material: skin:8449b9318e33158e64a46ab0de121c3d40000e3332c1574932b3c849d8fa0dc2
           slots: 29
         spawn:
           name: <t:regular_heading>传送点
           lore:
-            - <action:primary><label>传送到传送点</label></action>
-            - <action:tertiary><label>设置传送点</label></action>
-            - "<action:quaternary><label>访客传送: <t:regular_value><v:teleport></t></label><desc>   <t:decoration>• </t>也可以在职位菜单中编辑.</desc></action>"
+          - <action:primary><label>传送到传送点</label></action>
+          - <action:tertiary><label>设置传送点</label></action>
+          - '<action:quaternary><label>访客传送: <t:regular_value><v:teleport></t></label><desc>   <t:decoration>• </t>也可以在职位菜单中编辑.</desc></action>'
           material: ENDER_PEARL
           slots: 9
           bedrock:
@@ -949,99 +941,98 @@ gui:
         child_failure_land:
           name: <t:error_heading>必须设置在城镇内
           lore:
-            - <t:error>传送点无法设置在荒野或其他城镇中.
+          - <t:error>传送点无法设置在荒野或其他城镇中.
         statistics:
           name: <t:regular_heading>统计信息
           lore:
-            - "<t:regular>传送点: <t:regular_value><v:world></t>, x=<t:regular_value><v:x></t>, z=<t:regular_value><v:z></t>"
-            - 所属联邦:<t:entity_nation> <v:nation></t>
-            - "规模: <t:regular_value><v:chunks></t> <t:decoration>/</t> <t:regular_value><v:chunks_max></t> 个区块"
-            - "成员: <t:regular_value><v:members></t> <t:decoration>/</t> <t:regular_value><v:members_max></t>"
-            - ""
-            - <t:regular_heading>经济信息</t>
-            - " <t:decoration>• </t><t:regular>城镇"
-            - "   余额: <t:regular_value><v:balance></t>"
-            - "   下次占领费用: <t:regular_value><v:chunk_cost></t>"
-            - "   维护费<t:cost> <v:upkeep></t> 收取时间:"
-            - "   <t:time><v:upkeep_next></t>"
-            - " <t:decoration>• </t><t:regular>你"
-            - "   已占领区块总数:<t:regular_value> <v:player_chunks_used></t> <t:decoration>/</t> <t:regular_value><v:player_chunks></t>"
-            - "   余额: <t:regular_value><v:balance_player></t>"
-            - "   税费<t:cost> <v:taxes></t> 收取时间:"
-            - "   <t:time><v:taxes_next></t>"
+          - '<t:regular>传送点: <t:regular_value><v:world></t>, x=<t:regular_value><v:x></t>, z=<t:regular_value><v:z></t>'
+          - 所属联邦:<t:entity_nation> <v:nation></t>
+          - '规模: <t:regular_value><v:chunks></t> <t:decoration>/</t> <t:regular_value><v:chunks_max></t> 个区块'
+          - '成员: <t:regular_value><v:members></t> <t:decoration>/</t> <t:regular_value><v:members_max></t>'
+          - ''
+          - <t:regular_heading>经济信息</t>
+          - ' <t:decoration>• </t><t:regular>城镇'
+          - '   余额: <t:regular_value><v:balance></t>'
+          - '   下次占领费用: <t:regular_value><v:chunk_cost></t>'
+          - '   维护费<t:cost> <v:upkeep></t>'
+          - '   收税时间: <t:time><v:upkeep_next></t>'
+          - ' <t:decoration>• </t><t:regular>你'
+          - '   已占领区块总数:<t:regular_value> <v:player_chunks_used></t> <t:decoration>/</t> <t:regular_value><v:player_chunks></t>'
+          - '   余额: <t:regular_value><v:balance_player></t>'
+          - '   税费<t:cost> <v:taxes></t>'
+          - '   收税时间: <t:time><v:taxes_next></t>'
           material: skin:d01afe973c5482fdc71e6aa10698833c79c437f21308ea9a1a095746ec274a0f
           slots: 16
         various:
           name: <t:regular_heading>杂项设置
           lore:
-            - <t:decoration>✖ </t><t:regular>编辑城镇名称, 标签, 图标,
-            - "   进入消息, 类别等设置."
+          - <t:decoration>✖ </t><t:regular>编辑城镇名称, 标签, 图标,
+          - '  宣言, 类别等设置.'
           material: BEACON
           slots: 32
         relations_camp:
           name: <t:regular_heading>外交关系
           lore:
-            - <t:error>露营地无法建立外交关系.
+          - <t:error>露营地无法建立外交关系.
           material: LIME_BANNER
           slots: 13
         relations:
           name: <t:regular_heading>外交关系
           lore:
-            - <t:decoration>✖ </t><t:regular>管理你与其他城镇和联邦的外交关系
-            - "   这些城镇和联邦."
+          - <t:decoration>✖ </t><t:regular>管理你与其他城镇和联邦的外交关系
           material: LIME_BANNER
           slots: 13
         inbox:
           name: <t:regular_heading>日志箱</t> <t:decoration>(</t><t:regular_value><v:amount></t><t:decoration>)</t>
           lore:
-            - <t:decoration>✖ </t><t:regular>打开详情菜单.
-            - ""
-            - <t:regular_value><v:inbox></t>
+          - <t:decoration>✖ </t><t:regular>打开详情菜单.
+          - ''
+          - <t:regular_value><v:inbox></t>
           material: skin:6bf3fcdccffd963e4334818108e1e9ae3a80566d0d3d2d4ab3051a2cd811348c
           slots: 15
         child_failure_mainblock_claim:
           name: <t:error_heading>必须放置在城镇内
           lore:
-            - <t:error>城镇核心必须放置在城镇内.
-            - <t:regular>请确认你位于城镇<t:entity_land> <v:land></t> 内.
+          - <t:error>城镇核心必须放置在城镇内.
+          - <t:regular>请确认你位于城镇<t:entity_land> <v:land></t> 内.
         child_failure_mainblock_space:
           name: <t:error_heading>空间不足
           lore:
-            - <t:error>你当前所在位置空间不足, 无法放置城镇核心.
+          - <t:error>你当前所在位置空间不足, 无法放置城镇核心.
         camp_remove:
           material: skin:548d7d1e03e1af145b0125ab841285672b421265da2ab915015f9058438ba2d8
           slots: 34
           lore:
-            - <t:decoration>✖ </t><t:regular>取消占领此露营地
-            - "   并取回露营地物品, 以便在其他位置重新放置."
-            - "   剩余时间保持不变."
+          - <t:decoration>✖ </t><t:regular>取消占领此露营地
+          - '   并取回露营地物品, 以便在其他位置重新放置.'
+          - '   剩余时间保持不变.'
           name: <t:negative_heading>移除露营地
         expiration:
           material: COBWEB
           slots: 33
           lore:
-            - <v:status>
+          - <v:status>
           name: <t:regular_heading>不活跃状态
         expiration_camp:
           material: CLOCK
           slots: 33
           lore:
-            - <t:regular>此露营地将在 <t:time><v:time></t> 后解散.
+          - <t:regular>此露营地将在 <t:time><v:time></t> 后解散.
           name: <t:regular_heading>剩余时间
       patches:
         basic:
           statistics:
             name: <t:regular_heading>统计信息
             lore:
-              - "<t:regular>传送点: <t:regular_value><v:world></t>, x=<t:regular_value><v:x></t>, z=<t:regular_value><v:z></t>"
-              - "占领区块: <t:regular_value><v:chunks></t> / <t:regular_value><v:chunks_max></t>"
-              - "成员数: <t:regular_value><v:members></t> / <t:regular_value><v:members_max></t>"
+            - '<t:regular>传送点: <t:regular_value><v:world></t>, x=<t:regular_value><v:x></t>, z=<t:regular_value><v:z></t>'
+            - '占领区块: <t:regular_value><v:chunks></t> / <t:regular_value><v:chunks_max></t>'
+            - '成员数: <t:regular_value><v:members></t> / <t:regular_value><v:members_max></t>'
             material: skin:d01afe973c5482fdc71e6aa10698833c79c437f21308ea9a1a095746ec274a0f
             slots: 17
           members:
             name: <t:regular_heading>成员
             lore:
-              - <t:decoration>✖ </t><t:regular>管理成员.
+            - <t:decoration>✖ </t><t:regular>管理成员.
             material: skin:e8b8c6a46d87cf86a55df214cf84bf45cca25edb9a676e96364dd6a6eea235b3
             slots: 11
           roles:
@@ -1057,149 +1048,146 @@ gui:
     items:
       default:
         entry_phantom_spawn:
-          name: "<v:enabled_symbol> <t:entry_heading>幻翼生成: <v:enabled>"
+          name: '<v:enabled_symbol> <t:entry_heading>幻翼生成: <v:enabled>'
           lore:
-            - <t:decoration>✖ </t><t:regular>是否允许幻翼自然生成?
-            - "    <t:decoration>• </t><t:regular>此设置不会影响刷怪笼."
+          - <t:decoration>✖ </t><t:regular>是否允许幻翼自然生成?
+          - '    <t:decoration>• </t><t:regular>此设置不会影响刷怪笼.'
           material: PHANTOM_SPAWN_EGG
         child_failure_permission:
           name: <t:error_heading>缺少权限
           lore:
-            - <t:error>你没有编辑此设置的权限.
+          - <t:error>你没有编辑此设置的权限.
         entry_expiration_shield:
-          name: "<v:enabled_symbol> <t:entry_heading>过期保护: <v:enabled>"
+          name: '<v:enabled_symbol> <t:entry_heading>过期保护: <v:enabled>'
           lore:
-            - <t:decoration>✖ </t><t:regular>防止不活跃的城镇被解散.
-            - "    <t:decoration>• </t><t:regular>此设置仅服务器管理员可见."
+          - <t:decoration>✖ </t><t:regular>防止不活跃的城镇被解散.
+          - '    <t:decoration>• </t><t:regular>此设置仅服务器管理员可见.'
           material: CLOCK
         entry_peaceful:
-          name: "<v:enabled_symbol> <t:entry_heading>和平城镇: <v:enabled>"
+          name: '<v:enabled_symbol> <t:entry_heading>和平城镇: <v:enabled>'
           lore:
-            - <t:decoration>✖ </t><t:regular>使此城镇免于参与任何战争.
-            - "    <t:decoration>• </t><t:regular>此设置仅服务器管理员可见."
+          - <t:decoration>✖ </t><t:regular>使此城镇免于参与任何战争.
+          - '    <t:decoration>• </t><t:regular>此设置仅服务器管理员可见.'
           material: CAKE
         entry_monster_spawn:
-          name: "<v:enabled_symbol> <t:entry_heading>怪物生成: <v:enabled>"
+          name: '<v:enabled_symbol> <t:entry_heading>怪物生成: <v:enabled>'
           lore:
-            - <t:decoration>✖ </t><t:regular>允许怪物自然生成吗?
-            - "    <t:decoration>• </t><t:regular>受影响的刷怪笼: <t:regular_value><v:spawners></t>"
+          - <t:decoration>✖ </t><t:regular>允许怪物自然生成吗?
+          - '    <t:decoration>• </t><t:regular>也影响刷怪笼: <t:regular_value><v:spawners></t>'
           material: SPAWNER
         entry_copper_golem:
-          name: "<v:enabled_symbol> <t:entry_heading>铜傀儡: <v:enabled>"
+          name: '<v:enabled_symbol> <t:entry_heading>铜傀儡: <v:enabled>'
           lore:
-            - <t:decoration>✖ </t><t:regular>允许同一城镇内其他子区域的铜傀儡进入此子区域吗?
-            - "    <t:decoration>• </t><t:regular>在荒野生成的铜傀儡始终无法进入."
+          - <t:decoration>✖ </t><t:regular>允许同一城镇内其他子区域的铜傀儡进入此子区域吗?
+          - '    <t:decoration>• </t><t:regular>在荒野生成的铜傀儡始终无法进入.'
           material: COPPER_GOLEM_STATUE
         entry_entity_griefing:
-          name: "<v:enabled_symbol> <t:entry_heading>生物破坏方块: <v:enabled>"
+          name: '<v:enabled_symbol> <t:entry_heading>生物破坏方块: <v:enabled>'
           lore:
-            - <t:decoration>✖ </t><t:regular>允许生物破坏方块吗?
-            - "    <t:decoration>• </t><t:regular>启用后, 苦力怕可以破坏你的建筑, 闪电也会造成伤害."
+          - <t:decoration>✖ </t><t:regular>允许生物破坏方块吗?
+          - '    <t:decoration>• </t><t:regular>启用后, 苦力怕可以破坏你的建筑, 闪电也会造成伤害.'
           material: CREEPER_HEAD
         entry_wither_attack_animal:
-          name: "<v:enabled_symbol> <t:entry_heading>凋灵攻击动物: <v:enabled>"
+          name: '<v:enabled_symbol> <t:entry_heading>凋灵攻击动物: <v:enabled>'
           lore:
-            - <t:decoration>✖ </t><t:regular>允许凋灵伤害动物吗?
-            - "    <t:decoration>• </t><t:regular>凋灵始终可以伤害其他怪物."
+          - <t:decoration>✖ </t><t:regular>允许凋灵伤害动物吗?
+          - '    <t:decoration>• </t><t:regular>凋灵始终可以伤害其他怪物.'
           material: skin:886dc0cfcaeecfe1ab69146e4d4f1190837076a67dec135fabda6271f375d01f
         entry_snow_melt:
-          name: "<v:enabled_symbol> <t:entry_heading>融雪: <v:enabled>"
+          name: '<v:enabled_symbol> <t:entry_heading>融雪: <v:enabled>'
           lore:
-            - <t:decoration>✖ </t><t:regular>允许雪和冰融化吗?
-            - "    <t:decoration>• </t><t:regular>关闭后, 雪天和雪傀儡不会让地面覆盖积雪."
+          - <t:decoration>✖ </t><t:regular>允许雪和冰融化吗?
+          - '    <t:decoration>• </t><t:regular>关闭后, 雪天和雪傀儡不会让地面覆盖积雪.'
           material: SNOWBALL
         child_failure_priority:
           name: <t:error_heading>职位优先级不足
           lore:
-            - <t:error>你无权编辑此职位的
-            - 此职位的设置.
-            - " <t:decoration>• </t><t:regular>此职位的优先级更高,"
-            - "   或者你是该职位的"
-            - "   此职位的成员."
+          - <t:error>你无权编辑此职位的设置
+          - ' <t:decoration>• </t><t:regular>此职位的优先级等于或高于你.'
         entry_block_spreading:
-          name: "<v:enabled_symbol> <t:entry_heading>城镇间方块蔓延: <v:enabled>"
+          name: '<v:enabled_symbol> <t:entry_heading>城镇间方块蔓延: <v:enabled>'
           lore:
-            - <t:decoration>✖ </t><t:regular>允许同一城镇内其他子区域的方块蔓延到此子区域吗?
-            - "    <t:decoration>• </t><t:regular>此设置影响紫水晶等方块."
-            - "    <t:decoration>• </t><t:regular>荒野中的方块无法蔓延到此子区域."
+          - <t:decoration>✖ </t><t:regular>允许同一城镇内其他子区域的方块蔓延到此子区域吗?
+          - '    <t:decoration>• </t><t:regular>此设置影响紫水晶等方块.'
+          - '    <t:decoration>• </t><t:regular>荒野中的方块无法蔓延到此子区域.'
           material: BUDDING_AMETHYST
         entry_piston_griefing:
-          name: "<v:enabled_symbol> <t:entry_heading>荒野活塞: <v:enabled>"
+          name: '<v:enabled_symbol> <t:entry_heading>荒野活塞: <v:enabled>'
           lore:
-            - <t:decoration>✖ </t><t:regular>允许荒野或其他城镇的活塞
-            - "   将方块从其他子区域推入你的城镇吗?"
-            - "    <t:decoration>• </t><t:regular>启用后, 玩家可以利用活塞破坏你的城镇."
+          - <t:decoration>✖ </t><t:regular>允许荒野或其他城镇的活塞
+          - '   将方块从其他子区域推入你的城镇吗?'
+          - '    <t:decoration>• </t><t:regular>启用后, 玩家可以利用活塞破坏你的城镇.'
           material: PISTON
         child_failure_access:
           name: <t:error_heading>无权操作
           lore:
-            - <t:error>你无权编辑此子区域中的职位.
-            - " <t:decoration>• </t><t:regular>城镇所有者可以授予你的职位相应权限."
+          - <t:error>你无权编辑此子区域中的职位.
+          - ' <t:decoration>• </t><t:regular>城镇的主人可以授予你的职位相应权限.'
         entry_general_admin:
-          name: "<v:enabled_symbol> <t:entry_heading><v:flag>: <v:enabled>"
+          name: '<v:enabled_symbol> <t:entry_heading><v:flag>: <v:enabled>'
           lore:
-            - "<t:decoration>✖ </t><t:regular>点击切换:"
-            - "说明:"
-            - " <t:decoration>• </t><t:user_content><v:desc></t>"
-            - " • <t:regular>这是管理员设置, 仅适用于"
-            - "   管理员城镇和<t:cmd>/<v:cmd></t><t:regular> 的荒野区域."
+          - '<t:decoration>✖ </t><t:regular>点击切换:'
+          - '说明:'
+          - ' <t:decoration>• </t><t:user_content><v:desc></t>'
+          - ' • <t:regular>这是管理员设置, 仅适用于'
+          - '   管理员城镇和<t:cmd>/<v:cmd></t><t:regular> 的荒野区域.'
           material: INHERIT
         entry_fire_spread:
-          name: "<v:enabled_symbol> <t:entry_heading>火势蔓延: <v:enabled>"
+          name: '<v:enabled_symbol> <t:entry_heading>火势蔓延: <v:enabled>'
           lore:
-            - <t:decoration>✖ </t><t:regular>允许火势蔓延到你的城镇中吗?
-            - "    <t:decoration>• </t><t:regular>荒野中的火无法蔓延到你的城镇."
+          - <t:decoration>✖ </t><t:regular>允许火势蔓延到你的城镇中吗?
+          - '    <t:decoration>• </t><t:regular>荒野中的火无法蔓延到你的城镇.'
           material: FLINT_AND_STEEL
         entry_animal_spawn:
-          name: "<v:enabled_symbol> <t:entry_heading>动物生成: <v:enabled>"
+          name: '<v:enabled_symbol> <t:entry_heading>动物生成: <v:enabled>'
           lore:
-            - <t:decoration>✖ </t><t:regular>允许动物生成吗?
-            - "    <t:decoration>• </t><t:regular>此设置不会影响刷怪笼."
+          - <t:decoration>✖ </t><t:regular>允许动物生成吗?
+          - '    <t:decoration>• </t><t:regular>此设置不会影响刷怪笼.'
           material: skin:bee8514892f3d78a32e8456fcbb8c6081e21b246d82f398bd969fec19d3c27b3
         entry_plant_growth:
-          name: "<v:enabled_symbol> <t:entry_heading>植物生长: <v:enabled>"
+          name: '<v:enabled_symbol> <t:entry_heading>植物生长: <v:enabled>'
           lore:
-            - <t:decoration>✖ </t><t:regular>允许植物生长吗?
+          - <t:decoration>✖ </t><t:regular>允许植物生长吗?
           material: VINE
         entry_tnt_griefing:
-          name: "<v:enabled_symbol> <t:entry_heading>TNT 爆炸破坏: <v:enabled>"
+          name: '<v:enabled_symbol> <t:entry_heading>TNT 爆炸破坏: <v:enabled>'
           lore:
-            - <t:decoration>✖ </t><t:regular>允许 TNT 破坏方块和实体吗?
-            - "      <t:decoration>• </t><t:regular>启用后, 玩家可以将 TNT 射入你的城镇造成破坏."
+          - <t:decoration>✖ </t><t:regular>允许 TNT 破坏方块和实体吗?
+          - '      <t:decoration>• </t><t:regular>启用后, 玩家可以将 TNT 射入你的城镇造成破坏.'
           material: TNT
         entry_leaf_decay:
-          name: "<v:enabled_symbol> <t:entry_heading>树叶腐烂: <v:enabled>"
+          name: '<v:enabled_symbol> <t:entry_heading>树叶腐烂: <v:enabled>'
           lore:
-            - <t:decoration>✖ </t><t:regular>允许树叶在你的城镇内腐烂吗?
+          - <t:decoration>✖ </t><t:regular>允许树叶在你的城镇内腐烂吗?
           material: OAK_LEAVES
         entry_general_player:
-          name: "<v:enabled_symbol> <t:entry_heading><v:flag>: <v:enabled>"
+          name: '<v:enabled_symbol> <t:entry_heading><v:flag>: <v:enabled>'
           lore:
-            - "<t:decoration>✖ </t><t:regular>点击切换:"
-            - "说明:"
-            - <t:user_content><v:desc></t>
+          - '<t:decoration>✖ </t><t:regular>点击切换:'
+          - '说明:'
+          - <t:user_content><v:desc></t>
           material: INHERIT
         entry_waterflow_allow:
-          name: "<v:enabled_symbol> <t:entry_heading>水流入: <v:enabled>"
+          name: '<v:enabled_symbol> <t:entry_heading>水流入: <v:enabled>'
           lore:
-            - <t:decoration>✖ </t><t:regular>允许荒野或其他领土中的水流入你的城镇吗?"
-            - "    <t:decoration>• </t><t:regular>启用后, 玩家可以荒野放水"
-            - "      从而对你的城镇造成破坏."
+          - <t:decoration>✖ </t><t:regular>允许荒野或其他领土中的水流入你的城镇吗?
+          - '    <t:decoration>• </t><t:regular>启用后, 玩家可以荒野放水'
+          - '      从而对你的城镇造成破坏.'
           material: WATER_BUCKET
         entry_lavaflow_allow:
-          name: "<v:enabled_symbol> <t:entry_heading>熔岩流入: <v:enabled>"
+          name: '<v:enabled_symbol> <t:entry_heading>熔岩流入: <v:enabled>'
           lore:
-            - <t:decoration>✖ </t><t:regular>允许荒野或其他领土中的岩浆流入你的城镇吗?
-            - "    <t:decoration>• </t><t:regular>启用后, 玩家可以荒野岩浆"
-            - "      从而对你的城镇造成破坏."
+          - <t:decoration>✖ </t><t:regular>允许荒野或其他领土中的岩浆流入你的城镇吗?
+          - '    <t:decoration>• </t><t:regular>启用后, 玩家可以荒野岩浆'
+          - '      从而对你的城镇造成破坏.'
           material: LAVA_BUCKET
         roles:
           name: <t:regular_heading>职位设置
           lore:
-            - <t:decoration>✖ </t><t:regular>影响玩家的职位设置 (如 PvP, 方块放置等)
-            - "   应该在职位设置界面而不是当前界面管理."
-            - ""
-            - <t:decoration>✖ </t><t:regular>点击此处管理职位.
+          - <t:decoration>✖ </t><t:regular>影响玩家的职位设置 (如 PvP, 方块放置等)
+          - '   应该在职位设置界面而不是当前界面管理.'
+          - ''
+          - <t:decoration>✖ </t><t:regular>点击此处管理职位.
           material: skin:e8b8c6a46d87cf86a55df214cf84bf45cca25edb9a676e96364dd6a6eea235b3
           slots: 41
   list_role_settings:
@@ -1207,292 +1195,291 @@ gui:
     items:
       default:
         entry_setting_edit_various:
-          name: "<v:enabled_symbol> <t:entry_heading>编辑其他设置: <v:enabled>"
+          name: '<v:enabled_symbol> <t:entry_heading>编辑其他设置: <v:enabled>'
           lore:
-            - <t:decoration>✖ </t><t:regular>允许此职位编辑例如名称的其他设置吗?
+          - <t:decoration>✖ </t><t:regular>允许此职位编辑例如名称的其他设置吗?
           material: NAME_TAG
         entry_plant:
-          name: "<v:enabled_symbol> <t:entry_heading>种植: <v:enabled>"
+          name: '<v:enabled_symbol> <t:entry_heading>种植: <v:enabled>'
           lore:
-            - <t:decoration>✖ </t><t:regular>允许此职位种植作物吗?
-            - "   例如树苗, 浆果, 甘蔗等."
+          - <t:decoration>✖ </t><t:regular>允许此职位种植作物吗?
+          - '   例如树苗, 浆果, 甘蔗等.'
           material: IRON_HOE
         entry_balance_withdraw:
-          name: "<v:enabled_symbol> <t:entry_heading>取款: <v:enabled>"
+          name: '<v:enabled_symbol> <t:entry_heading>取款: <v:enabled>'
           lore:
-            - <t:decoration>✖ </t><t:regular>允许此职位从城镇金库取款吗?
-            - "    <t:decoration>• </t><t:regular>命令: <t:cmd>/<v:cmd></t>"
+          - <t:decoration>✖ </t><t:regular>允许此职位从城镇金库取款吗?
+          - '    <t:decoration>• </t><t:regular>命令: <t:cmd>/<v:cmd></t>'
           material: GOLD_NUGGET
         entry_player_untrust:
-          name: "<v:enabled_symbol> <t:entry_heading>移出玩家: <v:enabled>"
+          name: '<v:enabled_symbol> <t:entry_heading>移出玩家: <v:enabled>'
           lore:
-            - <t:decoration>✖ </t><t:regular>允许此职位移出玩家吗?
-            - "    <t:decoration>• </t><t:regular>不能移出"
-            - "      职位相同或高于此的玩家."
+          - <t:decoration>✖ </t><t:regular>允许此职位移出玩家吗?
+          - '    <t:decoration>• </t><t:regular>不能移出'
+          - '      职位相同或高于此的玩家.'
           material: skin:548d7d1e03e1af145b0125ab841285672b421265da2ab915015f9058438ba2d8
         entry_land_enter:
-          name: "<v:enabled_symbol> <t:entry_heading>进入此子区域: <v:enabled>"
+          name: '<v:enabled_symbol> <t:entry_heading>进入此子区域: <v:enabled>'
           lore:
-            - <t:decoration>✖ </t><t:regular>允许此职位进入此子区域吗?
-            - "    <t:decoration>• </t><t:regular>如果战斗标记生效,"
-            - "      即使关闭此权限, 玩家仍可能进入你占领的领土."
+          - <t:decoration>✖ </t><t:regular>允许此职位进入此子区域吗?
+          - '    <t:decoration>• </t><t:regular>如果战斗标记生效,'
+          - '      即使关闭此权限, 玩家仍可能进入你占领的领土.'
           material: OAK_FENCE_GATE
         entry_land_claim:
-          name: "<v:enabled_symbol> <t:entry_heading>占领与取消占领: <v:enabled>"
+          name: '<v:enabled_symbol> <t:entry_heading>占领与取消占领: <v:enabled>'
           lore:
-            - <t:decoration>✖ </t><t:regular>允许此职位为城镇占领或取消占领吗?
+          - <t:decoration>✖ </t><t:regular>允许此职位为城镇占领或取消占领吗?
           material: IRON_SHOVEL
         entry_ender_pearl:
-          name: "<v:enabled_symbol> <t:entry_heading>使用末影珍珠: <v:enabled>"
+          name: '<v:enabled_symbol> <t:entry_heading>使用末影珍珠: <v:enabled>'
           lore:
-            - <t:decoration>✖ </t><t:regular>允许此职位使用末影珍珠和紫颂果传送进入此城镇吗?
+          - <t:decoration>✖ </t><t:regular>允许此职位使用末影珍珠和紫颂果传送进入此城镇吗?
           material: ENDER_PEARL
         entry_shear:
-          name: "<v:enabled_symbol> <t:entry_heading>修剪生物: <v:enabled>"
+          name: '<v:enabled_symbol> <t:entry_heading>修剪生物: <v:enabled>'
           lore:
-            - <t:decoration>✖ </t><t:regular>允许此职位修剪生物吗?
-            - "   例如羊, 哞菇."
+          - <t:decoration>✖ </t><t:regular>允许此职位修剪生物吗?
+          - '   例如羊, 哞菇.'
           material: SHEARS
         entry_attack_monster:
-          name: "<v:enabled_symbol> <t:entry_heading>攻击怪物: <v:enabled>"
+          name: '<v:enabled_symbol> <t:entry_heading>攻击怪物: <v:enabled>'
           lore:
-            - <t:decoration>✖ </t><t:regular>允许此职位攻击怪物吗?
-            - "    <t:decoration>• </t><t:regular>关闭后, 怪物也不会攻击这些玩家."
+          - <t:decoration>✖ </t><t:regular>允许此职位攻击怪物吗?
+          - '    <t:decoration>• </t><t:regular>关闭后, 怪物也不会攻击这些玩家.'
           material: ZOMBIE_HEAD
         entry_harvest:
-          name: "<v:enabled_symbol> <t:entry_heading>收获: <v:enabled>"
+          name: '<v:enabled_symbol> <t:entry_heading>收获: <v:enabled>'
           lore:
-            - <t:decoration>✖ </t><t:regular>允许此职位收获作物吗?
-            - "   例如作物, 树苗, 浆果 甘蔗等."
+          - <t:decoration>✖ </t><t:regular>允许此职位收获作物吗?
+          - '   例如作物, 树苗, 浆果 甘蔗等.'
           material: WHEAT
         entry_fly:
-          name: "<v:enabled_symbol> <t:entry_heading>飞行: <v:enabled>"
+          name: '<v:enabled_symbol> <t:entry_heading>飞行: <v:enabled>'
           lore:
-            - <t:decoration>✖ </t><t:regular>允许此职位在此子区域中使用 <t:cmd>/fly</t><t:regular> 吗?
+          - <t:decoration>✖ </t><t:regular>允许此职位在此子区域中使用 <t:cmd>/fly</t><t:regular> 吗?
           material: FEATHER
         entry_general_admin:
-          name: "<v:enabled_symbol> <t:entry_heading><v:flag>: <v:enabled>"
+          name: '<v:enabled_symbol> <t:entry_heading><v:flag>: <v:enabled>'
           lore:
-            - "<t:decoration>✖ </t><t:regular>点击切换:"
-            - "    <t:decoration>• </t><t:regular>说明:"
-            - "      <t:user_content><v:desc></t>"
-            - " <t:decoration>• </t><t:regular>这是管理员设置, 仅适用于"
-            - "   管理员城镇和<t:cmd>/<v:cmd></t><t:regular> 的荒野区域."
+          - '<t:decoration>✖ </t><t:regular>点击切换:'
+          - '    <t:decoration>• </t><t:regular>说明:'
+          - '      <t:user_content><v:desc></t>'
+          - ' <t:decoration>• </t><t:regular>这是管理员设置, 仅适用于'
+          - '   管理员城镇和<t:cmd>/<v:cmd></t><t:regular> 的荒野区域.'
           material: INHERIT
         entry_player_trust:
-          name: "<v:enabled_symbol> <t:entry_heading>添加玩家: <v:enabled>"
+          name: '<v:enabled_symbol> <t:entry_heading>添加玩家: <v:enabled>'
           lore:
-            - <t:decoration>✖ </t><t:regular>允许此职位邀请其他玩家加入吗?
+          - <t:decoration>✖ </t><t:regular>允许此职位邀请其他玩家加入吗?
           material: skin:ffec3d25ae0d147c342c45370e0e43300a4e48a5b43f9bb858babff756144dac
         entry_block_ignite:
-          name: "<v:enabled_symbol> <t:entry_heading>点燃方块: <v:enabled>"
+          name: '<v:enabled_symbol> <t:entry_heading>点燃方块: <v:enabled>'
           lore:
-            - <t:decoration>✖ </t><t:regular>允许此职位点燃方块吗?
+          - <t:decoration>✖ </t><t:regular>允许此职位点燃方块吗?
           material: FLINT_AND_STEEL
         entry_war_manage:
-          name: "<v:enabled_symbol> <t:entry_heading>管理战争: <v:enabled>"
+          name: '<v:enabled_symbol> <t:entry_heading>管理战争: <v:enabled>'
           lore:
-            - <t:decoration>✖ </t><t:regular>允许此职位为你的城镇宣战
-            - "   并管理你城镇的战争吗?"
+          - <t:decoration>✖ </t><t:regular>允许此职位为你的城镇宣战
+          - '   并管理你城镇的战争吗?'
           material: IRON_SWORD
         entry_attack_player:
-          name: "<v:enabled_symbol> <t:entry_heading>攻击玩家: <v:enabled>"
+          name: '<v:enabled_symbol> <t:entry_heading>攻击玩家: <v:enabled>'
           lore:
-            - <t:decoration>✖ </t><t:regular>允许此职位攻击玩家吗?
-            - "    <t:decoration>• </t><t:regular>战斗标记:"
-            - "     <t:regular>若一个玩家在城镇外攻击另一名玩家,"
-            - "      你的城镇内仍可以发生战斗."
-            - "    <t:decoration>• </t><t:regular>公平关系:"
-            - "     <t:regular>玩家只能攻击那些可以攻击自己的玩家."
+          - <t:decoration>✖ </t><t:regular>允许此职位攻击玩家吗?
+          - '    <t:decoration>• </t><t:regular>战斗标记:'
+          - '     <t:regular>若一个玩家在城镇外攻击另一名玩家,'
+          - '      你的城镇内仍可以发生战斗.'
+          - '    <t:decoration>• </t><t:regular>公平关系:'
+          - '     <t:regular>玩家只能攻击那些可以攻击自己的玩家.'
           material: IRON_SWORD
         entry_trample_farmland:
-          name: "<v:enabled_symbol> <t:entry_heading>践踏耕地: <v:enabled>"
+          name: '<v:enabled_symbol> <t:entry_heading>践踏耕地: <v:enabled>'
           lore:
-            - <t:decoration>✖ </t><t:regular>允许此职位践踏耕地吗?
+          - <t:decoration>✖ </t><t:regular>允许此职位践踏耕地吗?
           material: FARMLAND
         entry_elytra:
-          name: "<v:enabled_symbol> <t:entry_heading>鞘翅和激流: <v:enabled>"
+          name: '<v:enabled_symbol> <t:entry_heading>鞘翅和激流: <v:enabled>'
           lore:
-            - <t:decoration>✖ </t><t:regular>允许此职位使用鞘翅或激流在此子区域飞行吗?
+          - <t:decoration>✖ </t><t:regular>允许此职位使用鞘翅或激流在此子区域飞行吗?
           material: ELYTRA
         entry_interact_villager:
-          name: "<v:enabled_symbol> <t:entry_heading>与村民交易: <v:enabled>"
+          name: '<v:enabled_symbol> <t:entry_heading>与村民交易: <v:enabled>'
           lore:
-            - <t:decoration>✖ </t><t:regular>允许此职位与村民交易吗?
+          - <t:decoration>✖ </t><t:regular>允许此职位与村民交易吗?
           material: EMERALD
         child_failure_permission:
           name: <t:error_heading>缺少权限
           lore:
-            - <t:error>你没有在任何城镇中切换此设置的权限.
+          - <t:error>你没有在任何城镇中切换此设置的权限.
         child_failure_allow-edit:
           name: <t:error_heading>此设置不可切换
           lore:
-            - <t:error>服务器已将此职位的此设置设为不可切换.
+          - <t:error>服务器已将此职位的此设置设为不可切换.
         entry_player_setrole:
-          name: "<v:enabled_symbol> <t:entry_heading>设置职位: <v:enabled>"
+          name: '<v:enabled_symbol> <t:entry_heading>设置职位: <v:enabled>'
           lore:
-            - <t:decoration>✖ </t><t:regular>允许此职位为
-            - "   为成员设置职位吗?"
-            - "    <t:decoration>• </t><t:regular>他们无法编辑"
-            - "      优先级相同或高于自己的职位."
+          - <t:decoration>✖ </t><t:regular>允许此职位为
+          - '   为成员设置职位吗?'
+          - '    <t:decoration>• </t><t:regular>他们无法编辑'
+          - '      优先级相同或高于自己的职位.'
           material: skin:1e8ffbfd7890dfba8841166d688c93a88b6e8cac4d0260644cac9f3afd57c63e
         entry_interact_general:
-          name: "<v:enabled_symbol> <t:entry_heading>一般交互: <v:enabled>"
+          name: '<v:enabled_symbol> <t:entry_heading>一般交互: <v:enabled>'
           lore:
-            - <t:decoration>✖ </t><t:regular>允许此职位与未受其他设置限制的方块交互吗?
+          - <t:decoration>✖ </t><t:regular>允许此职位与未受其他设置限制的方块交互吗?
           material: STRING
         child_failure_blacklist:
           name: <t:error_heading>设置由城镇控制
           lore:
-            - <t:error>联邦无法修改此设置.
-            - " <t:decoration>• </t><t:regular>联邦中的每个城镇都可以单独修改此设置."
+          - <t:error>联邦无法修改此设置.
+          - ' <t:decoration>• </t><t:regular>联邦中的每个城镇都可以单独修改此设置.'
         child_failure_cancelled:
           name: <t:error_heading>已被插件取消
           lore:
-            - <t:error>第三方插件取消了此次设置切换.
+          - <t:error>第三方插件取消了此次设置切换.
         child_failure_edit_owner:
-          name: <t:error_heading>所有者职位
+          name: <t:error_heading>主人职位
           lore:
-            - <t:error>你无法为自己的所有者职位切换此设置.
-            - " <t:decoration>• </t><t:regular>这样可以防止你意外剥夺自己的权限."
+          - <t:error>你无法为自己的主人职位切换此设置.
+          - ' <t:decoration>• </t><t:regular>这样可以防止你意外剥夺自己的权限.'
         entry_interact_mechanism:
-          name: "<v:enabled_symbol> <t:entry_heading>使用红石: <v:enabled>"
+          name: '<v:enabled_symbol> <t:entry_heading>使用红石: <v:enabled>'
           lore:
-            - <t:decoration>✖ </t><t:regular>允许此职位使用红石机关吗?
-            - "   例如拉杆等."
+          - <t:decoration>✖ </t><t:regular>允许此职位使用红石机关吗?
+          - '   例如拉杆等.'
           material: REDSTONE
         entry_land_claim_border:
-          name: "<v:enabled_symbol> <t:entry_heading>在城镇边界占领领土: <v:enabled>"
+          name: '<v:enabled_symbol> <t:entry_heading>在城镇边界占领领土: <v:enabled>'
           lore:
-            - <t:decoration>✖ </t><t:regular>允许此职位占领领土区块并直接在此城镇边界处为其城镇占领区块吗?
+          - <t:decoration>✖ </t><t:regular>允许此职位占领领土区块并直接在此城镇边界处为其城镇占领区块吗?
           material: IRON_BARS
         entry_spawn_set:
-          name: "<v:enabled_symbol> <t:entry_heading>设置传送点: <v:enabled>"
+          name: '<v:enabled_symbol> <t:entry_heading>设置传送点: <v:enabled>'
           lore:
-            - <t:decoration>✖ </t><t:regular>允许此职位更改传送点吗?
+          - <t:decoration>✖ </t><t:regular>允许此职位更改传送点吗?
           material: ENDER_EYE
         entry_player_ban:
-          name: "<v:enabled_symbol> <t:entry_heading>管理封禁: <v:enabled>"
+          name: '<v:enabled_symbol> <t:entry_heading>管理封禁: <v:enabled>'
           lore:
-            - <t:decoration>✖ </t><t:regular>允许此职位封禁或解封玩家吗?
-            - "    <t:decoration>• </t><t:regular>不能封禁职位高于此的玩家."
+          - <t:decoration>✖ </t><t:regular>允许此职位封禁或解封玩家吗?
+          - '    <t:decoration>• </t><t:regular>不能封禁职位高于此的玩家.'
           material: BARRIER
         entry_item_pickup:
-          name: "<v:enabled_symbol> <t:entry_heading>拾取与丢弃物品: <v:enabled>"
+          name: '<v:enabled_symbol> <t:entry_heading>拾取与丢弃物品: <v:enabled>'
           lore:
-            - <t:decoration>✖ </t><t:regular>允许此职位拾取或丢弃物品吗?
+          - <t:decoration>✖ </t><t:regular>允许此职位拾取或丢弃物品吗?
           material: HOPPER
         child_failure_priority:
           name: <t:error_heading>职位优先级不足
           lore:
-            - <t:error>你无权编辑此职位的设置.
-            - " <t:decoration>• </t><t:regular>此职位的优先级等于或高于你."
+          - <t:error>你无权编辑此职位的设置.
+          - ' <t:decoration>• </t><t:regular>此职位的优先级等于或高于你.'
         entry_block_place:
-          name: "<v:enabled_symbol> <t:entry_heading>放置方块: <v:enabled>"
+          name: '<v:enabled_symbol> <t:entry_heading>放置方块: <v:enabled>'
           lore:
-            - <t:decoration>✖ </t><t:regular>允许此职位放置方块吗?
+          - <t:decoration>✖ </t><t:regular>允许此职位放置方块吗?
           material: OAK_PLANKS
         entry_setting_edit_land:
-          name: "<v:enabled_symbol> <t:entry_heading>编辑环境设置: <v:enabled>"
+          name: '<v:enabled_symbol> <t:entry_heading>编辑环境设置: <v:enabled>'
           lore:
-            - <t:decoration>✖ </t><t:regular>允许此职位编辑环境设置吗?
+          - <t:decoration>✖ </t><t:regular>允许此职位编辑环境设置吗?
           material: skin:8449b9318e33158e64a46ab0de121c3d40000e3332c1574932b3c849d8fa0dc2
         entry_interact_container:
-          name: "<v:enabled_symbol> <t:entry_heading>打开容器: <v:enabled>"
+          name: '<v:enabled_symbol> <t:entry_heading>打开容器: <v:enabled>'
           lore:
-            - <t:decoration>✖ </t><t:regular>允许此职位打开容器吗?
+          - <t:decoration>✖ </t><t:regular>允许此职位打开容器吗?
           material: CHEST
         child_failure_access:
           name: <t:error_heading>职位权限不足
           lore:
-            - <t:error>你无权编辑此子区域中的职位.
-            - " <t:decoration>• </t><t:regular>城镇所有者可以授予你的职位执行此操作的权限."
+          - <t:error>你无权编辑此子区域中的职位.
+          - ' <t:decoration>• </t><t:regular>城镇的主人可以授予你的职位执行此操作的权限.'
         entry_no_damage:
-          name: "<v:enabled_symbol> <t:entry_heading>免受伤害: <v:enabled>"
+          name: '<v:enabled_symbol> <t:entry_heading>免受伤害: <v:enabled>'
           lore:
-            - <t:decoration>✖ </t><t:regular>使此职位的成员免受除 PvP 和怪物以外的任何伤害.
-            - "    <t:decoration>• </t><t:regular>玩家或怪物造成的伤害可通过"
-            - "      对应的设置单独控制."
-            - "    <t:decoration>• </t><t:regular>此设置仅服务器管理员可见."
+          - <t:decoration>✖ </t><t:regular>使此职位的成员免受除 PvP 和怪物以外的任何伤害.
+          - '    <t:decoration>• </t><t:regular>玩家或怪物造成的伤害可通过对应的设置控制.'
+          - '    <t:decoration>• </t><t:regular>此设置仅服务器管理员可见.'
           material: CAKE
         entry_block_break:
-          name: "<v:enabled_symbol> <t:entry_heading>破坏方块: <v:enabled>"
+          name: '<v:enabled_symbol> <t:entry_heading>破坏方块: <v:enabled>'
           lore:
-            - <t:decoration>✖ </t><t:regular>允许此职位破坏方块吗?
+          - <t:decoration>✖ </t><t:regular>允许此职位破坏方块吗?
           material: IRON_PICKAXE
         entry_wind_burst:
-          name: "<v:enabled_symbol> <t:entry_heading>风爆与风弹: <v:enabled>"
+          name: '<v:enabled_symbol> <t:entry_heading>风爆与风弹: <v:enabled>'
           lore:
-            - <t:decoration>✖ </t><t:regular>允许此职位使用风爆附魔和风弹物品吗?
-            - "    <t:decoration>• </t><t:regular>启用后, 玩家还可以使用带有风爆附魔的重锤攻击来开关门."
+          - <t:decoration>✖ </t><t:regular>允许此职位使用风爆附魔和风弹物品吗?
+          - '    <t:decoration>• </t><t:regular>启用后, 玩家还可以使用带有风爆附魔的重锤攻击来开关门.'
           material: WIND_CHARGE
         entry_setting_edit_role:
-          name: "<v:enabled_symbol> <t:entry_heading>编辑职位设置: <v:enabled>"
+          name: '<v:enabled_symbol> <t:entry_heading>编辑职位设置: <v:enabled>'
           lore:
-            - <t:decoration>✖ </t><t:regular>允许此职位编辑其他职位设置与创建新职位吗?
-            - "    <t:decoration>• </t><t:regular>此职位无法编辑自己的职位设置."
-            - "    <t:decoration>• </t><t:regular>此权限仅应授予非常值得信任的玩家."
+          - <t:decoration>✖ </t><t:regular>允许此职位编辑其他职位设置与创建新职位吗?
+          - '    <t:decoration>• </t><t:regular>此职位无法编辑自己的职位设置.'
+          - '    <t:decoration>• </t><t:regular>此权限仅应授予非常值得信任的玩家.'
           material: skin:e8b8c6a46d87cf86a55df214cf84bf45cca25edb9a676e96364dd6a6eea235b3
         entry_interact_trapdoor:
-          name: "<v:enabled_symbol> <t:entry_heading>打开活板门: <v:enabled>"
+          name: '<v:enabled_symbol> <t:entry_heading>打开活板门: <v:enabled>'
           lore:
-            - <t:decoration>✖ </t><t:regular>允许此职位打开活板门吗?
+          - <t:decoration>✖ </t><t:regular>允许此职位打开活板门吗?
           material: OAK_TRAPDOOR
         entry_setting_edit_taxes:
-          name: "<v:enabled_symbol> <t:entry_heading>编辑税费: <v:enabled>"
+          name: '<v:enabled_symbol> <t:entry_heading>编辑税费: <v:enabled>'
           lore:
-            - <t:decoration>✖ </t><t:regular>允许此职位编辑税费吗?
-            - "    <t:decoration>• </t><t:regular>此权限仅应授予非常值得信任的玩家."
+          - <t:decoration>✖ </t><t:regular>允许此职位编辑税费吗?
+          - '    <t:decoration>• </t><t:regular>此权限仅应授予非常值得信任的玩家.'
           material: GOLD_INGOT
         child_failure_nation:
           name: <t:error_heading>职位由联邦管理
           lore:
-            - <t:error>此职位部分由联邦<t:error_value> <v:nation></t> 管理.
-            - " <t:decoration>• </t><t:regular>只有联邦可以修改此设置:"
-            - "   <t:cmd>/<v:cmd></t>"
+          - <t:error>此职位部分由联邦<t:error_value> <v:nation></t> 管理.
+          - ' <t:decoration>• </t><t:regular>只有联邦可以修改此设置:'
+          - '   <t:cmd>/<v:cmd></t>'
         entry_attack_animal:
-          name: "<v:enabled_symbol> <t:entry_heading>攻击动物: <v:enabled>"
+          name: '<v:enabled_symbol> <t:entry_heading>攻击动物: <v:enabled>'
           lore:
-            - <t:decoration>✖ </t><t:regular>允许此职位攻击动物吗?
+          - <t:decoration>✖ </t><t:regular>允许此职位攻击动物吗?
           material: BOW
         entry_spawn_teleport:
-          name: "<v:enabled_symbol> <t:entry_heading>传送到传送点: <v:enabled>"
+          name: '<v:enabled_symbol> <t:entry_heading>传送到传送点: <v:enabled>'
           lore:
-            - <t:decoration>✖ </t><t:regular>允许此职位传送到传送点吗?
+          - <t:decoration>✖ </t><t:regular>允许此职位传送到传送点吗?
           material: ENDER_EYE
         entry_vehicle_use:
-          name: "<v:enabled_symbol> <t:entry_heading>使用载具: <v:enabled>"
+          name: '<v:enabled_symbol> <t:entry_heading>使用载具: <v:enabled>'
           lore:
-            - <t:decoration>✖ </t><t:regular>允许此职位使用载具吗?
+          - <t:decoration>✖ </t><t:regular>允许此职位使用载具吗?
           material: MINECART
         entry_area_assign:
-          name: "<v:enabled_symbol> <t:entry_heading>管理子区域: <v:enabled>"
+          name: '<v:enabled_symbol> <t:entry_heading>管理子区域: <v:enabled>'
           lore:
-            - <t:decoration>✖ </t><t:regular>允许此职位创建子区域并调整子区域大小吗?
+          - <t:decoration>✖ </t><t:regular>允许此职位创建子区域并调整子区域大小吗?
           material: OAK_FENCE
         entry_general_player:
-          name: "<v:enabled_symbol> <t:entry_heading><v:flag>: <v:enabled>"
+          name: '<v:enabled_symbol> <t:entry_heading><v:flag>: <v:enabled>'
           lore:
-            - "<t:decoration>✖ </t><t:regular>点击切换:"
-            - "    <t:decoration>• </t><t:regular>说明:"
-            - "      <t:user_content><v:desc></t>"
+          - '<t:decoration>✖ </t><t:regular>点击切换:'
+          - '    <t:decoration>• </t><t:regular>说明:'
+          - '      <t:user_content><v:desc></t>'
           material: INHERIT
         entry_interact_door:
-          name: "<v:enabled_symbol> <t:entry_heading>打开门: <v:enabled>"
+          name: '<v:enabled_symbol> <t:entry_heading>打开门: <v:enabled>'
           lore:
-            - <t:decoration>✖ </t><t:regular>允许此职位打开门吗?
+          - <t:decoration>✖ </t><t:regular>允许此职位打开门吗?
           material: IRON_DOOR
         entry_balance_deposit:
-          name: "<v:enabled_symbol> <t:entry_heading>存款: <v:enabled>"
+          name: '<v:enabled_symbol> <t:entry_heading>存款: <v:enabled>'
           lore:
-            - <t:decoration>✖ </t><t:regular>允许此职位向城镇金库存款吗?
-            - "    <t:decoration>• </t><t:regular>命令: <t:cmd>/<v:cmd></t>"
+          - <t:decoration>✖ </t><t:regular>允许此职位向城镇金库存款吗?
+          - '    <t:decoration>• </t><t:regular>命令: <t:cmd>/<v:cmd></t>'
         entry_level_up:
           material: EXPERIENCE_BOTTLE
           lore:
-            - <t:decoration>✖ </t><t:regular>允许此职位提升城镇等级吗?
-            - "   费用从城镇金库扣除."
-          name: "<v:enabled_symbol> <t:entry_heading>升级: <v:enabled>"
+          - <t:decoration>✖ </t><t:regular>允许此职位为城镇升级吗?
+          - '   费用将从城镇金库扣除.'
+          name: '<v:enabled_symbol> <t:entry_heading>升级: <v:enabled>'
   area:
     title: <t:menu_title><v:area>
     items:
@@ -1500,38 +1487,38 @@ gui:
         land-settings:
           name: <t:regular_heading>环境设置
           lore:
-            - <t:decoration>✖ </t><t:regular>管理此子区域的自然环境设置,
-            - "   例如怪物生成,植物生长等."
+          - <t:decoration>✖ </t><t:regular>管理此子区域的自然环境设置,
+          - '   例如怪物生成,植物生长等.'
           material: skin:8449b9318e33158e64a46ab0de121c3d40000e3332c1574932b3c849d8fa0dc2
           slots: 29
         child_failure_rented:
           name: <t:error_heading>已出租或出售
           lore:
-            - <t:error>无法为此子区域设置税费,
-            - 因为此子区域正在出租或出售.
-            - " <t:decoration>• </t><t:regular>当前住户:<t:regular_value> <v:player></t>"
+          - <t:error>无法为此子区域设置税费,
+          - 因为此子区域正在出租或出售.
+          - ' <t:decoration>• </t><t:regular>当前住户:<t:regular_value> <v:player></t>'
         child_failure_access:
           name: <t:error_heading>无权操作
           lore:
-            - <t:regular>子区域所有者可以授予你的职位相应权限.
-            - " <t:decoration>• </t><t:regular>设置: <t:regular_value><v:flag></t>"
+          - <t:regular>子区域的主人可以授予你的职位相应权限.
+          - ' <t:decoration>• </t><t:regular>设置: <t:regular_value><v:flag></t>'
         player-management:
           name: <t:regular_heading>玩家管理
           lore:
-            - <t:decoration>✖ </t><t:regular>管理成员, 已封禁玩家, 邀请和成员申请.
+          - <t:decoration>✖ </t><t:regular>管理成员, 已封禁玩家, 邀请和成员申请.
           material: skin:e8b8c6a46d87cf86a55df214cf84bf45cca25edb9a676e96364dd6a6eea235b3
           slots: 11
         various:
           name: <t:regular_heading>杂项设置
           lore:
-            - <t:decoration>✖ </t><t:regular>编辑子区域名称和描述.
+          - <t:decoration>✖ </t><t:regular>编辑子区域名称和描述.
           material: BEACON
           slots: 32
         spawn:
           name: <t:regular_heading>传送
           lore:
-            - <action:primary><label>传送到传送点</label><desc>传送到此子区域的传送点.</desc></action>
-            - <action:secondary><label>设置传送点</label></action>
+          - <action:primary><label>传送到传送点</label><desc>传送到此子区域的传送点.</desc></action>
+          - <action:secondary><label>设置传送点</label></action>
           material: ENDER_PEARL
           slots: 9
           bedrock:
@@ -1539,38 +1526,38 @@ gui:
         roles:
           name: <t:regular_heading>职位
           lore:
-            - <t:decoration>✖ </t><t:regular>管理此子区域的职位.
-            - "   <t:decoration>• </t><t:regular>默认总区域中的职位"
-            - "     会自动添加到此子区域."
+          - <t:decoration>✖ </t><t:regular>管理此子区域的职位.
+          - '   <t:decoration>• </t><t:regular>默认总区域中的职位'
+          - '     会自动添加到此子区域.'
           material: skin:e8b8c6a46d87cf86a55df214cf84bf45cca25edb9a676e96364dd6a6eea235b3
           slots: 30
         taxes:
           name: <t:regular_heading>税费
           lore:
-            - <t:decoration>✖ </t><t:regular>管理此子区域的税费.
+          - <t:decoration>✖ </t><t:regular>管理此子区域的税费.
           material: GOLD_INGOT
           slots: 31
         rental_setup:
           name: <t:regular_heading>设置租售
           lore:
-            - <t:decoration>✖ </t><t:regular>将此子区域设为出租或出售.
+          - <t:decoration>✖ </t><t:regular>将此子区域设为出租或出售.
           material: INHERIT
           slots: 34
         rental_setup_land:
           name: <t:regular_heading>出售城镇
           lore:
-            - <t:decoration>✖ </t><t:regular>将整个城镇设为出售.
-            - "   <t:decoration>• </t><t:regular>整个城镇或其默认子区域<t:decoration>(</t><t:regular_value><v:area></t>)"
-            - "     <t:regular>只能出售, 不能出租."
+          - <t:decoration>✖ </t><t:regular>将整个城镇设为出售.
+          - '   <t:decoration>• </t><t:regular>整个城镇或其默认子区域<t:decoration>(</t><t:regular_value><v:area></t>)'
+          - '     <t:regular>只能出售, 不能出租.'
           material: INHERIT
           slots: 34
         rental_setup_change_sell:
           name: <t:regular_heading>修改出售报价
           lore:
-            - <action:primary><label>更新报价</label><desc>更新购买报价.
-            - "   当前报价:"
-            - "    <t:decoration>• </t><t:regular>售价:<t:cost> <v:cost></t></desc></action>"
-            - <action:remove><label>移除报价</label></action>
+          - <action:primary><label>更新报价</label><desc>更新购买报价.
+          - '   当前报价:'
+          - '    <t:decoration>• </t><t:regular>售价:<t:cost> <v:cost></t></desc></action>'
+          - <action:remove><label>移除报价</label></action>
           material: INHERIT
           slots: 34
           bedrock:
@@ -1578,12 +1565,12 @@ gui:
         rental_setup_change_rent:
           name: <t:regular_heading>修改出租报价
           lore:
-            - <action:primary><label>更新报价</label><desc>
-            - "当前报价:"
-            - " <t:decoration>• </t><t:regular>租期:<t:time> <v:interval></t>"
-            - " <t:decoration>• </t><t:regular>每期租金:<t:cost> <v:cost></t>"
-            - " <t:decoration>• </t><t:regular>最长租期:<t:time> <v:max-time></t></desc></action>"
-            - <action:remove><label>移除报价</label></action>
+          - <action:primary><label>更新报价</label><desc>
+          - '当前报价:'
+          - ' <t:decoration>• </t><t:regular>租期:<t:time> <v:interval></t>'
+          - ' <t:decoration>• </t><t:regular>每期租金:<t:cost> <v:cost></t>'
+          - ' <t:decoration>• </t><t:regular>最长租期:<t:time> <v:max-time></t></desc></action>'
+          - <action:remove><label>移除报价</label></action>
           material: INHERIT
           slots: 34
           bedrock:
@@ -1591,16 +1578,16 @@ gui:
         child_failure_spawn_area:
           name: <t:error_heading>必须在子区域内
           lore:
-            - <t:error>传送点必须设置在此子区域内.
-            - <t:regular>你当前不在此子区域内.
+          - <t:error>传送点必须设置在此子区域内.
+          - <t:regular>你当前不在此子区域内.
         child_failure_spawn_none:
           name: <t:error_heading>未设置传送点
           lore:
-            - <t:error>此子区域尚未设置传送点.
+          - <t:error>此子区域尚未设置传送点.
         child_success_spawn_set:
           name: <t:success_heading>传送点已设置
           lore:
-            - <t:regular>已将传送点设置在你当前的位置.
+          - <t:regular>已将传送点设置在你当前的位置.
   list_area_players:
     title: <t:menu_title>子区域成员
     items:
@@ -1608,115 +1595,110 @@ gui:
         add:
           name: <t:positive_heading>添加成员
           lore:
-            - <t:regular>可用名额:<t:regular_value> <v:players></t> <t:decoration>/</t><t:limit> <v:max></t>
+          - <t:regular>可用名额:<t:regular_value> <v:players></t> <t:decoration>/</t><t:limit> <v:max></t>
           material: skin:ffec3d25ae0d147c342c45370e0e43300a4e48a5b43f9bb858babff756144dac
           slots: 40
         child_failure_edit_player_land:
           name: <t:error_heading>职位优先级
           lore:
-            - <t:error>你无法编辑此玩家.
-            - " <t:decoration>• </t><t:regular>对方的职位<t:regular_value> <v:role></t> 优先级高于或等于你的职位."
+          - <t:error>你无法编辑此玩家.
+          - ' <t:decoration>• </t><t:regular>对方的职位<t:regular_value> <v:role></t> 优先级高于或等于你的职位.'
         entry_area:
           name: <t:entry_heading><v:player>
           lore:
-            - <t:regular>职位:<t:regular_value> <v:role></t>
-            - ""
-            - <action:primary><label>更多信息</label></action>
-            - <action:tertiary><label>▲ 提升职位</label></action>
-            - <action:quaternary><label>▼ 降低职位</label></action>
-            - <action:remove><label>移出</label></action>
+          - <t:regular>职位:<t:regular_value> <v:role></t>
+          - ''
+          - <action:primary><label>更多信息</label></action>
+          - <action:tertiary><label>▲ 升职</label></action>
+          - <action:quaternary><label>▼ 降职</label></action>
+          - <action:remove><label>移出</label></action>
           material: INHERIT
           bedrock:
             detail: true
         child_failure_edit_player_area:
           name: <t:error_heading>职位优先级不足
           lore:
-            - <t:error>你无法编辑此玩家.
-            - " <t:decoration>• </t><t:regular>对方的职位<t:regular_value> <v:role></t> 优先级高于或等于你的职位."
+          - <t:error>你无法编辑此玩家.
+          - ' <t:decoration>• </t><t:regular>对方的职位<t:regular_value> <v:role></t> 优先级高于或等于你的职位.'
         child_failure_max-players:
           name: <t:error_heading>成员数已达上限
           lore:
-            - "<t:error>此城镇的成员数已达上限:"
-            - <t:error_value> <v:max></t> 名成员.
+          - <t:error>此城镇的成员数已达上限 <t:error_value> <v:max></t> 名
         refresh_toggle:
-          name: "<t:regular_heading>仅查看当前子区域: <v:current>"
+          name: '<t:regular_heading>仅查看当前子区域: <v:current>'
           lore:
-            - "<t:decoration>✖ </t><t:regular>仅显示以下玩家:"
-            - "   已加入此子区域 <t:decoration>(</t><t:regular_value><v:area></t><t:decoration>)</t><t:regular>?"
-            - "    <t:decoration>• </t><t:regular>关闭后, 将显示整个城镇的成员."
+          - '<t:decoration>✖ </t><t:regular>仅显示以下玩家:'
+          - '   已加入此子区域 <t:decoration>(</t><t:regular_value><v:area></t><t:decoration>)</t><t:regular>?'
+          - '    <t:decoration>• </t><t:regular>关闭后, 将显示整个城镇的成员.'
           material: HOPPER
           slots: 41
         global-action:
-          name: "<t:regular_heading>对所有子区域执行: <v:current>"
+          name: '<t:regular_heading>对所有子区域执行: <v:current>'
           lore:
-            - <t:decoration>✖ </t><t:regular>要在整个城镇中添加或移出玩家吗?
-            - "   <t:decoration>• </t><t:regular>关闭后, 仅对以下子区域中的玩家执行添加或移出操作:"
-            - "     子区域<t:regular_value> <v:area></t>."
+          - <t:decoration>✖ </t><t:regular>要在整个城镇中添加或移出玩家吗?
+          - '   <t:decoration>• </t><t:regular>关闭后, 仅对以下子区域中的玩家执行添加或移出操作:'
+          - '     子区域<t:regular_value> <v:area></t>.'
           material: skin:c9c8881e42915a9d29bb61a16fb26d059913204d265df5b439b3d792acd56
           slots: 44
         child_failure_priority:
           name: <t:error_heading>职位优先级不足
           lore:
-            - <t:error>你无权
-            - 编辑此职位的设置.
-            - " <t:decoration>• </t><t:regular>此职位的优先级更高,"
-            - "   或者你是该职位的"
-            - "   同一职位的成员."
+          - <t:error>你无权编辑此职位的设置.
+          - ' <t:decoration>• </t><t:regular>此职位的优先级等于或高于你.'
         entry_area_all:
           name: <t:entry_heading><v:player>
           lore:
-            - "<t:regular>已加入以下子区域:"
-            - <t:regular_value><v:areas></t>
-            - ""
-            - <action:primary><label>更多信息</label></action>
-            - <action:remove><label>移出</label></action>
+          - '<t:regular>已加入以下子区域:'
+          - <t:regular_value><v:areas></t>
+          - ''
+          - <action:primary><label>更多信息</label></action>
+          - <action:remove><label>移出</label></action>
           material: INHERIT
           bedrock:
             detail: true
         entry_area_temporary:
           name: <t:entry_heading><v:player>
           lore:
-            - <t:regular>职位:<t:regular_value> <v:role></t>
-            - <t:regular>临时成员身份将在<t:regular_value> <v:time></t> 后到期
-            - ""
-            - <action:primary><label>更多信息</label></action>
-            - <action:tertiary><label>▲ 提升职位</label></action>
-            - <action:quaternary><label>▼ 降低职位</label></action>
-            - <action:remove><label>移出</label></action>
+          - <t:regular>职位:<t:regular_value> <v:role></t>
+          - <t:regular>临时成员身份将在<t:regular_value> <v:time></t> 后到期
+          - ''
+          - <action:primary><label>更多信息</label></action>
+          - <action:tertiary><label>▲ 升职</label></action>
+          - <action:quaternary><label>▼ 降职</label></action>
+          - <action:remove><label>移出</label></action>
           material: INHERIT
           bedrock:
             detail: true
         child_failure_access:
           name: <t:error_heading>无权操作
           lore:
-            - <t:error>你无权移出玩家.
-            - " <t:decoration>• </t><t:regular>城镇所有者可以授予你的职位执行此操作的权限."
+          - <t:error>你无权移出玩家.
+          - ' <t:decoration>• </t><t:regular>城镇的主人可以授予你的职位执行此操作的权限.'
         remove:
           name: <t:negative_heading>移出成员
           material: skin:548d7d1e03e1af145b0125ab841285672b421265da2ab915015f9058438ba2d8
           slots: 42
         child_failure_owner:
-          name: <t:error_heading>所有者
+          name: <t:error_heading>主人
           lore:
-            - <t:error>无法移出所有者.
-            - " <t:decoration>• </t><t:regular>可以通过执行以下命令设置新所有者:"
-            - "   <t:cmd>/<v:cmd></t><t:regular>."
+          - <t:error>无法移出主人.
+          - ' <t:decoration>• </t><t:regular>可以通过执行以下命令设置新主人:'
+          - '   <t:cmd>/<v:cmd></t><t:regular>.'
         child_failure_tenant:
           name: <t:error_heading>住户
           lore:
-            - <t:error>无法直接移出住户或无法更改其职位.
-            - " <t:decoration>• </t><t:regular>可执行以下命令与住户解约:"
-            - "   <t:cmd>/<v:cmd></t><t:regular>."
+          - <t:error>无法直接移出住户或无法更改其职位.
+          - ' <t:decoration>• </t><t:regular>可执行以下命令与住户解约:'
+          - '   <t:cmd>/<v:cmd></t><t:regular>.'
         child_failure_setrole:
           name: <t:error_heading>无权操作
           lore:
-            - <t:error>你无权设置职位.
-            - " <t:decoration>• </t><t:regular>城镇所有者可以授予你的职位相应权限."
+          - <t:error>你无权设置职位.
+          - ' <t:decoration>• </t><t:regular>城镇的主人可以授予你的职位相应权限.'
         child_failure_self:
           name: <t:error_heading>无法移出自己
           lore:
-            - <t:regular>要离开城镇, 请使用 <t:cmd>/<v:cmd></t>
-            - <t:regular>命令即可.
+          - <t:regular>使用 <t:cmd>/<v:cmd></t> 离开城镇.
   list_admin_lands:
     title: <t:menu_title>管理员城镇
     items:
@@ -1724,25 +1706,25 @@ gui:
         add:
           name: <t:positive_heading>转换为管理员城镇
           lore:
-            - <t:decoration>✖ </t><t:regular>将普通城镇转换为管理员城镇.
+          - <t:decoration>✖ </t><t:regular>将普通城镇转换为管理员城镇.
           material: skin:ffec3d25ae0d147c342c45370e0e43300a4e48a5b43f9bb858babff756144dac
           slots: 40
         entry_object:
           name: <t:entry_heading><v:land>
           lore:
-            - <t:user_content><v:title></t>
-            - <t:decoration>✖ </t><t:regular>打开城镇菜单.
+          - <t:user_content><v:title></t>
+          - <t:decoration>✖ </t><t:regular>打开城镇菜单.
           material: INHERIT
         convert:
           name: <t:regular_heading>恢复为普通城镇
           lore:
-            - <t:decoration>✖ </t><t:regular>将管理员城镇恢复为普通城镇.
+          - <t:decoration>✖ </t><t:regular>将管理员城镇恢复为普通城镇.
           material: skin:1811917c644f04f56b68c9c71b33ac082c2601c24409be78c2063d4df2a86525
           slots: 41
         delete:
           name: <t:negative_heading>彻底删除
           lore:
-            - <t:decoration>✖ </t><t:regular>彻底删除此管理员城镇.
+          - <t:decoration>✖ </t><t:regular>彻底删除此管理员城镇.
           material: skin:548d7d1e03e1af145b0125ab841285672b421265da2ab915015f9058438ba2d8
           slots: 42
   player-management:
@@ -1752,31 +1734,31 @@ gui:
         members:
           name: <t:regular_heading>成员
           lore:
-            - <t:decoration>✖ </t><t:regular>管理成员.
+          - <t:decoration>✖ </t><t:regular>管理成员.
           material: skin:e8b8c6a46d87cf86a55df214cf84bf45cca25edb9a676e96364dd6a6eea235b3
           slots: 11
         members_online:
           name: <t:regular_heading>在线成员
           lore:
-            - <t:decoration>✖ </t><t:regular>查看当前在线的成员.
+          - <t:decoration>✖ </t><t:regular>查看当前在线的成员.
           material: CLOCK
           slots: 32
         invites:
           name: <t:regular_heading>邀请
           lore:
-            - <t:decoration>✖ </t><t:regular>管理发出的邀请.
+          - <t:decoration>✖ </t><t:regular>管理发出的邀请.
           material: WRITABLE_BOOK
           slots: 15
         banned:
           name: <t:regular_heading>已封禁玩家
           lore:
-            - <t:decoration>✖ </t><t:regular>管理已封禁的玩家.
+          - <t:decoration>✖ </t><t:regular>管理已封禁的玩家.
           material: BARRIER
           slots: 13
         membership-requests:
           name: <t:regular_heading>成员申请
           lore:
-            - <t:decoration>✖ </t><t:regular>管理收到的成员申请.
+          - <t:decoration>✖ </t><t:regular>管理收到的成员申请.
           material: BOOKSHELF
           slots: 17
   admin_main:
@@ -1786,26 +1768,24 @@ gui:
         lands:
           name: <t:regular_heading>管理管理员城镇
           lore:
-            - <t:decoration>✖ </t><t:regular>查看和管理管理员城镇.
-            - "    <t:decoration>• </t><t:regular>可像管理普通城镇一样, 使用"
-            - "      <t:regular_value>/<v:cmd_land></t> ... 命令."
-            - "    <t:decoration>• </t><t:regular>管理员城镇无需缴纳维护费且不能参与战争."
-            - '      其所有者会自动设为 "Server"'
-            - '      "Server", 你仍可通过以下命令修改:'
-            - "      <t:regular_value>/<v:cmd_setowner></t>."
+          - <t:decoration>✖ </t><t:regular>查看和管理管理员城镇.
+          - '    <t:decoration>• </t><t:regular>可像管理普通城镇一样, 使用'
+          - '      <t:regular_value>/<v:cmd_land></t> ... 命令.'
+          - '    <t:decoration>• </t><t:regular>管理员城镇无需缴纳维护费且不能参与战争.'
+          - '      其主人会自动设为 "Server"'
+          - '      "Server", 你仍可通过以下命令修改:'
+          - '      <t:regular_value>/<v:cmd_setowner></t>.'
           material: skin:8449b9318e33158e64a46ab0de121c3d40000e3332c1574932b3c849d8fa0dc2
           slots: 25
         child_failure_world:
           name: <t:error_heading>非 Lands 世界
           lore:
-            - <t:error>你当前所在的世界
-            - 必须是允许占领城镇领土的世界.
-            - " <t:decoration>• </t><t:regular>可在插件配置中添加可占领的世界,"
-            - "   以供城镇占领领土."
+          - <t:error>你当前所在的世界必须是允许占领城镇领土的世界.
+          - ' <t:decoration>• </t><t:regular>可在插件配置中添加可占领的世界以供城镇占领领土.'
         wilderness:
           name: <t:regular_heading>荒野设置
           lore:
-            - <t:decoration>✖ </t><t:regular>切换荒野中的职位和自然设置.
+          - <t:decoration>✖ </t><t:regular>切换荒野中的职位和自然设置.
           material: NAME_TAG
           slots: 21
   list_membership-requests:
@@ -1815,22 +1795,22 @@ gui:
         entry_object:
           name: <t:regular_heading><v:name>
           lore:
-            - "<t:regular>时间: <t:time><v:time></t> 前"
-            - ""
-            - <action:primary><label>接受申请</label><desc>接受申请并将其加入.</desc></action>
-            - <action:secondary><label>查看信息</label></action>
-            - <action:remove><label>拒绝申请</label></action>
+          - '<t:regular>时间: <t:time><v:time></t> 前'
+          - ''
+          - <action:primary><label>接受申请</label><desc>接受申请并将其加入.</desc></action>
+          - <action:secondary><label>查看信息</label></action>
+          - <action:remove><label>拒绝申请</label></action>
           material: INHERIT
           bedrock:
             detail: true
         membership_accept:
-          name: "<t:regular_heading>自动接受: <v:status>"
+          name: '<t:regular_heading>自动接受: <v:status>'
           lore:
-            - <t:decoration>✖ </t><t:regular>自动接受成员申请?
-            - ""
-            - "    <t:decoration>• </t><t:regular>启用后, 任何人都可以自动加入此城镇."
-            - "    <t:decoration>• </t><t:regular>新成员将获得以下职位:"
-            - "      <t:regular_value><v:role></t>."
+          - <t:decoration>✖ </t><t:regular>自动接受成员申请?
+          - ''
+          - '    <t:decoration>• </t><t:regular>启用后, 任何人都可以自动加入此城镇.'
+          - '    <t:decoration>• </t><t:regular>新成员将获得以下职位:'
+          - '      <t:regular_value><v:role></t>.'
           material: REDSTONE
           slots: 42
       patches:
@@ -1846,56 +1826,56 @@ gui:
         entry_land_own:
           name: <t:entry_heading><v:land>
           lore:
-            - <t:regular>你拥有此城镇.
-            - " <t:decoration>• </t><t:regular>联邦:<t:entity_nation> <v:nation></t>"
-            - " <t:decoration>• </t><t:regular>区块数:<t:regular_value> <v:chunks></t> /<t:limit> <v:max-chunks></t>"
-            - ""
-            - <action:primary><label>管理此城镇</label></action>
-            - <action:secondary><label>查看信息</label></action>
-            - <action:tertiary><label>设为城镇编辑目标</label></action>
+          - <t:regular>你拥有此城镇.
+          - ' <t:decoration>• </t><t:regular>联邦:<t:entity_nation> <v:nation></t>'
+          - ' <t:decoration>• </t><t:regular>区块数:<t:regular_value> <v:chunks></t> /<t:limit> <v:max-chunks></t>'
+          - ''
+          - <action:primary><label>管理此城镇</label></action>
+          - <action:secondary><label>查看信息</label></action>
+          - <action:tertiary><label>设为编辑目标</label></action>
           material: INHERIT
           bedrock:
             detail: true
         entry_camp_own:
           name: <t:entry_heading><v:land>
           lore:
-            - <t:regular>你拥有此露营地, 它属于你的城镇.
-            - 露营地是无法扩张且无需缴纳维护费的城镇.
-            - ""
-            - <t:error_heading>此露营地将在以下时间后过期:</t>
-            - <t:time><v:time></t>
-            - ""
-            - <action:primary><label>管理此露营地</label></action>
-            - <action:secondary><label>查看信息</label></action>
-            - <action:tertiary><label>设为城镇编辑目标</label></action>
+          - <t:regular>你拥有此露营地, 它属于你的城镇.
+          - 露营地是无法扩张且无需缴纳维护费的城镇.
+          - ''
+          - <t:error_heading>此露营地将在以下时间后过期:</t>
+          - <t:time><v:time></t>
+          - ''
+          - <action:primary><label>管理此露营地</label></action>
+          - <action:secondary><label>查看信息</label></action>
+          - <action:tertiary><label>设为编辑目标</label></action>
           material: INHERIT
           bedrock:
             detail: true
         entry_camp:
           name: <t:entry_heading><v:land>
           lore:
-            - <t:regular>你是此城镇露营地的成员.
-            - 露营地是无法扩张且无需缴纳维护费的城镇.
-            - ""
-            - <t:error_heading>此露营地将在以下时间后过期:</t>
-            - <t:time><v:time></t>
-            - ""
-            - <action:primary><label>管理此露营地</label></action>
-            - <action:secondary><label>查看信息</label></action>
-            - <action:tertiary><label>设为城镇编辑目标</label></action>
+          - <t:regular>你是此城镇露营地的成员.
+          - 露营地是无法扩张且无需缴纳维护费的城镇.
+          - ''
+          - <t:error_heading>此露营地将在以下时间后过期:</t>
+          - <t:time><v:time></t>
+          - ''
+          - <action:primary><label>管理此露营地</label></action>
+          - <action:secondary><label>查看信息</label></action>
+          - <action:tertiary><label>设为编辑目标</label></action>
           material: INHERIT
           bedrock:
             detail: true
         entry_land:
           name: <t:entry_heading><v:land>
           lore:
-            - <t:regular>你是此城镇的成员.
-            - " <t:decoration>• </t><t:regular>联邦:<t:entity_nation> <v:nation></t>"
-            - " <t:decoration>• </t><t:regular>区块数:<t:regular_value> <v:chunks></t> /<t:limit> <v:max-chunks></t>"
-            - ""
-            - <action:primary><label>管理此城镇</label></action>
-            - <action:secondary><label>查看信息</label></action>
-            - <action:tertiary><label>设为城镇编辑目标</label></action>
+          - <t:regular>你是此城镇的成员.
+          - ' <t:decoration>• </t><t:regular>联邦:<t:entity_nation> <v:nation></t>'
+          - ' <t:decoration>• </t><t:regular>区块数:<t:regular_value> <v:chunks></t> /<t:limit> <v:max-chunks></t>'
+          - ''
+          - <action:primary><label>管理此城镇</label></action>
+          - <action:secondary><label>查看信息</label></action>
+          - <action:tertiary><label>设为编辑目标</label></action>
           material: INHERIT
           bedrock:
             detail: true
@@ -1904,12 +1884,12 @@ gui:
           bedrock:
             detail: true
           lore:
-            - "<t:success>已设为城镇编辑目标: 命令将对其生效."
-            - " <t:decoration>• </t><t:regular>联邦:<t:entity_nation> <v:nation></t>"
-            - " <t:decoration>• </t><t:regular>区块数:<t:regular_value> <v:chunks></t> /<t:limit> <v:max-chunks></t>"
-            - ""
-            - <action:primary><label>管理此城镇</label></action>
-            - <action:secondary><label>查看信息</label></action>
+          - '<t:success>已设为编辑目标: 命令将对其生效.'
+          - ' <t:decoration>• </t><t:regular>联邦:<t:entity_nation> <v:nation></t>'
+          - ' <t:decoration>• </t><t:regular>区块数:<t:regular_value> <v:chunks></t> /<t:limit> <v:max-chunks></t>'
+          - ''
+          - <action:primary><label>管理此城镇</label></action>
+          - <action:secondary><label>查看信息</label></action>
           name: <t:entry_heading><v:land>
         entry_camp_edit:
           material: skin:eef425b4db7d62b200e89c013e421a9e110bfb27f2d8b9f5884d10104d00f4f4
@@ -1917,14 +1897,14 @@ gui:
             detail: true
           name: <t:entry_heading><v:land>
           lore:
-            - "<t:success>已设为编辑目标: 命令将对其生效."
-            - <t:regular>露营地是无法扩张且无需缴纳维护费的城镇.
-            - ""
-            - <t:error_heading>此露营地将在以下时间后过期:</t>
-            - <t:time><v:time></t>
-            - ""
-            - <action:primary><label>管理此露营地</label></action>
-            - <action:secondary><label>查看信息</label></action>
+          - '<t:success>已设为编辑目标: 命令将对其生效.'
+          - <t:regular>露营地是无法扩张且无需缴纳维护费的城镇.
+          - ''
+          - <t:error_heading>此露营地将在以下时间后过期:</t>
+          - <t:time><v:time></t>
+          - ''
+          - <action:primary><label>管理此露营地</label></action>
+          - <action:secondary><label>查看信息</label></action>
   player_invite:
     title: <t:menu_title><v:land>
     items:
@@ -1932,66 +1912,64 @@ gui:
         child_failure_banned:
           name: <t:error_heading>你已被封禁
           lore:
-            - <t:error>你无法加入子区域<t:error_value> <v:area></t> 所属的
-            - 城镇<t:error_value> <v:land></t>, 因为对方已将你封禁.
+          - <t:error>你无法加入子区域<t:error_value> <v:area></t> 所属的
+          - 城镇<t:error_value> <v:land></t>, 因为对方已将你封禁.
         deny:
           name: <t:negative_heading>拒绝
           lore:
-            - <t:decoration>✖ </t><t:regular>拒绝此邀请.
+          - <t:decoration>✖ </t><t:regular>拒绝此邀请.
           material: RED_STAINED_GLASS_PANE
           slots: 24-27
         accept_owner:
           name: <t:positive_heading>接受
           lore:
-            - <t:decoration>✖ </t><t:regular>接受此邀请.
-            - "   税费:<t:cost> <v:tax></t>"
-            - "   维护费:<t:cost> <v:upkeep></t>"
+          - <t:decoration>✖ </t><t:regular>接受此邀请.
+          - '   税费:<t:cost> <v:tax></t>'
+          - '   维护费:<t:cost> <v:upkeep></t>'
           material: LIME_STAINED_GLASS_PANE
           slots: 19-22
         accept_merge:
           name: <t:positive_heading>接受
           lore:
-            - <t:decoration>✖ </t><t:regular>接受将你的城镇<t:entity_land> <v:merge></t>
-            - "   合并到<t:entity_land> <v:land></t> 的请求."
+          - <t:decoration>✖ </t><t:regular>接受将你的城镇<t:entity_land> <v:merge></t>
+          - '   合并到<t:entity_land> <v:land></t> 的请求.'
           material: LIME_STAINED_GLASS_PANE
           slots: 19-22
         accept_trust:
           name: <t:positive_heading>接受
           lore:
-            - <t:decoration>✖ </t><t:regular>接受此邀请.
-            - "   税费:<t:cost> <v:tax>"
+          - <t:decoration>✖ </t><t:regular>接受此邀请.
+          - '   税费:<t:cost> <v:tax>'
           material: LIME_STAINED_GLASS_PANE
           slots: 19-22
         child_failure_inviteOwner:
-          name: <t:error_heading>已是所有者
+          name: <t:error_heading>已是主人
           lore:
-            - <t:error>你无法加入此城镇.
-            - " <t:decoration>• </t><t:regular>你不能同时拥有"
-            - "   自己的城镇并加入另一个城镇."
+          - <t:error>你无法加入此城镇.
+          - ' <t:decoration>• </t><t:regular>你不能同时拥有自己的城镇并加入另一个城镇.'
         child_failure_lands:
           name: <t:error_heading>城镇数已达上限
           lore:
-            - <t:error>你无法加入其他城镇.
-            - " <t:decoration>• </t><t:regular>你已达到可加入城镇的数量上限 <t:regular_value><v:max></t> 个,"
-            - "   无法再加入其他城镇."
+          - <t:error>你无法加入其他城镇.
+          - ' <t:decoration>• </t><t:regular>你已达到可加入城镇的数量上限 <t:regular_value><v:max></t> 个,'
+          - '   无法再加入其他城镇.'
         child_failure_members:
           name: <t:error_heading>成员数已达上限
           lore:
-            - <t:error>无法将你加入城镇<t:error_value> <v:land></t>.
-            - " <t:decoration>• </t><t:regular>该城镇已达到成员数量上限 <t:regular_value><v:max></t> 人."
+          - <t:error>无法将你加入城镇<t:error_value> <v:land></t>.
+          - ' <t:decoration>• </t><t:regular>该城镇已达到成员数量上限 <t:regular_value><v:max></t> 人.'
         child_failure_war:
           name: <t:error_heading>正处于战争中
           lore:
-            - <t:error>你目前无法加入城镇
-            - <t:error_value><v:land></t>, 因为该城镇正处于
-            - 即将开始或正在进行的战争中.
+          - <t:error>你目前无法加入城镇 <t:error_value><v:land></t>,
+          - 因为该城镇正处于即将开始或正在进行的战争中.
         info:
           name: <t:regular_heading>信息
           lore:
-            - " <t:decoration>• </t><t:regular>子区域:<t:regular_value> <v:area></t>"
-            - " <t:decoration>• </t><t:regular>城镇:<t:entity_land> <v:land></t>"
-            - " <t:decoration>• </t><t:regular>收到时间:<t:time> <v:time></t>"
-            - " <t:decoration>• </t><t:regular>发送者: <v:sender>"
+          - ' <t:decoration>• </t><t:regular>子区域:<t:regular_value> <v:area></t>'
+          - ' <t:decoration>• </t><t:regular>城镇:<t:entity_land> <v:land></t>'
+          - ' <t:decoration>• </t><t:regular>收到时间:<t:time> <v:time></t>'
+          - ' <t:decoration>• </t><t:regular>发送者: <v:sender>'
           material: OAK_SIGN
           slots: 23
   list_rentables:
@@ -1999,55 +1977,55 @@ gui:
     items:
       default:
         refresh_type:
-          name: "<t:regular_heading>类型: <t:regular_value><v:type></t>"
+          name: '<t:regular_heading>类型: <t:regular_value><v:type></t>'
           lore:
-            - <t:decoration>✖ </t><t:regular>是否显示租售报价
-            - "   或不活跃所有者的城镇?"
+          - <t:decoration>✖ </t><t:regular>展示正在出租, 出售
+          - '   或主人不活跃的城镇?'
           material: COMPARATOR
           slots: 42
         entry_land_buy:
-          name: "<t:entry_heading>购买城镇: <v:land>"
+          name: '<t:entry_heading>购买城镇: <v:land>'
           lore:
-            - <t:decoration>• </t><t:regular>价格:<t:cost> <v:costs></t>
-            - <t:decoration>✖ </t><t:regular>传送
+          - <t:decoration>• </t><t:regular>价格:<t:cost> <v:costs></t>
+          - <t:decoration>✖ </t><t:regular>传送
           material: INHERIT
         entry_area_buy:
-          name: "<t:entry_heading>购买子区域: <v:area>"
+          name: '<t:entry_heading>购买子区域: <v:area>'
           lore:
-            - "<t:decoration>• </t><t:regular>大小: <t:regular_value><v:size></t> 个方块"
-            - <t:decoration>• </t><t:regular>价格:<t:cost> <v:costs></t>
-            - "<t:decoration>• </t><t:regular>城镇: <v:land>"
-            - <t:decoration>✖ </t><t:regular>传送
+          - '<t:decoration>• </t><t:regular>大小: <t:regular_value><v:size></t> 个方块'
+          - <t:decoration>• </t><t:regular>价格:<t:cost> <v:costs></t>
+          - '<t:decoration>• </t><t:regular>城镇: <v:land>'
+          - <t:decoration>✖ </t><t:regular>传送
           material: INHERIT
         refresh_sort:
-          name: "<t:regular_heading>排序方式: <t:regular_value><v:mode></t>"
+          name: '<t:regular_heading>排序方式: <t:regular_value><v:mode></t>'
           lore:
-            - <t:decoration>✖ </t><t:regular>点击切换排序方式.
+          - <t:decoration>✖ </t><t:regular>点击切换排序方式.
           material: HOPPER
           slots: 41
         entry_area_rent:
-          name: "<t:entry_heading>租用子区域: <v:area>"
+          name: '<t:entry_heading>租用子区域: <v:area>'
           lore:
-            - "<t:decoration>• </t><t:regular>大小: <t:regular_value><v:size></t> 个方块"
-            - <t:decoration>• </t><t:regular>租金:<t:cost> <v:costs></t> / <t:time><v:time></t>
-            - "<t:decoration>• </t><t:regular>最长租期: <t:regular_value><v:max></t>"
-            - "<t:decoration>• </t><t:regular>城镇: <v:land>"
-            - <t:decoration>✖ </t><t:regular>传送
+          - '<t:decoration>• </t><t:regular>大小: <t:regular_value><v:size></t> 个方块'
+          - <t:decoration>• </t><t:regular>租金:<t:cost> <v:costs></t> / <t:time><v:time></t>
+          - '<t:decoration>• </t><t:regular>最长租期: <t:regular_value><v:max></t>'
+          - '<t:decoration>• </t><t:regular>城镇: <v:land>'
+          - <t:decoration>✖ </t><t:regular>传送
           material: INHERIT
         child_failure_cooldown:
           name: <t:error_heading>冷却中
           lore:
-            - <t:regular>你还需要等待<t:time> <v:time></t>
-            - 才能再次传送至报价地点.
+          - <t:regular>你还需要等待<t:time> <v:time></t>
+          - 才能再次传送到这里.
         entry_land_buy_inactive:
           material: INHERIT
           lore:
-            - <t:decoration>• </t><t:regular>价格:<t:cost> <v:costs></t>
-            - "<t:decoration>• </t><t:regular>大小: <t:regular_value><v:chunks></t> 个区块"
-            - <t:decoration>• </t><t:negative>所有者 <t:error_value><v:owner></t> 已不活跃
-            - <t:decoration>• </t><v:end>
-            - <t:decoration>✖ </t><t:regular>购买
-          name: "<t:entry_heading>购买城镇: <v:land>"
+          - <t:decoration>• </t><t:regular>价格:<t:cost> <v:costs></t>
+          - '<t:decoration>• </t><t:regular>大小: <t:regular_value><v:chunks></t> 个区块'
+          - <t:decoration>• </t><t:negative>主人 <t:error_value><v:owner></t> 已不活跃
+          - <t:decoration>• </t><v:end>
+          - <t:decoration>✖ </t><t:regular>购买
+          name: '<t:entry_heading>购买城镇: <v:land>'
   action-confirm:
     title: <t:menu_title>确认此操作
     items:
@@ -2056,36 +2034,36 @@ gui:
           name: <t:positive_heading>确认
           material: LIME_STAINED_GLASS_PANE
           slots:
-            - 1-4
-            - 10-13
-            - 19-22
-            - 28-31
-            - 37-40
+          - 1-4
+          - 10-13
+          - 19-22
+          - 28-31
+          - 37-40
           sound_click: entity.player.levelup
         cancel:
           name: <t:negative_heading>取消
           material: RED_STAINED_GLASS_PANE
           slots:
-            - 6-9
-            - 15-18
-            - 24-27
-            - 33-36
-            - 42-45
+          - 6-9
+          - 15-18
+          - 24-27
+          - 33-36
+          - 42-45
           sound_click: block.anvil.hit
         info:
           name: <t:regular_heading>确认此操作
           lore:
-            - <v:message>
-            - ""
-            - <t:regular>点击<t:positive_heading>确认</t>按钮以确认, 或
-            - <t:negative_heading>取消</t>按钮以中止此操作.
+          - <v:message>
+          - ''
+          - <t:regular>点击<t:positive_heading>确认</t>按钮以确认.
+          - <t:regular>点击<t:negative_heading>取消</t>按钮以中止.
           material: OAK_SIGN
           slots:
-            - 5
-            - 14
-            - 23
-            - 32
-            - 41
+          - 5
+          - 14
+          - 23
+          - 32
+          - 41
   admin_wilderness:
     title: <t:menu_title>荒野设置
     items:
@@ -2093,20 +2071,20 @@ gui:
         management:
           name: <t:regular_heading>管理设置
           lore:
-            - <t:decoration>✖ </t><t:regular>编辑第三方插件提供的管理权限.
-            - "   这些权限可在荒野中切换."
+          - <t:decoration>✖ </t><t:regular>编辑第三方插件提供的
+          - '   可在荒野中切换的管理设置.'
           material: GOLD_INGOT
           slots: 23
         action:
           name: <t:regular_heading>行为设置
           lore:
-            - <t:decoration>✖ </t><t:regular>编辑动作权限, 例如方块破坏等.
+          - <t:decoration>✖ </t><t:regular>编辑破坏方块, 开启容器等设置.
           material: IRON_PICKAXE
           slots: 20
         landflags:
           name: <t:regular_heading>环境设置
           lore:
-            - <t:decoration>✖ </t><t:regular>切换自然环境设置, 例如荒野中的生物生成等.
+          - <t:decoration>✖ </t><t:regular>切换自然环境设置, 例如荒野中的生物生成等.
           material: skin:8449b9318e33158e64a46ab0de121c3d40000e3332c1574932b3c849d8fa0dc2
           slots: 26
   object_info:
@@ -2116,9 +2094,9 @@ gui:
         membership-request_not-looking:
           name: <t:regular_heading>申请加入
           lore:
-            - <t:error>此城镇目前不招募新成员.</t>
-            - <action:primary><label>申请加入</label></action>
-            - <action:secondary><label>撤回申请</label></action>
+          - <t:error>此城镇目前不招募新成员.</t>
+          - <action:primary><label>申请加入</label></action>
+          - <action:secondary><label>撤回申请</label></action>
           material: BOOKSHELF
           slots: 33
           bedrock:
@@ -2126,67 +2104,67 @@ gui:
         level:
           name: <t:regular_heading>等级
           lore:
-            - <t:decoration>✖ </t><t:regular>点击查看当前等级和下一级的信息.
+          - <t:decoration>✖ </t><t:regular>点击查看当前等级和下一级的信息.
           material: BEACON
           slots: 15
         created:
           name: <t:regular_heading>创建时间
           lore:
-            - <t:time><v:date></t>
+          - <t:time><v:date></t>
           material: CLOCK
           slots: 11
         players:
           name: <t:regular_heading>成员数</t> <t:decoration>(</t><t:regular_value><v:amount></t><t:decoration>)</t>
           lore:
-            - <t:cmd><v:players></t>
+          - <t:cmd><v:players></t>
           material: skin:e8b8c6a46d87cf86a55df214cf84bf45cca25edb9a676e96364dd6a6eea235b3
           slots: 13
         lands:
           name: <t:regular_heading>城镇</t> <t:decoration>(</t><t:regular_value><v:amount></t><t:decoration>)</t>
           lore:
-            - <t:cmd><v:lands></t>
+          - <t:cmd><v:lands></t>
           material: skin:8449b9318e33158e64a46ab0de121c3d40000e3332c1574932b3c849d8fa0dc2
           slots: 13
         membership-request:
           name: <t:regular_heading>申请加入
           lore:
-            - <action:primary><label>申请加入</label></action>
-            - <action:secondary><label>撤回申请</label></action>
+          - <action:primary><label>申请加入</label></action>
+          - <action:secondary><label>撤回申请</label></action>
           material: BOOKSHELF
           slots: 33
           bedrock:
             detail: true
         war:
-          name: "<t:regular_heading>胜率:"
+          name: '<t:regular_heading>胜率:'
           lore:
-            - " <t:decoration>• </t><t:regular>胜场: <t:regular_value><v:won></t>"
-            - " <t:decoration>• </t><t:regular>败场: <t:regular_value><v:lost></t>"
-            - "   <t:decoration>= </t><t:regular>胜负比:<t:regular_value> <v:wlr></t>"
-            - ""
-            - <t:regular_heading>击杀比:</t>
-            - " <t:decoration>• </t><t:regular>击杀: <t:regular_value><v:kills></t>"
-            - " <t:decoration>• </t><t:regular>死亡: <t:regular_value><v:deaths></t>"
-            - "   <t:decoration>= </t><t:regular>击杀死亡比:<t:regular_value> <v:kdr></t>"
-            - "<t:decoration>• </t><t:regular>占领数: <t:regular_value><v:captures></t>"
+          - ' <t:decoration>• </t><t:regular>胜场: <t:regular_value><v:won></t>'
+          - ' <t:decoration>• </t><t:regular>败场: <t:regular_value><v:lost></t>'
+          - '   <t:decoration>= </t><t:regular>胜负比:<t:regular_value> <v:wlr></t>'
+          - ''
+          - <t:regular_heading>击杀比:</t>
+          - ' <t:decoration>• </t><t:regular>击杀: <t:regular_value><v:kills></t>'
+          - ' <t:decoration>• </t><t:regular>死亡: <t:regular_value><v:deaths></t>'
+          - '   <t:decoration>= </t><t:regular>击杀死亡比:<t:regular_value> <v:kdr></t>'
+          - '<t:decoration>• </t><t:regular>占领数: <t:regular_value><v:captures></t>'
           material: IRON_SWORD
           slots: 31
         level_camp:
           name: <t:regular_heading>等级
           lore:
-            - <t:error>露营地没有等级.
+          - <t:error>露营地没有等级.
           material: BEACON
           slots: 15
         relations:
           name: <t:regular_heading>外交关系
           lore:
-            - <t:decoration>✖ </t><t:regular>查看外交关系.
+          - <t:decoration>✖ </t><t:regular>查看外交关系.
           material: LIME_BANNER
           slots: 29
         expiration:
           material: COBWEB
           slots: 17
           lore:
-            - <v:status>
+          - <v:status>
           name: <t:regular_heading>不活跃状态
   list_admin_wilderness_landflags:
     title: <t:menu_title>环境设置
@@ -2197,47 +2175,47 @@ gui:
         child_failure_max-roles:
           name: <t:error_heading>职位数已达上限
           lore:
-            - "<t:error>此子区域已达到职位数量上限 <t:error_value> <v:max></t> 个."
+          - <t:error>此子区域已达到职位数量上限 <t:error_value> <v:max></t> 个.
         child_failure_access:
           name: <t:error_heading>无权操作
           lore:
-            - <t:error>你无权编辑此子区域的职位.
-            - " <t:decoration>• </t><t:regular>城镇所有者可以授予你的职位相应权限."
+          - <t:error>你无权编辑此子区域的职位.
+          - ' <t:decoration>• </t><t:regular>城镇的主人可以授予你的职位相应权限.'
         entry_object_system_priority:
           name: <t:entry_heading><v:role>
           lore:
-            - <action:primary><label>编辑职位</label></action>
-            - <action:tertiary><label>提高优先级</label></action>
-            - <action:quaternary><label>降低优先级</label></action>
+          - <action:primary><label>编辑职位</label></action>
+          - <action:tertiary><label>提高优先级</label></action>
+          - <action:quaternary><label>降低优先级</label></action>
           material: INHERIT
           bedrock:
             detail: true
         entry_object_normal:
           name: <t:entry_heading><v:role>
           lore:
-            - <action:primary><label>编辑职位</label></action>
-            - <action:tertiary><label>提高优先级</label></action>
-            - <action:quaternary><label>降低优先级</label></action>
-            - <action:remove><label>删除职位</label></action>
+          - <action:primary><label>编辑职位</label></action>
+          - <action:tertiary><label>提高优先级</label></action>
+          - <action:quaternary><label>降低优先级</label></action>
+          - <action:remove><label>删除职位</label></action>
           material: INHERIT
           bedrock:
             detail: true
         entry_object_system:
           name: <t:entry_heading><v:role>
           lore:
-            - <action:primary><label>编辑职位</label></action>
+          - <action:primary><label>编辑职位</label></action>
           material: INHERIT
         create:
           name: <t:positive_heading>新建职位
           lore:
-            - <t:regular>可用数量:<t:regular_value> <v:roles></t> <t:decoration>/</t><t:limit> <v:max></t>
+          - <t:regular>可用数量:<t:regular_value> <v:roles></t> <t:decoration>/</t><t:limit> <v:max></t>
           material: skin:ffec3d25ae0d147c342c45370e0e43300a4e48a5b43f9bb858babff756144dac
           slots: 40
         child_failure_required:
           name: <t:error_heading>必需职位
           lore:
-            - <t:error>你不能删除此职位.
-            - " <t:decoration>• </t><t:regular>此职位是管理玩家所必需的."
+          - <t:error>你不能删除此职位.
+          - ' <t:decoration>• </t><t:regular>此职位是管理玩家所必需的.'
         delete:
           name: <t:negative_heading>删除职位
           material: skin:548d7d1e03e1af145b0125ab841285672b421265da2ab915015f9058438ba2d8
@@ -2245,8 +2223,8 @@ gui:
         child_failure_priority:
           name: <t:error_heading>职位优先级不足
           lore:
-            - <t:error>你无权编辑此职位的设置.
-            - " <t:decoration>• </t><t:regular>此职位的优先级高于你的职位, 或你属于该职位."
+          - <t:error>你无权编辑此职位的设置.
+          - ' <t:decoration>• </t><t:regular>此职位的优先级高于你的职位, 或你属于该职位.'
   list_player_map:
     title: <t:menu_title>地图
     items:
@@ -2254,30 +2232,30 @@ gui:
         entry_chunk_position:
           name: <t:regular_heading>当前位置
           lore:
-            - <t:regular>这是你当前所在的位置.
+          - <t:regular>这是你当前所在的位置.
           material: INHERIT
         entry_chunk_wilderness:
           name: <green>荒野
           lore:
-            - <t:decoration>✖ </t><t:regular>点击占领此区块.
+          - <t:decoration>✖ </t><t:regular>点击占领此区块.
           material: GREEN_STAINED_GLASS_PANE
         entry_chunk_untrusted:
           name: <t:negative_heading><v:land>
           lore:
-            - <red>你不是此区块的成员.
-            - <t:decoration>✖ </t><t:regular>查看城镇信息.
+          - <red>你不是此区块的成员.
+          - <t:decoration>✖ </t><t:regular>查看城镇信息.
           material: RED_STAINED_GLASS_PANE
         entry_chunk_owner:
           name: <t:positive_heading><v:land>
           lore:
-            - <t:regular>你拥有此城镇.
-            - <t:decoration>✖ </t><t:regular>打开此城镇的菜单.
+          - <t:regular>你拥有此城镇.
+          - <t:decoration>✖ </t><t:regular>打开此城镇的菜单.
           material: LIME_STAINED_GLASS_PANE
         entry_chunk_trusted:
           name: <t:positive_heading><v:land>
           lore:
-            - <t:regular>你是此区块的成员.
-            - <t:decoration>✖ </t><t:regular>打开此城镇的菜单.
+          - <t:regular>你是此区块的成员.
+          - <t:decoration>✖ </t><t:regular>打开此城镇的菜单.
           material: YELLOW_STAINED_GLASS_PANE
         refresh_move_up:
           name: <t:regular_heading>向 <v:direction> 移动
@@ -2298,30 +2276,28 @@ gui:
         refresh_reset-pos:
           name: <t:regular_heading>重置位置
           lore:
-            - <t:decoration>✖ </t><t:regular>重置当前位置.
+          - <t:decoration>✖ </t><t:regular>重置当前位置.
           material: skin:22e4ad83c4938d9e5fc589e60c8010be2480e08d834529cec0da13bdf2538555
           slots: 54
         refresh_select-land:
           name: <t:regular_heading>占领城镇:<t:entity_land> <v:land></t>
           lore:
-            - "<t:decoration>✖ </t><t:regular>点击选择要占领区块的城镇:"
-            - "   用于占领荒野区块."
+          - <t:decoration>✖ </t><t:regular>点击选择要占领荒野区块的城镇.
           material: FILLED_MAP
           slots: 53
         child_failure_permission:
           name: <t:error_heading>权限不足
           lore:
-            - <t:error>你缺少相关权限
-            - 以占领区块.
+          - <t:error>你没有占领区块的权限.
         child_failure_disabled:
           name: <t:error_heading>功能已禁用
           lore:
-            - <t:error>通过地图占领区块的功能当前已禁用.
+          - <t:error>通过地图占领区块的功能当前已禁用.
         child_failure_no-land-selected:
           name: <t:error_heading>未选择城镇
           lore:
-            - <t:error>请先选择用于占领区块的城镇.
-            - " <t:decoration>• </t><t:regular>点击<t:regular_value>占领领土</t>选择要占领领土的城镇."
+          - <t:error>请先选择用于占领区块的城镇.
+          - ' <t:decoration>• </t><t:regular>点击<t:regular_value>占领</t>选择要占领区块的城镇.'
         back:
           slots: 46
           bedrock:
@@ -2337,20 +2313,19 @@ gui:
     items:
       default:
         entry_object_owner:
-          name: <t:entry_heading><v:land> <t:decoration>-</t> 成为所有者
+          name: <t:entry_heading><v:land> <t:decoration>-</t> 成为主人
           lore:
-            - <t:decoration>✖ </t><t:regular>回复此邀请并查看详细信息.
+          - <t:decoration>✖ </t><t:regular>回复此邀请并查看详细信息.
           material: INHERIT
         entry_object_merge:
           name: <t:entry_heading><v:land> <t:decoration>-</t> <t:regular_heading>合并你的城镇
           lore:
-            - <t:decoration>✖ </t><t:regular>决定是否将你的城镇
-            - "   将城镇<t:entity_land> <v:merge></t> 合并到城镇<t:entity_land> <v:land></t>."
+          - <t:decoration>✖ </t><t:regular>决定是否将你的城镇 <t:entity_land> <v:merge></t> 合并到城镇<t:entity_land> <v:land></t>.
           material: INHERIT
         entry_object_trust:
           name: <t:entry_heading><v:land> <t:decoration>-</t> 成员邀请
           lore:
-            - <t:decoration>✖ </t><t:regular>回复此邀请并查看详细信息.
+          - <t:decoration>✖ </t><t:regular>回复此邀请并查看详细信息.
           material: INHERIT
   list_land_areas:
     title: <t:menu_title>子区域
@@ -2359,75 +2334,71 @@ gui:
         child_failure_rented:
           name: <t:error_heading>已出租或出售
           lore:
-            - <t:error>出租或出售期间, 你无法编辑此子区域.
-            - ""
-            - " <t:decoration>• </t><t:regular>当前住户:<t:regular_value> <v:player></t>"
+          - <t:error>出租或出售期间, 你无法编辑此子区域.
+          - ''
+          - ' <t:decoration>• </t><t:regular>当前住户:<t:regular_value> <v:player></t>'
         entry_area_default:
           name: <t:entry_heading><v:area>
           lore:
-            - <t:user_content><v:description></t>
-            - <action:primary><label>管理此子区域</label></action>
+          - <t:user_content><v:description></t>
+          - <action:primary><label>管理此子区域</label></action>
           material: INHERIT
         child_failure_access:
           name: <t:error_heading>无权操作
           lore:
-            - <t:error>你无权删除
-            - 此城镇中的子区域.
-            - " <t:decoration>• </t><t:regular>城镇所有者可以为你的"
-            - "   职位授予分配子区域的权限."
+          - <t:error>你无权删除此城镇中的子区域.
+          - ' <t:decoration>• </t><t:regular>城镇的主人可以为你的'
+          - '   职位授予分配子区域的权限.'
         entry_area:
           name: <t:entry_heading><v:area>
           lore:
-            - <t:user_content><v:description></t>
-            - <action:primary><label>管理此子区域</label></action>
-            - <action:remove><label>删除此子区域</label></action>
+          - <t:user_content><v:description></t>
+          - <action:primary><label>管理此子区域</label></action>
+          - <action:remove><label>删除此子区域</label></action>
           material: INHERIT
         create:
           name: <t:positive_heading>创建子区域
           lore:
-            - <t:decoration>✖ </t><t:regular>为此城镇创建子区域.
-            - "   可用数量:<t:regular_value> <v:areas></t> <t:decoration>/</t><t:limit> <v:max></t>"
+          - <t:decoration>✖ </t><t:regular>为此城镇创建子区域.
+          - '   可用数量:<t:regular_value> <v:areas></t> <t:decoration>/</t><t:limit> <v:max></t>'
           material: skin:ffec3d25ae0d147c342c45370e0e43300a4e48a5b43f9bb858babff756144dac
           slots: 40
         entry_area-setup:
           name: <t:negative_heading>尚未设置
           lore:
-            - <t:decoration>1. </t><t:regular>执行 <t:cmd>/<v:cmd_selection> </t><t:regular>并
-            - "   选择一个底角和一个顶角."
-            - <t:decoration>2. </t><t:regular>执行 <t:cmd>/<v:cmd></t>
-            - "  <t:regular>将此子区域调整为所选范围."
-            - <action:remove><label>删除此子区域</label></action>
+          - <t:decoration>1. </t><t:regular>执行 <t:cmd>/<v:cmd_selection> </t><t:regular>并
+          - '   选择一个底角和一个顶角.'
+          - <t:decoration>2. </t><t:regular>执行 <t:cmd>/<v:cmd></t>
+          - '  <t:regular>将此子区域调整为所选范围.'
+          - <action:remove><label>删除此子区域</label></action>
           material: ACACIA_FENCE
           bedrock:
             detail: true
         child_failure_untrusted:
           name: <t:error_heading>尚未加入
           lore:
-            - <t:error>你无权打开此子区域的菜单.
-            - " <t:decoration>• </t><t:regular>你需要先加入此子区域, 成为其成员."
+          - <t:error>你无权打开此子区域的菜单.
+          - ' <t:decoration>• </t><t:regular>你需要先成为其成员.'
         child_failure_default:
-          name: <t:error_heading>默认子区域
+          name: <t:error_heading>默认总区域
           lore:
-            - <t:error>你不能删除默认总区域.
-            - " <t:decoration>• </t><t:regular>新占领的城镇领土将归属此子区域."
+          - <t:error>你不能删除默认总区域.
+          - ' <t:decoration>• </t><t:regular>新占领的领土将归属此子区域.'
         child_failure_max-areas:
           name: <t:error_heading>子区域数已达上限
           lore:
-            - "<t:error>此城镇已达到子区域数量上限:"
-            - <t:error_value> <v:max></t> 个子区域.
+          - <t:error>此城镇已达到子区域数量上限<t:error_value> <v:max></t> 个.
         delete:
           name: <t:negative_heading>删除子区域
           lore:
-            - "<t:decoration>✖ </t><t:regular>删除一个子区域:"
-            - "   此城镇中的子区域."
+          - <t:decoration>✖ </t><t:regular>删除城镇的一个子区域.
           material: skin:548d7d1e03e1af145b0125ab841285672b421265da2ab915015f9058438ba2d8
           slots: 42
         child_failure_koth_arena:
           name: <t:error_heading>KotH 竞技场
           lore:
-            - <t:error>你不能删除此子区域,
-            - 因为它是 KotH 竞技场.
-            - " <t:decoration>• </t><t:regular>管理员必须先移除此竞技场."
+          - <t:error>你不能删除 KotH 竞技场.
+          - ' <t:decoration>• </t><t:regular>管理员必须先移除此竞技场.'
   list_area_banned:
     title: <t:menu_title>已封禁玩家
     items:
@@ -2435,50 +2406,50 @@ gui:
         unban:
           name: <t:positive_heading>解封玩家
           lore:
-            - <t:decoration>✖ </t><t:regular>解除对该玩家在此子区域的封禁.
+          - <t:decoration>✖ </t><t:regular>解除对该玩家在此子区域的封禁.
           material: skin:548d7d1e03e1af145b0125ab841285672b421265da2ab915015f9058438ba2d8
           slots: 42
         entry_area_all:
           name: <t:entry_heading><v:player>
           lore:
-            - "<t:regular>已在以下子区域中封禁:"
-            - <t:regular_value><v:areas></t>
-            - ""
-            - <action:primary><label>查看信息</label></action>
-            - <action:remove><label>解封</label></action>
+          - '<t:regular>已在以下子区域中封禁:'
+          - <t:regular_value><v:areas></t>
+          - ''
+          - <action:primary><label>查看信息</label></action>
+          - <action:remove><label>解封</label></action>
           material: INHERIT
           bedrock:
             detail: true
         entry_area:
           name: <t:entry_heading><v:player>
           lore:
-            - <t:regular>此玩家已在此子区域中被封禁.
-            - ""
-            - <action:primary><label>查看信息</label></action>
-            - <action:remove><label>解封</label></action>
+          - <t:regular>此玩家已在此子区域中被封禁.
+          - ''
+          - <action:primary><label>查看信息</label></action>
+          - <action:remove><label>解封</label></action>
           material: INHERIT
           bedrock:
             detail: true
         refresh_toggle:
-          name: "<t:regular_heading>仅查看当前子区域: <v:current>"
+          name: '<t:regular_heading>仅查看当前子区域: <v:current>'
           lore:
-            - "<t:decoration>✖ </t><t:regular>是否仅显示被子区域封禁的玩家 <t:decoration>(</t><t:regular_value> <v:area></t><t:decoration>)</t><t:regular>?"
-            - "    <t:decoration>• </t><t:regular>关闭后, 将显示整个城镇的封禁名单."
-            - "      也可以对整个城镇中的玩家进行封禁或解封."
+          - <t:decoration>✖ </t><t:regular>是否仅显示被子区域封禁的玩家 <t:decoration>(</t><t:regular_value> <v:area></t><t:decoration>)</t><t:regular>?
+          - '    <t:decoration>• </t><t:regular>关闭后, 将显示整个城镇的封禁名单.'
+          - '      也可以对整个城镇中的玩家进行封禁或解封.'
           material: HOPPER
           slots: 41
         global-action:
-          name: "<t:regular_heading>对所有子区域执行: <v:current>"
+          name: '<t:regular_heading>对所有子区域执行: <v:current>'
           lore:
-            - <t:decoration>✖ </t><t:regular>要封禁或解封整个城镇中的玩家吗?
-            - "   <t:decoration>• </t><t:regular>关闭后, 仅对子区域<t:regular_value> <v:area></t> 中的玩家执行封禁或解封."
+          - <t:decoration>✖ </t><t:regular>要封禁或解封整个城镇中的玩家吗?
+          - '   <t:decoration>• </t><t:regular>关闭后, 仅对子区域<t:regular_value> <v:area></t> 中的玩家执行封禁或解封.'
           material: skin:c9c8881e42915a9d29bb61a16fb26d059913204d265df5b439b3d792acd56
           slots: 44
         ban:
           name: <t:negative_heading>封禁玩家
           lore:
-            - <t:decoration>✖ </t><t:regular>封禁玩家, 禁止其进入此子区域.
-            - "    <t:decoration>• </t><t:regular>被封禁的玩家将无法进入或传送到此处."
+          - <t:decoration>✖ </t><t:regular>封禁玩家, 禁止其进入此子区域.
+          - '    <t:decoration>• </t><t:regular>被封禁的玩家将无法进入或传送到此处.'
           material: skin:ffec3d25ae0d147c342c45370e0e43300a4e48a5b43f9bb858babff756144dac
           slots: 40
   list_role_players:
@@ -2488,8 +2459,7 @@ gui:
         entry_object:
           name: <t:entry_heading><v:player>
           lore:
-            - <t:regular>此玩家可使最大
-            - 城镇规模增加<t:regular_value> <v:chunks></t> 个区块.
+          - <t:regular>此玩家可使最大城镇规模增加<t:regular_value> <v:chunks></t> 个区块.
           material: INHERIT
           slots: 10-36
   list_all:
@@ -2497,56 +2467,56 @@ gui:
     items:
       default:
         refresh_toggle-allowed:
-          name: "<t:regular_heading>仅显示公开: <v:only-allowed>"
+          name: '<t:regular_heading>仅显示公开: <v:only-allowed>'
           lore:
-            - <t:decoration>✖ </t><t:regular>仅显示你可以进入并传送到传送点吗?
+          - <t:decoration>✖ </t><t:regular>仅显示你可以进入并传送到传送点吗?
           material: OAK_DOOR
           slots: 42
         refresh_toggle-category:
-          name: "<t:regular_heading>类别: <v:category>"
+          name: '<t:regular_heading>类别: <v:category>'
           lore:
-            - <t:decoration>✖ </t><t:regular>仅显示属于此类别的城镇吗?
+          - <t:decoration>✖ </t><t:regular>仅显示属于此类别的城镇吗?
           material: BOOKSHELF
           slots: 41
         entry_land_looking:
           name: <t:regular_heading>#<v:pos></t> <t:entity_land><b><v:land></t>
           lore:
-            - " <t:decoration>• </t><t:regular_value><v:sorting></t>: <t:regular_value><v:value></t>"
-            - " <t:decoration>• </t><t:regular>类别: <t:regular_value><v:category></t>"
-            - " <t:decoration>• </t><t:regular>宣言:"
-            - "   <t:user_content><v:title></t>"
-            - ""
-            - <action:primary><label>传送至传送点</label></action>
-            - <action:secondary><label>查看信息</label></action>
-            - <action:tertiary><label>申请加入</label></action>
-            - <action:quaternary><label>撤回申请</label></action>
+          - ' <t:decoration>• </t><t:regular_value><v:sorting></t>: <t:regular_value><v:value></t>'
+          - ' <t:decoration>• </t><t:regular>类别: <t:regular_value><v:category></t>'
+          - ' <t:decoration>• </t><t:regular>宣言:'
+          - '   <t:user_content><v:title></t>'
+          - ''
+          - <action:primary><label>传送至传送点</label></action>
+          - <action:secondary><label>查看信息</label></action>
+          - <action:tertiary><label>申请加入</label></action>
+          - <action:quaternary><label>撤回申请</label></action>
           material: INHERIT
           bedrock:
             detail: true
         entry_nation:
           name: <t:regular_heading>#<v:pos></t> <t:entity_nation><b><v:nation></t>
           lore:
-            - " <t:decoration>• </t><t:regular_value><v:sorting></t>: <t:regular_value><v:value></t>"
-            - " <t:decoration>• </t><t:regular>标签: <t:user_content><v:tag></t>"
-            - " <t:decoration>• </t><t:regular>城镇数: <t:regular_value><v:lands></t>"
-            - ""
-            - <action:primary><label>传送至传送点</label></action>
-            - <action:secondary><label>查看信息</label></action>
+          - ' <t:decoration>• </t><t:regular_value><v:sorting></t>: <t:regular_value><v:value></t>'
+          - ' <t:decoration>• </t><t:regular>标签: <t:user_content><v:tag></t>'
+          - ' <t:decoration>• </t><t:regular>城镇数: <t:regular_value><v:lands></t>'
+          - ''
+          - <action:primary><label>传送至传送点</label></action>
+          - <action:secondary><label>查看信息</label></action>
           material: INHERIT
           bedrock:
             detail: true
         refresh_sorting:
-          name: "<t:regular_heading>排序方式: <v:current>"
+          name: '<t:regular_heading>排序方式: <v:current>'
           lore:
-            - <t:decoration>✖ </t><t:regular>切换排序方式.
+          - <t:decoration>✖ </t><t:regular>切换排序方式.
           material: HOPPER
           slots: 40
         refresh_search:
           name: <t:regular_heading>搜索
           lore:
-            - "<action:primary><label>搜索</label><desc>当前搜索: <t:user_content><v:search></t></desc></action>"
-            - "<action:secondary><label>搜索条件: <t:regular_value><v:mode></t></label></action>"
-            - <action:remove><label>重置搜索</label></action>
+          - '<action:primary><label>搜索</label><desc>当前搜索: <t:user_content><v:search></t></desc></action>'
+          - '<action:secondary><label>搜索条件: <t:regular_value><v:mode></t></label></action>'
+          - <action:remove><label>重置搜索</label></action>
           material: SPYGLASS
           slots: 43
           bedrock:
@@ -2554,16 +2524,16 @@ gui:
         entry_land:
           name: <t:regular_heading>#<v:pos></t> <t:entity_land><b><v:land></t>
           lore:
-            - " <t:decoration>• </t><t:regular_value><v:sorting></t>: <t:regular_value><v:value></t>"
-            - " <t:decoration>• </t><t:regular>分类: <t:regular_value><v:category></t>"
-            - " <t:decoration>• </t><t:regular>标签: <t:user_content><v:tag></t>"
-            - " <t:decoration>• </t><t:regular>宣言:"
-            - "   <t:user_content><v:title></t>"
-            - ""
-            - <action:primary><label>传送至传送点</label></action>
-            - <action:secondary><label>查看信息</label></action>
-            - <action:tertiary><label>申请加入</label></action>
-            - <action:quaternary><label>撤回申请</label></action>
+          - ' <t:decoration>• </t><t:regular_value><v:sorting></t>: <t:regular_value><v:value></t>'
+          - ' <t:decoration>• </t><t:regular>分类: <t:regular_value><v:category></t>'
+          - ' <t:decoration>• </t><t:regular>标签: <t:user_content><v:tag></t>'
+          - ' <t:decoration>• </t><t:regular>宣言:'
+          - '   <t:user_content><v:title></t>'
+          - ''
+          - <action:primary><label>传送至传送点</label></action>
+          - <action:secondary><label>查看信息</label></action>
+          - <action:tertiary><label>申请加入</label></action>
+          - <action:quaternary><label>撤回申请</label></action>
           material: INHERIT
           bedrock:
             detail: true
@@ -2574,15 +2544,15 @@ gui:
         refresh_filter:
           name: <t:regular_heading>按类型筛选:</t><t:regular_value> <v:type></t>
           lore:
-            - <t:decoration>✖ </t><t:regular>切换消息类型.
-            - "   当前类型:<t:regular_value> <v:type></t>"
+          - <t:decoration>✖ </t><t:regular>切换消息类型.
+          - '   当前类型:<t:regular_value> <v:type></t>'
           material: HOPPER
           slots: 40
         entry_object:
           name: <t:regular_heading>#<v:id></t><t:regular> <t:regular_value><v:date></t>
           lore:
-            - <t:user_content><v:message></t>
-            - <action:primary><label>移除</label></action>
+          - <t:user_content><v:message></t>
+          - <action:primary><label>移除</label></action>
           material: PAPER
           slots: 10-36
           bedrock:
@@ -2590,18 +2560,18 @@ gui:
         refresh_clear:
           name: <t:regular_heading>清空收件箱
           lore:
-            - <t:decoration>✖ </t><t:regular>移除收件箱中的所有消息.
+          - <t:decoration>✖ </t><t:regular>移除收件箱中的所有消息.
           material: BARRIER
           slots: 41
         child_failure_owner:
-          name: <t:error_heading>所有者
+          name: <t:error_heading>主人
           lore:
-            - <t:regular>只有城镇所有者可以移除收件箱消息.
+          - <t:regular>只有城镇的主人可以移除收件箱消息.
         refresh_post:
           name: <t:positive_heading>发布消息
           lore:
-            - <t:decoration>✖ </t><t:regular>向城镇成员发布消息.
-            - "   他们会收到通知."
+          - <t:decoration>✖ </t><t:regular>向城镇成员发布消息.
+          - '   他们会收到通知.'
           material: WRITABLE_BOOK
           slots: 42
   list_player_flags:
@@ -2609,25 +2579,25 @@ gui:
     items:
       default:
         entry_enter_messages:
-          name: "<v:enabled_symbol> <t:entry_heading>进入和离开消息: <v:enabled>"
+          name: '<v:enabled_symbol> <t:entry_heading>进入和离开消息: <v:enabled>'
           lore:
-            - <t:decoration>✖ </t><t:regular>显示进入和离开城镇的消息吗?
+          - <t:decoration>✖ </t><t:regular>显示进入和离开城镇的消息吗?
           material: OAK_SIGN
         entry_receive_invites:
-          name: "<v:enabled_symbol> <t:entry_heading>接收邀请: <v:enabled>"
+          name: '<v:enabled_symbol> <t:entry_heading>接收邀请: <v:enabled>'
           lore:
-            - <t:decoration>✖ </t><t:regular>允许其他城镇向你发送加入邀请吗?
+          - <t:decoration>✖ </t><t:regular>允许其他城镇向你发送加入邀请吗?
           material: WRITABLE_BOOK
         entry_show_inbox:
-          name: "<v:enabled_symbol> <t:entry_heading>显示收件箱: <v:enabled>"
+          name: '<v:enabled_symbol> <t:entry_heading>显示收件箱: <v:enabled>'
           lore:
-            - <t:decoration>✖ </t><t:regular>是否接收重要事件的通知
-            - "   例如你所属城镇中发生的事件?"
+          - <t:decoration>✖ </t><t:regular>是否接收重要事件的通知
+          - '   例如你所属城镇中发生的事件?'
           material: skin:6bf3fcdccffd963e4334818108e1e9ae3a80566d0d3d2d4ab3051a2cd811348c
         entry_general_player:
-          name: "<v:enabled_symbol> <t:entry_heading><v:flag>: <v:enabled>"
+          name: '<v:enabled_symbol> <t:entry_heading><v:flag>: <v:enabled>'
           lore:
-            - <t:decoration>✖</t> <t:user_content><v:desc></t>
+          - <t:decoration>✖</t> <t:user_content><v:desc></t>
           material: INHERIT
   player_info:
     title: <t:menu_title>玩家 <v:player>
@@ -2636,10 +2606,10 @@ gui:
         land_size_general:
           name: <t:regular_heading>城镇规模增加
           lore:
-            - <t:regular>每位加入你城镇的玩家
-            - 都能使城镇规模上限增加<t:regular_value> <v:chunks></t> 个区块.
-            - ""
-            - " <t:decoration>• </t><t:regular>城镇所有者不计入."
+          - <t:regular>每位加入你城镇的玩家
+          - 都能使城镇规模上限增加<t:regular_value> <v:chunks></t> 个区块.
+          - ''
+          - ' <t:decoration>• </t><t:regular>城镇的主人不计入.'
           material: skin:8449b9318e33158e64a46ab0de121c3d40000e3332c1574932b3c849d8fa0dc2
           slots: 22
           bedrock:
@@ -2647,7 +2617,7 @@ gui:
         land_size:
           name: <t:regular_heading>城镇规模增加
           lore:
-            - <t:regular>此玩家使城镇规模上限增加<t:regular_value> <v:chunks></t> 个区块.
+          - <t:regular>此玩家使城镇规模上限增加<t:regular_value> <v:chunks></t> 个区块.
           material: skin:8449b9318e33158e64a46ab0de121c3d40000e3332c1574932b3c849d8fa0dc2
           slots: 22
           bedrock:
@@ -2655,7 +2625,7 @@ gui:
         lands:
           name: <t:regular_heading>城镇</t> <t:decoration>(</t><t:regular_value><v:amount></t><t:decoration>)</t>
           lore:
-            - <t:regular_value><v:lands></t>
+          - <t:regular_value><v:lands></t>
           material: OAK_SIGN
           slots: 24
           bedrock:
@@ -2663,9 +2633,9 @@ gui:
         areas:
           name: <t:regular_heading>已加入的子区域</t> <t:decoration>(</t><t:regular_value><v:amount></t><t:decoration>)</t>
           lore:
-            - <t:regular>此玩家已加入以下子区域,
-            - "这些子区域位于城镇<t:entity_land> <v:land></t> 中:"
-            - <t:regular_value><v:areas></t>
+          - <t:regular>此玩家已加入以下子区域,
+          - '这些子区域位于城镇<t:entity_land> <v:land></t> 中:'
+          - <t:regular_value><v:areas></t>
           material: OAK_FENCE
           slots: 26
           bedrock:
@@ -2673,8 +2643,8 @@ gui:
         time:
           name: <t:regular_heading>上次在线时间和游戏时长
           lore:
-            - "<t:decoration>• </t><t:regular>上次在线: <t:time><v:seen></t> <t:decoration>/</t> <t:time><v:offline></t> 前"
-            - "<t:decoration>• </t><t:regular>游戏时长: <t:time><v:playtime></t>"
+          - '<t:decoration>• </t><t:regular>上次在线: <t:time><v:seen></t> <t:decoration>/</t> <t:time><v:offline></t> 前'
+          - '<t:decoration>• </t><t:regular>游戏时长: <t:time><v:playtime></t>'
           material: CLOCK
           slots: 20
           bedrock:
@@ -2686,25 +2656,25 @@ gui:
         offer_received:
           name: <t:regular_heading>收到的提议
           lore:
-            - <t:decoration>✖ </t><t:regular>管理收到的提议.
+          - <t:decoration>✖ </t><t:regular>管理收到的提议.
           material: skin:3b83bbccf4f0c86b12f6f79989d159454bf9281955d7e2411ce98c1b8aa38d8
           slots: 26
         offer_sent:
           name: <t:regular_heading>发出的提议
           lore:
-            - <t:decoration>✖ </t><t:regular>管理发出的提议.
+          - <t:decoration>✖ </t><t:regular>管理发出的提议.
           material: skin:3e4f2f9698c3f186fe44cc63d2f3c4f9a241223acf0581775d9cecd7075
           slots: 24
         enemies:
           name: <t:regular_heading>政敌
           lore:
-            - <t:decoration>✖ </t><t:regular>管理政敌.
+          - <t:decoration>✖ </t><t:regular>管理政敌.
           material: RED_BANNER
           slots: 22
         allies:
           name: <t:regular_heading>盟友
           lore:
-            - <t:decoration>✖ </t><t:regular>管理盟友.
+          - <t:decoration>✖ </t><t:regular>管理盟友.
           material: LIME_BANNER
           slots: 20
   list_relation:
@@ -2714,32 +2684,32 @@ gui:
         add:
           name: <t:positive_heading>添加
           lore:
-            - "<t:regular>数量上限: <t:regular_value><v:current></t> <t:decoration>/</t> <t:limit><v:max></t>"
+          - '<t:regular>数量上限: <t:regular_value><v:current></t> <t:decoration>/</t> <t:limit><v:max></t>'
           material: skin:ffec3d25ae0d147c342c45370e0e43300a4e48a5b43f9bb858babff756144dac
           slots: 40
         entry_offer_neutral_sender:
           name: <t:entry_heading><v:object>
           lore:
-            - <t:decoration>• </t><t:regular>所有者:<t:regular_value> <v:owner></t>
-            - "<t:decoration>• </t><t:regular>等级: <t:regular_value><v:level></t>"
-            - ""
-            - 如果对方接受此提议, 你们将不再是政敌.
-            - ""
-            - <action:tertiary><label>查看信息</label></action>
-            - <action:remove><label>撤回提议</label></action>
+          - <t:decoration>• </t><t:regular>主人:<t:regular_value> <v:owner></t>
+          - '<t:decoration>• </t><t:regular>等级: <t:regular_value><v:level></t>'
+          - ''
+          - 如果对方接受此提议, 你们将不再是政敌.
+          - ''
+          - <action:tertiary><label>查看信息</label></action>
+          - <action:remove><label>撤回提议</label></action>
           material: INHERIT
           bedrock:
             detail: true
         entry_offer_ally_sender:
           name: <t:entry_heading><v:object>
           lore:
-            - <t:decoration>• </t><t:regular>所有者:<t:regular_value> <v:owner></t>
-            - "<t:decoration>• </t><t:regular>等级: <t:regular_value><v:level></t>"
-            - ""
-            - 如果对方接受此提议, 你们将结为盟友.
-            - ""
-            - <action:tertiary><label>查看信息</label></action>
-            - <action:remove><label>撤回提议</label></action>
+          - <t:decoration>• </t><t:regular>主人:<t:regular_value> <v:owner></t>
+          - '<t:decoration>• </t><t:regular>等级: <t:regular_value><v:level></t>'
+          - ''
+          - 如果对方接受此提议, 你们将结为盟友.
+          - ''
+          - <action:tertiary><label>查看信息</label></action>
+          - <action:remove><label>撤回提议</label></action>
           material: INHERIT
           bedrock:
             detail: true
@@ -2750,88 +2720,84 @@ gui:
         entry_offer_neutral_receiver:
           name: <t:entry_heading><v:object>
           lore:
-            - <t:decoration>• </t><t:regular>所有者:<t:regular_value> <v:owner></t>
-            - "<t:decoration>• </t><t:regular>等级: <t:regular_value><v:level></t>"
-            - ""
-            - <action:primary><label>接受停战</label><desc>你们将不再是政敌.</desc></action>
-            - <action:tertiary><label>查看信息</label></action>
-            - <action:remove><label>拒绝提议</label></action>
+          - <t:decoration>• </t><t:regular>主人:<t:regular_value> <v:owner></t>
+          - '<t:decoration>• </t><t:regular>等级: <t:regular_value><v:level></t>'
+          - ''
+          - <action:primary><label>接受停战</label><desc>你们将不再是政敌.</desc></action>
+          - <action:tertiary><label>查看信息</label></action>
+          - <action:remove><label>拒绝提议</label></action>
           material: INHERIT
           bedrock:
             detail: true
         child_failure_war:
           name: <t:error_heading>即将开始或正在进行的战争
           lore:
-            - <t:error>当 <v:object> 即将参与或正在参与
-            - 针对<t:error_value> <v:enemy></t> 的战争时, 无法管理外交关系.
+          - <t:error>当 <v:object> 即将参与或正在参与
+          - 针对<t:error_value> <v:enemy></t> 的战争时, 无法管理外交关系.
         add_nation:
           name: <t:regular_heading>由联邦管理
           lore:
-            - <t:error>所有外交关系均由联邦
-            - <t:error_value><v:nation></t> 管理, 你的城镇属于该联邦.
+          - <t:error>所有外交关系均由联邦
+          - <t:error_value><v:nation></t> 管理, 你的城镇属于该联邦.
           material: skin:ffec3d25ae0d147c342c45370e0e43300a4e48a5b43f9bb858babff756144dac
           slots: 40
         child_failure_max_allies:
           name: <t:error_heading>盟友数已达上限
           lore:
-            - <t:error_value><v:object></t> <t:error>已达到
-            - 盟友数量上限<t:error_value> <v:max></t>.
+          - <t:error_value><v:object></t> <t:error>已达到盟友数量上限<t:error_value> <v:max></t>.
         entry_offer_ally_receiver:
           name: <t:entry_heading><v:object>
           lore:
-            - <t:decoration>• </t><t:regular>所有者:<t:regular_value> <v:owner></t>
-            - "<t:decoration>• </t><t:regular>等级: <t:regular_value><v:level></t>"
-            - ""
-            - <action:primary><label>接受结盟</label><desc>你们将成为盟友.</desc></action>
-            - <action:tertiary><label>查看信息</label></action>
-            - <action:remove><label>拒绝提议</label></action>
+          - <t:decoration>• </t><t:regular>主人:<t:regular_value> <v:owner></t>
+          - '<t:decoration>• </t><t:regular>等级: <t:regular_value><v:level></t>'
+          - ''
+          - <action:primary><label>接受结盟</label><desc>你们将成为盟友.</desc></action>
+          - <action:tertiary><label>查看信息</label></action>
+          - <action:remove><label>拒绝提议</label></action>
           material: INHERIT
           bedrock:
             detail: true
         entry_ally:
           name: <t:entry_heading>盟友 <v:object>
           lore:
-            - <t:decoration>• </t><t:regular>所有者:<t:regular_value> <v:owner></t>
-            - "<t:decoration>• </t><t:regular>等级: <t:regular_value><v:level></t>"
-            - ""
-            - <action:tertiary><label>查看信息</label></action>
-            - <action:remove><label>移除盟友关系</label></action>
+          - <t:decoration>• </t><t:regular>主人:<t:regular_value> <v:owner></t>
+          - '<t:decoration>• </t><t:regular>等级: <t:regular_value><v:level></t>'
+          - ''
+          - <action:tertiary><label>查看信息</label></action>
+          - <action:remove><label>移除盟友关系</label></action>
           material: INHERIT
           bedrock:
             detail: true
         remove_nation:
           name: <t:regular_heading>由联邦管理
           lore:
-            - <t:error>所有外交关系均由联邦
-            - <t:error_value><v:nation></t> 管理, 你的城镇属于该联邦.
+          - <t:error>所有外交关系均由所属联邦 <t:error_value><v:nation></t> 管理.
           material: skin:548d7d1e03e1af145b0125ab841285672b421265da2ab915015f9058438ba2d8
           slots: 42
         entry_enemy:
           name: <t:entry_heading>政敌 <v:object>
           lore:
-            - <t:decoration>• </t><t:regular>所有者:<t:regular_value> <v:owner></t>
-            - "<t:decoration>• </t><t:regular>等级: <t:regular_value><v:level></t>"
-            - ""
-            - <action:tertiary><label>查看信息</label></action>
-            - <action:remove><label>提出中立提议</label></action>
+          - <t:decoration>• </t><t:regular>主人:<t:regular_value> <v:owner></t>
+          - '<t:decoration>• </t><t:regular>等级: <t:regular_value><v:level></t>'
+          - ''
+          - <action:tertiary><label>查看信息</label></action>
+          - <action:remove><label>提出中立提议</label></action>
           material: INHERIT
           bedrock:
             detail: true
         child_failure_nation:
           name: <t:error_heading>由联邦管理
           lore:
-            - <t:error>所有外交关系均由联邦
-            - <t:error_value><v:nation></t> 管理, 你的城镇属于该联邦.
+          - <t:error>所有外交关系均由所属联邦 <t:error_value><v:nation></t> 管理.
         child_war:
           name: <t:error_heading>战争进行中
           lore:
-            - <t:error>当 <v:object>
-            - 正在参与战争时, 无法执行此操作.
+          - <t:error>无法在 <v:object> 正处于战争时这么做.
         child_failure_max_enemies:
           name: <t:error_heading>政敌数已达上限
           lore:
-            - <t:error_value><v:object></t> <t:error>已达到
-            - 政敌数量上限<t:error_value> <v:max></t>.
+          - <t:error_value><v:object></t> <t:error>已达到
+          - 政敌数量上限<t:error_value> <v:max></t>.
   object_info_relations:
     title: <t:menu_title>外交关系
     items:
@@ -2839,15 +2805,15 @@ gui:
         enemies:
           name: <t:negative_heading>政敌
           lore:
-            - <t:decoration>✖ </t><t:regular>查看政敌.
-            - "   <t:decoration>• </t><t:regular>数量: <v:enemies>"
+          - <t:decoration>✖ </t><t:regular>查看政敌.
+          - '   <t:decoration>• </t><t:regular>数量: <v:enemies>'
           material: RED_BANNER
           slots: 25
         allies:
           name: <t:positive_heading>盟友
           lore:
-            - <t:decoration>✖ </t><t:regular>查看盟友.
-            - "   <t:decoration>• </t><t:regular>数量: <v:allies>"
+          - <t:decoration>✖ </t><t:regular>查看盟友.
+          - '   <t:decoration>• </t><t:regular>数量: <v:allies>'
           material: LIME_BANNER
           slots: 21
   list_land_storage:
@@ -2859,7 +2825,7 @@ gui:
         entry_area:
           name: <t:entry_heading><v:player>
           lore:
-            - <t:regular>职位:<t:regular_value> <v:role></t>
+          - <t:regular>职位:<t:regular_value> <v:role></t>
           material: INHERIT
         entry_area_all:
           name: <t:entry_heading><v:player>
@@ -2868,11 +2834,11 @@ gui:
           name: <t:entry_heading><v:player>
           material: INHERIT
         refresh_toggle:
-          name: "<t:regular_heading>仅查看当前子区域: <v:current>"
+          name: '<t:regular_heading>仅查看当前子区域: <v:current>'
           lore:
-            - "<t:decoration>✖ </t><t:regular>仅显示以下玩家:"
-            - "   已加入此子区域 <t:decoration>(</t><t:regular_value><v:area></t><t:decoration>)</t><t:regular>?"
-            - "    <t:decoration>• </t><t:regular>关闭后, 将显示整个城镇的玩家."
+          - '<t:decoration>✖ </t><t:regular>仅显示以下玩家:'
+          - '   已加入此子区域 <t:decoration>(</t><t:regular_value><v:area></t><t:decoration>)</t><t:regular>?'
+          - '    <t:decoration>• </t><t:regular>关闭后, 将显示整个城镇的玩家.'
           material: HOPPER
           slots: 41
   rental_setup:
@@ -2880,73 +2846,68 @@ gui:
     items:
       default:
         type:
-          name: "<t:regular_heading>模式: <v:type>"
+          name: '<t:regular_heading>模式: <v:type>'
           lore:
-            - <t:decoration>✖ </t><t:regular>切换出租或出售模式.
+          - <t:decoration>✖ </t><t:regular>切换出租或出售模式.
           material: OAK_SIGN
           slots: 32
         interval:
-          name: "<t:regular_heading>单次租期: <v:interval>"
+          name: '<t:regular_heading>单次租期: <v:interval>'
           lore:
-            - <t:decoration>✖ </t><t:regular>住户每次支付<t:cost> <v:cost></t>, 周期为<t:time> <v:interval></t>
-            - "   并按此周期续租."
+          - <t:decoration>✖ </t><t:regular>住户每 <t:time> <v:interval></t> 需支付<t:cost> <v:cost></t>.
           material: CLOCK
           slots: 12
         max-time:
-          name: "<t:regular_heading>最大总租用时长: <v:max-time>"
+          name: '<t:regular_heading>最大总租用时长: <v:max-time>'
           lore:
-            - <t:decoration>✖ </t><t:regular>设置玩家租用此子区域的
-            - "   租用此子区域的最长总时限."
+          - <t:decoration>✖ </t><t:regular>设置玩家租用此子区域的最长总时限.
           material: CLOCK
           slots: 16
         cost_rental:
           name: <t:regular_heading>租金:</t><t:cost> <v:cost></t>
           lore:
-            - <t:decoration>✖ </t><t:regular>设置住户每次支付的租金
-            - "   每<t:time> <v:interval></t> 收取一次."
+          - <t:decoration>✖ </t><t:regular>设置住户每<t:time> <v:interval></t> 支付的租金.
           material: GOLD_INGOT
           slots: 14
         cost_sell:
           name: <t:regular_heading>售价:</t><t:cost> <v:cost></t>
           lore:
-            - <t:decoration>✖ </t><t:regular>设置买家需要支付的售价.
+          - <t:decoration>✖ </t><t:regular>设置买家需要支付的售价.
           material: GOLD_INGOT
           slots: 14
         confirm_rental:
           name: <t:positive_heading>确认
           lore:
-            - <t:decoration>✖ </t><t:regular>将此子区域设为出租.
-            - "   <t:decoration>• </t><t:regular>租期:<t:time> <v:interval></t>"
-            - "   <t:decoration>• </t><t:regular>每<t:time> <v:interval></t> 的租金:<t:cost> <v:cost></t>"
-            - "   <t:decoration>• </t><t:regular>最长租期:<t:time> <v:max-time></t>"
+          - <t:decoration>✖ </t><t:regular>将此子区域设为出租.
+          - '   <t:decoration>• </t><t:regular>租期:<t:time> <v:interval></t>'
+          - '   <t:decoration>• </t><t:regular>每<t:time> <v:interval></t> 的租金:<t:cost> <v:cost></t>'
+          - '   <t:decoration>• </t><t:regular>最长租期:<t:time> <v:max-time></t>'
           material: LIME_STAINED_GLASS_PANE
           slots: 45
         confirm_sell:
           name: <t:positive_heading>确认
           lore:
-            - <t:decoration>✖ </t><t:regular>将此子区域设为出售.
-            - "   <t:decoration>• </t><t:regular>售价:<t:cost> <v:cost></t>"
+          - <t:decoration>✖ </t><t:regular>将子区域挂牌出售.
+          - '   <t:decoration>• </t><t:regular>售价:<t:cost> <v:cost></t>'
           material: LIME_STAINED_GLASS_PANE
           slots: 45
         restore:
           material: GRASS_BLOCK
           slots: 30
-          name: "<t:regular_heading>恢复子区域: <v:state>"
+          name: '<t:regular_heading>恢复子区域: <v:state>'
           lore:
-            - <action:primary><label>切换</label></action>
-            - <t:regular>出租或出售结束后, 将此子区域
-            - "   恢复到之前的状态."
-            - "   <t:decoration>• </t><t:regular>在玩家租用或购买前会创建快照,"
-            - "     因此你自己的改动会保留."
-            - "   <t:decoration>• </t><t:regular>会先将子区域内的玩家传送出去."
-            - "   <t:decoration>• </t><t:regular>箱子内容会恢复到之前的状态."
+          - <action:primary><label>切换</label></action>
+          - <t:regular>出租或出售结束后, 将此子区域恢复到之前的状态.
+          - '   <t:decoration>• </t><t:regular>在玩家租用或购买前会创建快照, 因此最初有的改动会保留.'
+          - '   <t:decoration>• </t><t:regular>会先将子区域内的玩家传送出去.'
+          - '   <t:decoration>• </t><t:regular>箱子内容会恢复到之前的状态.'
         restore_unavailable:
           material: GRASS_BLOCK
           slots: 30
-          name: "<t:regular_heading>恢复子区域: <t:negative>不可用</t>"
+          name: '<t:regular_heading>恢复子区域: <t:negative>不可用</t>'
           lore:
-            - <t:decoration>✖ </t><t:regular>出租或出售结束后恢复子区域
-            - "   需要安装插件<t:regular_value> WildRegeneration</t>."
+          - <t:decoration>✖ </t><t:regular>需要安装插件<t:regular_value> WildRegeneration</t>
+          - '   才能实现出租或出售结束后恢复子区域.'
   select_time:
     title: <t:menu_title>时间
     items:
@@ -3018,7 +2979,7 @@ gui:
           data:
             modify: 500
         current:
-          name: "<t:regular_heading>当前值: <v:value>"
+          name: '<t:regular_heading>当前值: <v:value>'
           material: GOLD_INGOT
           slots: 23
         refresh_minus-3:
@@ -3050,7 +3011,7 @@ gui:
           material: INHERIT
           name: <t:entry_heading><v:player>
           lore:
-            - <action:primary><label>选择</label></action>
+          - <action:primary><label>选择</label></action>
     title: <t:menu_title>选择玩家
 skulls:
   area_default:

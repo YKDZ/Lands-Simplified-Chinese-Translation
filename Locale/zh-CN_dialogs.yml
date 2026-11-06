@@ -109,7 +109,7 @@ value:
           confirm: <t:negative>确认添加此职位吗?</t> <t:regular>已拥有此职位的城镇会重复获得该职位, 例如通过 roles.yml 获得此职位的新城镇. 对同一职位再次执行此操作会继续添加重复职位.
       limits:
         migrate:
-          confirm: "<t:negative>确认将旧限制权限迁移到限制包吗?</t> <t:regular>请先在 <v:file> 中配置所有限制包: 系统将据此计算编号权限与对应限制包之间的差值. 请先备份数据库, 以便在需要时撤销此操作."
+          confirm: '<t:negative>确认将旧限制权限迁移到限制包吗?</t> <t:regular>请先在 <v:file> 中配置所有限制包: 系统将据此计算编号权限与对应限制包之间的差值. 请先备份数据库, 以便在需要时撤销此操作.'
     claim:
       merge:
         confirm: <t:regular>确认将城镇<t:entity_land> <v:merge></t> 合并到<t:entity_land> <v:land></t>, 并支付<t:cost> <v:cost></t> 吗?
@@ -122,7 +122,7 @@ value:
       confirm: <t:regular>确认离开城镇<t:entity_land> <v:land></t> 吗? 你占领的<t:regular_value> <v:chunks></t> 个领土区块可能被取消占领.
     member:
       setowner:
-        confirm: <t:regular>确认将玩家<t:regular_value> <v:player></t> 设为城镇<t:entity_land> <v:land></t> 的新所有者吗?
+        confirm: <t:regular>确认将玩家<t:regular_value> <v:player></t> 设为城镇<t:entity_land> <v:land></t> 的新主人吗?
     nation:
       leave:
         confirm: <t:regular>确认让城镇<t:entity_land> <v:land></t> 退出联邦<t:entity_nation> <v:nation></t> 吗?

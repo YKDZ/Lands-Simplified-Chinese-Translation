@@ -25,7 +25,6 @@
 | Locale/Nations/en-US_gui.yml | Locale/Nations/zh-CN_gui.yml |
 | Locale/Wars/en-US_gui.yml | Locale/Wars/zh-CN_gui.yml |
 | categories.yml | categories.yml |
-| roles.yml | roles.yml |
 
 仅翻译了可以显示在游戏内的文本，没有翻译配置文件注释等不重要的文本（因为量大且难以维护）。
 
@@ -54,7 +53,7 @@
 | camp, camps | 露营地 | 临时、固定大小的城镇。 |
 | wilderness | 荒野 | 没有被占领的区块。 |
 | role, roles | 职位 | 城镇或联邦成员的权限控制。 |
-| owner, owners | 所有者 | README 将该词列为 Lands 玩法中的领域术语。 |
+| owner, owners | 主人 | README 将该词列为 Lands 玩法中的领域术语。 |
 | tenant, tenants | 住户 | 租用或购买子区域的玩家, 统一称为住户; 包括租客和子区域买主。 |
 | trust, trusts, trusted, trusting | 邀请, 加入 | 对应其他领地插件的 invite；从玩家视角也可表达为被加入。 |
 | trusted player, trusted players | 成员 | 已受信任并获得成员身份的玩家。 |
