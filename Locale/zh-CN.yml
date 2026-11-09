@@ -1058,6 +1058,12 @@ lands:
           <hover:show_text:"<t:regular>点击关闭选区."><click:run_command:"/<v:cmd_selection>"><t:regular>关闭选区: <t:cmd>/<v:cmd_selection> </t><java><t:click>[点击]</t></java></click></hover>
         not-complete: <t:error>你的选区尚未完成. <t:regular>请确保两个位置都已设置. <hover:show_text:"<t:regular>点击此处切换选区模式."><click:run_command:"/<v:cmd>"><t:regular>执行<t:cmd>/<v:cmd> </t>即可切换选区模式<java><t:click>[点击]</t></java></click></hover>
         disabled: <title><t:regular_heading>选区模式<subtitle><t:negative>模式已禁用
+        complete-no-areas: "<title><t:success_heading>选区完成<subtitle><t:regular>占领选区: <t:cmd><b>/<v:cmd_claim>"
+        reminder-no-areas: |
+          <t:regular>已完成选区: 可以执行以下操作:
+            <hover:show_text:"<t:regular>点此占领此选区."><click:suggest_command:"/<v:cmd_claim>"><t:regular>✖ 占领: <t:cmd>/<v:cmd_claim> </t><java><t:click>[点击]</t></java></click></hover>
+            <hover:show_text:"<t:regular>点此取消占领此选区."><click:suggest_command:"/<v:cmd_unclaim>"><t:regular>✖ 取消占领: <t:cmd>/<v:cmd_unclaim> </t><java><t:click>[点击]</t></java></click></hover>
+          <hover:show_text:"<t:regular>点此撤销选区."><click:run_command:"/<v:cmd_selection>"><t:regular>撤销选区: <t:cmd>/<v:cmd_selection> </t><java><t:click>[点击]</t></java></click></hover>
     invites:
       accept:
         max: <t:error>你不能再加入更多城镇了. <t:regular>你可加入的城镇数量已达到上限<t:limit> <v:max> </t>个.
@@ -1432,88 +1438,88 @@ list:
   hologram:
     landblock:
       main:
-      - <t:regular>城镇<t:entity_land> <v:land></t>
-      - <t:regular>日志箱:<t:user_content> <v:inbox></t>
-      - '<t:regular>余额: <t:regular_value><v:balance></t>'
-      - <t:regular>维护费和税费将在<t:time> <v:upkeep_next> </t>后收取
+        - <t:regular>城镇<t:entity_land> <v:land></t>
+        - <t:regular>日志箱:<t:user_content> <v:inbox></t>
+        - '<t:regular>余额: <t:regular_value><v:balance></t>'
+        - <t:regular>维护费和税费将在<t:time> <v:upkeep_next> </t>后收取
       main_camp:
-      - <t:regular>城镇<t:entity_land> <v:land></t>
-      - <t:regular>日志箱:<t:user_content> <v:inbox></t>
-      - <t:regular>将在<t:time> <v:expiration> </t>后到期
+        - <t:regular>城镇<t:entity_land> <v:land></t>
+        - <t:regular>日志箱:<t:user_content> <v:inbox></t>
+        - <t:regular>将在<t:time> <v:expiration> </t>后到期
     rental:
-    - <t:regular_heading>租用 <v:area>
-    - <t:cost><v:cost> </t><t:regular>每 <t:time><v:time></t>
-    - '<t:regular>最长租用时长: <t:time><v:max></t>'
-    - <t:decoration>点击租用.</t>
+      - <t:regular_heading>租用 <v:area>
+      - <t:cost><v:cost> </t><t:regular>每 <t:time><v:time></t>
+      - '<t:regular>最长租用时长: <t:time><v:max></t>'
+      - <t:decoration>点击租用.</t>
     sell:
       area:
-      - <t:positive>购买
-      - '<t:regular>子区域: <t:regular_value><v:area></t>'
-      - <t:cost>总计 <v:cost> </t><t:regular>
-      - <t:decoration>点击购买.</t>
+        - <t:positive>购买
+        - '<t:regular>子区域: <t:regular_value><v:area></t>'
+        - <t:cost>总计 <v:cost> </t><t:regular>
+        - <t:decoration>点击购买.</t>
       land:
-      - <t:positive>购买
-      - '<t:regular>城镇: <t:entity_land><v:land></t>'
-      - <t:cost>总计 <v:cost> </t><t:regular>
-      - <t:decoration>点击购买.</t>
+        - <t:positive>购买
+        - '<t:regular>城镇: <t:entity_land><v:land></t>'
+        - <t:cost>总计 <v:cost> </t><t:regular>
+        - <t:decoration>点击购买.</t>
     rented:
-    - <t:regular>子区域<t:regular_value> <v:area></t>
-    - <t:regular>住户:<t:regular_value> <v:player></t>
-    - <t:time><v:time> </t><t:regular>剩余时长
-    - <t:cost><v:cost> </t><t:regular>每 <t:time><v:time></t>
-    - '<t:decoration>按住潜行键点击: 取消</t>'
-    - '<t:decoration>点击: 延长租期</t>'
+      - <t:regular>子区域<t:regular_value> <v:area></t>
+      - <t:regular>住户:<t:regular_value> <v:player></t>
+      - <t:time><v:time> </t><t:regular>剩余时长
+      - <t:cost><v:cost> </t><t:regular>每 <t:time><v:time></t>
+      - '<t:decoration>按住潜行键点击: 取消</t>'
+      - '<t:decoration>点击: 延长租期</t>'
     sold:
       area:
-      - <t:positive>已售出
-      - '<t:regular>子区域: <t:regular_value><v:area></t>'
-      - <t:regular>买主:<t:regular_value> <v:player></t>
-      - '<t:decoration>按住潜行键点击: 取消</t>'
+        - <t:positive>已售出
+        - '<t:regular>子区域: <t:regular_value><v:area></t>'
+        - <t:regular>买主:<t:regular_value> <v:player></t>
+        - '<t:decoration>按住潜行键点击: 取消</t>'
       land:
-      - <t:positive>已售出
-      - '<t:regular>城镇: <t:entity_land><v:land></t>'
-      - <t:regular>买主:<t:regular_value> <v:player></t>
+        - <t:positive>已售出
+        - '<t:regular>城镇: <t:entity_land><v:land></t>'
+        - <t:regular>买主:<t:regular_value> <v:player></t>
   sign:
     top:
       entry:
-      - <t:regular_heading>#<v:pos> <t:entity_land><v:object></t>
-      - <t:regular>主人 <t:regular_value><v:owner></t>
-      - '<t:regular><v:sorting>:'
-      - <t:regular_value><v:value></t>
+        - <t:regular_heading>#<v:pos> <t:entity_land><v:object></t>
+        - <t:regular>主人 <t:regular_value><v:owner></t>
+        - '<t:regular><v:sorting>:'
+        - <t:regular_value><v:value></t>
       none:
-      - <t:error>无
+        - <t:error>无
     rental:
-    - <t:regular_heading>租用子区域
-    - <t:regular_value><v:area></t>
-    - <t:cost><v:cost></t><t:decoration>/</t><t:time><v:time></t>
-    - '<t:regular>最长时间: <t:time><v:max></t>'
+      - <t:regular_heading>租用子区域
+      - <t:regular_value><v:area></t>
+      - <t:cost><v:cost></t><t:decoration>/</t><t:time><v:time></t>
+      - '<t:regular>最长时间: <t:time><v:max></t>'
     sell:
       area:
-      - <t:regular_heading>购买子区域
-      - <t:regular_value><v:area></t>
-      - '<t:regular>费用: <t:cost><v:cost></t>'
-      - <t:regular>点击购买.
+        - <t:regular_heading>购买子区域
+        - <t:regular_value><v:area></t>
+        - '<t:regular>费用: <t:cost><v:cost></t>'
+        - <t:regular>点击购买.
       land:
-      - <t:regular_heading>购买城镇
-      - <t:entity_land><v:land></t>
-      - '<t:regular>费用: <t:cost><v:cost></t>'
-      - <t:regular>点击购买.
+        - <t:regular_heading>购买城镇
+        - <t:entity_land><v:land></t>
+        - '<t:regular>费用: <t:cost><v:cost></t>'
+        - <t:regular>点击购买.
     rented:
-    - <t:regular_heading>已出租
-    - '<t:regular>子区域: <t:regular_value><v:area></t>'
-    - '<t:regular>住户: <t:regular_value><v:player></t>'
-    - '<t:regular>剩余时长: <t:time><v:time></t>'
+      - <t:regular_heading>已出租
+      - '<t:regular>子区域: <t:regular_value><v:area></t>'
+      - '<t:regular>住户: <t:regular_value><v:player></t>'
+      - '<t:regular>剩余时长: <t:time><v:time></t>'
     sold:
       area:
-      - <t:regular_heading>已售出
-      - '<t:regular>子区域: <t:regular_value><v:area></t>'
-      - '<t:regular>买主: <t:regular_value><v:player></t>'
+        - <t:regular_heading>已售出
+        - '<t:regular>子区域: <t:regular_value><v:area></t>'
+        - '<t:regular>买主: <t:regular_value><v:player></t>'
       land:
-      - <t:regular_heading>已售出
-      - '<t:regular>城镇: <t:entity_land><v:land></t>'
-      - '<t:regular>买主: <t:regular_value><v:player></t>'
+        - <t:regular_heading>已售出
+        - '<t:regular>城镇: <t:entity_land><v:land></t>'
+        - '<t:regular>买主: <t:regular_value><v:player></t>'
     restoring:
-    - <t:regular_heading>请稍候
-    - <t:regular_value><v:area></t>
-    - <t:regular>正在准备恢复
-    - <t:regular>或正在恢复原状.
+      - <t:regular_heading>请稍候
+      - <t:regular_value><v:area></t>
+      - <t:regular>正在准备恢复
+      - <t:regular>或正在恢复原状.
